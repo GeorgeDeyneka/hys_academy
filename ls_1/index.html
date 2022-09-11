@@ -11,75 +11,72 @@
       <header class="header">
         <div class="header__container">
           <nav class="header__nav">
-            <div class="header__logo">
-              <img
-                class="header__logo-img"
-                width="53"
-                src="./images/logo.svg"
-                alt="Company logo"
-              />
+            <svg class="header__logo-img" width="54" height="24">
+              <use href="./images/sprite.svg#icon-logo"></use>
+            </svg>
+            <div class="header__nav-wrapper">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="" class="header__link">Categories</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__link">Course</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__link">Explore</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__link">Degrees</a>
+                </li>
+              </ul>
             </div>
-            <a href="" class="header__link">Categories</a>
-            <a href="" class="header__link">Course</a>
-            <a href="" class="header__link">Explore</a>
-            <a href="" class="header__link">Degrees</a>
             <button type="button" class="btn__blue">Explore</button>
           </nav>
           <div class="header__background background">
-            <div class="background__icons">
-              <img
-                class="background__icons-img"
-                width="746"
-                src="./images/union.png"
-                alt=""
-              />
-            </div>
-            <div class="background__light-triangle">
-              <img
-                class="background__light-triangle-img"
-                width="740"
-                src="./images/header-lightgreen-triangle.png"
-                alt=""
-              />
-            </div>
-            <div class="background__dark-triangle">
-              <img
-                class="background__dark-triangle-img"
-                width="778"
-                src="./images/header-green-triangle.png"
-                alt=""
-              />
-            </div>
+            <img
+              class="background__icons-img"
+              width="746"
+              src="./images/union.png"
+              alt=""
+            />
+            <img
+              class="background__light-triangle-img"
+              width="740"
+              src="./images/header-lightgreen-triangle.png"
+              alt=""
+            />
+            <img
+              class="background__dark-triangle-img"
+              width="778"
+              src="./images/header-green-triangle.png"
+              alt=""
+            />
           </div>
         </div>
+      </header>
+      <main class="main">
         <!-- Education -->
         <section class="education">
           <div class="education__container">
             <div class="education__content">
-              <div class="education__title">
-                <h1 class="education__title-text">
-                  Education is the most powerfull weapon
-                </h1>
-              </div>
-              <div class="education__description">
-                <p class="education__description-text">
-                  Education is the most powerfull weapon A bank is a financial
-                  institution accepts deposits from public and creates credit.
-                  For all of your needs. Read More Get started
-                </p>
-              </div>
+              <h1 class="education__title">
+                Education is the most powerfull weapon
+              </h1>
+              <p class="education__description">
+                Education is the most powerfull weapon A bank is a financial
+                institution accepts deposits from public and creates credit. For
+                all of your needs. Read More Get started
+              </p>
               <div class="education__buttons buttons-block">
                 <button type="button" class="btn__blue">Read More</button>
                 <button type="button" class="btn__green">Get Started</button>
               </div>
-              <div class="education__illustraition">
-                <img
-                  class="education__illustraition-img"
-                  width="403"
-                  src="./images/writing-boy.png"
-                  alt="Writing boy"
-                />
-              </div>
+              <img
+                class="education__illustraition-img"
+                width="403"
+                src="./images/writing-boy.png"
+                alt="Writing boy"
+              />
             </div>
             <div class="education__logos">
               <img
@@ -115,102 +112,52 @@
             </div>
           </div>
         </section>
-      </header>
-      <!-- About -->
-      <main class="main">
+        <!-- About -->
         <section class="about" id="about">
           <div class="about__container">
-            <div class="about__header">
-              <div class="about__title title">
-                <h2 class="title__text">Why choose us?</h2>
-                <div class="title__border">
-                  <img
-                    class="title__border-img"
-                    width="60"
-                    src="./images/blue-border.png"
-                    alt="border"
-                  />
-                </div>
-              </div>
-            </div>
+            <h2 class="about__title title">Why choose us?</h2>
             <div class="about__content">
               <div class="about__item">
-                <div class="about__icon">
-                  <img
-                    class="about__icon-img"
-                    width="53"
-                    src="./images/certificate.svg"
-                    alt="Certificate"
-                  />
-                </div>
-                <div class="about__subtitle">
-                  <h3 class="about__subtitle-text">Certificate</h3>
-                </div>
-                <div class="about__description">
-                  <p class="about__description-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod.A bank is a financial institution accepts
-                    deposits from public and creates credit.
-                  </p>
-                </div>
+                <svg class="about__icon-img" width="54" height="54">
+                  <use href="./images/sprite.svg#icon-certificate"></use>
+                </svg>
+                <h3 class="about__subtitle">Certificate</h3>
+                <p class="about__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod.A bank is a financial institution accepts deposits
+                  from public and creates credit.
+                </p>
               </div>
               <div class="about__item">
-                <div class="about__icon">
-                  <img
-                    class="about__icon-img"
-                    width="39"
-                    src="./images/life-programs.svg"
-                    alt="Life Programs"
-                  />
-                </div>
-                <div class="about__subtitle">
-                  <h3 class="about__subtitle-content">Life Programs</h3>
-                </div>
-                <div class="about__description">
-                  <p class="about__description-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    institution accepts deposits from public
-                  </p>
-                </div>
+                <svg class="about__icon-img" width="54" height="54">
+                  <use href="./images/sprite.svg#icon-life-programs"></use>
+                </svg>
+                <h3 class="about__subtitle">Life Programs</h3>
+                <p class="about__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  institution accepts deposits from public
+                </p>
               </div>
               <div class="about__item">
-                <div class="about__icon">
-                  <img
-                    class="about__icon-img"
-                    width="43"
-                    src="./images/affordability.svg"
-                    alt="Affordability"
-                  />
-                </div>
-                <div class="about__subtitle">
-                  <h3 class="about__subtitle-text">Affordability</h3>
-                </div>
-                <div class="about__description">
-                  <p class="about__description-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed. A bank is a financial institution accepts deposits from
-                    public and creates credit.
-                  </p>
-                </div>
+                <svg class="about__icon-img" width="54" height="54">
+                  <use href="./images/sprite.svg#icon-affordability"></use>
+                </svg>
+                <h3 class="about__subtitle">Affordability</h3>
+                <p class="about__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
+                  A bank is a financial institution accepts deposits from public
+                  and creates credit.
+                </p>
               </div>
               <div class="about__item">
-                <div class="about__icon">
-                  <img
-                    class="about__icon-img"
-                    width="38"
-                    src="./images/social.svg"
-                    alt="Social"
-                  />
-                </div>
-                <div class="about__subtitle">
-                  <h3 class="about__subtitle-content">Social</h3>
-                </div>
-                <div class="about__description">
-                  <p class="about__description-text">
-                    A bank is a financial institution accepts deposits from
-                    public and creates credit.
-                  </p>
-                </div>
+                <svg class="about__icon-img" width="54" height="54">
+                  <use href="./images/sprite.svg#icon-social"></use>
+                </svg>
+                <h3 class="about__subtitle">Social</h3>
+                <p class="about__description">
+                  A bank is a financial institution accepts deposits from public
+                  and creates credit.
+                </p>
               </div>
             </div>
           </div>
@@ -218,49 +165,36 @@
         <!-- Courses -->
         <section class="courses" id="courses">
           <div class="courses__container">
-            <div class="courses__background">
-              <img
-                class="courses__background-img"
-                width="746"
-                src="./images/union-two.png"
-                alt=""
-              />
-            </div>
+            <img
+              class="courses__background-img"
+              width="746"
+              src="./images/union-two.png"
+              alt=""
+            />
             <div class="courses__header">
-              <div class="courses__subtitle subtitle">
-                <h6 class="subtitle__text">MOST POPULAR COURSES</h6>
-              </div>
-              <div class="courses__title">
-                <h2 class="courses__title-text">2000+ Online courses</h2>
-              </div>
+              <h6 class="courses__subtitle subtitle">MOST POPULAR COURSES</h6>
+              <h2 class="courses__title">2000+ Online courses</h2>
             </div>
             <div class="courses__content">
               <button class="courses__slide btn__slide" type="button">
-                <img
-                  class="btn__slide-img"
-                  width="6"
-                  src="./images/arrow-left.svg"
-                  alt="slide"
-                />
+                <svg class="btn__slide-img" width="10" height="14">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
               </button>
               <div class="courses__items">
                 <div class="courses__item">
-                  <div class="courses__avatar illustration__ellipse-portrait">
-                    <img
-                      class="illustration__ellipse-portrait-img"
-                      width="48"
-                      src="./images/teacher-one.svg"
-                      alt="Our teacher"
-                    />
-                  </div>
-                  <div class="courses__card">
-                    <img
-                      class="courses__card-img"
-                      width="270"
-                      src="./images/tablet-design-courses.jpg"
-                      alt="Tablet"
-                    />
-                  </div>
+                  <img
+                    class="courses__avatar-img"
+                    width="48"
+                    src="./images/teacher-one.png"
+                    alt="Our teacher"
+                  />
+                  <img
+                    class="courses__card-img"
+                    width="270"
+                    src="./images/tablet-design-courses.jpg"
+                    alt="Tablet"
+                  />
                   <h6 class="courses__subtitle-card">DESIGN</h6>
                   <h3 class="courses__title-card">Learn Photoshop title</h3>
                   <div class="courses__description">
@@ -269,57 +203,38 @@
                     >
                     <p class="courses__old-price">360$</p>
                     <div class="courses__stars">
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
                     </div>
                     <p class="courses__reviews">(4)</p>
                   </div>
                 </div>
                 <div class="courses__item">
-                  <div class="courses__avatar illustration__ellipse-portrait">
-                    <img
-                      class="illustration__ellipse-portrait-img"
-                      width="48"
-                      src="./images/teacher-two.svg"
-                      alt="Our teacher"
-                    />
-                  </div>
-                  <div class="courses__card">
-                    <img
-                      class="courses__card-img"
-                      width="270"
-                      src="./images/girl-opposite-laptop.jpg"
-                      alt="Designer works"
-                    />
-                  </div>
+                  <img
+                    class="courses__avatar-img"
+                    width="48"
+                    src="./images/teacher-two.png"
+                    alt="Our teacher"
+                  />
+                  <img
+                    class="courses__card-img"
+                    width="270"
+                    src="./images/girl-opposite-laptop.jpg"
+                    alt="Designer works"
+                  />
                   <h6 class="courses__subtitle-card">Marketing</h6>
                   <h3 class="courses__title-card">
                     Learn Photoshop title trun...
@@ -330,57 +245,38 @@
                     >
                     <p class="courses__old-price">360$</p>
                     <div class="courses__stars">
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
                     </div>
                     <p class="courses__reviews">(4)</p>
                   </div>
                 </div>
                 <div class="courses__item">
-                  <div class="courses__avatar illustration__ellipse-portrait">
-                    <img
-                      class="illustration__ellipse-portrait-img"
-                      width="48"
-                      src="./images/ponasenkov.svg"
-                      alt="The greatest maestro"
-                    />
-                  </div>
-                  <div class="courses__card">
-                    <img
-                      class="courses__card-img"
-                      width="270"
-                      src="./images/laptop-graphic-courses.jpg"
-                      alt="The desigher work with graphic"
-                    />
-                  </div>
+                  <img
+                    class="courses__avatar-img"
+                    width="48"
+                    src="./images/ponasenkov.png"
+                    alt="The greatest maestro"
+                  />
+                  <img
+                    class="courses__card-img"
+                    width="270"
+                    src="./images/laptop-graphic-courses.jpg"
+                    alt="The desigher work with graphic"
+                  />
                   <h6 class="courses__subtitle-card">Web Design</h6>
                   <h3 class="courses__title-card">Learn Photoshop</h3>
                   <div class="courses__description">
@@ -389,48 +285,30 @@
                     >
                     <p class="courses__old-price">360$</p>
                     <div class="courses__stars">
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
-                      <img
-                        class="courses__stars-img"
-                        width="10"
-                        src="./images/star.svg"
-                        alt="star"
-                      />
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-star"></use>
+                      </svg>
                     </div>
                     <p class="courses__reviews">(4)</p>
                   </div>
                 </div>
               </div>
               <button class="courses__slide btn__slide" type="button">
-                <img
-                  class="btn__slide-img"
-                  width="6"
-                  src="./images/arrow-right.svg"
-                  alt="slide"
-                />
+                <svg class="btn__slide-img" width="10" height="14">
+                  <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
               </button>
             </div>
           </div>
@@ -445,262 +323,161 @@
                 src="./images/two-girls-stydying-tour.jpg"
                 alt="Two girls are learning"
               />
+              <button class="tour__btn-play" type="button">
+                <svg class="tour__btn-play-img" width="18" height="18">
+                  <use href="./images/sprite.svg#icon-play-triangle"></use>
+                </svg>
+              </button>
             </div>
-            <button class="tour__btn-play" type="button">
-              <img
-                class="tour__btn-play-img"
-                width="14"
-                src="./images/play-triangle.svg"
-                alt="play"
-              />
-            </button>
             <div class="tour__header">
-              <div class="tour__subtitle subtitle">
-                <h6 class="subtitle__text">UNIVERSITY DESCRIPTION</h6>
-              </div>
-              <div class="tour__title title">
-                <h2 class="title__text">Take a tour</h2>
-                <div class="title__border">
-                  <img
-                    width="60"
-                    class="title__border-img"
-                    src="./images/blue-border.png"
-                    alt="border"
-                  />
-                </div>
-              </div>
+              <h6 class="tour__subtitle subtitle">UNIVERSITY DESCRIPTION</h6>
+              <h2 class="tour__title title">Take a tour</h2>
             </div>
             <div class="tour__content">
-              <div class="tour__description">
-                <p class="tour__description-text">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque
-                </p>
-                <p class="tour__description-text">
-                  Laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                  inventore veritatis et quasi architecto beatae vitae dicta
-                  sunt explicabo.
-                </p>
-              </div>
+              <p class="tour__description">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque
+              </p>
+              <p class="tour__description-text">
+                Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </p>
               <ul class="tour__description-list">
                 <li class="tour__list-item">
-                  <p class="tour__list-item-text">
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                    amet, consectetur
-                  </p>
+                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                  amet, consectetur
                 </li>
                 <li class="tour__list-item">
-                  <p class="tour__list-item-text">
-                    Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                    consequatur?
-                  </p>
+                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  consequatur?
                 </li>
               </ul>
               <button type="button" class="btn__blue">Read More</button>
+              <div class="tour__peach-square"></div>
+              <div class="tour__gray-ellipse"></div>
             </div>
           </div>
-          <div class="tour__peach-square">
-            <!-- Здесь будет декоративный квадрат -->
-          </div>
-          <div class="tour__gray-ellipse"></div>
-          <!-- Здесь будет декоративный круг -->
         </section>
         <!-- Events -->
         <section class="events" id="events">
           <div class="events__container">
+            <h2 class="conferences__title title">Why choose us?</h2>
             <div class="events__conferences conferences">
-              <div class="conferences__title title">
-                <h2 class="title__text">Why choose us?</h2>
-                <div class="title__border">
-                  <img
-                    width="60"
-                    class="title__border-img"
-                    src="./images/blue-border.png"
-                    alt="border"
-                  />
-                </div>
-              </div>
-              <div class="conferences__list">
-                <div class="conferences__item event">
-                  <h3 class="event__subtitle">
-                    International Conference on Bussiness
-                  </h3>
-                  <ul class="event__description">
-                    <li class="event__item_day">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-calendar.svg"
-                          alt="Calendar icon"
-                        />
-                      </div>
-                      July 8, 2018
-                    </li>
-                    <li class="event__item_time">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-clock.svg"
-                          alt="Time icon"
-                        />
-                      </div>
-                      5:00pm - 7:00pm
-                    </li>
-                    <li class="event__item_place">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/grey-map-point.svg"
-                          alt="Place icon"
-                        />
-                      </div>
-                      United States
-                    </li>
-                  </ul>
-                </div>
-                <div class="conferences__item event">
-                  <h3 class="event__subtitle">
-                    International Conference on Bussiness
-                  </h3>
-                  <ul class="event__description">
-                    <li class="event__item_day">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-calendar.svg"
-                          alt="Calendar icon"
-                        />
-                      </div>
-                      July 8, 2018
-                    </li>
-                    <li class="event__item_time">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-clock.svg"
-                          alt="Time icon"
-                        />
-                      </div>
-                      5:00pm - 7:00pm
-                    </li>
-                    <li class="event__item_place">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/grey-map-point.svg"
-                          alt="Place icon"
-                        />
-                      </div>
-                      United States
-                    </li>
-                  </ul>
-                </div>
-                <div class="conferences__item event">
-                  <h3 class="event__subtitle">
-                    International Conference on Bussiness
-                  </h3>
-                  <ul class="event__description">
-                    <li class="event__item_day">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-calendar.svg"
-                          alt="Calendar icon"
-                        />
-                      </div>
-                      July 8, 2018
-                    </li>
-                    <li class="event__item_time">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-clock.svg"
-                          alt="Time icon"
-                        />
-                      </div>
-                      5:00pm - 7:00pm
-                    </li>
-                    <li class="event__item_place">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/grey-map-point.svg"
-                          alt="Place icon"
-                        />
-                      </div>
-                      United States
-                    </li>
-                  </ul>
-                </div>
-                <div class="conferences__item event">
-                  <h3 class="event__subtitle">
-                    International Conference on Bussiness
-                  </h3>
-                  <ul class="event__description">
-                    <li class="event__item_day">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-calendar.svg"
-                          alt="Calendar icon"
-                        />
-                      </div>
-                      July 8, 2018
-                    </li>
-                    <li class="event__item_time">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/gray-clock.svg"
-                          alt="Time icon"
-                        />
-                      </div>
-                      5:00pm - 7:00pm
-                    </li>
-                    <li class="event__item_place">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/grey-map-point.svg"
-                          alt="Place icon"
-                        />
-                      </div>
-                      United States
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="events__featured featured">
-              <p class="featured__big-title">
-                <span class="featured__big-title-content">FEATURED</span>
-              </p>
-              <div class="featured__duration">
-                <ul>
-                  <li class="featured__days">
-                    <span class="bold-number__blue">213$</span>Days
+              <div class="conferences__item event">
+                <h3 class="event__subtitle">
+                  International Conference on Bussiness
+                </h3>
+                <ul class="event__description">
+                  <li class="event__item_day">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-calendar"></use>
+                    </svg>
+                    July 8, 2018
                   </li>
-                  <li class="featured__hours">
-                    <span class="bold-number__yellow">23</span>Hours
+                  <li class="event__item_time">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-clock"></use>
+                    </svg>
+                    5:00pm - 7:00pm
                   </li>
-                  <li class="featured__min">
-                    <span class="bold-number__red">59</span>Min
+                  <li class="event__item_place">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-map-point"></use>
+                    </svg>
+                    United States
                   </li>
                 </ul>
               </div>
+              <div class="conferences__item event">
+                <h3 class="event__subtitle">
+                  International Conference on Bussiness
+                </h3>
+                <ul class="event__description">
+                  <li class="event__item_day">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-calendar"></use>
+                    </svg>
+                    July 8, 2018
+                  </li>
+                  <li class="event__item_time">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-clock"></use>
+                    </svg>
+                    5:00pm - 7:00pm
+                  </li>
+                  <li class="event__item_place">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-map-point"></use>
+                    </svg>
+                    United States
+                  </li>
+                </ul>
+              </div>
+              <div class="conferences__item event">
+                <h3 class="event__subtitle">
+                  International Conference on Bussiness
+                </h3>
+                <ul class="event__description">
+                  <li class="event__item_day">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-calendar"></use>
+                    </svg>
+                    July 8, 2018
+                  </li>
+                  <li class="event__item_time">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-clock"></use>
+                    </svg>
+                    5:00pm - 7:00pm
+                  </li>
+                  <li class="event__item_place">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-map-point"></use>
+                    </svg>
+                    United States
+                  </li>
+                </ul>
+              </div>
+              <div class="conferences__item event">
+                <h3 class="event__subtitle">
+                  International Conference on Bussiness
+                </h3>
+                <ul class="event__description">
+                  <li class="event__item_day">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-calendar"></use>
+                    </svg>
+                    July 8, 2018
+                  </li>
+                  <li class="event__item_time">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-clock"></use>
+                    </svg>
+                    5:00pm - 7:00pm
+                  </li>
+                  <li class="event__item_place">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-gray-map-point"></use>
+                    </svg>
+                    United States
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="events__featured featured">
+              <p class="featured__big-title">FEATURED</p>
+              <ul class="featured__duration">
+                <li class="featured__days">
+                  <span class="bold-number__blue">213$</span>Days
+                </li>
+                <li class="featured__hours">
+                  <span class="bold-number__yellow">23</span>Hours
+                </li>
+                <li class="featured__min">
+                  <span class="bold-number__red">59</span>Min
+                </li>
+              </ul>
               <div class="featured__card">
                 <img
                   class="featured__card-img-bg"
@@ -708,43 +485,28 @@
                   src="./images/tablet-design-featured.jpg"
                   alt="Tablet"
                 />
-                <div class="featured__content">
-                  <ul class="featured__list event__description">
-                    <li class="featured__item event__item_day">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/white-calendar.svg"
-                          alt="Calendar icon"
-                        />
-                      </div>
-                      July 8, 2018
-                    </li>
-                    <li class="featured__item event__item_time">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/white-clock.svg"
-                          alt="Time icon"
-                        />
-                      </div>
-                      5:00pm - 7:00pm
-                    </li>
-                    <li class="featured__item event__item_place">
-                      <div class="event__icon">
-                        <img
-                          class="event__icon-img"
-                          width="20"
-                          src="./images/white-map-point.svg"
-                          alt="Place icon"
-                        />
-                      </div>
-                      United States
-                    </li>
-                  </ul>
-                </div>
+                <ul class="featured__list event__description">
+                  <li class="featured__item event__item_day">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-white-calendar"></use>
+                    </svg>
+                    July 8, 2018
+                  </li>
+                  <li class="featured__item event__item_time">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use href="./images/sprite.svg#icon-white-clock"></use>
+                    </svg>
+                    5:00pm - 7:00pm
+                  </li>
+                  <li class="featured__item event__item_place">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use
+                        href="./images/sprite.svg#icon-white-map-point"
+                      ></use>
+                    </svg>
+                    United States
+                  </li>
+                </ul>
               </div>
             </div>
             <button type="button" class="btn__blue">Become a Sponsor</button>
@@ -753,73 +515,59 @@
         <!-- Study -->
         <section class="study" id="study">
           <div class="study__container">
-            <div class="study__title title">
-              <h2 class="title__text">Which one do you prefer?</h2>
-              <div class="title__border">
-                <img
-                  class="title__border-img"
-                  width="60"
-                  src="./images/blue-border.png"
-                  alt="border"
-                />
-              </div>
-            </div>
+            <h2 class="study__title title">Which one do you prefer?</h2>
             <p class="study__description">
               Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               veritatis et quasiarchitecto beatae vitae dicta sunt explicabo.
             </p>
             <div class="study__content">
               <button class="study__slide btn__slide" type="button">
-                <img
-                  class="btn__slide-img"
-                  width="6"
-                  src="./images/arrow-left.svg"
-                  alt="slide"
-                />
+                <svg class="btn__slide-img" width="10" height="14">
+                  <use href="./images/sprite.svg#icon-arrow-left"></use>
+                </svg>
               </button>
-              <div class="study__item">
-                <img
-                  class="study__item-img"
-                  width="197"
-                  src="./images/tablet-design-study.jpg"
-                  alt="Graphic Design"
-                />
-                <h3 class="study__item-text">Graphic Design</h3>
-              </div>
-              <div class="study__item">
-                <img
-                  class="study__item-img"
-                  width="197"
-                  src="./images/laptop-graphic-study.jpg"
-                  alt="Web Design"
-                />
-                <h3 class="study__item-text">Web Design</h3>
-              </div>
-              <div class="study__item">
-                <img
-                  class="study__item-img"
-                  width="197"
-                  src="./images/man-writing.jpg"
-                  alt="Marketing"
-                />
-                <h3 class="study__item-text">Marketing</h3>
-              </div>
-              <div class="study__item">
-                <img
-                  class="study__item-img"
-                  width="197"
-                  src="./images/men-make-a-list-study.jpg"
-                  alt="Education"
-                />
-                <h3 class="study__item-text">Education</h3>
-              </div>
+              <ul class="study__list">
+                <li class="study__item">
+                  <img
+                    class="study__item-img"
+                    width="197"
+                    src="./images/tablet-design-study.jpg"
+                    alt="Graphic Design"
+                  />
+                  <h3 class="study__item-text">Graphic Design</h3>
+                </li>
+                <li class="study__item">
+                  <img
+                    class="study__item-img"
+                    width="197"
+                    src="./images/laptop-graphic-study.jpg"
+                    alt="Web Design"
+                  />
+                  <h3 class="study__item-text">Web Design</h3>
+                </li>
+                <li class="study__item">
+                  <img
+                    class="study__item-img"
+                    width="197"
+                    src="./images/man-writing.jpg"
+                    alt="Marketing"
+                  />
+                  <h3 class="study__item-text">Marketing</h3>
+                </li>
+                <li class="study__item">
+                  <img
+                    class="study__item-img"
+                    width="197"
+                    src="./images/men-make-a-list-study.jpg"
+                    alt="Education"
+                  />
+                  <h3 class="study__item-text">Education</h3>
+                </li>
+              </ul>
               <button class="study__slide btn__slide" type="button">
-                <img
-                  class="btn__slide-img"
-                  width="6"
-                  src="./images/arrow-right.svg"
-                  alt="slide"
-                />
+                <svg class="btn__slide-img" width="10" height="14">
+                  <use href="./images/sprite.svg#icon-arrow-right"></use>
+                </svg>
               </button>
             </div>
           </div>
@@ -842,35 +590,18 @@
               />
             </div>
             <div class="customer__blue-square">
-              <div class="customer__card">
-                <img
-                  class="customer__card-img"
-                  width="344"
-                  src="./images/two-girls-stydying-customers.jpg"
-                  alt="Two girls studying"
-                />
-              </div>
+              <img
+                class="customer__card-img"
+                width="344"
+                src="./images/two-girls-stydying-customers.jpg"
+                alt="Two girls studying"
+              />
             </div>
             <div class="customer__content">
-              <div class="customer__title title">
-                <h2 class="title__text">Our great customers</h2>
-                <div class="title__border">
-                  <img
-                    class="title__border-img"
-                    width="60"
-                    src="./images/blue-border.png"
-                    alt="border"
-                  />
-                </div>
-              </div>
-              <div class="customer__qoutes">
-                <img
-                  class="customer__qoutes-img"
-                  width="39"
-                  src="./images/quotes.svg"
-                  alt="Quoutes"
-                />
-              </div>
+              <h2 class="customer__title title">Our great customers</h2>
+              <svg class="customer__qoutes-img" width="39" height="31">
+                <use href="./images/sprite.svg#icon-quotes"></use>
+              </svg>
               <div class="customer__paragraph">
                 <p class="customer__text">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -896,90 +627,64 @@
         <!-- Get started -->
         <section class="start" id="start">
           <div class="start__container">
-            <div class="start__background">
-              <img
-                class="start__background-img"
-                width="1440"
-                src="./images/tablet-design-get-started.jpg"
-                alt=""
-              />
-            </div>
+            <img
+              class="start__background-img"
+              width="1440"
+              src="./images/tablet-design-get-started.jpg"
+              alt=""
+            />
             <div class="start__content">
-              <div class="start__description">
-                <div class="start__subtitle">
-                  <h5 class="start__subtitle-text">
-                    IT'S FAST, FREE AND VERY EASY!
-                  </h5>
-                </div>
-                <div class="start__title">
-                  <h2 class="start__title-text">Ready to get started?</h2>
-                </div>
-
-                <div class="start__paragraph">
-                  <p class="start__paragraph-text">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque
-                  </p>
-                  <p class="start__paragraph-text">
-                    Laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                    inventore veritatis et quasi architecto beatae vitae dicta
-                    sunt explicabo.
-                  </p>
-                </div>
-                <div class="start__buttons buttons-block">
-                  <button class="btn__blue_apply" type="button">
-                    Apply Now
-                  </button>
-                  <button class="btn__blue_apply" type="button">
-                    Request Service
-                  </button>
-                </div>
+              <h5 class="start__subtitle">IT'S FAST, FREE AND VERY EASY!</h5>
+              <h2 class="start__title">Ready to get started?</h2>
+              <div class="start__paragraph">
+                <p class="start__paragraph-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque
+                </p>
+                <p class="start__paragraph-text">
+                  Laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                  inventore veritatis et quasi architecto beatae vitae dicta
+                  sunt explicabo.
+                </p>
+              </div>
+              <div class="start__buttons buttons-block">
+                <a href="start__apply-link">Apply Now</a>
+                <button class="btn__blue_apply" type="button">
+                  Request Service
+                </button>
               </div>
             </div>
             <div class="start__links">
               <div class="start__links-title">
-                <img
-                  class="start__links-title-img"
-                  width="24"
-                  src="./images/white-chain.svg"
-                  alt="Chain logo"
-                />
+                <svg class="start__links-title-img" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-white-chain"></use>
+                </svg>
                 <h2 class="start__links-title-text">Quick Link</h2>
               </div>
               <ul class="start__links-list">
                 <li class="start__item">
-                  <img
-                    class="start__item-img"
-                    width="24"
-                    src="./images/white-pen.svg"
-                    alt="Pen logo"
-                  /><a class="start__item-link" href="">Tution and Fees</a>
+                  <svg class="start__item-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-white-pen"></use>
+                  </svg>
+                  <a class="start__item-link" href="">Tution and Fees</a>
                 </li>
                 <li class="start__item">
-                  <img
-                    class="start__item-img"
-                    width="24"
-                    src="./images/white-briefcase.svg"
-                    alt="Briefcase logo"
-                  /><a class="start__item-link" href="">Review & Rating</a>
+                  <svg class="start__item-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-white-briefcase"></use>
+                  </svg>
+                  <a class="start__item-link" href="">Review & Rating</a>
                 </li>
                 <li class="start__item">
-                  <img
-                    class="start__item-img"
-                    width="24"
-                    src="./images/white-book-open.svg"
-                    alt="Book logo"
-                  /><a class="start__item-link" href=""
-                    >Universoty Facilities</a
-                  >
+                  <svg class="start__item-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-white-book-open"></use>
+                  </svg>
+                  <a class="start__item-link" href="">Universoty Facilities</a>
                 </li>
                 <li class="start__item">
-                  <img
-                    class="start__item-img"
-                    width="24"
-                    src="./images/white-comment.svg"
-                    alt="Comment logo"
-                  /><a class="start__item-link" href="">Community Q&A</a>
+                  <svg class="start__item-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-white-comment"></use>
+                  </svg>
+                  <a class="start__item-link" href="">Community Q&A</a>
                 </li>
               </ul>
             </div>
@@ -988,114 +693,66 @@
         <!-- Blog -->
         <section class="blog" id="blog">
           <div class="blog__container">
-            <div class="blog__title title">
-              <h2 class="title__text">Which one do you prefer?</h2>
-              <div class="title__border">
-                <img
-                  class="title__border-img"
-                  width="60"
-                  src="./images/blue-border.png"
-                  alt="border"
-                />
-              </div>
+            <h2 class="blog__title title">Latest Blog</h2>
+            <div class="blog__card">
+              <img
+                class="blog__illustration-img"
+                width="328"
+                src="./images/laptop-graphic-blog.jpg"
+                alt="Designer draw on laptop"
+              />
+              <h5 class="blog__vertical">DESIGN</h5>
+              <img
+                class="courses__avatar-img"
+                width="48"
+                src="./images/teacher-one.png"
+                alt="Our teacher"
+              />
+              <h3 class="blog__subtitle-text">
+                International Conference on Bussiness
+              </h3>
+              <a class="blog__read-link" href="">Read Now</a>
             </div>
             <div class="blog__card">
-              <div class="blog__illustration">
-                <img
-                  class="blog__illustration-img"
-                  width="328"
-                  src="./images/laptop-graphic-blog.jpg"
-                  alt="Designer draw on laptop"
-                />
-              </div>
-              <div class="blog__vertical">
-                <h5 class="blog__vertical-text">DESIGN</h5>
-              </div>
-              <div class="courses__avatar illustration__ellipse-portrait">
-                <img
-                  class="illustration__ellipse-portrait-img"
-                  width="48"
-                  src="./images/teacher-one.svg"
-                  alt="Our teacher"
-                />
-              </div>
-              <div class="blog__subtitle">
-                <h3 class="blog__subtitle-text">
-                  International Conference on Bussiness
-                </h3>
-              </div>
-              <div class="blog__read">
-                <h5 class="blog__read-text">
-                  <a class="blog__read-link" href="">Read Now</a>
-                </h5>
-              </div>
+              <img
+                class="blog__illustration-img"
+                width="328"
+                src="./images/men-make-a-list-blog.jpg"
+                alt="Designer draw on laptop"
+              />
+              <h5 class="blog__vertical-text">DESIGN</h5>
+              <img
+                class="courses__avatar-img"
+                width="48"
+                src="./images/teacher-two.png"
+                alt="Our teacher"
+              />
+              <h3 class="blog__subtitle-text">
+                International Conference on Bussiness
+              </h3>
+              <a class="blog__read-link" href="">Read Now</a>
             </div>
-            <div class="blog__card">
-              <div class="blog__illustration">
-                <img
-                  class="blog__illustration-img"
-                  width="328"
-                  src="./images/men-make-a-list-blog.jpg"
-                  alt="Designer draw on laptop"
-                />
-              </div>
-              <div class="blog__vertical">
-                <h5 class="blog__vertical-text">DESIGN</h5>
-              </div>
-              <div class="courses__avatar illustration__ellipse-portrait">
-                <img
-                  class="illustration__ellipse-portrait-img"
-                  width="48"
-                  src="./images/teacher-two.svg"
-                  alt="Our teacher"
-                />
-              </div>
-              <div class="blog__subtitle">
-                <h3 class="blog__subtitle-text">
-                  International Conference on Bussiness
-                </h3>
-              </div>
-              <div class="blog__read">
-                <h5 class="blog__read-text">
-                  <a class="blog__read-link" href="">Read Now</a>
-                </h5>
-              </div>
-            </div>
-            <div class="blog__points-bar">
-              <ul class="blog__points">
-                <li class="blog__point">1</li>
-                <li class="blog__point">2</li>
-                <li class="blog__point_active">3</li>
-                <li class="blog__point">4</li>
-                <li class="blog__point">5</li>
-              </ul>
-            </div>
-            <div class="blog__forms">
-              <div class="blog__form">
-                <input
-                  class="blog__form-name"
-                  placeholder="Name Surname"
-                  type="text"
-                />
-              </div>
-              <div class="blog__form">
-                <input
-                  class="blog__form-phone"
-                  placeholder="Phone"
-                  type="text"
-                />
-              </div>
-              <div class="blog__form">
-                <input
-                  class="blog__form-email"
-                  placeholder="Enter your email..."
-                  type="text"
-                />
-              </div>
-            </div>
-            <div class="blog__submit">
-              <button class="btn__submit" type="submit">Send</button>
-            </div>
+            <ul class="blog__points">
+              <li class="blog__point">1</li>
+              <li class="blog__point">2</li>
+              <li class="blog__point_active">3</li>
+              <li class="blog__point">4</li>
+              <li class="blog__point">5</li>
+            </ul>
+            <form class="blog__form">
+              <input
+                class="blog__form_name"
+                placeholder="Name Surname"
+                type="text"
+              />
+              <input class="blog__form_phone" placeholder="Phone" type="text" />
+              <input
+                class="blog__form_email"
+                placeholder="Enter your email..."
+                type="text"
+              />
+            </form>
+            <button class="btn__submit" type="submit">Send</button>
           </div>
         </section>
       </main>
@@ -1103,14 +760,9 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__references">
-            <div class="footer__logo">
-              <img
-                class="footer__logo-img"
-                width="53"
-                src="./images/logo.svg"
-                alt="Company logo"
-              />
-            </div>
+            <svg class="footer__logo-img" width="54" height="24">
+              <use href="./images/sprite.svg#icon-logo"></use>
+            </svg>
             <div class="footer__link-list">
               <h3 class="footer__subtitle">Company</h3>
               <ul class="footer__links">
@@ -1157,44 +809,30 @@
               <h3 class="footer__subtitle">Course</h3>
               <div class="footer__logos">
                 <a class="footer__link-fb" href="">
-                  <img
-                    class="footer__fb-img"
-                    width="24"
-                    src="./images/facebook.svg"
-                    alt="Link on our Facebook account"
-                  />
+                  <svg class="footer__fb-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
                 </a>
                 <a class="footer__link-inst" href="">
-                  <img
-                    class="footer__inst-img"
-                    width="24"
-                    src="./images/instagram.svg"
-                    alt="Link on our Instagram account"
-                  />
+                  <svg class="footer__inst-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-instagram"></use>
+                  </svg>
                 </a>
                 <a class="footer__link-tw" href="">
-                  <img
-                    class="footer__tw-img"
-                    width="24"
-                    src="./images/twitter.svg"
-                    alt="Link on our Twitter account"
-                  />
+                  <svg class="footer__tw-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
                 </a>
                 <a class="footer__link-yt" href="">
-                  <img
-                    class="footer__yt-img"
-                    width="24"
-                    src="./images/youtube.svg"
-                    alt="Link on our Youtube account"
-                  />
+                  <svg class="footer__yt-img" width="24" height="24">
+                    <use href="./images/sprite.svg#icon-youtube"></use>
+                  </svg>
                 </a>
               </div>
             </div>
           </div>
           <div class="footer__info">
-            <div class="footer__rights">
-              <h5 class="footer__rights-text">All rights Reserved</h5>
-            </div>
+            <h5 class="footer__rights-text">All rights Reserved</h5>
             <ul class="footer__other-data">
               <li class="footer__item">
                 <h5 class="footer__item-text">
