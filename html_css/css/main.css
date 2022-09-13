@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../assets/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Semi Bold"), local("Montserrat-SemiBold"), url("../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Medium"), local("Montserrat-Medium"), url("../assets/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 1.2225;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 1.385;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+h5 {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.334;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+p,
+ul,
+ol {
+  font-size: 14px;
+  line-height: 1.572;
+  list-style: none;
+}
+
+a {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.57;
+  color: inherit;
+}
+
+button, .btn {
+  font-weight: 700;
+}
+
+.bold-number {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.334;
+}
+.bold-number__blue {
+  color: #91a3ed;
+}
+.bold-number__yellow {
+  color: #f0c41b;
+}
+.bold-number__red {
+  color: #fe5f60;
+}
+
+.subtitle {
+  color: #1b63f0;
+  text-transform: uppercase;
+}
+
+.footer__subtitle {
+  font-weight: 700;
+}
+.footer__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.572;
+}
+.footer__rights-text {
+  font-weight: 600;
+  color: #5c5c5c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a {
+  cursor: default;
+  text-decoration: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-family: "Montserrat";
+  color: #5c5c5c;
+}
+
+input.form__input::placeholder {
+  color: #5c5c5c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.btn {
+  padding: 12px 24px;
+  font-size: 12px;
+  line-height: 1.584;
+  color: #fff;
+  background-color: #1b63f0;
+  border-radius: 22px;
+  border: none;
+}
+.btn__blue:hover {
+  background-color: #3d7fff;
+}
+.btn__blue:active {
+  background-color: #175ee9;
+}
+.btn__lightgreen {
+  background-color: #64be97;
+}
+.btn__green {
+  color: #000;
+  background-color: #97f5cd;
+}
+.btn__lightgreen:hover, .btn__green:hover {
+  background-color: #c0ffe4;
+}
+.btn__lightgreen:active, .btn__green:active {
+  background-color: #83ebbf;
+}
+.btn__request {
+  padding: 9px 21px;
+  background-color: rgba(28, 28, 28, 0);
+  border: 1px solid #fff;
+}
+.btn__request:hover {
+  background-color: rgba(255, 255, 255, 0.1490196078);
+}
+.btn__request:active {
+  padding: 8px 20px;
+  border: 2px solid #fff;
+}
+.btn__submit {
+  padding: 14px 44px;
+  width: 120px;
+  line-height: 1.334;
+  background-color: #64be97;
+}
+
+.blog__point-btn {
+  width: 40px;
+  height: 40px;
+  color: #5d74e4;
+  background-color: #fff;
+  border: none;
+  border-radius: 50%;
+}
+.blog__point-btn:hover {
+  color: #1b63f0;
+  box-shadow: 0px 5px 10px #e2edf8;
+}
+.blog__point-btn:active {
+  border: 1px solid #64be97;
+  box-shadow: none;
+}
+
+.slider__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0px 5px 10px #e2edf8;
+}
+.slider__btn:hover {
+  background-color: #64be97;
+  --color1: #fff;
+  stroke: var(--color1);
+}
+.slider__btn:active {
+  background-color: #55b089;
+  box-shadow: none;
+}
+
+.player {
+  padding: 9px 6px 7px 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #64be97;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0px 5px 10px rgba(75, 202, 103, 0.5607843137);
+}
+.player:hover {
+  padding: 11px 6px 9px 10px;
+  border: none;
+}
+.player:active {
+  background-color: #55b089;
+  box-shadow: none;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.logo__main:hover {
+  --color1: #000;
+  fill: --color1;
+}
+
+.title {
+  display: flex;
+}
+.title__text {
+  margin-right: 24px;
+}
+.title__border {
+  align-self: flex-end;
+  width: 60px;
+  height: 2px;
+  margin-bottom: 8px;
+  background-color: #1b63f0;
+}
+
+.background__dark-triangle-img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  min-width: 420px;
+}
+.background__light-triangle-img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
+  min-width: 420px;
+}
+
+.header__nav-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  z-index: 3;
+}
+.header__nav-list {
+  display: flex;
+  align-items: center;
+}
+.header__link {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.education__logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.courses__item {
+  position: relative;
+}
+.courses__subtitle-card {
+  color: #fff;
+}
+.courses__title-card {
+  font-weight: 500;
+  color: #fff;
+}
+.courses__text-content {
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  color: #fff;
+}
+.courses__description {
+  display: flex;
+  align-items: center;
+}
+.courses__reviews, .courses__old-price {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.334;
+  text-decoration: line-through;
+}
+
+.events .conferences {
+  background-color: #fbfcff;
+}
+.events .conferences__item {
+  color: #838383;
+}
+.events .featured {
+  background-color: #fff9f1;
+}
+.events .featured__card {
+  position: relative;
+  z-index: 1;
+}
+.events .featured__big-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.219;
+  letter-spacing: 24px;
+  color: #f6f2e9;
+}
+.events .featured__description {
+  position: absolute;
+  bottom: 0px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+  width: 280px;
+  height: 156px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.events .featured__item {
+  color: #bfbfbf;
+}
+.events .event__subtitle_featured {
+  color: #fff;
+}
+
+.study__item {
+  position: relative;
+  z-index: 1;
+}
+.study__item-text {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  color: #fff;
+}
+
+.start__container {
+  position: relative;
+  z-index: 1;
+  max-width: 1440px;
+}
+.start__content {
+  position: absolute;
+  top: 64px;
+  left: 208px;
+  z-index: 2;
+  min-width: 327px;
+  max-width: 415px;
+  max-height: 292px;
+}
+.start__subtitle {
+  color: #fff;
+}
+.start__title {
+  color: #64be97;
+}
+.start__paragraph {
+  color: #fff;
+}
+.start__apply-link {
+  color: #fff;
+}
+.start__links {
+  position: absolute;
+  z-index: 2;
+  top: 88px;
+  right: 208px;
+  min-width: 327px;
+  max-width: 415px;
+  max-height: 292px;
+}
+.start__links-title {
+  color: #fff;
+}
+.start__links-list {
+  color: #fff;
+}
+.start__item-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.57;
+}
+
+.blog__read-link {
+  color: #000;
+}
+.blog__vertical-text {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 1px;
+  line-height: 0.834;
+  color: #5d74e4;
+}
+.blog__points {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #5d74e4;
+}
+.blog .form {
+  display: flex;
+  flex-direction: column;
+}
+.blog .form__input {
+  margin-bottom: 16px;
+  padding-left: 12px;
+  width: 415px;
+  height: 44px;
+  background-color: #f3f6fc;
+  border-radius: 22px;
+  border: none;
+}

@@ -1,0 +1,281 @@
+@import "./utils/variables";
+@import "./base/typography";
+@import "./base/reset";
+@import "./components/buttons";
+
+// Global styles
+
+.wrapper {
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.logo {
+  &__main {
+    &:hover {
+      --color1: #000;
+      fill: --color1;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  &__text {
+    margin-right: 24px;
+  }
+  &__border {
+    align-self: flex-end;
+    width: 60px;
+    height: 2px;
+    margin-bottom: 8px;
+    background-color: $blue-link-btn;
+  }
+}
+
+.background {
+  &__dark-triangle-img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    min-width: 420px;
+  }
+  &__light-triangle-img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    min-width: 420px;
+  }
+}
+
+// Header
+
+.header {
+  &__nav-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    z-index: 3;
+  }
+  &__nav-list {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    margin-right: 10px;
+    color: #fff;
+  }
+}
+
+// Education section
+
+.education {
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+// Courses section
+
+.courses {
+  &__item {
+    position: relative;
+  }
+
+  &__subtitle-card {
+    color: #fff;
+  }
+
+  &__title-card {
+    font-weight: 500;
+    color: #fff;
+  }
+
+  &__text-content {
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    color: #fff;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+  }
+
+  &__reviews,
+  &__old-price {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.334;
+    text-decoration: line-through;
+  }
+}
+
+// Events section
+
+.events {
+  .conferences {
+    background-color: $conference-bg;
+    &__item {
+      color: $conference-text;
+    }
+  }
+
+  .featured {
+    background-color: $featured-bg;
+    &__card {
+      position: relative;
+      z-index: 1;
+    }
+    &__big-title {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1.219;
+      letter-spacing: 24px;
+      color: #f6f2e9;
+    }
+    &__description {
+      position: absolute;
+      bottom: 0px;
+      left: 24px;
+      right: 24px;
+      z-index: 2;
+      width: 280px;
+      height: 156px;
+      background-color: #000000cc;
+    }
+    &__item {
+      color: #bfbfbf;
+    }
+  }
+
+  .event {
+    &__subtitle {
+      &_featured {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Study section
+
+.study {
+  &__item {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item-text {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    color: #fff;
+  }
+}
+
+// Start section
+
+.start {
+  &__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+  }
+
+  &__content {
+    position: absolute;
+    top: 64px;
+    left: 208px;
+    z-index: 2;
+    min-width: 327px;
+    max-width: 415px;
+    max-height: 292px;
+  }
+
+  &__subtitle {
+    color: #fff;
+  }
+
+  &__title {
+    color: $green-link-btn;
+  }
+
+  &__paragraph {
+    color: #fff;
+  }
+
+  &__apply-link {
+    color: #fff;
+  }
+
+  &__links {
+    position: absolute;
+    z-index: 2;
+    top: 88px;
+    right: 208px;
+    min-width: 327px;
+    max-width: 415px;
+    max-height: 292px;
+  }
+
+  &__links-title {
+    color: #fff;
+  }
+
+  &__links-list {
+    color: #fff;
+  }
+
+  &__item-link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+  }
+}
+
+// Blog section
+
+.blog {
+  &__read-link {
+    color: #000;
+  }
+
+  &__vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 1px;
+    line-height: 0.834;
+    color: $blog-design;
+  }
+
+  &__points {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $blog-design;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    &__input {
+      margin-bottom: 16px;
+      padding-left: 12px;
+      width: 415px;
+      height: 44px;
+      background-color: #f3f6fc;
+      border-radius: 22px;
+      border: none;
+    }
+  }
+}

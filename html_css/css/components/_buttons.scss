@@ -1,0 +1,111 @@
+.btn {
+  padding: 12px 24px;
+  font-size: 12px;
+  line-height: 1.584;
+  color: #fff;
+  background-color: $blue-link-btn;
+  border-radius: 22px;
+  border: none;
+  &__blue {
+    &:hover {
+      background-color: #3d7fff;
+    }
+    &:active {
+      background-color: #175ee9;
+    }
+  }
+  &__lightgreen {
+    background-color: $green-link-btn;
+  }
+  &__green {
+    color: #000;
+    background-color: $get-started;
+  }
+  &__lightgreen,
+  &__green {
+    &:hover {
+      background-color: #c0ffe4;
+    }
+    &:active {
+      background-color: #83ebbf;
+    }
+  }
+  &__request {
+    padding: 9px 21px;
+    background-color: #1c1c1c00;
+    border: 1px solid #fff;
+    &:hover {
+      background-color: #ffffff26;
+    }
+    &:active {
+      padding: 8px 20px;
+      border: 2px solid #fff;
+    }
+  }
+  &__submit {
+    padding: 14px 44px;
+    width: 120px;
+    line-height: 1.334;
+    background-color: $green-link-btn;
+  }
+}
+
+.blog {
+  &__point-btn {
+    width: 40px;
+    height: 40px;
+    color: $blog-design;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    &:hover {
+      color: $blue-link-btn;
+      box-shadow: 0px 5px 10px #e2edf8;
+    }
+    &:active {
+      border: 1px solid $green-link-btn;
+      box-shadow: none;
+    }
+  }
+}
+
+.slider {
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 5px 10px #e2edf8;
+    &:hover {
+      background-color: $green-link-btn;
+      --color1: #fff;
+      stroke: var(--color1);
+    }
+    &:active {
+      background-color: #55b089;
+      box-shadow: none;
+    }
+  }
+}
+
+.player {
+  padding: 9px 6px 7px 10px;
+  width: 40px;
+  height: 40px;
+  background-color: $green-link-btn;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0px 5px 10px #4bca678f;
+  &:hover {
+    padding: 11px 6px 9px 10px;
+    border: none;
+  }
+  &:active {
+    background-color: #55b089;
+    box-shadow: none;
+  }
+}
