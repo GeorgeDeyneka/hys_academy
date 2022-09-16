@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #000;
+  color: $black;
 }
 
 h1 {
@@ -93,13 +93,13 @@ button, .btn {
   font-weight: 700;
   line-height: 1.334;
   &__blue {
-    color: #91a3ed;
+    color: $blue-text;
   }
   &__yellow {
-    color: #f0c41b;
+    color: $yellow-text;
   }
   &__red {
-    color: #fe5f60;
+    color: $red-text;
   }
 }
 
@@ -121,6 +121,6 @@ button, .btn {
 
   &__rights-text {
     font-weight: 600;
-    color: $basic-text;
+    color: $gray-basic-text;
   }
 }

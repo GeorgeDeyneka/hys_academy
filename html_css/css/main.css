@@ -133,12 +133,15 @@ dd {
   margin: 0;
 }
 
+ul {
+  padding-left: 0px;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
 
 a {
-  cursor: default;
   text-decoration: none;
 }
 a:not([class]) {
@@ -209,10 +212,10 @@ input.form__input::placeholder {
   color: #000;
   background-color: #97f5cd;
 }
-.btn__lightgreen:hover, .btn__green:hover {
+.btn__lightgreen:hover, .btn__green:hover, .btn__submit:hover {
   background-color: #c0ffe4;
 }
-.btn__lightgreen:active, .btn__green:active {
+.btn__lightgreen:active, .btn__green:active, .btn__submit:active {
   background-color: #83ebbf;
 }
 .btn__request {
@@ -229,9 +232,16 @@ input.form__input::placeholder {
 }
 .btn__submit {
   padding: 14px 44px;
-  width: 120px;
   line-height: 1.334;
   background-color: #64be97;
+}
+
+a.btn {
+  display: inline-block;
+}
+
+.buttons-block :first-child {
+  margin-right: 24px;
 }
 
 .blog__point-btn {
@@ -264,7 +274,7 @@ input.form__input::placeholder {
 }
 .slider__btn:hover {
   background-color: #64be97;
-  --color1: #fff;
+  --color1: $white;
   stroke: var(--color1);
 }
 .slider__btn:active {
@@ -290,134 +300,259 @@ input.form__input::placeholder {
   box-shadow: none;
 }
 
-.wrapper {
-  position: relative;
+@media (max-width: 1440px) {
+  .container {
+    width: 1024px;
+  }
+  .background__dark {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+  }
+  .background__light {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+  }
+  .header {
+    position: relative;
+  }
+  .header__nav-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    z-index: 3;
+  }
+  .header__nav-list {
+    display: flex;
+    align-items: center;
+  }
+  .header__link {
+    margin-right: 10px;
+    color: #fff;
+  }
+  .events .featured__big-title {
+    max-width: 509px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.219;
+    letter-spacing: 24px;
+    color: #f6f2e9;
+  }
 }
-
-.container {
-  margin: 0 auto;
-  max-width: 1024px;
+@media (max-width: 768px) {
+  .container {
+    width: 568px;
+  }
 }
-
 .logo__main:hover {
-  --color1: #000;
+  --color1: $black;
   fill: --color1;
 }
 
 .title {
   display: flex;
 }
-.title__text {
-  margin-right: 24px;
-}
-.title__border {
-  align-self: flex-end;
+.title ::after {
+  content: "";
+  display: inline-block;
   width: 60px;
   height: 2px;
-  margin-bottom: 8px;
   background-color: #1b63f0;
+  margin-left: 24px;
 }
 
-.background__dark-triangle-img {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 1;
-  min-width: 420px;
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+  .background {
+    position: absolute;
+    right: 0;
+    width: 95%;
+    height: 314px;
+    z-index: -1;
+  }
+  .background__dark {
+    width: 100%;
+  }
+  .header__icons-img {
+    background-image: url(../assets/images/union.png);
+  }
+  .header__nav-list {
+    display: none;
+  }
+  .header__nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .education__content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .education__illustraition-img {
+    z-index: 3;
+    margin-top: 80px;
+    padding: 0px 3.5px 24px 3.5px;
+  }
+  .education__title {
+    padding-bottom: 32px;
+  }
+  .education__description {
+    padding-bottom: 40px;
+  }
+  .education__buttons {
+    padding-bottom: 40px;
+  }
+  .education__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+  .about__title {
+    padding-bottom: 56px;
+  }
+  .about__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about__subtitle {
+    padding: 19px 0px 6px 0px;
+  }
+  .about__description_first, .about__description_third {
+    padding-bottom: 20px;
+  }
+  .about__description_second {
+    padding-bottom: 40px;
+  }
+  .about__description_fourth {
+    padding-bottom: 80px;
+  }
+  .courses__header {
+    text-align: center;
+  }
+  .courses__item {
+    position: relative;
+  }
+  .courses__subtitle-card {
+    color: #fff;
+  }
+  .courses__title-card {
+    font-weight: 500;
+    color: #fff;
+  }
+  .courses__text-content {
+    position: absolute;
+    bottom: 0;
+    z-index: 20;
+    color: #fff;
+  }
+  .courses__description {
+    display: flex;
+    align-items: center;
+  }
+  .courses__reviews, .courses__old-price {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.334;
+    text-decoration: line-through;
+  }
+  .tour {
+    background-color: #f8fbff;
+    padding-bottom: 36px;
+    margin-bottom: 44px;
+  }
+  .tour__title {
+    padding-bottom: 24px;
+  }
+  .tour__description-list {
+    margin: 0;
+    padding: 12px 0px 24px 28px;
+    position: relative;
+  }
+  .tour__list-item::before {
+    content: "";
+    position: absolute;
+    margin-top: 8px;
+    left: 8px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #fde7e6;
+  }
+  .tour__list-item :not(:last-child) {
+    padding-bottom: 12px;
+  }
+  .events {
+    background-color: #fbfcff;
+  }
+  .events__title {
+    padding-top: 40px;
+  }
+  .events .conferences__item {
+    color: #838383;
+    padding: 40px 0px 8px 0px;
+    border-bottom: 1px solid rgba(92, 92, 92, 0.1019607843);
+  }
+  .events .conferences__item_first {
+    padding-top: 32px;
+  }
+  .featured {
+    background-color: #fff9f1;
+  }
+  .featured__card {
+    position: relative;
+    z-index: 1;
+  }
+  .featured__description {
+    position: absolute;
+    bottom: 0px;
+    left: 24px;
+    right: 24px;
+    z-index: 2;
+    width: 280px;
+    height: 156px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .event__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 8px;
+    margin: 0px;
+    padding: 16px 0px;
+  }
+  .event__list_featured {
+    justify-content: center;
+  }
+  .event__item {
+    display: flex;
+    align-items: center;
+  }
+  .event__item_featured {
+    color: #bfbfbf;
+  }
+  .event__icon-img {
+    margin-right: 8px;
+  }
+  .event__subtitle_featured {
+    color: #fff;
+  }
 }
-.background__light-triangle-img {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 2;
-  min-width: 420px;
-}
-
-.header__nav-wrapper {
-  position: absolute;
-  top: 10px;
-  right: 50px;
-  z-index: 3;
-}
-.header__nav-list {
-  display: flex;
-  align-items: center;
-}
-.header__link {
-  margin-right: 10px;
-  color: #fff;
-}
-
-.education__logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.courses__item {
-  position: relative;
-}
-.courses__subtitle-card {
-  color: #fff;
-}
-.courses__title-card {
-  font-weight: 500;
-  color: #fff;
-}
-.courses__text-content {
-  position: absolute;
-  bottom: 0;
-  z-index: 20;
-  color: #fff;
-}
-.courses__description {
-  display: flex;
-  align-items: center;
-}
-.courses__reviews, .courses__old-price {
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.334;
-  text-decoration: line-through;
-}
-
-.events .conferences {
-  background-color: #fbfcff;
-}
-.events .conferences__item {
-  color: #838383;
-}
-.events .featured {
-  background-color: #fff9f1;
-}
-.events .featured__card {
-  position: relative;
-  z-index: 1;
-}
-.events .featured__big-title {
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 1.219;
-  letter-spacing: 24px;
-  color: #f6f2e9;
-}
-.events .featured__description {
-  position: absolute;
-  bottom: 0px;
-  left: 24px;
-  right: 24px;
-  z-index: 2;
-  width: 280px;
-  height: 156px;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.events .featured__item {
-  color: #bfbfbf;
-}
-.events .event__subtitle_featured {
-  color: #fff;
-}
-
 .study__item {
   position: relative;
   z-index: 1;
@@ -433,9 +568,10 @@ input.form__input::placeholder {
   position: relative;
   z-index: 1;
   max-width: 1440px;
+  width: 100%;
+  height: auto;
 }
 .start__content {
-  position: absolute;
   top: 64px;
   left: 208px;
   z-index: 2;
@@ -456,7 +592,6 @@ input.form__input::placeholder {
   color: #fff;
 }
 .start__links {
-  position: absolute;
   z-index: 2;
   top: 88px;
   right: 208px;
@@ -499,7 +634,7 @@ input.form__input::placeholder {
 .blog .form__input {
   margin-bottom: 16px;
   padding-left: 12px;
-  width: 415px;
+  max-width: 415px;
   height: 44px;
   background-color: #f3f6fc;
   border-radius: 22px;

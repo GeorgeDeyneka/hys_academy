@@ -19,13 +19,16 @@ dd {
   margin: 0;
 }
 
+ul {
+  padding-left: 0px;
+}
+
 html:focus-within {
   scroll-behavior: smooth;
 }
 
 
 a {
-  cursor: default;
   text-decoration: none;
   &:not([class]) {
     text-decoration-skip-ink: auto;
@@ -54,11 +57,11 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   font-family: "Montserrat";
-  color: $basic-text;
+  color: $gray-basic-text;
 }
 
 input.form__input::placeholder {
-  color: $basic-text;
+  color: $gray-basic-text;
 }
 
 @media (prefers-reduced-motion: reduce) {
