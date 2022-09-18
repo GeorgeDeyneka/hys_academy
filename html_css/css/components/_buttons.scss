@@ -1,0 +1,121 @@
+.btn {
+  padding: 12px 24px;
+  font-size: 12px;
+  line-height: 1.584;
+  color: $white;
+  background-color: $blue-link-btn;
+  border-radius: 22px;
+  border: none;
+  &__blue {
+    &:hover {
+      background-color: $blue-link-btn-hover;
+    }
+    &:active {
+      background-color: $blue-link-btn-pressed;
+    }
+  }
+  &__lightgreen {
+    background-color: $green-link-btn;
+  }
+  &__green {
+    color: $black;
+    background-color: $lightgreen-btn;
+  }
+  &__lightgreen,
+  &__green, &__submit {
+    &:hover {
+      background-color: $lightgreen-btn-hover;
+    }
+    &:active {
+      background-color: $lightgreen-btn-pressed;
+    }
+  }
+  &__request {
+    padding: 9px 21px;
+    background-color: $gray-request-btn;
+    border: 1px solid $white;
+    &:hover {
+      background-color: $white-request-btn-hover;
+    }
+    &:active {
+      padding: 8px 20px;
+      border: 2px solid $white;
+    }
+  }
+  &__submit {
+    padding: 14px 44px;
+    // max-width: 120px;
+    line-height: 1.334;
+    background-color: $green-link-btn;
+  }
+}
+
+a.btn {
+  display: inline-block;
+}
+
+.buttons-block {
+  :first-child {
+    margin-right: 24px;
+  }
+}
+
+.blog {
+  &__point-btn {
+    width: 40px;
+    height: 40px;
+    color: $blue-blog-text;
+    background-color: $white;
+    border: none;
+    border-radius: 50%;
+    &:hover {
+      color: $blue-link-btn;
+      box-shadow: 0px 5px 10px $lightblue-slider-shadow;
+    }
+    &:active {
+      border: 1px solid $green-link-btn;
+      box-shadow: none;
+    }
+  }
+}
+
+.slider {
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0px 5px 10px $lightblue-slider-shadow;
+    &:hover {
+      background-color: $green-link-btn;
+      --color1: $white;
+      stroke: var(--color1);
+    }
+    &:active {
+      background-color: $green-slider-bg;
+      box-shadow: none;
+    }
+  }
+}
+
+.player {
+  padding: 9px 6px 7px 10px;
+  width: 40px;
+  height: 40px;
+  background-color: $green-link-btn;
+  border-radius: 50%;
+  border: 2px solid $white;
+  box-shadow: 0px 5px 10px $green-player-shadow;
+  &:hover {
+    padding: 11px 6px 9px 10px;
+    border: none;
+  }
+  &:active {
+    background-color: $green-slider-bg;
+    box-shadow: none;
+  }
+}

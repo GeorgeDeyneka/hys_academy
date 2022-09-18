@@ -1,0 +1,443 @@
+@import "./utils/variables";
+@import "./base/typography";
+@import "./base/reset";
+@import "./components/buttons";
+
+// Global styles
+
+// Media for PC and basic styles
+
+@media (max-width: 1440px) {
+  .container {
+    width: 1024px;
+  }
+  .background {
+    &__dark {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 1;
+    }
+    &__light {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      z-index: 2;
+    }
+  }
+  .header {
+    position: relative;
+    &__nav-wrapper {
+      position: absolute;
+      top: 10px;
+      right: 50px;
+      z-index: 3;
+    }
+    &__nav-list {
+      display: flex;
+      align-items: center;
+    }
+    &__link {
+      margin-right: 10px;
+      color: $white;
+    }
+  }
+  .events {
+    .featured {
+      &__big-title {
+        max-width: 509px;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.219;
+        letter-spacing: 24px;
+        color: $lightorange-featured-title;
+      }
+    }
+  }
+}
+
+// Media for tablet
+
+@media (max-width: 768px) {
+  .container {
+    width: 568px;
+  }
+}
+
+// Media for mobile phone
+
+.logo {
+  &__main {
+    &:hover {
+      --color1: $black;
+      fill: --color1;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  ::after {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background-color: $blue-link-btn;
+    margin-left: 24px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+
+  .background {
+    position: absolute;
+    right: 0;
+    width: 95%;
+    height: 314px;
+    z-index: -1;
+    &__dark {
+      width: 100%;
+    }
+  }
+
+  // Header
+
+  .header {
+    &__icons-img {
+      background-image: url(../assets/images/union.png);
+    }
+    &__nav-list {
+      display: none;
+    }
+    &__nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  // Education section
+
+  .education {
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__illustraition-img {
+      z-index: 3;
+      margin-top: 80px;
+      padding: 0px 3.5px 24px 3.5px;
+    }
+    &__title {
+      padding-bottom: 32px;
+    }
+    &__description {
+      padding-bottom: 40px;
+    }
+    &__buttons {
+      padding-bottom: 40px;
+    }
+    &__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding-bottom: 80px;
+    }
+  }
+
+  // About section
+
+  .about {
+    &__title {
+      padding-bottom: 56px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__subtitle {
+      padding: 19px 0px 6px 0px;
+    }
+    &__description {
+      &_first,
+      &_third {
+        padding-bottom: 20px;
+      }
+      &_second {
+        padding-bottom: 40px;
+      }
+      &_fourth {
+        padding-bottom: 80px;
+      }
+    }
+  }
+
+  // Courses
+
+  .courses {
+    &__header {
+      text-align: center;
+    }
+
+    &__item {
+      position: relative;
+    }
+
+    &__subtitle-card {
+      color: $white;
+    }
+
+    &__title-card {
+      font-weight: 500;
+      color: $white;
+    }
+
+    &__text-content {
+      position: absolute;
+      bottom: 0;
+      z-index: 20;
+      color: $white;
+    }
+
+    &__description {
+      display: flex;
+      align-items: center;
+    }
+
+    &__reviews,
+    &__old-price {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.334;
+      text-decoration: line-through;
+    }
+  }
+
+  // Tour section
+
+  .tour {
+    background-color: $lightblue-tour-bg;
+    padding-bottom: 36px;
+    margin-bottom: 44px;
+    &__title {
+      padding-bottom: 24px;
+    }
+    &__description-list {
+      margin: 0;
+      padding: 12px 0px 24px 28px;
+      position: relative;
+    }
+    &__list-item {
+      &::before {
+        content: "";
+        position: absolute;
+        margin-top: 8px;
+        left: 8px;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: $lightorange-decor-elem;
+      }
+      :not(:last-child) {
+        padding-bottom: 12px;
+      }
+    }
+  }
+
+  // Events styles
+
+  .events {
+    background-color: $lightblue-conference-bg;
+    &__title {
+      padding-top: 40px;
+    }
+    .conferences {
+      &__item {
+        color: $gray-conference-text;
+        padding: 40px 0px 8px 0px;
+        border-bottom: 1px solid $lightgray-border;
+        &_first {
+          padding-top: 32px;
+        }
+      }
+    }
+  }
+
+  // Common styles (without @media)
+
+  .featured {
+    background-color: $lightorange-featured-bg;
+    &__card {
+      position: relative;
+      z-index: 1;
+    }
+
+    &__description {
+      position: absolute;
+      bottom: 0px;
+      left: 24px;
+      right: 24px;
+      z-index: 2;
+      width: 280px;
+      height: 156px;
+      background-color: $black-featured-card;
+    }
+  }
+
+  .event {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 24px;
+      row-gap: 8px;
+      margin: 0px;
+      padding: 16px 0px;
+      &_featured {
+        justify-content: center;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      &_featured {
+        color: $white-featured-text;
+      }
+    }
+    &__icon-img {
+      margin-right: 8px;
+    }
+    &__subtitle {
+      &_featured {
+        color: $white;
+      }
+    }
+  }
+}
+
+// Study section, basic styles (not started)
+
+.study {
+  &__item {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__item-text {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    color: $white;
+  }
+}
+
+// Start section, basic styles (not started)
+
+.start {
+  &__container {
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__content {
+    // position: absolute;
+    top: 64px;
+    left: 208px;
+    z-index: 2;
+    min-width: 327px;
+    max-width: 415px;
+    max-height: 292px;
+  }
+
+  &__subtitle {
+    color: $white;
+  }
+
+  &__title {
+    color: $green-link-btn;
+  }
+
+  &__paragraph {
+    color: $white;
+  }
+
+  &__apply-link {
+    color: $white;
+  }
+
+  &__links {
+    // position: absolute;
+    z-index: 2;
+    top: 88px;
+    right: 208px;
+    min-width: 327px;
+    max-width: 415px;
+    max-height: 292px;
+  }
+
+  &__links-title {
+    color: $white;
+  }
+
+  &__links-list {
+    color: $white;
+  }
+
+  &__item-link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+  }
+}
+
+// Blog section, basic styles (not started)
+
+.blog {
+  &__read-link {
+    color: $black;
+  }
+
+  &__vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 1px;
+    line-height: 0.834;
+    color: $blue-blog-text;
+  }
+
+  &__points {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $blue-blog-text;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    &__input {
+      margin-bottom: 16px;
+      padding-left: 12px;
+      max-width: 415px;
+      height: 44px;
+      background-color: $lightblue-input-bg;
+      border-radius: 22px;
+      border: none;
+    }
+  }
+}
