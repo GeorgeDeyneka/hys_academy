@@ -1,52 +1,75 @@
 .btn {
   padding: 12px 24px;
   font-size: 12px;
-  line-height: 1.584;
-  color: #fff;
+  line-height: 1.334;
+  color: $white;
   background-color: $blue-link-btn;
   border-radius: 22px;
   border: none;
   &__blue {
     &:hover {
-      background-color: #3d7fff;
+      background-color: $blue-link-btn-hover;
     }
     &:active {
-      background-color: #175ee9;
+      background-color: $blue-link-btn-pressed;
     }
   }
   &__lightgreen {
     background-color: $green-link-btn;
   }
   &__green {
-    color: #000;
-    background-color: $get-started;
+    color: $black;
+    background-color: $lightgreen-btn;
   }
   &__lightgreen,
   &__green {
     &:hover {
-      background-color: #c0ffe4;
+      background-color: $lightgreen-btn-hover;
     }
     &:active {
-      background-color: #83ebbf;
+      background-color: $lightgreen-btn-pressed;
     }
   }
   &__request {
-    padding: 9px 21px;
-    background-color: #1c1c1c00;
-    border: 1px solid #fff;
+    padding: 11px 21px;
+    background-color: $gray-request-btn;
+    border: 1px solid $white;
     &:hover {
-      background-color: #ffffff26;
+      background-color: $white-request-btn-hover;
     }
     &:active {
       padding: 8px 20px;
-      border: 2px solid #fff;
+      border: 2px solid $white;
     }
   }
   &__submit {
     padding: 14px 44px;
-    width: 120px;
+    max-width: 415px;
     line-height: 1.334;
     background-color: $green-link-btn;
+    box-shadow: 0px 5px 10px $green-player-shadow;
+    &:hover {
+      transition: background-color 200ms ease-in;
+      background-color: $lightgreen-btn;
+    }
+    &:active {
+      border-color: $green-link-btn;
+      color: $green-link-btn;
+      background-color: $white;
+      -webkit-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+      box-shadow: 0 0 10px 0 $green-link-btn inset, 0 0 10px 4px $green-link-btn;
+    }
+  }
+}
+
+a.btn {
+  display: inline-block;
+}
+
+.buttons-block {
+  :first-child {
+    margin-right: 24px;
   }
 }
 
@@ -54,13 +77,13 @@
   &__point-btn {
     width: 40px;
     height: 40px;
-    color: $blog-design;
-    background-color: #fff;
+    color: $blue-blog-text;
+    background-color: $white;
     border: none;
     border-radius: 50%;
     &:hover {
       color: $blue-link-btn;
-      box-shadow: 0px 5px 10px #e2edf8;
+      box-shadow: 0px 5px 10px $lightblue-slider-shadow;
     }
     &:active {
       border: 1px solid $green-link-btn;
@@ -76,17 +99,17 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #fff;
-    border-radius: 50%;
+    background-color: $white;
+    border-radius: 20px;
     border: none;
-    box-shadow: 0px 5px 10px #e2edf8;
+    box-shadow: 0px 5px 10px $lightblue-slider-shadow;
     &:hover {
       background-color: $green-link-btn;
-      --color1: #fff;
+      --color1: $white;
       stroke: var(--color1);
     }
     &:active {
-      background-color: #55b089;
+      background-color: $green-slider-bg;
       box-shadow: none;
     }
   }
@@ -98,14 +121,14 @@
   height: 40px;
   background-color: $green-link-btn;
   border-radius: 50%;
-  border: 2px solid #fff;
-  box-shadow: 0px 5px 10px #4bca678f;
+  border: 2px solid $white;
+  box-shadow: 0px 5px 10px $green-player-shadow;
   &:hover {
     padding: 11px 6px 9px 10px;
     border: none;
   }
   &:active {
-    background-color: #55b089;
+    background-color: $green-slider-bg;
     box-shadow: none;
   }
 }
