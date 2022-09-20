@@ -1,0 +1,17 @@
+.header {
+  &__icons-img {
+    background-image: url(../assets/images/union.png);
+  }
+  &__nav-list {
+    display: none;
+  }
+  &__nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}

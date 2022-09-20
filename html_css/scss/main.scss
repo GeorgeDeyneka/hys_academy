@@ -2,6 +2,8 @@
 @import "./base/typography";
 @import "./base/reset";
 @import "./components/buttons";
+@import "./layout/header";
+@import "./layout/footer";
 
 // Global styles
 
@@ -37,9 +39,10 @@
     }
     &__link {
       margin-right: 10px;
-      color: $white;
+      color: var(--white);
     }
   }
+
   .events {
     .featured {
       &__big-title {
@@ -48,7 +51,7 @@
         font-weight: 700;
         line-height: 1.219;
         letter-spacing: 24px;
-        color: $lightorange-featured-title;
+        color: var(--lightorange-featured-title);
       }
     }
   }
@@ -67,7 +70,7 @@
   &__main {
     transition: 1500ms;
     &:hover {
-      --color1: $black;
+      --color1: var(--black);
       fill: --color1;
     }
   }
@@ -80,7 +83,7 @@
     display: inline-block;
     width: 60px;
     height: 2px;
-    background-color: $blue-link-btn;
+    background-color: var(--blue-link-btn);
     margin-left: 24px;
   }
 }
@@ -99,26 +102,6 @@
   z-index: -1;
   &__dark {
     width: 100%;
-  }
-}
-
-// Header
-
-.header {
-  &__icons-img {
-    background-image: url(../assets/images/union.png);
-  }
-  &__nav-list {
-    display: none;
-  }
-  &__nav-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 24px 0px;
-    top: 0;
-    left: 0;
-    right: 0;
   }
 }
 
@@ -187,6 +170,7 @@
   }
 }
 
+
 // Courses
 
 .courses {
@@ -237,22 +221,22 @@
     right: 0px;
     bottom: 0;
     z-index: 20;
-    color: $white;
+    color: var(--white);
   }
 
   &__subtitle-card {
     padding: 0px 16px 8px 16px;
-    color: $white;
+    color: var(--white);
   }
 
   &__title-card {
     font-weight: 500;
-    color: $white;
+    color: var(--white);
     padding: 0px 16px 16px 16px;
   }
 
   &__description {
-    border-top: 1px solid $white-border;
+    border-top: 1px solid var(--white-border);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -287,7 +271,7 @@
 
 .tour {
   &__container {
-    background-color: $lightblue-tour-bg;
+    background-color: var(--lightblue-tour-bg);
     padding-bottom: 36px;
     margin-bottom: 44px;
   }
@@ -319,7 +303,7 @@
       width: 8px;
       height: 8px;
       border-radius: 4px;
-      background-color: $lightorange-decor-elem;
+      background-color: var(--lightorange-decor-elem);
     }
     :not(:last-child) {
       padding-bottom: 12px;
@@ -330,16 +314,16 @@
 // Events styles
 
 .events {
-  background-color: $lightblue-conference-bg;
+  background-color: var(--lightblue-conference-bg);
   &__title {
     padding-top: 40px;
   }
   .conferences {
     padding-bottom: 40px;
     &__item {
-      color: $gray-conference-text;
+      color: var(--gray-conference-text);
       padding: 40px 0px 8px 0px;
-      border-bottom: 1px solid $lightgray-border;
+      border-bottom: 1px solid var(--lightgray-border);
       &_first {
         padding-top: 32px;
       }
@@ -360,7 +344,7 @@
     display: flex;
     align-items: center;
     &_featured {
-      color: $white-featured-text;
+      color: var(--white-featured-text);
     }
   }
   &__icon-img {
@@ -368,13 +352,13 @@
   }
   &__subtitle {
     &_featured {
-      color: $white;
+      color: var(--white);
     }
   }
 }
 
 .featured {
-  background-color: $lightorange-featured-bg;
+  background-color: var(--lightorange-featured-bg);
   margin: 0px -24px;
   padding: 40px 24px 60px 24px;
   position: relative;
@@ -385,7 +369,7 @@
     font-weight: 700;
     line-height: 1.22;
     letter-spacing: 0.4em;
-    color: $lightorange-featured-title;
+    color: var(--lightorange-featured-title);
     padding-bottom: 41px;
   }
 
@@ -429,7 +413,7 @@
     z-index: 2;
     max-width: 280px;
     height: 156px;
-    background-color: $black-featured-card;
+    background-color: var(--black-featured-card);
   }
 
   &__list {
@@ -462,16 +446,16 @@
   &__list {
     margin: 0px;
     :nth-child(1) {
-      background-color: $blue-study-bg;
+      background-color: var(--blue-study-bg);
     }
     :nth-last-child(3) {
-      background-color: $yellow-study-bg;
+      background-color: var(--yellow-study-bg);
     }
     :nth-child(3) {
-      background-color: $purple-study-bg;
+      background-color: var(--purple-study-bg);
     }
     :nth-child(4) {
-      background-color: $red-study-bg;
+      background-color: var(--red-study-bg);
     }
   }
 
@@ -494,7 +478,7 @@
   &__item-text {
     position: absolute;
     z-index: 2;
-    color: $white;
+    color: var(--white);
   }
 }
 
@@ -523,7 +507,7 @@
     width: 273px;
     height: 273px;
     position: relative;
-    background-color: $blue-customers-card;
+    background-color: var(--blue-customers-card);
     border-radius: 24px;
     margin-right: 24px;
   }
@@ -558,10 +542,10 @@
   &__point {
     width: 10px;
     height: 10px;
-    background-color: $blue-point;
+    background-color: var(--blue-point);
     border-radius: 50%;
     &_active {
-      background-color: $blue-link-btn;
+      background-color: var(--blue-link-btn);
     }
   }
 }
@@ -576,9 +560,9 @@
   }
 
   &__container {
-    background-color: $purple-start-bg;
+    background-color: var(--purple-start-bg);
     opacity: 95%;
-    color: $white;
+    color: var(--white);
     z-index: 5;
   }
 
@@ -588,11 +572,11 @@
 
   &__subtitle {
     padding-bottom: 8px 0px;
-    color: $white;
+    color: var(--white);
   }
 
   &__title {
-    color: $green-link-btn;
+    color: var(--green-link-btn);
   }
 
   &__paragraph {
@@ -610,7 +594,7 @@
   }
 
   &__links-title-text {
-    color: $white;
+    color: var(--white);
     padding-left: 8px;
   }
 
@@ -621,7 +605,7 @@
   &__item {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid $white-border;
+    border-bottom: 1px solid var(--white-border);
     padding: 12px 0px;
   }
 
@@ -648,7 +632,7 @@
 
   &__card {
     position: relative;
-    background-color: $lightgreen-blog-bg;
+    background-color: var(--lightgreen-blog-bg);
     max-width: 415px;
     border-radius: 16px 16px 0px 16px;
   }
@@ -667,7 +651,7 @@
     text-orientation: upright;
     letter-spacing: 1px;
     line-height: 0.834;
-    color: $blue-blog-text;
+    color: var(--blue-blog-text);
     padding: 18px 27.5px;
   }
 
@@ -681,7 +665,7 @@
     display: inline-block;
     padding: 16px 164px 24px 68px;
     line-height: 1.334;
-    color: $black;
+    color: var(--black);
   }
 
   &__points {
@@ -693,17 +677,17 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
-    color: $blue-blog-text;
+    color: var(--blue-blog-text);
   }
   &__point {
     border-radius: 50%;
     &:hover {
-      color: $blue-link-btn;
-      box-shadow: 0px 5px 20px $lightblue-slider-shadow;
+      color: var(--blue-link-btn);
+      box-shadow: 0px 5px 20px var(--lightblue-slider-shadow);
     }
     &:active {
-      color: $blue-link-btn;
-      border: 1px solid $green-link-btn;
+      color: var(--blue-link-btn);
+      border: 1px solid var(--green-link-btn);
       box-shadow: none;
     }
   }
@@ -717,74 +701,13 @@
       bottom: 32px;
       max-width: 415px;
       height: 44px;
-      background-color: $lightblue-input-bg;
+      background-color: var(--lightblue-input-bg);
       border-radius: 22px;
       border: none;
-      box-shadow: 0px 5px 5px $white-featured-text;
+      box-shadow: 0px 5px 5px var(--white-featured-text);
     }
     &__submit {
       margin: 32px 0px 80px 0px;
-    }
-  }
-}
-
-// Footer
-
-.footer {
-  &__background {
-    background-image: url(../assets/images/union.png);
-    background-size: 745px no-repeat;
-    background-position: center;
-    background-position-y: 130px;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
-  &__link-list {
-    padding-top: 20px;
-  }
-  &__subtitle {
-    padding-bottom: 16px;
-  }
-  &__links {
-    margin: 0px;
-    :not(:last-child) {
-      padding-bottom: 12px;
-    }
-  }
-  &__logos {
-    padding: 8px 0px 40px 0px;
-    border-bottom: 1px solid $lightgray-border;
-  }
-  &__social {
-    transition: stroke 1500ms ease-in-out;
-    &:hover {
-      --color1: #97f5cd;
-      stroke: --color1;
-    }
-  }
-  &__link {
-    padding-right: 14px;
-    &:hover {
-      color: $lightgreen-btn;
-      transition: 500ms;
-    }
-  }
-  &__info {
-    padding: 40px 0px 24px 0px;
-  }
-  &__rights-text {
-    padding-bottom: 24px;
-  }
-  &__other-data {
-    margin: 0px;
-    :not(:last-child) {
-      padding-bottom: 20px;
-    }
-  }
-  &__item {
-    :hover {
-      color: $blue-link-btn;
-      transition: 500ms;
     }
   }
 }
