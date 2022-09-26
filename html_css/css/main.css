@@ -308,11 +308,11 @@ a.btn {
   border: none;
   border-radius: 50%;
 }
-.blog__point-btn:hover {
+.blog__point-btn:hover, .blog__point-btn_active {
   color: var(--blue-link-btn);
   box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
 }
-.blog__point-btn:active {
+.blog__point-btn:active, .blog__point-btn_active {
   border: 1px solid var(--green-link-btn);
   box-shadow: none;
 }
@@ -327,6 +327,9 @@ a.btn {
   border-radius: 20px;
   border: none;
   box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
+}
+.slider__btn_right {
+  transform: scale(-1, 1);
 }
 .slider__btn:hover {
   background-color: var(--green-link-btn);
@@ -359,17 +362,60 @@ a.btn {
 .header__icons-img {
   background-image: url(../assets/images/union.png);
 }
-.header__nav-list {
-  display: none;
-}
 .header__nav-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 24px 0px;
-  top: 0;
-  left: 0;
-  right: 0;
+}
+.header__nav {
+  display: none;
+}
+.header__mobile-input {
+  display: none;
+}
+.header__burger-logo {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.header #menu-toggle:checked + .header__burger-logo .menu__btn-container .menu__btn {
+  background-color: var(--black);
+}
+.header #menu-toggle:checked + .header__burger-logo .menu__btn-container .menu__btn::after {
+  background-color: var(--black);
+}
+.header #menu-toggle:checked + .header__burger-logo .menu__btn-container .menu__btn::before {
+  background-color: var(--black);
+}
+
+.menu__btn-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 18px;
+  cursor: pointer;
+}
+.menu__btn, .menu__btn::before, .menu__btn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 3px;
+  width: 20px;
+  background-color: var(--blue-link-btn);
+  border-radius: 2px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.5, 0.98);
+}
+.menu__btn {
+  left: 3px;
+}
+.menu__btn::after {
+  margin-top: 6px;
+}
+.menu__btn::before {
+  margin-top: -6px;
 }
 
 .footer__background {
@@ -430,6 +476,7 @@ a.btn {
 @media (min-width: 1440px) {
   .container {
     width: 1024px;
+    margin: 0px auto;
   }
   .background__dark {
     position: absolute;
@@ -442,15 +489,6 @@ a.btn {
     top: 0px;
     right: 0px;
     z-index: 2;
-  }
-  .header {
-    position: relative;
-  }
-  .header__nav-wrapper {
-    position: absolute;
-    top: 10px;
-    right: 50px;
-    z-index: 3;
   }
   .header__nav-list {
     display: flex;
@@ -497,7 +535,6 @@ a.btn {
 .container {
   width: 100%;
   padding: 0px 24px;
-  margin: 0px auto;
 }
 
 .background {
@@ -524,7 +561,7 @@ a.btn {
   flex-direction: column-reverse;
 }
 .education__illustraition-img {
-  z-index: 3;
+  z-index: -1;
   padding: 0px 3.5px 24px 3.5px;
 }
 .education__title {
@@ -583,8 +620,7 @@ a.btn {
 }
 .courses__avatar-img {
   position: absolute;
-  top: -22px;
-  left: 15px;
+  transform: translate(25px, -50%);
 }
 .courses__card-img {
   border-radius: 8px;
@@ -650,13 +686,22 @@ a.btn {
   background-color: var(--lightblue-tour-bg);
   padding-bottom: 36px;
   margin-bottom: 44px;
+  padding: 0px;
 }
 .tour__player {
+  position: relative;
   background-image: url("../assets/images/two-girls-stydying-tour.jpg");
-  display: flex;
-  justify-content: center;
-  padding: 197px 0px 283px 0px;
-  margin: 0px -24px 0px -24px;
+  width: 100%;
+  min-height: 520px;
+}
+.tour__btn-play {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.tour__content {
+  padding: 0px 24px;
 }
 .tour__subtitle {
   padding-top: 40px;
@@ -888,13 +933,15 @@ a.btn {
   display: flex;
   gap: 5px;
 }
-.customer__point {
+.customer__point-btn {
   width: 10px;
   height: 10px;
+  padding: 0px;
   background-color: var(--blue-point);
   border-radius: 50%;
+  border: none;
 }
-.customer__point_active {
+.customer__point-btn_active {
   background-color: var(--blue-link-btn);
 }
 
@@ -1002,18 +1049,6 @@ a.btn {
   line-height: 1.5;
   color: var(--blue-blog-text);
 }
-.blog__point {
-  border-radius: 50%;
-}
-.blog__point:hover {
-  color: var(--blue-link-btn);
-  box-shadow: 0px 5px 20px var(--lightblue-slider-shadow);
-}
-.blog__point:active {
-  color: var(--blue-link-btn);
-  border: 1px solid var(--green-link-btn);
-  box-shadow: none;
-}
 .blog .form {
   display: flex;
   flex-direction: column;
@@ -1026,8 +1061,12 @@ a.btn {
   height: 44px;
   background-color: var(--lightblue-input-bg);
   border-radius: 22px;
-  border: none;
   box-shadow: 0px 5px 5px var(--white-featured-text);
+  border: none;
+}
+.blog .form__input:focus {
+  border: 2px solid var(--blue-link-btn);
+  outline: none;
 }
 .blog .form__submit {
   margin: 32px 0px 80px 0px;

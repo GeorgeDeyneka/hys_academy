@@ -7,688 +7,673 @@
     <title>Academy Landing Page</title>
   </head>
   <body>
-    <div class="wrapper">
-      <header class="header">
-        <div class="container">
-          <img
-            class="background background__dark"
-            width="778"
-            src="./assets/images/header-green-triangle.png"
-            alt=""
-          />
-          <img
-            class="background background__light"
-            width="740"
-            src="./assets/images/header-lightgreen-triangle.png"
-            alt=""
-          />
-          <div class="header__icons-img"></div>
+    <header class="header">
+      <div class="container">
+        <img
+          class="background background__dark"
+          width="778"
+          src="./assets/images/header-green-triangle.png"
+          alt=""
+        />
+        <img
+          class="background background__light"
+          width="740"
+          src="./assets/images/header-lightgreen-triangle.png"
+          alt=""
+        />
+        <div class="header__nav-wrapper">
+          <input class="header__mobile-input" id="menu-toggle" type="checkbox">
+          <div class="header__burger-logo menu">
+            <label class="menu__btn-container mobile" for="menu-toggle">
+                    <div class="menu__btn burger"></div>
+                </label>
+            <svg class="logo logo__main" width="54" height="24">
+              <use href="./assets/images/sprite.svg#icon-logo"></use>
+            </svg>
+          </div>
           <nav class="header__nav">
-            <div class="header__nav-wrapper">
-              <svg class="logo logo__main" width="54" height="24">
-                <use href="./assets/images/sprite.svg#icon-logo"></use>
-              </svg>
-              <ul class="header__nav-list">
-                <li class="header__nav-item">
-                  <a class="header__link" href="#">Categories</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__link" href="#">Course</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__link" href="#">Explore</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__link" href="#">Degrees</a>
-                </li>
-              </ul>
-              <button type="button" class="btn btn__blue">Explore</button>
-            </div>
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__link" href="#">Categories</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__link" href="#">Course</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__link" href="#">Explore</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__link" href="#">Degrees</a>
+              </li>
+            </ul>
           </nav>
-        </div>
-      </header>
-      <main class="main">
-        <!-- Education -->
-        <section class="education">
-          <div class="education__background">
-            <div class="education__container container">
-              <div class="education__content">
-                <div class="education__main-text">
-                  <h1 class="education__title">
-                    Education is the most powerfull weapon
-                  </h1>
-                  <p class="education__description">
-                    A bank is a financial institution accepts deposits from
-                    public and creates credit. For all of your needs.
-                  </p>
-                  <div class="education__buttons buttons-block">
-                    <a class="btn btn__blue" href="#">Read More</a>
-                    <a class="btn btn__green" href="#start">Get Started</a>
-                  </div>
-                </div>
-                <img
-                  class="education__illustraition-img"
-                  width="500"
-                  src="./assets/images/сoding-amico.png"
-                  alt="Writing boy"
-                />
-              </div>
-              <div class="education__logos">
-                <img
-                  class="education__logo-img"
-                  width="155"
-                  src="./assets/images/logo-youfone.png"
-                  alt="Youfone company logo"
-                />
-                <img
-                  class="education__logo-img"
-                  width="97"
-                  src="./assets/images/logo-nice.png"
-                  alt="Nice company logo"
-                />
-                <img
-                  class="education__logo-img"
-                  width="135"
-                  src="./assets/images/logo-swishfund.png"
-                  alt="Swishfund company logo"
-                />
-                <img
-                  class="education__logo-img"
-                  width="90"
-                  src="./assets/images/logo-brico.png"
-                  alt="Brico company logo"
-                />
-                <img
-                  class="education__logo-img"
-                  width="101"
-                  src="./assets/images/logo-praxis.png"
-                  alt="Praxis company logo"
-                />
-              </div>
-            </div>
+            <button type="button" class="btn btn__blue">Explore</button>
           </div>
-        </section>
-        <!-- About -->
-        <section class="about" id="about">
-          <div class="container">
-            <div class="about__title title">
-              <h2 class="title__text">Why choose us?</h2>
-            </div>
-            <div class="about__content">
-              <div class="about__item">
-                <svg class="about__icon-img" width="54" height="54">
-                  <use href="./assets/images/sprite.svg#icon-certificate"></use>
-                </svg>
-                <h3 class="about__subtitle">Certificate</h3>
-                <p class="about__description_first">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod.
-                </p>
-              </div>
-              <div class="about__item">
-                <svg class="about__icon-img" width="54" height="54">
-                  <use
-                    href="./assets/images/sprite.svg#icon-life-programs"
-                  ></use>
-                </svg>
-                <h3 class="about__subtitle">Life Programs</h3>
-                <p class="about__description_second">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
-                </p>
-              </div>
-              <div class="about__item">
-                <svg class="about__icon-img" width="54" height="54">
-                  <use
-                    href="./assets/images/sprite.svg#icon-affordability"
-                  ></use>
-                </svg>
-                <h3 class="about__subtitle">Affordability</h3>
-                <p class="about__description_third">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
-                </p>
-              </div>
-              <div class="about__item">
-                <svg class="about__icon-img" width="54" height="54">
-                  <use href="./assets/images/sprite.svg#icon-social"></use>
-                </svg>
-                <h3 class="about__subtitle">Social</h3>
-                <p class="about__description_fourth">
+      </div>
+    </header>
+    <main class="main">
+      <!-- Education -->
+      <section class="education">
+        <div class="education__background">
+          <div class="education__container container">
+            <div class="education__content">
+              <div class="education__main-text">
+                <h1 class="education__title">
+                  Education is the most powerfull weapon
+                </h1>
+                <p class="education__description">
                   A bank is a financial institution accepts deposits from public
-                  and creates credit.
+                  and creates credit. For all of your needs.
                 </p>
+                <div class="education__buttons buttons-block">
+                  <a class="btn btn__blue" href="#">Read More</a>
+                  <a class="btn btn__green" href="#start">Get Started</a>
+                </div>
               </div>
+              <img
+                class="education__illustraition-img"
+                width="500"
+                src="./assets/images/coding-amico.svg"
+                alt="Writing boy"
+              />
             </div>
+            <ul class="education__logos">
+              <li class="education__logo">
+                <a class="education__logo-link" href="#">
+                  <img
+                    class="education__logo-img"
+                    width="155"
+                    src="./assets/images/logo-youfone.png"
+                    alt="Youfone company logo"
+                /></a>
+              </li>
+              <li class="education__logo">
+                <a class="education__logo-link" href="#">
+                  <img
+                    class="education__logo-img"
+                    width="97"
+                    src="./assets/images/logo-nice.png"
+                    alt="Nice company logo"
+                  />
+                </a>
+              </li>
+              <li class="education__logo">
+                <a class="education__logo-link" href="#">
+                  <img
+                    class="education__logo-img"
+                    width="135"
+                    src="./assets/images/logo-swishfund.png"
+                    alt="Swishfund company logo"
+                /></a>
+              </li>
+              <li class="education__logo">
+                <a class="education__logo-link" href="#">
+                  <img
+                    class="education__logo-img"
+                    width="90"
+                    src="./assets/images/logo-brico.png"
+                    alt="Brico company logo"
+                /></a>
+              </li>
+              <li class="education__logo">
+                <a class="education__logo-link" href="#">
+                  <img
+                    class="education__logo-img"
+                    width="101"
+                    src="./assets/images/logo-praxis.png"
+                    alt="Praxis company logo"
+                /></a>
+              </li>
+            </ul>
           </div>
-        </section>
-        <!-- Courses -->
-        <section class="courses" id="courses">
-          <div class="courses__container container">
-            <div class="courses__background-img"></div>
-            <div class="courses__header">
-              <h6 class="courses__subtitle subtitle">MOST POPULAR COURSES</h6>
-              <h2 class="courses__title">2000+ Online courses</h2>
-            </div>
-            <div class="courses__content">
-              <button class="courses__slide-left slider__btn" type="button">
-                <svg
-                  class="slider__slide-img"
-                  width="10"
-                  height="14"
-                  stroke="#64be97"
-                >
-                  <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
-                </svg>
-              </button>
-              <div class="courses__items">
-                <div class="courses__item courses__item_design">
-                  <img
-                    class="courses__avatar-img"
-                    width="48"
-                    src="./assets/images/teacher-one.png"
-                    alt="Our teacher"
-                  />
-                  <img
-                    class="courses__card-img"
-                    width="270"
-                    src="./assets/images/tablet-design-courses.jpg"
-                    alt="Tablet"
-                  />
-                  <div class="courses__text-content">
-                    <h6 class="courses__subtitle-card">DESIGN</h6>
-                    <h3 class="courses__title-card">Learn Photoshop title</h3>
-                    <div class="courses__description">
-                      <div class="courses__prices price">
-                        <span class="price__actually bold-number">260$</span>
-                        <p class="price__old">360$</p>
-                      </div>
-                      <div class="courses__raiting">
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <p class="courses__reviews">(4)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="courses__item courses__item_marketing">
-                  <img
-                    class="courses__avatar-img"
-                    width="48"
-                    src="./assets/images/teacher-two.png"
-                    alt="Our teacher"
-                  />
-                  <img
-                    class="courses__card-img"
-                    width="270"
-                    src="./assets/images/girl-opposite-laptop.jpg"
-                    alt="Designer works"
-                  />
-                  <div class="courses__text-content">
-                    <h6 class="courses__subtitle-card">Marketing</h6>
-                    <h3 class="courses__title-card">
-                      Learn Photoshop title trun...
-                    </h3>
-                    <div class="courses__description">
-                      <div class="courses__prices price">
-                        <span class="price__actually bold-number">260$</span>
-                        <p class="price__old">360$</p>
-                      </div>
-                      <div class="courses__raiting">
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <p class="courses__reviews">(4)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="courses__item courses__item_web-design">
-                  <img
-                    class="courses__avatar-img"
-                    width="48"
-                    src="./assets/images/ponasenkov.png"
-                    alt="The greatest maestro"
-                  />
-                  <img
-                    class="courses__card-img"
-                    width="270"
-                    src="./assets/images/laptop-graphic-courses.jpg"
-                    alt="The desigher work with graphic"
-                  />
-                  <div class="courses__text-content">
-                    <h6 class="courses__subtitle-card">Web Design</h6>
-                    <h3 class="courses__title-card">Learn Photoshop</h3>
-                    <div class="courses__description">
-                      <div class="courses__prices price">
-                        <span class="price__actually bold-number">260$</span>
-                        <p class="price__old">360$</p>
-                      </div>
-                      <div class="courses__raiting">
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <svg class="courses__stars-img" width="11" height="11">
-                          <use
-                            href="./assets/images/sprite.svg#icon-star"
-                          ></use>
-                        </svg>
-                        <p class="courses__reviews">(4)</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button class="courses__slide-right slider__btn" type="button">
-                <svg
-                  class="slider__slide-img"
-                  width="10"
-                  height="14"
-                  stroke="#64be97"
-                >
-                  <use href="./assets/images/sprite.svg#icon-arrow-right"></use>
-                </svg>
-              </button>
-            </div>
+        </div>
+      </section>
+      <!-- About -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__title title">
+            <h2 class="title__text">Why choose us?</h2>
           </div>
-        </section>
-        <!-- Tour -->
-        <section class="tour" id="tour">
-          <div class="tour__container container">
-            <div class="tour__player">
-              <button class="tour__btn-play player" type="button">
-                <svg class="player__play-img" width="18" height="18">
-                  <use
-                    href="./assets/images/sprite.svg#icon-play-triangle"
-                  ></use>
-                </svg>
-              </button>
-            </div>
-            <div class="tour__header">
-              <h6 class="tour__subtitle subtitle">UNIVERSITY DESCRIPTION</h6>
-              <div class="tour__title title">
-                <h2 class="title__text">Take a tour</h2>
-              </div>
-            </div>
-            <div class="tour__content">
-              <p class="tour__description-text">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque
-                <br /><br />
-                Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          <div class="about__content">
+            <div class="about__item">
+              <svg class="about__icon-img" width="54" height="54">
+                <use href="./assets/images/sprite.svg#icon-certificate"></use>
+              </svg>
+              <h3 class="about__subtitle">Certificate</h3>
+              <p class="about__description_first">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod.
               </p>
-              <ul class="tour__description-list">
-                <li class="tour__list-item">
-                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                  amet, consectetur
-                </li>
-                <li class="tour__list-item">
-                  Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                  corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                  consequatur?
-                </li>
-              </ul>
-              <a class="btn btn__blue" href="#">Read More</a>
-              <div class="tour__peach-square"></div>
-              <div class="tour__gray-ellipse"></div>
+            </div>
+            <div class="about__item">
+              <svg class="about__icon-img" width="54" height="54">
+                <use href="./assets/images/sprite.svg#icon-life-programs"></use>
+              </svg>
+              <h3 class="about__subtitle">Life Programs</h3>
+              <p class="about__description_second">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
+              </p>
+            </div>
+            <div class="about__item">
+              <svg class="about__icon-img" width="54" height="54">
+                <use href="./assets/images/sprite.svg#icon-affordability"></use>
+              </svg>
+              <h3 class="about__subtitle">Affordability</h3>
+              <p class="about__description_third">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
+              </p>
+            </div>
+            <div class="about__item">
+              <svg class="about__icon-img" width="54" height="54">
+                <use href="./assets/images/sprite.svg#icon-social"></use>
+              </svg>
+              <h3 class="about__subtitle">Social</h3>
+              <p class="about__description_fourth">
+                A bank is a financial institution accepts deposits from public
+                and creates credit.
+              </p>
             </div>
           </div>
-        </section>
-        <!-- Events -->
-        <section class="events" id="events">
-          <div class="container">
-            <div class="events__title title">
-              <h2 class="title__text">Why choose us?</h2>
-            </div>
-            <div class="events__conferences conferences">
-              <div class="conferences__item conferences__item_first">
-                <h3 class="event__subtitle event">
-                  International Conference on Bussiness
-                </h3>
-                <ul class="event__list">
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-calendar"
-                      ></use>
-                    </svg>
-                    July 8, 2018
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-clock"
-                      ></use>
-                    </svg>
-                    5:00pm - 7:00pm
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-map-point"
-                      ></use>
-                    </svg>
-                    United States
-                  </li>
-                </ul>
-              </div>
-              <div class="conferences__item event">
-                <h3 class="event__subtitle">
-                  International Conference on Bussiness
-                </h3>
-                <ul class="event__list">
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-calendar"
-                      ></use>
-                    </svg>
-                    July 8, 2018
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-clock"
-                      ></use>
-                    </svg>
-                    5:00pm - 7:00pm
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-map-point"
-                      ></use>
-                    </svg>
-                    United States
-                  </li>
-                </ul>
-              </div>
-              <div class="conferences__item event">
-                <h3 class="event__subtitle">
-                  International Conference on Bussiness
-                </h3>
-                <ul class="event__list">
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-calendar"
-                      ></use>
-                    </svg>
-                    July 8, 2018
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-clock"
-                      ></use>
-                    </svg>
-                    5:00pm - 7:00pm
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-map-point"
-                      ></use>
-                    </svg>
-                    United States
-                  </li>
-                </ul>
-              </div>
-              <div class="conferences__item event">
-                <h3 class="event__subtitle">
-                  International Conference on Bussiness
-                </h3>
-                <ul class="event__list">
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-calendar"
-                      ></use>
-                    </svg>
-                    July 8, 2018
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-clock"
-                      ></use>
-                    </svg>
-                    5:00pm - 7:00pm
-                  </li>
-                  <li class="event__item">
-                    <svg class="event__icon-img" width="20" height="20">
-                      <use
-                        href="./assets/images/sprite.svg#icon-gray-map-point"
-                      ></use>
-                    </svg>
-                    United States
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="events__featured featured">
-              <p class="featured__big-title">FEATURED</p>
-              <ul class="featured__duration-list">
-                <li class="featured__duration-item">
-                  <span class="bold-number bold-number__blue">213$</span>Days
-                </li>
-                <li class="featured__duration-item">
-                  <span class="bold-number bold-number__yellow">23</span>Hours
-                </li>
-                <li class="featured__duration-item">
-                  <span class="bold-number bold-number__red">59</span>Min
-                </li>
-              </ul>
-              <div class="featured__card">
+        </div>
+      </section>
+      <!-- Courses -->
+      <section class="courses" id="courses">
+        <div class="courses__container container">
+          <div class="courses__background-img"></div>
+          <div class="courses__header">
+            <h6 class="courses__subtitle subtitle">MOST POPULAR COURSES</h6>
+            <h2 class="courses__title">2000+ Online courses</h2>
+          </div>
+          <div class="courses__content">
+            <button class="courses__slide slider__btn" type="button">
+              <svg
+                class="slider__slide-img"
+                width="10"
+                height="14"
+                stroke="#64be97"
+              >
+                <use href="./assets/images/sprite.svg#icon-arrow-slide"></use>
+              </svg>
+            </button>
+            <div class="courses__items">
+              <div class="courses__item courses__item_design">
                 <img
-                  class="featured__card-img-bg"
-                  width="328"
-                  src="./assets/images/tablet-design-featured.jpg"
+                  class="courses__avatar-img"
+                  width="48"
+                  src="./assets/images/teacher-one.png"
+                  alt="Our teacher"
+                />
+                <img
+                  class="courses__card-img"
+                  width="270"
+                  src="./assets/images/tablet-design-courses.jpg"
                   alt="Tablet"
                 />
-                <div class="featured__description event">
-                  <h3 class="event__subtitle_featured featured__subtitle">
-                    International Conference..
-                  </h3>
-                  <ul class="event__list featured__list">
-                    <li class="event__item event__item_featured">
-                      <svg class="event__icon-img" width="20" height="20">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-calendar"
-                        ></use>
+                <div class="courses__text-content">
+                  <h6 class="courses__subtitle-card">DESIGN</h6>
+                  <h3 class="courses__title-card">Learn Photoshop title</h3>
+                  <div class="courses__description">
+                    <div class="courses__prices price">
+                      <span class="price__actually bold-number">260$</span>
+                      <p class="price__old">360$</p>
+                    </div>
+                    <div class="courses__raiting">
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
                       </svg>
-                      July 8, 2018
-                    </li>
-                    <li class="event__item event__item_featured">
-                      <svg class="event__icon-img" width="20" height="20">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-clock"
-                        ></use>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
                       </svg>
-                      5pm - 7pm
-                    </li>
-                    <li class="event__item event__item_featured">
-                      <svg class="event__icon-img" width="20" height="20">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-map-point"
-                        ></use>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
                       </svg>
-                      United States
-                    </li>
-                  </ul>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <p class="courses__reviews">(4)</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <button type="button" class="btn btn__blue featured__btn">
-                Become a Sponsor
-              </button>
+              <div class="courses__item courses__item_marketing">
+                <img
+                  class="courses__avatar-img"
+                  width="48"
+                  src="./assets/images/teacher-two.png"
+                  alt="Our teacher"
+                />
+                <img
+                  class="courses__card-img"
+                  width="270"
+                  src="./assets/images/girl-opposite-laptop.jpg"
+                  alt="Designer works"
+                />
+                <div class="courses__text-content">
+                  <h6 class="courses__subtitle-card">Marketing</h6>
+                  <h3 class="courses__title-card">
+                    Learn Photoshop title trun...
+                  </h3>
+                  <div class="courses__description">
+                    <div class="courses__prices price">
+                      <span class="price__actually bold-number">260$</span>
+                      <p class="price__old">360$</p>
+                    </div>
+                    <div class="courses__raiting">
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <p class="courses__reviews">(4)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="courses__item courses__item_web-design">
+                <img
+                  class="courses__avatar-img"
+                  width="48"
+                  src="./assets/images/ponasenkov.png"
+                  alt="The greatest maestro"
+                />
+                <img
+                  class="courses__card-img"
+                  width="270"
+                  src="./assets/images/laptop-graphic-courses.jpg"
+                  alt="The desigher work with graphic"
+                />
+                <div class="courses__text-content">
+                  <h6 class="courses__subtitle-card">Web Design</h6>
+                  <h3 class="courses__title-card">Learn Photoshop</h3>
+                  <div class="courses__description">
+                    <div class="courses__prices price">
+                      <span class="price__actually bold-number">260$</span>
+                      <p class="price__old">360$</p>
+                    </div>
+                    <div class="courses__raiting">
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <svg class="courses__stars-img" width="11" height="11">
+                        <use href="./assets/images/sprite.svg#icon-star"></use>
+                      </svg>
+                      <p class="courses__reviews">(4)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="courses__slide slider__btn slider__btn_right" type="button">
+              <svg
+                class="slider__slide-img"
+                width="10"
+                height="14"
+                stroke="#64be97"
+              >
+                <use href="./assets/images/sprite.svg#icon-arrow-slide"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Tour -->
+      <section class="tour" id="tour">
+        <div class="tour__container container">
+          <div class="tour__player">
+            <button class="tour__btn-play player" type="button">
+              <svg class="player__play-img" width="18" height="18">
+                <use href="./assets/images/sprite.svg#icon-play-triangle"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="tour__content">
+          <div class="tour__header">
+            <h6 class="tour__subtitle subtitle">UNIVERSITY DESCRIPTION</h6>
+            <div class="tour__title title">
+              <h2 class="title__text">Take a tour</h2>
             </div>
           </div>
-        </section>
-        <!-- Study -->
-        <section class="study" id="study">
-          <div class="container">
-            <div class="study__title title">
-              <h2 class="title__text">Which one do you prefer?</h2>
-            </div>
-            <p class="study__description">
+            <p class="tour__description-text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque
+              <br /><br />
               Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-              veritatis et quasiarchitecto beatae vitae dicta sunt explicabo.
+              veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
-            <div class="study__content">
-              <button class="study__slide slider__btn" type="button">
-                <svg
-                  class="slider__slide-img"
-                  width="10"
-                  height="14"
-                  stroke="#64be97"
-                >
-                  <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
-                </svg>
-              </button>
-              <ul class="study__list">
-                <li class="study__item">
-                  <img
-                    class="study__item-img"
-                    width="197"
-                    src="./assets/images/tablet-design-study.jpg"
-                    alt="Graphic Design"
-                  />
-                  <h3 class="study__item-text">Graphic Design</h3>
+            <ul class="tour__description-list">
+              <li class="tour__list-item">
+                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                consectetur
+              </li>
+              <li class="tour__list-item">
+                Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                consequatur?
+              </li>
+            </ul>
+            <a class="btn btn__blue" href="#">Read More</a>
+            <div class="tour__peach-square"></div>
+            <div class="tour__gray-ellipse"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Events -->
+      <section class="events" id="events">
+        <div class="container">
+          <div class="events__title title">
+            <h2 class="title__text">Why choose us?</h2>
+          </div>
+          <div class="events__conferences conferences">
+            <div class="conferences__item conferences__item_first">
+              <h3 class="event__subtitle event">
+                International Conference on Bussiness
+              </h3>
+              <ul class="event__list">
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-calendar"
+                    ></use>
+                  </svg>
+                  July 8, 2018
                 </li>
-                <li class="study__item">
-                  <img
-                    class="study__item-img"
-                    width="197"
-                    src="./assets/images/laptop-graphic-study.jpg"
-                    alt="Web Design"
-                  />
-                  <h3 class="study__item-text">Web Design</h3>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-clock"
+                    ></use>
+                  </svg>
+                  5:00pm - 7:00pm
                 </li>
-                <li class="study__item">
-                  <img
-                    class="study__item-img"
-                    width="197"
-                    src="./assets/images/man-writing.jpg"
-                    alt="Marketing"
-                  />
-                  <h3 class="study__item-text">Marketing</h3>
-                </li>
-                <li class="study__item">
-                  <img
-                    class="study__item-img"
-                    width="197"
-                    src="./assets/images/men-make-a-list-study.jpg"
-                    alt="Education"
-                  />
-                  <h3 class="study__item-text">Education</h3>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-map-point"
+                    ></use>
+                  </svg>
+                  United States
                 </li>
               </ul>
-              <button class="study__slide slider__btn" type="button">
-                <svg
-                  class="slider__slide-img"
-                  width="10"
-                  height="14"
-                  stroke="#64be97"
-                >
-                  <use href="./assets/images/sprite.svg#icon-arrow-right"></use>
-                </svg>
-              </button>
+            </div>
+            <div class="conferences__item event">
+              <h3 class="event__subtitle">
+                International Conference on Bussiness
+              </h3>
+              <ul class="event__list">
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-calendar"
+                    ></use>
+                  </svg>
+                  July 8, 2018
+                </li>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-clock"
+                    ></use>
+                  </svg>
+                  5:00pm - 7:00pm
+                </li>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-map-point"
+                    ></use>
+                  </svg>
+                  United States
+                </li>
+              </ul>
+            </div>
+            <div class="conferences__item event">
+              <h3 class="event__subtitle">
+                International Conference on Bussiness
+              </h3>
+              <ul class="event__list">
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-calendar"
+                    ></use>
+                  </svg>
+                  July 8, 2018
+                </li>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-clock"
+                    ></use>
+                  </svg>
+                  5:00pm - 7:00pm
+                </li>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-map-point"
+                    ></use>
+                  </svg>
+                  United States
+                </li>
+              </ul>
+            </div>
+            <div class="conferences__item event">
+              <h3 class="event__subtitle">
+                International Conference on Bussiness
+              </h3>
+              <ul class="event__list">
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-calendar"
+                    ></use>
+                  </svg>
+                  July 8, 2018
+                </li>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-clock"
+                    ></use>
+                  </svg>
+                  5:00pm - 7:00pm
+                </li>
+                <li class="event__item">
+                  <svg class="event__icon-img" width="20" height="20">
+                    <use
+                      href="./assets/images/sprite.svg#icon-gray-map-point"
+                    ></use>
+                  </svg>
+                  United States
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
-        <!-- Customer -->
-        <section class="customer" id="customer">
-          <div class="customer__container container">
-            <div class="customer__background">
+          <div class="events__featured featured">
+            <p class="featured__big-title">FEATURED</p>
+            <ul class="featured__duration-list">
+              <li class="featured__duration-item">
+                <span class="bold-number bold-number__blue">213$</span>Days
+              </li>
+              <li class="featured__duration-item">
+                <span class="bold-number bold-number__yellow">23</span>Hours
+              </li>
+              <li class="featured__duration-item">
+                <span class="bold-number bold-number__red">59</span>Min
+              </li>
+            </ul>
+            <div class="featured__card">
               <img
-                class="customer__background-img_ellipse"
-                width="516"
-                src="./assets/images/lightgreen-ellipse.png"
-                alt=""
+                class="featured__card-img-bg"
+                width="328"
+                src="./assets/images/tablet-design-featured.jpg"
+                alt="Tablet"
               />
-              <img
-                class="customer__background-img_abstraction"
-                width="796"
-                src="./assets/images/lightgreen-abstraction.png"
-                alt=""
-              />
-            </div>
-            <div class="customer__blue-square">
-              <img
-                class="customer__card-img"
-                width="344"
-                src="./assets/images/two-girls-stydying-customers.jpg"
-                alt="Two girls studying"
-              />
-            </div>
-            <div class="customer__content">
-              <div class="customer__title title">
-                <h2 class="title__text">Our great customers</h2>
+              <div class="featured__description event">
+                <h3 class="event__subtitle_featured featured__subtitle">
+                  International Conference..
+                </h3>
+                <ul class="event__list featured__list">
+                  <li class="event__item event__item_featured">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use
+                        href="./assets/images/sprite.svg#icon-white-calendar"
+                      ></use>
+                    </svg>
+                    July 8, 2018
+                  </li>
+                  <li class="event__item event__item_featured">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use
+                        href="./assets/images/sprite.svg#icon-white-clock"
+                      ></use>
+                    </svg>
+                    5pm - 7pm
+                  </li>
+                  <li class="event__item event__item_featured">
+                    <svg class="event__icon-img" width="20" height="20">
+                      <use
+                        href="./assets/images/sprite.svg#icon-white-map-point"
+                      ></use>
+                    </svg>
+                    United States
+                  </li>
+                </ul>
               </div>
-              <svg class="customer__qoutes-img" width="39" height="31">
-                <use href="./assets/images/sprite.svg#icon-quotes"></use>
+            </div>
+            <button type="button" class="btn btn__blue featured__btn">
+              Become a Sponsor
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Study -->
+      <section class="study" id="study">
+        <div class="container">
+          <div class="study__title title">
+            <h2 class="title__text">Which one do you prefer?</h2>
+          </div>
+          <p class="study__description">
+            Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+            veritatis et quasiarchitecto beatae vitae dicta sunt explicabo.
+          </p>
+          <div class="study__content">
+            <button class="study__slide slider__btn" type="button">
+              <svg
+                class="slider__slide-img"
+                width="10"
+                height="14"
+                stroke="#64be97"
+              >
+                <use href="./assets/images/sprite.svg#icon-arrow-slide"></use>
               </svg>
+            </button>
+            <ul class="study__list">
+              <li class="study__item">
+                <img
+                  class="study__item-img"
+                  width="197"
+                  src="./assets/images/tablet-design-study.jpg"
+                  alt="Graphic Design"
+                />
+                <h3 class="study__item-text">Graphic Design</h3>
+              </li>
+              <li class="study__item">
+                <img
+                  class="study__item-img"
+                  width="197"
+                  src="./assets/images/laptop-graphic-study.jpg"
+                  alt="Web Design"
+                />
+                <h3 class="study__item-text">Web Design</h3>
+              </li>
+              <li class="study__item">
+                <img
+                  class="study__item-img"
+                  width="197"
+                  src="./assets/images/man-writing.jpg"
+                  alt="Marketing"
+                />
+                <h3 class="study__item-text">Marketing</h3>
+              </li>
+              <li class="study__item">
+                <img
+                  class="study__item-img"
+                  width="197"
+                  src="./assets/images/men-make-a-list-study.jpg"
+                  alt="Education"
+                />
+                <h3 class="study__item-text">Education</h3>
+              </li>
+            </ul>
+            <button class="study__slide slider__btn slider__btn_right" type="button">
+              <svg
+                class="slider__slide-img"
+                width="10"
+                height="14"
+                stroke="#64be97"
+              >
+                <use href="./assets/images/sprite.svg#icon-arrow-slide"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Customer -->
+      <section class="customer" id="customer">
+        <div class="customer__container container">
+          <div class="customer__background">
+            <img
+              class="customer__background-img_ellipse"
+              width="516"
+              src="./assets/images/lightgreen-ellipse.png"
+              alt=""
+            />
+            <img
+              class="customer__background-img_abstraction"
+              width="796"
+              src="./assets/images/lightgreen-abstraction.png"
+              alt=""
+            />
+          </div>
+          <div class="customer__blue-square">
+            <img
+              class="customer__card-img"
+              width="344"
+              src="./assets/images/two-girls-stydying-customers.jpg"
+              alt="Two girls studying"
+            />
+          </div>
+          <div class="customer__content">
+            <div class="customer__title title">
+              <h2 class="title__text">Our great customers</h2>
+            </div>
+            <svg class="customer__qoutes-img" width="39" height="31">
+              <use href="./assets/images/sprite.svg#icon-quotes"></use>
+            </svg>
+            <blockquote>
               <p class="customer__text">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque
@@ -696,279 +681,267 @@
                 Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
                 veritatis et quasi architecto beatae vitae dicta sunt explicabo.
               </p>
-              <h5 class="customer__author">Stephanie Magion</h5>
-              <ul class="customer__points">
-                <li class="customer__point"></li>
-                <li class="customer__point"></li>
-                <li class="customer__point customer__point_active"></li>
-                <li class="customer__point"></li>
-                <li class="customer__point"></li>
-              </ul>
-            </div>
+            </blockquote>
+              <figcaption>
+                <h5 class="customer__author">Stephanie Magion</h5>
+              </figcaption>
+            <ul class="customer__points">
+              <li class="customer__point"><button class="customer__point-btn" type="button"></button></li>
+              <li class="customer__point"><button class="customer__point-btn" type="button"></button></li>
+              <li class="customer__point"><button class="customer__point-btn customer__point-btn_active" type="button"></button></li>
+              <li class="customer__point"><button class="customer__point-btn" type="button"></button></li>
+              <li class="customer__point"><button class="customer__point-btn" type="button"></button></li>
+            </ul>
           </div>
-        </section>
-        <!-- Get started -->
-        <section class="start" id="start">
-          <div class="start__background">
-            <div class="container start__container">
-              <div class="start__content">
-                <h5 class="start__subtitle">IT'S FAST, FREE AND VERY EASY!</h5>
-                <h2 class="start__title">Ready to get started?</h2>
-                <div class="start__paragraph">
-                  <p class="start__paragraph-text">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque
-                    <br /><br />
-                    Laudantium, totam rem aperiam, eaque ipsa quae ab illo
-                    inventore veritatis et quasi architecto beatae vitae dicta
-                    sunt explicabo.
-                  </p>
-                </div>
-                <div class="start__buttons buttons-block">
-                  <a class="btn btn__lightgreen" href="#form">Apply Now</a>
-                  <button class="btn btn__request" type="button">
-                    Request Service
-                  </button>
-                </div>
+        </div>
+      </section>
+      <!-- Get started -->
+      <section class="start" id="start">
+        <div class="start__background">
+          <div class="container start__container">
+            <div class="start__content">
+              <h5 class="start__subtitle">IT'S FAST, FREE AND VERY EASY!</h5>
+              <h2 class="start__title">Ready to get started?</h2>
+              <div class="start__paragraph">
+                <p class="start__paragraph-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque
+                  <br /><br />
+                  Laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                  inventore veritatis et quasi architecto beatae vitae dicta
+                  sunt explicabo.
+                </p>
               </div>
-              <div class="start__links">
-                <div class="start__links-title">
-                  <svg class="start__links-title-img" width="24" height="24">
+              <div class="start__buttons buttons-block">
+                <a class="btn btn__lightgreen" href="#form">Apply Now</a>
+                <button class="btn btn__request" type="button">
+                  Request Service
+                </button>
+              </div>
+            </div>
+            <div class="start__links">
+              <div class="start__links-title">
+                <svg class="start__links-title-img" width="24" height="24">
+                  <use href="./assets/images/sprite.svg#icon-white-chain"></use>
+                </svg>
+                <h2 class="start__links-title-text">Quick Link</h2>
+              </div>
+              <ul class="start__links-list">
+                <li class="start__item">
+                  <svg class="start__item-img" width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-white-pen"></use>
+                  </svg>
+                  <a class="start__item-link" href="#">Tution and Fees</a>
+                </li>
+                <li class="start__item">
+                  <svg class="start__item-img" width="24" height="24">
                     <use
-                      href="./assets/images/sprite.svg#icon-white-chain"
+                      href="./assets/images/sprite.svg#icon-white-briefcase"
                     ></use>
                   </svg>
-                  <h2 class="start__links-title-text">Quick Link</h2>
-                </div>
-                <ul class="start__links-list">
-                  <li class="start__item">
-                    <svg class="start__item-img" width="24" height="24">
-                      <use
-                        href="./assets/images/sprite.svg#icon-white-pen"
-                      ></use>
-                    </svg>
-                    <a class="start__item-link" href="#">Tution and Fees</a>
-                  </li>
-                  <li class="start__item">
-                    <svg class="start__item-img" width="24" height="24">
-                      <use
-                        href="./assets/images/sprite.svg#icon-white-briefcase"
-                      ></use>
-                    </svg>
-                    <a class="start__item-link" href="#">Review & Rating</a>
-                  </li>
-                  <li class="start__item">
-                    <svg class="start__item-img" width="24" height="24">
-                      <use
-                        href="./assets/images/sprite.svg#icon-white-book-open"
-                      ></use>
-                    </svg>
-                    <a class="start__item-link" href="#"
-                      >Universoty Facilities</a
-                    >
-                  </li>
-                  <li class="start__item">
-                    <svg class="start__item-img" width="24" height="24">
-                      <use
-                        href="./assets/images/sprite.svg#icon-white-comment"
-                      ></use>
-                    </svg>
-                    <a class="start__item-link" href="#">Community Q&A</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Blog -->
-        <section class="blog" id="blog">
-          <div class="container">
-            <div class="blog__title title">
-              <h2 class="title__text">Latest Blog</h2>
-            </div>
-            <div class="blog__cards">
-              <div class="blog__card">
-                <img
-                  class="blog__illustration-img"
-                  width="328"
-                  src="./assets/images/laptop-graphic.jpg"
-                  alt="Designer draw on laptop"
-                />
-                <h5 class="blog__vertical-text">DESIGN</h5>
-                <div class="blog__card-event">
-                  <img
-                    class="blog__avatar-img"
-                    width="48"
-                    src="./assets/images/teacher-one.png"
-                    alt="Our teacher"
-                  />
-                  <h3 class="blog__subtitle-text">
-                    International Conference on Bussiness
-                  </h3>
-                </div>
-                <a class="blog__read-link" href="#">Read Now</a>
-              </div>
-              <div class="blog__card">
-                <img
-                  class="blog__illustration-img"
-                  width="328"
-                  src="./assets/images/men-make-a-list-blog.jpg"
-                  alt="Designer draw on laptop"
-                />
-                <h5 class="blog__vertical-text">DESIGN</h5>
-                <div class="blog__card-event">
-                  <img
-                    class="blog__avatar-img"
-                    width="48"
-                    src="./assets/images/teacher-two.png"
-                    alt="Our teacher"
-                  />
-                  <h3 class="blog__subtitle-text">
-                    International Conference on Bussiness
-                  </h3>
-                </div>
-                <a class="blog__read-link" href="#">Read Now</a>
-              </div>
-            </div>
-            <ul class="blog__points">
-              <li class="blog__point">
-                <button class="blog__point-btn" type="button">1</button>
-              </li>
-              <li class="blog__point">
-                <button class="blog__point-btn" type="button">2</button>
-              </li>
-              <li class="blog__point">
-                <button class="blog__point-btn" type="button">3</button>
-              </li>
-              <li class="blog__point">
-                <button class="blog__point-btn" type="button">4</button>
-              </li>
-              <li class="blog__point">
-                <button class="blog__point-btn" type="button">5</button>
-              </li>
-            </ul>
-            <form class="blog__form form" id="form">
-              <input
-                class="form__input"
-                placeholder="Name Surname"
-                type="text"
-              />
-              <input class="form__input" placeholder="Phone" type="text" />
-              <input
-                class="form__input"
-                placeholder="Enter your email..."
-                type="text"
-              />
-              <button class="btn btn__submit form__submit" type="submit">
-                Send
-              </button>
-            </form>
-          </div>
-        </section>
-      </main>
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer__background">
-          <div class="container">
-            <div class="footer__references">
-              <svg class="logo logo__main" width="54" height="24">
-                <use href="./assets/images/sprite.svg#icon-logo"></use>
-              </svg>
-              <div class="footer__link-list">
-                <h3 class="footer__subtitle">Company</h3>
-                <ul class="footer__links">
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">About Company</a>
-                  </li>
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Feature Course</a>
-                  </li>
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Careers</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer__link-list">
-                <h3 class="footer__subtitle">Help Links</h3>
-                <ul class="footer__links">
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Student Support</a>
-                  </li>
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Course Policy</a>
-                  </li>
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Register Key</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer__link-list">
-                <h3 class="footer__subtitle">Course</h3>
-                <ul class="footer__links">
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Wordpres</a>
-                  </li>
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Photography</a>
-                  </li>
-                  <li class="footer__link-text">
-                    <a class="footer__link" href="#">Learning English</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer__link-list">
-                <h3 class="footer__subtitle">Social Media</h3>
-                <div class="footer__logos">
-                  <a class="footer__link" href="#">
-                    <svg class="footer__social" width="24" height="24">
-                      <use
-                        href="./assets/images/sprite.svg#icon-facebook"
-                      ></use>
-                    </svg>
-                  </a>
-                  <a class="footer__link" href="#">
-                    <svg class="footer__social" width="24" height="24">
-                      <use
-                        href="./assets/images/sprite.svg#icon-instagram"
-                      ></use>
-                    </svg>
-                  </a>
-                  <a class="footer__link" href="#">
-                    <svg class="footer__social" width="24" height="24">
-                      <use href="./assets/images/sprite.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                  <a class="footer__link" href="#">
-                    <svg class="footer__social" width="24" height="24">
-                      <use href="./assets/images/sprite.svg#icon-youtube"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="footer__info">
-              <h5 class="footer__rights-text">All rights Reserved</h5>
-              <ul class="footer__other-data">
-                <li class="footer__item">
-                  <a class="footer__item-link" href="#">About company</a>
+                  <a class="start__item-link" href="#">Review & Rating</a>
                 </li>
-                <li class="footer__item">
-                  <a class="footer__item-link" href="#">Privacy Policy</a>
+                <li class="start__item">
+                  <svg class="start__item-img" width="24" height="24">
+                    <use
+                      href="./assets/images/sprite.svg#icon-white-book-open"
+                    ></use>
+                  </svg>
+                  <a class="start__item-link" href="#">Universoty Facilities</a>
                 </li>
-                <li class="footer__item">
-                  <a class="footer__item-link" href="#">Help Center</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__item-link" href="#">Terms</a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__item-link" href="#">Site map</a>
+                <li class="start__item">
+                  <svg class="start__item-img" width="24" height="24">
+                    <use
+                      href="./assets/images/sprite.svg#icon-white-comment"
+                    ></use>
+                  </svg>
+                  <a class="start__item-link" href="#">Community Q&A</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
+      <!-- Blog -->
+      <section class="blog" id="blog">
+        <div class="container">
+          <div class="blog__title title">
+            <h2 class="title__text">Latest Blog</h2>
+          </div>
+          <div class="blog__cards">
+            <div class="blog__card">
+              <img
+                class="blog__illustration-img"
+                width="328"
+                src="./assets/images/laptop-graphic.jpg"
+                alt="Designer draw on laptop"
+              />
+              <h5 class="blog__vertical-text">DESIGN</h5>
+              <div class="blog__card-event">
+                <img
+                  class="blog__avatar-img"
+                  width="48"
+                  src="./assets/images/teacher-one.png"
+                  alt="Our teacher"
+                />
+                <h3 class="blog__subtitle-text">
+                  International Conference on Bussiness
+                </h3>
+              </div>
+              <a class="blog__read-link" href="#">Read Now</a>
+            </div>
+            <div class="blog__card">
+              <img
+                class="blog__illustration-img"
+                width="328"
+                src="./assets/images/men-make-a-list-blog.jpg"
+                alt="Designer draw on laptop"
+              />
+              <h5 class="blog__vertical-text">DESIGN</h5>
+              <div class="blog__card-event">
+                <img
+                  class="blog__avatar-img"
+                  width="48"
+                  src="./assets/images/teacher-two.png"
+                  alt="Our teacher"
+                />
+                <h3 class="blog__subtitle-text">
+                  International Conference on Bussiness
+                </h3>
+              </div>
+              <a class="blog__read-link" href="#">Read Now</a>
+            </div>
+          </div>
+          <ul class="blog__points">
+            <li class="blog__point">
+              <button class="blog__point-btn" type="button">1</button>
+            </li>
+            <li class="blog__point">
+              <button class="blog__point-btn" type="button">2</button>
+            </li>
+            <li class="blog__point">
+              <button class="blog__point-btn blog__point-btn_active" type="button">3</button>
+            </li>
+            <li class="blog__point">
+              <button class="blog__point-btn" type="button">4</button>
+            </li>
+            <li class="blog__point">
+              <button class="blog__point-btn" type="button">5</button>
+            </li>
+          </ul>
+          <form class="blog__form form" id="form">
+            <input class="form__input" placeholder="Name Surname" type="text" />
+            <input class="form__input" placeholder="Phone" type="text" />
+            <input
+              class="form__input"
+              placeholder="Enter your email..."
+              type="text"
+            />
+            <button class="btn btn__submit form__submit" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__background">
+        <div class="container">
+          <div class="footer__references">
+            <svg class="logo logo__main" width="54" height="24">
+              <use href="./assets/images/sprite.svg#icon-logo"></use>
+            </svg>
+            <div class="footer__link-list">
+              <h3 class="footer__subtitle">Company</h3>
+              <ul class="footer__links">
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">About Company</a>
+                </li>
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Feature Course</a>
+                </li>
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Careers</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__link-list">
+              <h3 class="footer__subtitle">Help Links</h3>
+              <ul class="footer__links">
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Student Support</a>
+                </li>
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Course Policy</a>
+                </li>
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Register Key</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__link-list">
+              <h3 class="footer__subtitle">Course</h3>
+              <ul class="footer__links">
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Wordpres</a>
+                </li>
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Photography</a>
+                </li>
+                <li class="footer__link-text">
+                  <a class="footer__link" href="#">Learning English</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__link-list">
+              <h3 class="footer__subtitle">Social Media</h3>
+              <div class="footer__logos">
+                <a class="footer__link" href="#">
+                  <svg class="footer__social" width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+                <a class="footer__link" href="#">
+                  <svg class="footer__social" width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+                <a class="footer__link" href="#">
+                  <svg class="footer__social" width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+                <a class="footer__link" href="#">
+                  <svg class="footer__social" width="24" height="24">
+                    <use href="./assets/images/sprite.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__info">
+            <h5 class="footer__rights-text">All rights Reserved</h5>
+            <ul class="footer__other-data">
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">About company</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Privacy Policy</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Help Center</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Terms</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__item-link" href="#">Site map</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

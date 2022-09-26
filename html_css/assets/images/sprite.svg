@@ -15,11 +15,8 @@
 <symbol id="icon-logo" viewBox="0 0 72 32">
 <path fill="#1b63f0" style="fill: var(--color1, #1b63f0)" d="M16 5.12c6.009 0 10.88 4.871 10.88 10.88 0 6.005-4.865 10.874-10.87 10.88-0.003 0-0.007 0-0.010 0h-0.004c-6.007-0.002-10.876-4.873-10.876-10.88 0-6.009 4.871-10.88 10.88-10.88zM27.731 26.88c2.649-2.855 4.269-6.678 4.269-10.88 0-8.837-7.163-16-16-16s-16 7.163-16 16c0 8.837 7.163 16 16 16 0.004 0 0.008 0 0.013 0h38.802c0.004 0 0.009 0 0.013 0 8.837 0 16-7.163 16-16s-7.163-16-16-16c-8.837 0-16 7.163-16 16 0 4.202 1.62 8.025 4.269 10.88h-15.365zM54.831 26.88h-0.014c-6.004-0.006-10.87-4.875-10.87-10.88 0-6.009 4.871-10.88 10.88-10.88s10.88 4.871 10.88 10.88c0 6.008-4.869 10.878-10.876 10.88z"></path>
 </symbol>
-<symbol id="icon-arrow-left" viewBox="0 0 8 12">
+<symbol id="icon-arrow-slide" viewBox="0 0 8 12">
 <path fill="none" stroke="#64be97" style="stroke: var(--color1, #64be97)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7143" d="M6.429 11.143l-5.143-5.143 5.143-5.143"></path>
-</symbol>
-<symbol id="icon-arrow-right" viewBox="0 0 8 12">
-<path fill="none" stroke="#64be97" style="stroke: var(--color1, #64be97)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7143" d="M1.286 11.143l5.143-5.143-5.143-5.143"></path>
 </symbol>
 <symbol id="icon-facebook" viewBox="0 0 24 24">
 <path fill="none" style="stroke: var(--color1, #000)" d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="#25282B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

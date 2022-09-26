@@ -10,6 +10,7 @@
 @media (min-width: 1440px) {
   .container {
     width: 1024px;
+    margin: 0px auto;
   }
   .background {
     &__dark {
@@ -26,13 +27,6 @@
     }
   }
   .header {
-    position: relative;
-    &__nav-wrapper {
-      position: absolute;
-      top: 10px;
-      right: 50px;
-      z-index: 3;
-    }
     &__nav-list {
       display: flex;
       align-items: center;
@@ -91,7 +85,6 @@
 .container {
   width: 100%;
   padding: 0px 24px;
-  margin: 0px auto;
 }
 
 .background {
@@ -106,7 +99,6 @@
 }
 
 // Education section
-
 .education {
   &__background {
     background-image: url(../assets/images/union.png);
@@ -121,7 +113,7 @@
     flex-direction: column-reverse;
   }
   &__illustraition-img {
-    z-index: 3;
+    z-index: -1;
     padding: 0px 3.5px 24px 3.5px;
   }
   &__title {
@@ -170,7 +162,6 @@
   }
 }
 
-
 // Courses
 
 .courses {
@@ -195,8 +186,7 @@
 
   &__avatar-img {
     position: absolute;
-    top: -22px;
-    left: 15px;
+    transform: translate(25px, -50%);
   }
 
   &__card-img {
@@ -274,13 +264,22 @@
     background-color: var(--lightblue-tour-bg);
     padding-bottom: 36px;
     margin-bottom: 44px;
+    padding: 0px;
   }
   &__player {
+    position: relative;
     background-image: url("../assets/images/two-girls-stydying-tour.jpg");
-    display: flex;
-    justify-content: center;
-    padding: 197px 0px 283px 0px;
-    margin: 0px -24px 0px -24px;
+    width: 100%;
+    min-height: 520px;
+  }
+  &__btn-play {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__content {
+    padding: 0px 24px;
   }
   &__subtitle {
     padding-top: 40px;
@@ -539,11 +538,13 @@
     display: flex;
     gap: 5px;
   }
-  &__point {
+  &__point-btn {
     width: 10px;
     height: 10px;
+    padding: 0px;
     background-color: var(--blue-point);
     border-radius: 50%;
+    border: none;
     &_active {
       background-color: var(--blue-link-btn);
     }
@@ -679,18 +680,6 @@
     line-height: 1.5;
     color: var(--blue-blog-text);
   }
-  &__point {
-    border-radius: 50%;
-    &:hover {
-      color: var(--blue-link-btn);
-      box-shadow: 0px 5px 20px var(--lightblue-slider-shadow);
-    }
-    &:active {
-      color: var(--blue-link-btn);
-      border: 1px solid var(--green-link-btn);
-      box-shadow: none;
-    }
-  }
 
   .form {
     display: flex;
@@ -703,8 +692,12 @@
       height: 44px;
       background-color: var(--lightblue-input-bg);
       border-radius: 22px;
-      border: none;
       box-shadow: 0px 5px 5px var(--white-featured-text);
+      border: none;
+      &:focus {
+        border: 2px solid var(--blue-link-btn);
+        outline: none;
+      }
     }
     &__submit {
       margin: 32px 0px 80px 0px;
