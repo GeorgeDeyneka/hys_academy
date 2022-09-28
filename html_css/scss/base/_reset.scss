@@ -57,11 +57,11 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   font-family: "Montserrat";
-  color: $gray-basic-text;
+  color: var(--gray-basic-text);
 }
 
 input.form__input::placeholder {
-  color: $gray-basic-text;
+  color: var(--gray-basic-text);
 }
 
 @media (prefers-reduced-motion: reduce) {
