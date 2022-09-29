@@ -2,10 +2,14 @@
   padding: 12px 24px;
   font-size: 12px;
   line-height: 1.334;
-  color: var(--white);
-  background-color: var(--blue-link-btn);
   border-radius: 22px;
   border: none;
+  background-color: var(--blue-link-btn);
+  color: var(--white);
+  transition-property: background-color;
+  &_short {
+    padding: 12px 20px;
+  }
   &__blue {
     &:hover {
       background-color: var(--blue-link-btn-hover);
@@ -13,9 +17,6 @@
     &:active {
       background-color: var(--blue-link-btn-pressed);
     }
-  }
-  &__lightgreen {
-    background-color: var(--green-link-btn);
   }
   &__green {
     color: var(--black);
@@ -31,14 +32,14 @@
     }
   }
   &__request {
-    padding: 11px 21px;
+    padding: 11px 20px;
     background-color: var(--gray-request-btn);
     border: 1px solid var(--white);
     &:hover {
       background-color: var(--white-request-btn-hover);
     }
     &:active {
-      padding: 8px 20px;
+      padding: 10px 19px;
       border: 2px solid var(--white);
     }
   }
@@ -49,7 +50,6 @@
     background-color: var(--green-link-btn);
     box-shadow: 0px 5px 10px var(--green-player-shadow);
     &:hover {
-      transition: background-color 200ms ease-in;
       background-color: var(--lightgreen-btn);
     }
     &:active {
@@ -58,8 +58,10 @@
       background-color: var(--white);
       -webkit-transition: all 150ms ease-in-out;
       transition: all 150ms ease-in-out;
-      box-shadow: 0 0 10px 0 var(--green-link-btn inset), 0 0 10px 4px var(--green-link-btn);
+      box-shadow: 0 0 10px 0 var(--green-link-btn inset),
+        0 0 10px 4px var(--green-link-btn);
     }
+    // This is my realization of submit button
   }
 }
 
@@ -69,7 +71,7 @@ a.btn {
 
 .buttons-block {
   :first-child {
-    margin-right: 24px;
+    margin-right: 20px;
   }
 }
 
@@ -81,13 +83,17 @@ a.btn {
     background-color: var(--white);
     border: none;
     border-radius: 50%;
+    transition-property: color;
     &:hover {
       color: var(--blue-link-btn);
       box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
     }
-    &:active {
+    &:active,
+    &_active {
       border: 1px solid var(--green-link-btn);
       box-shadow: none;
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -103,6 +109,12 @@ a.btn {
     border-radius: 20px;
     border: none;
     box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
+    transition-property: background-color;
+    &_right {
+
+      transform: scale(-1, 1);
+    }
+
     &:hover {
       background-color: var(--green-link-btn);
       --color1: var(--white);
@@ -123,6 +135,7 @@ a.btn {
   border-radius: 50%;
   border: 2px solid var(--white);
   box-shadow: 0px 5px 10px var(--green-player-shadow);
+  transition-property: padding;
   &:hover {
     padding: 11px 6px 9px 10px;
     border: none;

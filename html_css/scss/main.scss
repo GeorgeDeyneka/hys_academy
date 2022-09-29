@@ -5,699 +5,646 @@
 @import "./layout/header";
 @import "./layout/footer";
 
-// Global styles
-
-@media (min-width: 1440px) {
-  .container {
-    width: 1024px;
-  }
-  .background {
-    &__dark {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      z-index: 1;
-    }
-    &__light {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      z-index: 2;
-    }
-  }
-  .header {
-    position: relative;
-    &__nav-wrapper {
-      position: absolute;
-      top: 10px;
-      right: 50px;
-      z-index: 3;
-    }
-    &__nav-list {
-      display: flex;
-      align-items: center;
-    }
-    &__link {
-      margin-right: 10px;
-      color: var(--white);
-    }
-  }
-
-  .events {
-    .featured {
-      &__big-title {
-        max-width: 509px;
-        font-size: 60px;
-        font-weight: 700;
-        line-height: 1.219;
-        letter-spacing: 24px;
-        color: var(--lightorange-featured-title);
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 568px;
-  }
-}
+// Mobile Layout
 
 @media (min-width: 375px) {
-}
-
-.logo {
-  &__main {
-    transition: 1500ms;
-    &:hover {
-      --color1: var(--black);
-      fill: --color1;
+  .logo {
+    &__main {
+      cursor: pointer;
+      fill: var(--blue-link-btn);
+      transition-property: fill;
+      &:hover {
+        fill: var(--black);
+      }
     }
   }
-}
 
-.title {
-  display: flex;
-  ::after {
-    content: "";
-    display: inline-block;
-    width: 60px;
-    height: 2px;
-    background-color: var(--blue-link-btn);
-    margin-left: 24px;
+
+  .title {
+    display: flex;
+    ::after {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 2px;
+      background-color: var(--blue-link-btn);
+      margin-left: 24px;
+      margin-bottom: 3px;
+    }
   }
-}
 
-.container {
-  width: 100%;
-  padding: 0px 24px;
-  margin: 0px auto;
-}
-
-.background {
-  position: absolute;
-  right: 0;
-  width: 95%;
-  height: 314px;
-  z-index: -1;
-  &__dark {
-    width: 100%;
-  }
-}
-
-// Education section
-
-.education {
-  &__background {
-    background-image: url(../assets/images/union.png);
-    background-size: 745px no-repeat;
-    background-position: center;
-    background-position-y: 5px;
-    background-repeat: no-repeat;
+  .background {
+    position: absolute;
+    right: 0;
+    width: 95%;
+    height: 314px;
     z-index: -1;
-  }
-  &__content {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-  &__illustraition-img {
-    z-index: 3;
-    padding: 0px 3.5px 24px 3.5px;
-  }
-  &__title {
-    padding-bottom: 32px;
-  }
-  &__description {
-    padding-bottom: 40px;
-  }
-  &__buttons {
-    padding-bottom: 40px;
-  }
-  &__logos {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-bottom: 80px;
-  }
-}
-
-// About section
-
-.about {
-  &__title {
-    padding-bottom: 56px;
-  }
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  &__subtitle {
-    padding: 19px 0px 6px 0px;
-  }
-  &__description {
-    &_first,
-    &_third {
-      padding-bottom: 20px;
+    &__dark {
+      width: 100%;
     }
-    &_second {
+  }
+
+  .education {
+    &__background {
+      background-image: url(../assets/images/union.png);
+      background-size: 745px;
+      background-position-x: center;
+      background-position-y: 120px;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    &__container {
+      padding: 0px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__illustration-img {
+      object-position: 0px -15px;
+      z-index: 1;
+    }
+    &__main-text,
+    &__logos {
+      padding: 0px 24px;
+    }
+    &__description {
       padding-bottom: 40px;
     }
-    &_fourth {
-      padding-bottom: 80px;
+    &__title {
+      margin-top: -15px;
+      padding-bottom: 32px;
+    }
+    &__logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 15px;
+      padding-bottom: 81px;
+      margin: 0px;
+    }
+    &__buttons {
+      padding-bottom: 40px;
     }
   }
-}
-
-
-// Courses
-
-.courses {
-  &__container {
-    width: 100%;
-    padding: 0px 9.5px;
-    margin: 0px auto;
-  }
-  &__header {
-    text-align: center;
-  }
-
-  &__title {
-    padding-bottom: 54px;
-  }
-
-  &__content {
-    display: flex;
-    align-items: center;
-    margin-bottom: 80px;
-  }
-
-  &__avatar-img {
-    position: absolute;
-    top: -22px;
-    left: 15px;
-  }
-
-  &__card-img {
-    border-radius: 8px;
-    object-fit: cover;
-  }
-
-  &__item {
-    margin: 0px 8px;
-    position: relative;
-    border-radius: 8px;
-    max-width: 260px;
-    &_marketing,
-    &_web-design {
-      display: none;
+  .about {
+    &__title {
+      padding-bottom: 56px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__subtitle {
+      padding: 19px 0px 6px 0px;
+    }
+    &__description {
+      &_first,
+      &_third {
+        padding-bottom: 18px;
+      }
+      &_second {
+        padding-bottom: 40px;
+      }
+      &_fourth {
+        padding-bottom: 80px;
+      }
     }
   }
-
-  &__text-content {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0;
-    z-index: 20;
-    color: var(--white);
-  }
-
-  &__subtitle-card {
-    padding: 0px 16px 8px 16px;
-    color: var(--white);
-  }
-
-  &__title-card {
-    font-weight: 500;
-    color: var(--white);
-    padding: 0px 16px 16px 16px;
-  }
-
-  &__description {
-    border-top: 1px solid var(--white-border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 13px 20px 16px;
-    .price {
+  .courses {
+    &__container {
+      padding: 0px 9.5px;
+    }
+    &__background {
+      background-image: url(../assets/images/union.png);
+      background-size: 745px;
+      background-position-x: center;
+      background-position-y: 40px;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    &__content {
       display: flex;
       align-items: center;
-      &__actually {
-        padding-right: 10px;
+      justify-content: center;
+      margin-bottom: 80px;
+    }
+    &__header {
+      text-align: center;
+    }
+
+    &__title {
+      padding: 6px 0px 32px 0px;
+    }
+    &__items {
+      padding-top: 22px;
+    }
+    &__item {
+      position: relative;
+      max-width: 260px;
+      margin: 0px 8px;
+      border-radius: 8px;
+      transition-property: box-shadow;
+      &_marketing,
+      &_web-design {
+        display: none;
+      }
+      &:hover {
+        box-shadow: 0px 5px 15px rgba(27, 99, 240, 0.4);
+        cursor: pointer;
       }
     }
-  }
-  &__raiting {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-  }
-  &__reviews {
-    padding-left: 2px;
-  }
-
-  &__reviews,
-  .price__old {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.334;
-    text-decoration: line-through;
-  }
-}
-
-// Tour section
-
-.tour {
-  &__container {
-    background-color: var(--lightblue-tour-bg);
-    padding-bottom: 36px;
-    margin-bottom: 44px;
-  }
-  &__player {
-    background-image: url("../assets/images/two-girls-stydying-tour.jpg");
-    display: flex;
-    justify-content: center;
-    padding: 197px 0px 283px 0px;
-    margin: 0px -24px 0px -24px;
-  }
-  &__subtitle {
-    padding-top: 40px;
-  }
-  &__title {
-    padding-bottom: 24px;
-  }
-  &__description-list {
-    margin: 0;
-    padding: 12px 0px 24px 28px;
-    position: relative;
-  }
-  &__list-item {
-    &::before {
-      content: "";
+    &__avatar-img {
       position: absolute;
-      margin-top: 8px;
-      left: 8px;
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 4px;
-      background-color: var(--lightorange-decor-elem);
+      transform: translate(25px, -50%);
     }
-    :not(:last-child) {
+    &__card-img {
+      object-fit: cover;
+      height: 364px;
+      border-radius: 8px;
+    }
+
+    &__text-content {
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+      z-index: 20;
+      color: var(--white);
+    }
+    &__subtitle-card {
+      padding: 0px 16px 9px 16px;
+      color: var(--white);
+    }
+
+    &__title-card {
+      padding: 0px 16px 15px 16px;
+      color: var(--white);
+    }
+
+    &__description {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 23px 20px 16px;
+      border-top: 1px solid var(--white-border);
+      .price {
+        display: flex;
+        align-items: center;
+        &__actually {
+          padding-right: 10px;
+        }
+      }
+    }
+    &__raiting {
+      display: flex;
+      align-items: center;
+      gap: 1px;
+    }
+    &__reviews {
+      padding-left: 3px;
+    }
+
+    &__reviews,
+    .price__old {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.334;
+      text-decoration: line-through;
+    }
+  }
+  .tour {
+    &__container {
+      padding: 0px 0px 36px 0px;
+      margin-bottom: 44px;
+      background-color: var(--lightblue-tour-bg);
+    }
+    &__player {
+      position: relative;
+      background-image: url("../assets/images/two-girls-studying-tour.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 520px;
+    }
+    &__btn-play {
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &__subtitle {
+      padding: 40px 0px 6px 0px;
+    }
+    &__content {
+      padding: 0px 24px;
+    }
+    &__title {
+      padding-bottom: 24px;
+    }
+    &__description-text {
       padding-bottom: 12px;
     }
-  }
-}
+    &__description-list {
+      margin: 0;
+      padding: 0px 0px 12px 36px;
+      position: relative;
+    }
 
-// Events styles
-
-.events {
-  background-color: var(--lightblue-conference-bg);
-  &__title {
-    padding-top: 40px;
-  }
-  .conferences {
-    padding-bottom: 40px;
-    &__item {
-      color: var(--gray-conference-text);
-      padding: 40px 0px 8px 0px;
-      border-bottom: 1px solid var(--lightgray-border);
-      &_first {
-        padding-top: 32px;
+    &__list-item {
+      padding-bottom: 12px;
+      &::before {
+        content: "";
+        position: absolute;
+        margin-top: 8px;
+        left: 8px;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: var(--lightorange-decor-elem);
+      }
+      :not(:last-child) {
+        padding-bottom: 12px;
       }
     }
   }
-}
+  .events {
+    background-color: var(--lightblue-conference-bg);
+    &__title {
+      padding-top: 40px;
+    }
+    .conferences {
+      padding-bottom: 40px;
+      &__item {
+        color: var(--gray-conference-text);
+        padding: 41px 0px 9px 0px;
+        border-bottom: 1px solid var(--lightgray-border);
+        &_first {
+          padding-top: 33px;
+        }
+      }
+    }
+    .event {
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 8px;
+        margin: 0px;
+        padding: 15px 0px;
+      }
+      &__item {
+        display: flex;
+        align-items: center;
+        &_featured {
+          color: var(--white-featured-text);
+        }
+      }
+      &__icon-img {
+        margin-right: 8px;
+      }
+      &__subtitle {
+        &_featured {
+          color: var(--white);
+        }
+      }
+    }
+    .featured {
+      background-color: var(--lightorange-featured-bg);
+      padding: 40px 23.5px 60px 23.5px;
+      position: relative;
+      margin: 0px -24px;
+      &__big-title {
+        margin-left: -8px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.22;
+        letter-spacing: 0.4em;
+        color: var(--lightorange-featured-title);
+        padding-bottom: 40px;
+      }
+      .bold-number {
+        padding-right: 6.5px;
+      }
+      &__duration-list {
+        display: flex;
+        margin: 0px;
+        padding-bottom: 24px;
+      }
+      &__duration-item {
+        display: flex;
+        align-items: center;
+        &:nth-child(1) {
+          padding-right: 44px;
+        }
+        &:nth-child(2) {
+          padding-right: 55px;
+        }
+      }
+      &__card {
+        position: relative;
+        z-index: 1;
+      }
+      &__card-img-bg {
+        border-radius: 8px;
+        transition-property: box-shadow;
+        &:hover {
+          box-shadow: 0px 5px 15px rgba(27, 99, 240, 0.4);
+        }
+      }
 
-.event {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 8px;
-    margin: 0px;
-    padding: 16px 0px;
-  }
-  &__item {
-    display: flex;
-    align-items: center;
-    &_featured {
-      color: var(--white-featured-text);
+      &__subtitle {
+        padding: 26px 0px 14px 0px;
+        display: flex;
+        justify-content: center;
+      }
+
+      &__description {
+        position: absolute;
+        bottom: 0px;
+        left: 24px;
+        right: 24px;
+        z-index: 2;
+        max-width: 280px;
+        height: 156px;
+        background-color: var(--black-featured-card);
+        cursor: pointer;
+      }
+
+      &__list {
+        justify-content: center;
+        padding: 0px 21.5px 40px 21.5px;
+      }
+
+      &__btn {
+        position: absolute;
+        bottom: -20px;
+      }
     }
   }
-  &__icon-img {
-    margin-right: 8px;
-  }
-  &__subtitle {
-    &_featured {
+  .study {
+    &__title {
+      padding-bottom: 16px;
+    }
+
+    &__description {
+      text-align: center;
+    }
+
+    &__list {
+      display: flex;
+      gap: 20px;
+      margin: 0px;
+      :nth-child(1) {
+        background-color: var(--blue-study-bg);
+      }
+      :nth-last-child(3) {
+        background-color: var(--yellow-study-bg);
+      }
+      :nth-child(3) {
+        background-color: var(--purple-study-bg);
+      }
+      :nth-child(4) {
+        background-color: var(--red-study-bg);
+      }
+    }
+    &__container {
+      padding-top: 100px;
+    }
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 0px 80px 0px;
+    }
+    &__item {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition-property: box-shadow;
+      &:nth-last-child(-n + 3) {
+        display: none;
+      }
+      &:hover {
+        box-shadow: 0px 5px 15px var(--lightgray-border);
+        cursor: pointer;
+      }
+    }
+    &__item-img {
+      opacity: 0.2;
+      border-radius: 4px;
+    }
+
+    &__item-text {
+      position: absolute;
+      z-index: 2;
       color: var(--white);
     }
   }
-}
-
-.featured {
-  background-color: var(--lightorange-featured-bg);
-  margin: 0px -24px;
-  padding: 40px 24px 60px 24px;
-  position: relative;
-
-  &__big-title {
-    margin-left: -8px;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1.22;
-    letter-spacing: 0.4em;
-    color: var(--lightorange-featured-title);
-    padding-bottom: 41px;
-  }
-
-  .bold-number {
-    padding-right: 6px;
-  }
-  &__duration-list {
-    display: flex;
-    margin: 0px;
-    padding-bottom: 24px;
-  }
-  &__duration-item {
-    display: flex;
-    align-items: center;
-    &:nth-child(1) {
-      padding-right: 43.5px;
+  .customer {
+    &__container {
+      padding-bottom: 94px;
+      background-image: url("../assets/images/green-bg.svg");
+      background-repeat: no-repeat;
+      background-size: 546px 409px;
+      background-position: -72px 478px;
+      overflow: hidden;
     }
-    &:nth-child(2) {
-      padding-right: 53.5px;
+    &__title {
+      padding: 70px 0px 48px 0px;
     }
-  }
-  &__card {
-    position: relative;
-    z-index: 1;
-  }
-  &__card-img-bg {
-    border-radius: 8px;
-  }
-
-  &__subtitle {
-    padding: 24px 16px 16px 16px;
-    display: flex;
-    justify-content: center;
-  }
-
-  &__description {
-    position: absolute;
-    bottom: 0px;
-    left: 24px;
-    right: 24px;
-    z-index: 2;
-    max-width: 280px;
-    height: 156px;
-    background-color: var(--black-featured-card);
-  }
-
-  &__list {
-    justify-content: center;
-    padding: 0px 21.5px 40px 21.5px;
-  }
-
-  &__btn {
-    position: absolute;
-    bottom: -20px;
-  }
-}
-
-// Study section
-
-.study {
-  padding-top: 100px;
-  &__title {
-    padding-bottom: 16px;
-  }
-
-  &__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 40px;
-    padding-bottom: 80px;
-  }
-
-  &__list {
-    margin: 0px;
-    :nth-child(1) {
-      background-color: var(--blue-study-bg);
+    &__card-img {
+      position: absolute;
+      top: 46px;
+      left: 54px;
+      border-radius: 24px;
     }
-    :nth-last-child(3) {
-      background-color: var(--yellow-study-bg);
+    &__blue-square {
+      position: relative;
+      width: 273px;
+      height: 273px;
+      background-color: var(--blue-customers-card);
+      border-radius: 24px;
     }
-    :nth-child(3) {
-      background-color: var(--purple-study-bg);
+
+    &__description {
+      padding: 28px 0px 4px 0px;
     }
-    :nth-child(4) {
-      background-color: var(--red-study-bg);
+
+    &__description-text {
+      padding-bottom: 12px;
+    }
+
+    &__author {
+      padding-bottom: 54px;
+    }
+
+    &__points {
+      display: flex;
+      margin: 0px;
+      gap: 5px;
+    }
+    &__point-btn {
+      width: 10px;
+      height: 10px;
+      padding: 0px;
+      background-color: var(--blue-point);
+      border-radius: 50%;
+      border: none;
+      &_active {
+        background-color: var(--blue-link-btn);
+      }
     }
   }
+  .start {
+    &__content {
+      padding: 40px 0px 56px;
+    }
+    &__links {
+      padding-bottom: 40px;
+    }
+    &__background {
+      background-image: url(../assets/images/tablet-design-get-started.jpg);
+      background-position: center;
+      z-index: 1;
+    }
 
-  &__item {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    &:nth-last-child(-n + 3) {
-      display: none;
+    &__overflow {
+      background-color: var(--purple-start-bg);
+      opacity: 95%;
+      color: var(--white);
+      z-index: 5;
+    }
+
+    &__subtitle {
+      padding-bottom: 8px;
+      color: var(--white);
+    }
+
+    &__title {
+      color: var(--green-link-btn);
+    }
+
+    &__description {
+      padding: 24px 0px 20px 0px;
+    }
+
+    &__description-text {
+      padding-bottom: 12px;
+    }
+
+    &__links-title {
+      display: flex;
+      align-items: center;
+      padding-bottom: 12px;
+    }
+
+    &__links-title-text {
+      color: var(--white);
+      padding-left: 8px;
+    }
+
+    &__links-list {
+      margin: 0px;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--white-border);
+      padding: 12px 0px;
+    }
+
+    &__item-link {
+      padding-left: 13px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.57;
+      transition-property: color;
+      &:hover {
+        color: var(--lightgreen-btn);
+      }
     }
   }
-  &__item-img {
-    opacity: 0.2;
-    border-radius: 4px;
-  }
+  .blog {
+    &__title {
+      padding: 80px 0px 72px 0px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+    &__card {
+      position: relative;
+      background-color: var(--lightgreen-blog-bg);
+      max-width: 415px;
+      border-radius: 16px 16px 0px 16px;
+      transition-property: box-shadow;
+      &:hover {
+        box-shadow: 0px 5px 15px var(--lightgray-border);
+        cursor: pointer;
+      }
+    }
+    &__card-event {
+      display: flex;
+      padding: 30px 0px 0px 4%;
+      gap: 7px;
+    }
+    &__points {
+      display: flex;
+      justify-content: center;
+      margin: 0px;
+      padding: 24px 0px 80px 0px;
+      gap: 22px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--blue-blog-text);
+    }
+    &__illustration-img {
+      position: absolute;
+      top: -24px;
+      right: 0px;
+      object-fit: cover;
+      width: 79%;
+      height: 160px;
+    }
 
-  &__item-text {
-    position: absolute;
-    z-index: 2;
-    color: var(--white);
-  }
-}
+    &__vertical-text {
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      letter-spacing: 1px;
+      line-height: 0.834;
+      color: var(--blue-blog-text);
+      display: inline-block;
+      padding: 18px 8% 14px;
+    }
 
-.customer {
-  &__container {
-    position: relative;
-    overflow: hidden;
-  }
-  &__background-img_ellipse {
-    position: absolute;
-    left: -72px;
-    bottom: -12px;
-    z-index: -1;
-    min-height: 361px;
-    min-width: 353px;
-  }
-  &__background-img_abstraction {
-    position: absolute;
-    left: -80px;
-    bottom: -30px;
-    z-index: -2;
-    min-height: 409px;
-    min-width: 546px;
-  }
-  &__blue-square {
-    width: 273px;
-    height: 273px;
-    position: relative;
-    background-color: var(--blue-customers-card);
-    border-radius: 24px;
-    margin-right: 24px;
-  }
-
-  &__card-img {
-    position: absolute;
-    top: 46px;
-    left: 54px;
-    border-radius: 24px;
-  }
-
-  &__title {
-    padding: 70px 0px 48px 0px;
-  }
-
-  &__content {
-    padding-bottom: 100px;
-  }
-  &__text {
-    padding: 32px 0px 16px 0px;
-  }
-
-  &__author {
-    padding-bottom: 60px;
-  }
-
-  &__points {
-    margin: 0px;
-    display: flex;
-    gap: 5px;
-  }
-  &__point {
-    width: 10px;
-    height: 10px;
-    background-color: var(--blue-point);
-    border-radius: 50%;
-    &_active {
-      background-color: var(--blue-link-btn);
+    &__read-link {
+      display: inline-block;
+      padding: 14px 21% 24px;
+      line-height: 1.334;
+      color: var(--black);
     }
   }
-}
-
-// Start section
-
-.start {
-  &__background {
-    background-image: url(../assets/images/tablet-design-get-started.jpg);
-    background-position: center;
-    z-index: 1;
-  }
-
-  &__container {
-    background-color: var(--purple-start-bg);
-    opacity: 95%;
-    color: var(--white);
-    z-index: 5;
-  }
-
-  &__content {
-    padding: 40px 0px 56px 0px;
-  }
-
-  &__subtitle {
-    padding-bottom: 8px 0px;
-    color: var(--white);
-  }
-
-  &__title {
-    color: var(--green-link-btn);
-  }
-
-  &__paragraph {
-    padding: 24px 0px 32px 0px;
-  }
-
-  &__links {
-    padding-bottom: 40px;
-  }
-
-  &__links-title {
-    display: flex;
-    align-items: center;
-    padding-bottom: 12px;
-  }
-
-  &__links-title-text {
-    color: var(--white);
-    padding-left: 8px;
-  }
-
-  &__links-list {
-    margin: 0px;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--white-border);
-    padding: 12px 0px;
-  }
-
-  &__item-link {
-    padding-left: 13px;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.57;
-  }
-}
-
-// Blog section
-
-.blog {
-  &__title {
-    padding: 80px 0px 72px 0px;
-  }
-
-  &__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 44px;
-  }
-
-  &__card {
-    position: relative;
-    background-color: var(--lightgreen-blog-bg);
-    max-width: 415px;
-    border-radius: 16px 16px 0px 16px;
-  }
-
-  &__illustration-img {
-    position: absolute;
-    top: -24px;
-    right: 0px;
-    object-fit: cover;
-    max-width: 259px;
-    height: 160px;
-  }
-
-  &__vertical-text {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    letter-spacing: 1px;
-    line-height: 0.834;
-    color: var(--blue-blog-text);
-    padding: 18px 27.5px;
-  }
-
-  &__card-event {
-    padding: 28px 0px 0px 12px;
-    display: flex;
-    gap: 8px;
-  }
-
-  &__read-link {
-    display: inline-block;
-    padding: 16px 164px 24px 68px;
-    line-height: 1.334;
-    color: var(--black);
-  }
-
-  &__points {
-    display: flex;
-    justify-content: center;
-    padding: 24px 0px 80px 0px;
-    margin: 0px;
-    gap: 22px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--blue-blog-text);
-  }
-  &__point {
-    border-radius: 50%;
-    &:hover {
-      color: var(--blue-link-btn);
-      box-shadow: 0px 5px 20px var(--lightblue-slider-shadow);
-    }
-    &:active {
-      color: var(--blue-link-btn);
-      border: 1px solid var(--green-link-btn);
-      box-shadow: none;
-    }
-  }
-
   .form {
     display: flex;
     flex-direction: column;
     &__input {
-      margin-bottom: 16px;
+      width: 100%;
       padding-left: 12px;
+      margin-bottom: 16px;
       bottom: 32px;
       max-width: 415px;
       height: 44px;
@@ -705,9 +652,440 @@
       border-radius: 22px;
       border: none;
       box-shadow: 0px 5px 5px var(--white-featured-text);
+      &:focus {
+        border: 2px solid var(--blue-link-btn);
+        outline: none;
+      }
     }
     &__submit {
-      margin: 32px 0px 80px 0px;
+      margin: 16px 0px 80px 0px;
+    }
+  }
+}
+
+// Tablet Layout
+
+@media (min-width: 768px) {
+  .background {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    min-height: 652px;
+    &__dark {
+      z-index: -2;
+      max-width: 778px;
+    }
+    &__light {
+      z-index: -1;
+      max-width: 740px;
+    }
+  }
+  .education {
+    &__title {
+      margin-top: 0px;
+    }
+    &__main-text {
+      padding: 0px 50px;
+    }
+    &__logos {
+      padding: 25px 0px 80px 0px;
+      justify-content: center;
+    }
+    &__illustration-img {
+      align-self: center;
+      object-position: 0px;
+    }
+
+  }
+  .about {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px 4%;
+      padding-bottom: 82px;
+    }
+    &__item {
+      width: 48%;
+    }
+  }
+  .courses {
+    &__item {
+      &_marketing {
+        display: block;
+      }
+    }
+    &__items {
+      display: flex;
+      gap: 4px;
+    }
+  }
+  .tour {
+    &__container {
+      padding: 0px;
+    }
+    &__player {
+      margin: 0px;
+    }
+
+    &__content {
+      padding: 50px;
+    }
+  }
+  .events {
+    &__title {
+      justify-content: center;
+    }
+    .event {
+      &__subtitle {
+        text-align: center;
+      }
+    }
+    .featured {
+      margin: 0px -50px;
+      padding: 50px;
+      &__duration-list {
+        justify-content: center;
+      }
+      &__big-title {
+        text-align: center;
+      }
+      &__card,
+      &__card-img-bg,
+      &__description {
+        margin: auto;
+      }
+      &__btn {
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+  }
+  .study {
+    &__container {
+      padding-top: 90px;
+    }
+    &__title {
+      justify-content: center;
+    }
+    &__item {
+      &:nth-last-child(-n + 1) {
+        display: flex;
+      }
+    }
+    &__content {
+      justify-content: space-around;
+    }
+  }
+  .customer {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 50px;
+      background-size: auto;
+      background-position: top left;
+    }
+    &__content {
+      width: 45%;
+    }
+    &__title {
+      padding-top: 0px;
+    }
+  }
+  .blog {
+    &__content {
+      margin: auto;
+      max-width: 1000px;
+    }
+    &__cards {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 4%;
+    }
+    &__card {
+      width: 48%;
+    }
+    .form {
+      align-items: center;
+      &__input {
+        padding-left: 10px;
+        min-width: 415px;
+      }
+    }
+  }
+}
+
+// Breakpoints are created for display items where the screen allows
+
+@media (min-width: 950px) {
+  .courses {
+    &__item {
+      &_marketing,
+      &_web-design {
+        display: block;
+      }
+    }
+  }
+  .study {
+    &__item {
+      &:nth-last-child(-n + 2) {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .study {
+    &__item {
+      &:nth-last-child(-n + 3) {
+        display: flex;
+      }
+      // Here flex is repeating because I'm cannot return block in display, because card is include flex elements.
+    }
+  }
+}
+
+// PC Layout
+
+@media (min-width: 1440px) {
+  .education {
+    &__background {
+      background-position: 9px -63px;
+    }
+    &__container {
+      max-width: 850px;
+    }
+    &__content {
+      flex-direction: row;
+      gap: 85px;
+    }
+    &__main-text {
+      padding: 136px 0px 0px;
+    }
+    &__illustration-img {
+      margin-right: -105px;
+    }
+    &__logos {
+      justify-content: flex-start;
+    }
+  }
+
+  .about {
+    &__container {
+      max-width: 850px;
+    }
+    &__subtitle {
+      padding: 18px 0px 6px 0px;
+    }
+    &__content {
+      justify-content: start;
+      gap: 22px 28px;
+    }
+    &__item {
+      align-items: flex-start;
+      max-width: 415px;
+      text-align: start;
+    }
+  }
+
+  .courses {
+    &__background {
+      background-position: 17px 48px;
+    }
+    &__container {
+      max-width: 988px;
+    }
+    &__content {
+      gap: 12px;
+      margin-bottom: 64px;
+    }
+    &__item {
+      max-width: 270px;
+    }
+    &__title {
+      padding-bottom: 55px;
+    }
+  }
+
+  .tour {
+    &__container {
+      display: flex;
+      min-width: 100%;
+      margin-bottom: 100px;
+    }
+    &__player {
+      min-width: 730px;
+    }
+    &__content {
+      padding: 16px 208px 66px 87px;
+    }
+    &__description-list {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        right: -130px;
+        top: -29px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: var(--lightorange-decor-elem);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        bottom: -31px;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--gray-decor-elem);
+      }
+    }
+  }
+
+  .player {
+    position: absolute;
+    top: 48%;
+    left: 505px;
+  }
+
+  .events {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      margin-left: calc((100% - 1024px) / 2);
+      max-width: calc(100% - (100% - 1024px) / 2);
+    }
+    &__title {
+      justify-content: flex-start;
+      padding-top: 68px;
+    }
+    .conferences {
+      min-width: 502px;
+      .event {
+        &__subtitle {
+          text-align: start;
+        }
+        &__list {
+          justify-content: flex-start;
+        }
+      }
+    }
+    .featured {
+      padding: 60px 115px 76px 0px;
+      margin: 0px;
+      &__content {
+        padding-left: 88px;
+      }
+      &__big-title {
+        margin: 0px;
+        padding-left: 18px;
+        padding-bottom: 27px;
+        max-width: 509px;
+        text-align: start;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.219;
+        letter-spacing: 24px;
+        color: var(--lightorange-featured-title);
+      }
+      &__duration-list {
+        justify-content: flex-start;
+        padding-bottom: 40px;
+      }
+      &__card,
+      &__card-img-bg,
+      &__description {
+        margin: 0px;
+      }
+      &__btn {
+        left: auto;
+        transform: translate(0%);
+        // This made for zeroing button position on tablet layout
+      }
+    }
+  }
+  .study {
+    &__container {
+      padding-top: 80px;
+    }
+    &__description {
+      padding: 0px 200px;
+    }
+    &__content {
+      justify-content: space-between;
+      padding: 52px 27px 0px 27px;
+    }
+    &__item {
+      max-width: 197.5px;
+    }
+  }
+  .customer {
+    &__container {
+      justify-content: flex-start;
+      gap: 178px;
+      padding: 180px 0px 185px 208px;
+      margin-right: calc((100% - 1024px) / 2);
+      max-width: calc(100% - (100% - 1024px) / 2);
+      background-position: 0px 76px;
+    }
+    &__content {
+      max-width: 400px;
+    }
+    &__blue-square {
+      min-width: 344px;
+      min-height: 344px;
+    }
+    &__card-img {
+      top: 58px;
+      left: 68px;
+    }
+  }
+  .start {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__links,
+    &__content {
+      width: 415px;
+    }
+    &__content {
+      padding: 64px 0px;
+    }
+    &__links {
+      padding: 88px 0px 74px;
+    }
+  }
+  .blog {
+    &__title {
+      padding: 100px 0px 48px;
+    }
+    &__cards {
+      gap: 20px;
+      margin-top: 24px;
+    }
+    &__card {
+      width: 415px;
+      height: 264px;
+    }
+    &__card-event {
+      gap: 24px;
+    }
+    &__points {
+      flex-direction: column;
+      padding: 0px 27px 0px 0px;
+      // Here i don't use padding-right because I have to zeroing style for this points after tablet layout
+    }
+    &__content {
+      flex-direction: row;
+      max-width: 100%;
+      padding-bottom: 80px;
     }
   }
 }
