@@ -126,3 +126,16 @@
     }
   }
 }
+
+@media (min-width: 1560px) {
+  .header {
+    .background {
+      &__dark {
+        min-width: 50%;
+      }
+      &__light {
+        min-width: 48%;
+      }
+    }
+  }
+}

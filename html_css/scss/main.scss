@@ -263,7 +263,7 @@
         width: 8px;
         height: 8px;
         border-radius: 4px;
-        background-color: var(--lightorange-decor-elem);
+        background-color: var(--lightorange-decor-circle);
       }
       :not(:last-child) {
         padding-bottom: 12px;
@@ -350,6 +350,7 @@
       &__card-img-bg {
         border-radius: 8px;
         transition-property: box-shadow;
+        object-fit: cover;
         &:hover {
           box-shadow: 0px 5px 15px rgba(27, 99, 240, 0.4);
         }
@@ -438,6 +439,7 @@
     &__item-img {
       opacity: 0.2;
       border-radius: 4px;
+      object-fit: cover;
     }
 
     &__item-text {
@@ -509,7 +511,7 @@
       padding-bottom: 40px;
     }
     &__background {
-      background-image: url(../assets/images/tablet-design-get-started.jpg);
+      background-image: url(../assets/images/tablet-design.jpg);
       background-position: center;
       z-index: 1;
     }
@@ -741,6 +743,9 @@
       &__subtitle {
         text-align: center;
       }
+      &__list {
+        justify-content: center;
+      }
     }
     .featured {
       margin: 0px -50px;
@@ -850,6 +855,10 @@
 // PC Layout
 
 @media (min-width: 1440px) {
+  .background-icons {
+    max-width: 1440px;
+    margin: auto;
+  }
   .education {
     &__background {
       background-position: 9px -63px;
@@ -932,7 +941,7 @@
         width: 40px;
         height: 40px;
         border-radius: 8px;
-        background-color: var(--lightorange-decor-elem);
+        background-color: var(--lightorange-decor-square);
       }
       &::after {
         content: "";
