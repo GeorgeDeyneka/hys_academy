@@ -19,7 +19,6 @@
     }
   }
 
-
   .title {
     display: flex;
     ::after {
@@ -30,17 +29,6 @@
       background-color: var(--blue-link-btn);
       margin-left: 24px;
       margin-bottom: 3px;
-    }
-  }
-
-  .background {
-    position: absolute;
-    right: 0;
-    width: 95%;
-    height: 314px;
-    z-index: -1;
-    &__dark {
-      width: 100%;
     }
   }
 
@@ -62,6 +50,7 @@
     }
     &__illustration-img {
       object-position: 0px -15px;
+      margin-top: -24px;
       z-index: 1;
     }
     &__main-text,
@@ -498,7 +487,7 @@
       background-color: var(--blue-point);
       border-radius: 50%;
       border: none;
-      &_active {
+      &:hover, &_active {
         background-color: var(--blue-link-btn);
       }
     }
@@ -668,20 +657,6 @@
 // Tablet Layout
 
 @media (min-width: 768px) {
-  .background {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    min-height: 652px;
-    &__dark {
-      z-index: -2;
-      max-width: 778px;
-    }
-    &__light {
-      z-index: -1;
-      max-width: 740px;
-    }
-  }
   .education {
     &__title {
       margin-top: 0px;
@@ -858,6 +833,7 @@
   .background-icons {
     max-width: 1440px;
     margin: auto;
+    z-index: -2;
   }
   .education {
     &__background {
@@ -871,7 +847,7 @@
       gap: 85px;
     }
     &__main-text {
-      padding: 136px 0px 0px;
+      padding: 112px 0px 0px;
     }
     &__illustration-img {
       margin-right: -105px;

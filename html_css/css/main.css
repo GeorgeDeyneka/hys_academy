@@ -2,6 +2,7 @@
 :root {
   --black-featured-card: #000000cc;
   --black: #000;
+  --black-header-bg: #00000033;
   --gray-basic-text: #5c5c5c;
   --gray-conference-text: #838383;
   --gray-decor-elem: #eaedf4;
@@ -372,18 +373,27 @@ a.btn {
 }
 
 @media (min-width: 375px) {
+  .wrapper {
+    background-image: url(../assets/images/green-head-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+  }
   .container {
     padding: 0px 24px;
     width: 100%;
   }
-  .header__icons-img {
-    background-image: url(../assets/images/union.png);
+  .header {
+    background-color: var(--black-header-bg);
+    position: sticky;
+    top: 0px;
+    z-index: 20;
   }
   .header__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 24px;
+    padding: 24px 0px;
   }
   .header__nav-wrapper {
     display: flex;
@@ -407,13 +417,13 @@ a.btn {
     align-items: center;
     gap: 18px;
   }
-  .header #menu-toggle:checked + .header__burger-logo .menu__btn-container .menu__btn {
+  .header #menu-toggle:checked + .menu__btn-container .menu__btn {
     background-color: var(--black);
   }
-  .header #menu-toggle:checked + .header__burger-logo .menu__btn-container .menu__btn::after {
+  .header #menu-toggle:checked + .menu__btn-container .menu__btn::after {
     background-color: var(--black);
   }
-  .header #menu-toggle:checked + .header__burger-logo .menu__btn-container .menu__btn::before {
+  .header #menu-toggle:checked + .menu__btn-container .menu__btn::before {
     background-color: var(--black);
   }
   .header .menu__mobile-input {
@@ -447,6 +457,10 @@ a.btn {
   }
 }
 @media (min-width: 768px) {
+  .wrapper {
+    background-position: right 0px;
+    background-size: auto;
+  }
   .container {
     padding: 0px 50px;
   }
@@ -474,11 +488,8 @@ a.btn {
   }
 }
 @media (min-width: 1560px) {
-  .header .background__dark {
-    min-width: 50%;
-  }
-  .header .background__light {
-    min-width: 48%;
+  .wrapper {
+    background-size: 50%;
   }
 }
 @media (min-width: 375px) {
@@ -616,16 +627,6 @@ a.btn {
     margin-left: 24px;
     margin-bottom: 3px;
   }
-  .background {
-    position: absolute;
-    right: 0;
-    width: 95%;
-    height: 314px;
-    z-index: -1;
-  }
-  .background__dark {
-    width: 100%;
-  }
   .education__background {
     background-image: url(../assets/images/union.png);
     background-size: 745px;
@@ -643,6 +644,7 @@ a.btn {
   }
   .education__illustration-img {
     object-position: 0px -15px;
+    margin-top: -24px;
     z-index: 1;
   }
   .education__main-text, .education__logos {
@@ -1044,7 +1046,7 @@ a.btn {
     border-radius: 50%;
     border: none;
   }
-  .customer__point-btn_active {
+  .customer__point-btn:hover, .customer__point-btn_active {
     background-color: var(--blue-link-btn);
   }
   .start__content {
@@ -1193,20 +1195,6 @@ a.btn {
   }
 }
 @media (min-width: 768px) {
-  .background {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    min-height: 652px;
-  }
-  .background__dark {
-    z-index: -2;
-    max-width: 778px;
-  }
-  .background__light {
-    z-index: -1;
-    max-width: 740px;
-  }
   .education__title {
     margin-top: 0px;
   }
@@ -1336,6 +1324,7 @@ a.btn {
   .background-icons {
     max-width: 1440px;
     margin: auto;
+    z-index: -2;
   }
   .education__background {
     background-position: 9px -63px;
@@ -1348,7 +1337,7 @@ a.btn {
     gap: 85px;
   }
   .education__main-text {
-    padding: 136px 0px 0px;
+    padding: 112px 0px 0px;
   }
   .education__illustration-img {
     margin-right: -105px;
