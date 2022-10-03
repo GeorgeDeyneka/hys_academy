@@ -6,40 +6,41 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Academy Landing Page</title>
   </head>
-  <body>
+  <body id="body">
     <script defer src="./mobile-menu.js"></script>
     <div class="wrapper">
       <header class="header">
         <div class="header__container container">
-          <nav class="header__nav">
+          <nav class="header__nav menu">
+            <input
+              class="menu__mobile-input"
+              id="menu-toggle"
+              type="checkbox"
+            />
             <div class="header__burger-logo">
-              <div class="header__burger menu">
-                <input
-                  class="menu__mobile-input"
-                  id="menu-toggle"
-                  type="checkbox"
-                />
-                <label class="menu__btn-container mobile" for="menu-toggle">
-                  <div class="menu__btn burger"></div>
-                </label>
-              </div>
+              <label class="menu__btn-container" for="menu-toggle">
+                <div class="menu__btn menu__btn_burger"></div>
+              </label>
               <svg class="logo logo__main" width="54" height="24">
                 <use href="./assets/images/sprite.svg#icon-logo"></use>
               </svg>
             </div>
+            <label class="menu__btn-closer" for="menu-toggle">
+              <div class="menu__btn menu__btn_close"></div>
+            </label>
             <div class="header__nav-wrapper">
               <ul class="header__nav-list">
                 <li class="header__nav-item">
-                  <a class="header__link" href="#courses">Categories</a>
+                  <a class="header__link" href="#about">Features</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__link" href="#study">Course</a>
+                  <a class="header__link" href="#courses">Courses</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__link" href="#blog">Explore</a>
+                  <a class="header__link" href="#about">Explore</a>
                 </li>
                 <li class="header__nav-item">
-                  <a class="header__link" href="#customer">Degrees</a>
+                  <a class="header__link" href="#blog">Blog</a>
                 </li>
               </ul>
               <button type="button" class="btn btn__blue">Explore</button>
@@ -49,7 +50,7 @@
       </header>
       <main class="main">
         <!-- Education -->
-        <section class="education">
+        <section class="education" id="education">
           <div class="education__background background-icons">
             <div class="education__container container">
               <div class="education__content">
@@ -75,50 +76,39 @@
               </div>
               <ul class="education__logos">
                 <li class="education__logo">
-                  <a class="education__logo-link" href="#">
-                    <img
-                      class="education__logo-img"
-                      width="155"
-                      src="./assets/images/logo-youfone.png"
-                      alt="Youfone company logo"
-                  /></a>
-                </li>
-                <li class="education__logo">
-                  <a class="education__logo-link" href="#">
-                    <img
-                      class="education__logo-img"
-                      width="97"
-                      src="./assets/images/logo-nice.png"
-                      alt="Nice company logo"
-                    />
+                  <a
+                    class="education__logo-link"
+                    href="https://about.google/"
+                    target="_blank"
+                  >
+                    <svg class="education__logo-img" width="122" height="40">
+                      <use href="./assets/images/sprite.svg#icon-google"></use>
+                    </svg>
                   </a>
                 </li>
                 <li class="education__logo">
-                  <a class="education__logo-link" href="#">
-                    <img
-                      class="education__logo-img"
-                      width="135"
-                      src="./assets/images/logo-swishfund.png"
-                      alt="Swishfund company logo"
-                  /></a>
+                  <a
+                    class="education__logo-link"
+                    href="https://www.microsoft.com/"
+                    target="_blank"
+                  >
+                    <svg class="education__logo-img" width="187" height="40">
+                      <use
+                        href="./assets/images/sprite.svg#icon-microsoft"
+                      ></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="education__logo">
-                  <a class="education__logo-link" href="#">
-                    <img
-                      class="education__logo-img"
-                      width="90"
-                      src="./assets/images/logo-brico.png"
-                      alt="Brico company logo"
-                  /></a>
-                </li>
-                <li class="education__logo">
-                  <a class="education__logo-link" href="#">
-                    <img
-                      class="education__logo-img"
-                      width="101"
-                      src="./assets/images/logo-praxis.png"
-                      alt="Praxis company logo"
-                  /></a>
+                  <a
+                    class="education__logo-link"
+                    href="https://www.youfone.com/"
+                    target="_blank"
+                  >
+                    <svg class="education__logo-img" width="142" height="40">
+                      <use href="./assets/images/sprite.svg#icon-youfone"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -128,7 +118,7 @@
         <section class="about" id="about">
           <div class="about__container container">
             <div class="about__title title">
-              <h2 class="title__text">Why choose us?</h2>
+              <h2 class="title__text">Our features</h2>
             </div>
             <div class="about__content">
               <div class="about__item">
@@ -209,12 +199,12 @@
                     <img
                       class="courses__card-img"
                       width="270"
-                      src="./assets/images/tablet-design.jpg"
+                      src="./assets/images/learning-photoshop.jpg"
                       alt="Tablet"
                     />
                     <div class="courses__text-content">
-                      <h6 class="courses__subtitle-card">DESIGN</h6>
-                      <h3 class="courses__title-card">Learn Photoshop title</h3>
+                      <h6 class="courses__subtitle-card">Design</h6>
+                      <h3 class="courses__title-card">Learn Photoshop</h3>
                       <div class="courses__description">
                         <div class="courses__prices price">
                           <span class="price__actually bold-number">$260</span>
@@ -281,13 +271,13 @@
                     <img
                       class="courses__card-img"
                       width="270"
-                      src="./assets/images/girl-opposite-laptop.jpg"
+                      src="./assets/images/learning-html.jpg"
                       alt="Designer works"
                     />
                     <div class="courses__text-content">
-                      <h6 class="courses__subtitle-card">Marketing</h6>
+                      <h6 class="courses__subtitle-card">Web developer</h6>
                       <h3 class="courses__title-card">
-                        Learn Photoshop title trun...
+                        Learn HTML/CSS and JavaS...
                       </h3>
                       <div class="courses__description">
                         <div class="courses__prices price">
@@ -359,8 +349,8 @@
                       alt="The desigher work with graphic"
                     />
                     <div class="courses__text-content">
-                      <h6 class="courses__subtitle-card">Web Design</h6>
-                      <h3 class="courses__title-card">Learn Photoshop</h3>
+                      <h6 class="courses__subtitle-card">Design</h6>
+                      <h3 class="courses__title-card">Learn UI/UX</h3>
                       <div class="courses__description">
                         <div class="courses__prices price">
                           <span class="price__actually bold-number">$260</span>
@@ -472,7 +462,7 @@
                   consequatur?
                 </li>
               </ul>
-              <a class="btn btn__blue btn_short" href="#">Read More</a>
+              <a class="btn btn__blue" href="#">Read More</a>
               <div class="tour__peach-square"></div>
               <div class="tour__gray-ellipse"></div>
             </div>
@@ -664,10 +654,7 @@
                     </ul>
                   </div>
                 </div>
-                <button
-                  type="button"
-                  class="btn btn__blue featured__btn btn_short"
-                >
+                <button type="button" class="btn btn__blue featured__btn">
                   Become a Sponsor
                 </button>
               </div>
@@ -684,6 +671,13 @@
               Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
+            <select class="study__select" name="Label" id="pagination">
+              <option selected disabled hidden>Label</option>
+              <option value="Item 1">Item 1</option>
+              <option value="Item 2">Item 2</option>
+              <option value="Item 3">Item 3</option>
+              <option value="Item 4">Item 4</option>
+            </select>
             <div class="study__content">
               <button class="study__slide slider__btn" type="button">
                 <svg
@@ -829,9 +823,7 @@
                     </p>
                   </div>
                   <div class="start__buttons buttons-block">
-                    <a class="btn btn__green btn_short" href="#form"
-                      >Apply Now</a
-                    >
+                    <a class="btn btn__green" href="#form">Apply Now</a>
                     <button class="btn btn__request" type="button">
                       Request Service
                     </button>
@@ -844,7 +836,7 @@
                         href="./assets/images/sprite.svg#icon-white-chain"
                       ></use>
                     </svg>
-                    <h2 class="start__links-title-text">Quick Link</h2>
+                    <h2 class="start__links-title-text">Quick Links</h2>
                   </div>
                   <ul class="start__links-list">
                     <li class="start__item">

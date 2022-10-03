@@ -8,6 +8,9 @@
 // Mobile Layout
 
 @media (min-width: 375px) {
+  .no-scroll {
+    overflow: hidden;
+  }
   .logo {
     &__main {
       cursor: pointer;
@@ -56,6 +59,7 @@
     &__main-text,
     &__logos {
       padding: 0px 24px;
+      gap: 15px;
     }
     &__description {
       padding-bottom: 40px;
@@ -69,16 +73,24 @@
       flex-wrap: wrap;
       align-items: center;
       row-gap: 15px;
-      padding-bottom: 81px;
       margin: 0px;
     }
+    &__logo-img {
+      fill: var(--lightgray-logo);
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      transition-property: fill;
+      &:hover {
+        fill: var(--blue-link-btn);
+      }
+    }
     &__buttons {
-      padding-bottom: 40px;
+      padding-bottom: 43px;
     }
   }
   .about {
     &__title {
-      padding-bottom: 56px;
+      padding: 38px 0px 56px;
     }
     &__item {
       display: flex;
@@ -383,6 +395,25 @@
       text-align: center;
     }
 
+    &__select {
+      display: flex;
+      width: 200px;
+      height: 48px;
+      margin: 21px auto;
+      padding: 14px 8px;
+      border: none;
+      border-radius: 22px;
+      background-color: var(--lightblue-input-bg);
+      &:active,
+      &:hover {
+        outline: none;
+        border: 1px solid var(--blue-link-btn);
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+
     &__list {
       display: flex;
       gap: 20px;
@@ -407,7 +438,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 40px 0px 80px 0px;
+      padding-bottom: 80px;
     }
     &__item {
       position: relative;
@@ -487,7 +518,8 @@
       background-color: var(--blue-point);
       border-radius: 50%;
       border: none;
-      &:hover, &_active {
+      &:hover,
+      &_active {
         background-color: var(--blue-link-btn);
       }
     }
@@ -522,7 +554,7 @@
     }
 
     &__description {
-      padding: 24px 0px 20px 0px;
+      padding: 24px 0px 18px 0px;
     }
 
     &__description-text {
@@ -642,14 +674,13 @@
       background-color: var(--lightblue-input-bg);
       border-radius: 22px;
       border: none;
-      box-shadow: 0px 5px 5px var(--white-featured-text);
       &:focus {
         border: 2px solid var(--blue-link-btn);
         outline: none;
       }
     }
     &__submit {
-      margin: 16px 0px 80px 0px;
+      margin: 16px 0px 84px 0px;
     }
   }
 }
@@ -657,6 +688,17 @@
 // Tablet Layout
 
 @media (min-width: 768px) {
+  .btn {
+    padding: 12px 24px;
+    &__request {
+      &:active {
+        padding: 11px 23px;
+      }
+    }
+    &__submit {
+      padding: 12px 44px;
+    }
+  }
   .education {
     &__title {
       margin-top: 0px;
@@ -665,14 +707,13 @@
       padding: 0px 50px;
     }
     &__logos {
-      padding: 25px 0px 80px 0px;
+      padding: 24px 0px 0px;
       justify-content: center;
     }
     &__illustration-img {
       align-self: center;
       object-position: 0px;
     }
-
   }
   .about {
     &__content {
@@ -681,21 +722,26 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 20px 4%;
-      padding-bottom: 82px;
     }
     &__item {
       width: 48%;
     }
+    &__title {
+      padding: 86px 0px 56px;
+    }
   }
   .courses {
+    &__items {
+      display: flex;
+      gap: 4px;
+    }
     &__item {
       &_marketing {
         display: block;
       }
     }
-    &__items {
-      display: flex;
-      gap: 4px;
+    &__subtitle {
+      padding-top: 82px;
     }
   }
   .tour {
@@ -753,6 +799,9 @@
       &:nth-last-child(-n + 1) {
         display: flex;
       }
+    }
+    &__select {
+      margin: 32px auto;
     }
     &__content {
       justify-content: space-around;
@@ -853,6 +902,7 @@
       margin-right: -105px;
     }
     &__logos {
+      gap: 30px;
       justify-content: flex-start;
     }
   }
@@ -890,7 +940,7 @@
       max-width: 270px;
     }
     &__title {
-      padding-bottom: 55px;
+      padding-bottom: 56px;
     }
   }
 
@@ -1004,7 +1054,7 @@
     }
     &__content {
       justify-content: space-between;
-      padding: 52px 27px 0px 27px;
+      padding: 0px 27px;
     }
     &__item {
       max-width: 197.5px;

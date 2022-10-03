@@ -1,5 +1,5 @@
 .btn {
-  padding: 12px 24px;
+  padding: 12px 20px;
   font-size: 12px;
   line-height: 1.334;
   border-radius: 22px;
@@ -7,9 +7,6 @@
   background-color: var(--blue-link-btn);
   color: var(--white);
   transition-property: background-color;
-  &_short {
-    padding: 12px 20px;
-  }
   &__blue {
     &:hover {
       background-color: var(--blue-link-btn-hover);
@@ -32,19 +29,17 @@
     }
   }
   &__request {
-    padding: 11px 20px;
     background-color: var(--gray-request-btn);
     border: 1px solid var(--white);
     &:hover {
       background-color: var(--white-request-btn-hover);
     }
     &:active {
-      padding: 10px 19px;
+      padding: 11px 19px;
       border: 2px solid var(--white);
     }
   }
   &__submit {
-    padding: 14px 44px;
     max-width: 415px;
     line-height: 1.334;
     background-color: var(--green-link-btn);
@@ -111,7 +106,6 @@ a.btn {
     box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
     transition-property: background-color;
     &_right {
-
       transform: scale(-1, 1);
     }
 
