@@ -27,6 +27,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+*:hover {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 a {
   text-decoration: none;
@@ -62,6 +66,7 @@ body {
 
 input.form__input::placeholder {
   color: var(--gray-basic-text);
+  font-size: 14px;
 }
 
 @media (prefers-reduced-motion: reduce) {
