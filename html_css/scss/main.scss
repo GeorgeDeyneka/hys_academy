@@ -594,6 +594,7 @@
       }
     }
   }
+
   .blog {
     &__title {
       padding: 80px 0px 72px 0px;
@@ -617,6 +618,9 @@
       &:hover {
         box-shadow: 0px 5px 15px var(--lightgray-border);
         cursor: pointer;
+      }
+      &_delete {
+        display: none;
       }
     }
     &__card-event {
@@ -642,6 +646,10 @@
       object-fit: cover;
       width: 79%;
       height: 160px;
+    }
+
+    &__avatar-img {
+      border-radius: 50%;
     }
 
     &__vertical-text {
@@ -1124,3 +1132,4 @@
     }
   }
 }
+
