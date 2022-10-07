@@ -3,10 +3,13 @@
   --black-featured-card: #000000cc;
   --black: #000;
   --black-header-bg: #00000033;
+  --black-header-bg: #00000033;
   --gray-basic-text: #5c5c5c;
   --gray-conference-text: #838383;
   --gray-decor-elem: #eaedf4;
+  --gray-decor-elem: #eaedf4;
   --gray-request-btn: #1c1c1c00;
+  --lightgray-logo: #dedede;
   --lightgray-logo: #dedede;
   --lightgray-border: #5c5c5c1a;
   --white: #fff;
@@ -192,6 +195,11 @@ html:focus-within {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+*:hover {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 a {
   text-decoration: none;
 }
@@ -227,6 +235,7 @@ body {
 input.form__input::placeholder {
   color: var(--gray-basic-text);
   font-size: 14px;
+  font-size: 14px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -248,6 +257,9 @@ input.form__input::placeholder {
   line-height: 1.334;
   border-radius: 22px;
   border: none;
+  background-color: var(--blue-link-btn);
+  color: var(--white);
+  transition-property: background-color;
   background-color: var(--blue-link-btn);
   color: var(--white);
   transition-property: background-color;
@@ -313,6 +325,7 @@ a.btn {
   border: none;
   border-radius: 50%;
   transition-property: color;
+  transition-property: color;
 }
 .blog__point-btn:hover {
   color: var(--blue-link-btn);
@@ -321,6 +334,8 @@ a.btn {
 .blog__point-btn:active, .blog__point-btn_active {
   border: 1px solid var(--green-link-btn);
   box-shadow: none;
+  width: 40px;
+  height: 40px;
   width: 40px;
   height: 40px;
 }
@@ -335,6 +350,7 @@ a.btn {
   border-radius: 20px;
   border: none;
   box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
+  transition-property: background-color;
   transition-property: background-color;
 }
 .slider__btn_right {
@@ -358,6 +374,7 @@ a.btn {
   border-radius: 50%;
   border: 2px solid var(--white);
   box-shadow: 0px 5px 10px var(--green-player-shadow);
+  transition-property: padding;
   transition-property: padding;
 }
 .player:hover {
