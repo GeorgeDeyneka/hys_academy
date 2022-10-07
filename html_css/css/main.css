@@ -670,6 +670,7 @@ a.btn {
     background-color: var(--blue-link-btn);
     margin-left: 24px;
     margin-bottom: 3px;
+    margin-bottom: 3px;
   }
   .education__background {
     background-image: url(../assets/images/union.png);
@@ -986,6 +987,7 @@ a.btn {
     height: 156px;
     background-color: var(--black-featured-card);
     cursor: pointer;
+    cursor: pointer;
   }
   .events .featured__list {
     justify-content: center;
@@ -1251,6 +1253,8 @@ a.btn {
     flex-direction: column;
   }
   .form__input {
+    width: 100%;
+    padding-left: 12px;
     width: 100%;
     padding-left: 12px;
     margin-bottom: 16px;
