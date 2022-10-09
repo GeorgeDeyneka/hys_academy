@@ -5,7 +5,10 @@ const blogPoints = document.querySelector(".blog__points");
 
 function paginator(event) {
   let buttonActive;
-  if (event.target.className === "blog__points") {
+  if (
+    event.target.className === "blog__points" ||
+    event.target.className === "blog__point"
+  ) {
     return;
   }
   buttonActive = event.target.innerText;
@@ -39,10 +42,6 @@ function paginator(event) {
 })();
 
 function changeActiveBtn(event) {
-  if (event.target.className === "blog__point") {
-    return;
-    // I have to write this condition because it fixed bug with press on <li> tag
-  }
   document
     .querySelector(".blog__point-btn_active")
     .classList.remove("blog__point-btn_active");
