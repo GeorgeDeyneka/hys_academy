@@ -56,7 +56,6 @@
       box-shadow: 0 0 10px 0 var(--green-link-btn inset),
         0 0 10px 4px var(--green-link-btn);
     }
-    // This is my realization of submit button
   }
 }
 
@@ -76,9 +75,9 @@ a.btn {
     height: 40px;
     color: var(--blue-blog-text);
     background-color: var(--white);
-    border: none;
+    border: var(--white);
     border-radius: 50%;
-    transition-property: color;
+    transition-property: border;
     &:hover {
       color: var(--blue-link-btn);
       box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);

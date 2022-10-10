@@ -12,7 +12,7 @@ function paginator(event) {
     return;
   }
   buttonActive = event.target.innerText;
-  getData(blogCards.children.length, buttonActive);
+  setTimeout(getData.bind(this, blogCards.children.length, buttonActive), 200);
 }
 
 (function renderPaginationBtn() {
@@ -42,10 +42,14 @@ function paginator(event) {
 })();
 
 function changeActiveBtn(event) {
+  if (event.target.className === "blog__point-btn blog__point-btn_active")
+    return;
   document
     .querySelector(".blog__point-btn_active")
     .classList.remove("blog__point-btn_active");
   event.target.classList.add("blog__point-btn_active");
+  blogCards.classList.add("blog__cards_opacity");
+  setTimeout(() => blogCards.classList.remove("blog__cards_opacity"), 200);
 }
 
 function getData(cardsPerPage, numberOfBtn = 1) {

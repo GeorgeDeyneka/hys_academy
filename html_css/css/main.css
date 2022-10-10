@@ -310,9 +310,9 @@ a.btn {
   height: 40px;
   color: var(--blue-blog-text);
   background-color: var(--white);
-  border: none;
+  border: var(--white);
   border-radius: 50%;
-  transition-property: color;
+  transition-property: border;
 }
 .blog__point-btn:hover {
   color: var(--blue-link-btn);
@@ -1191,6 +1191,11 @@ a.btn {
     display: flex;
     flex-direction: column;
     gap: 44px;
+    opacity: 100%;
+    transition: opacity 100ms ease-in;
+  }
+  .blog__cards_opacity {
+    opacity: 0%;
   }
   .blog__card {
     position: relative;
