@@ -310,9 +310,9 @@ a.btn {
   height: 40px;
   color: var(--blue-blog-text);
   background-color: var(--white);
-  border: none;
+  border: var(--white);
   border-radius: 50%;
-  transition-property: color;
+  transition-property: border;
 }
 .blog__point-btn:hover {
   color: var(--blue-link-btn);
@@ -472,6 +472,7 @@ a.btn {
     left: 0px;
     background-color: var(--white);
     width: 100%;
+    height: 100vh;
   }
   .header #menu-toggle:checked ~ * ul.header__nav-list :not(:last-child) {
     border-bottom: 1px solid rgba(61, 127, 255, 0.2);
@@ -668,6 +669,7 @@ a.btn {
     height: 2px;
     background-color: var(--blue-link-btn);
     margin-left: 24px;
+    margin-bottom: 3px;
     margin-bottom: 3px;
   }
   .education__background {
@@ -985,6 +987,7 @@ a.btn {
     height: 156px;
     background-color: var(--black-featured-card);
     cursor: pointer;
+    cursor: pointer;
   }
   .events .featured__list {
     justify-content: center;
@@ -1188,6 +1191,11 @@ a.btn {
     display: flex;
     flex-direction: column;
     gap: 44px;
+    opacity: 100%;
+    transition: opacity 100ms ease-in;
+  }
+  .blog__cards_opacity {
+    opacity: 0%;
   }
   .blog__card {
     position: relative;
@@ -1199,6 +1207,9 @@ a.btn {
   .blog__card:hover {
     box-shadow: 0px 5px 15px var(--lightgray-border);
     cursor: pointer;
+  }
+  .blog__card_delete {
+    display: none;
   }
   .blog__card-event {
     display: flex;
@@ -1224,6 +1235,9 @@ a.btn {
     width: 79%;
     height: 160px;
   }
+  .blog__avatar-img {
+    border-radius: 50%;
+  }
   .blog__vertical-text {
     writing-mode: vertical-lr;
     text-orientation: upright;
@@ -1244,6 +1258,8 @@ a.btn {
     flex-direction: column;
   }
   .form__input {
+    width: 100%;
+    padding-left: 12px;
     width: 100%;
     padding-left: 12px;
     margin-bottom: 16px;
