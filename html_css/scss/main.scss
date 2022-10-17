@@ -36,19 +36,19 @@
     }
   }
 
-  .title {
-    display: flex;
-    ::after {
-      content: "";
-      display: inline-block;
-      width: 60px;
-      height: 2px;
-      background-color: var(--blue-link-btn);
-      margin-left: 24px;
+    .title {
+      display: flex;
+      ::after {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 2px;
+        background-color: var(--blue-link-btn);
+        margin-left: 24px;
       margin-bottom: 3px;
       margin-bottom: 3px;
     }
-  }
+    }
 
   .education {
     &__background {
@@ -392,23 +392,23 @@
         justify-content: center;
       }
 
-      &__description {
-        position: absolute;
-        bottom: 0px;
-        left: 24px;
-        right: 24px;
-        z-index: 2;
-        max-width: 280px;
-        height: 156px;
-        background-color: var(--black-featured-card);
+          &__description {
+            position: absolute;
+            bottom: 0px;
+            left: 24px;
+            right: 24px;
+            z-index: 2;
+            max-width: 280px;
+            height: 156px;
+            background-color: var(--black-featured-card);
         cursor: pointer;
         cursor: pointer;
       }
 
-      &__list {
-        justify-content: center;
-        padding: 0px 21.5px 40px 21.5px;
-      }
+          &__list {
+            justify-content: center;
+            padding: 0px 21.5px 40px 21.5px;
+          }
 
       &__btn {
         position: absolute;
@@ -570,9 +570,9 @@
       color: var(--white);
     }
 
-    &__title {
-      color: var(--green-link-btn);
-    }
+      &__title {
+        color: var(--green-link-btn);
+      }
 
     &__description {
       padding: 24px 0px 18px 0px;
@@ -582,27 +582,27 @@
       padding-bottom: 12px;
     }
 
-    &__links-title {
-      display: flex;
-      align-items: center;
-      padding-bottom: 12px;
-    }
+      &__links-title {
+        display: flex;
+        align-items: center;
+        padding-bottom: 12px;
+      }
 
-    &__links-title-text {
-      color: var(--white);
-      padding-left: 8px;
-    }
+      &__links-title-text {
+        color: var(--white);
+        padding-left: 8px;
+      }
 
-    &__links-list {
-      margin: 0px;
-    }
+      &__links-list {
+        margin: 0px;
+      }
 
-    &__item {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid var(--white-border);
-      padding: 12px 0px;
-    }
+      &__item {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--white-border);
+        padding: 12px 0px;
+      }
 
     &__item-link {
       padding-left: 13px;
@@ -1165,3 +1165,4 @@
     }
   }
 }
+
