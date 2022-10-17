@@ -1,5 +1,3 @@
-import { DATA_SLICK_SLIDER, DATA_NATIVE_SLIDER } from "./state.js";
-
 class SliderSlick {
   constructor(parentClassName) {
     this.parentClassName = parentClassName;
@@ -122,14 +120,6 @@ class SliderSlick {
   }
 }
 
-const COURSES_ITEMS = document.querySelector(".courses__items");
-const COURSES_SLIDER = new SliderSlick(COURSES_ITEMS);
-COURSES_SLIDER.renderSlides(DATA_SLICK_SLIDER.length);
-COURSES_SLIDER.setData(COURSES_ITEMS, DATA_SLICK_SLIDER);
-COURSES_SLIDER.initSlider();
-
-
-
 class NativeSlider {
   constructor() {}
 
@@ -138,6 +128,7 @@ class NativeSlider {
 
     const CONTAINER = document.createElement("div");
     const UL_LIST = document.createElement("ul");
+    const SLIDER_WRAPPER = document.getElementById("native-slider");
 
     CONTAINER.classList.add("study__list-container");
     CONTAINER.append(UL_LIST);
@@ -171,7 +162,7 @@ class NativeSlider {
       SLIDER_WRAPPER.addEventListener("click", (event) => {
         if (event.target.classList.contains("study__slide-prev")) prev();
         else if (event.target.classList.contains("study__slide-next")) next();
-      })
+      });
 
       let slidesToShow;
       let position = 0;
@@ -248,7 +239,4 @@ class NativeSlider {
   }
 }
 
-const SLIDER_WRAPPER = document.getElementById("native-slider");
-const NATIVE_SLIDER = new NativeSlider();
-NATIVE_SLIDER.renderSlides(DATA_NATIVE_SLIDER.length);
-NATIVE_SLIDER.setData(DATA_NATIVE_SLIDER);
+export { SliderSlick, NativeSlider };
