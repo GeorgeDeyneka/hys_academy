@@ -24,7 +24,7 @@ function makeActiveSlick() {
   $(parentSelector).slick({
     slidesToShow: 3,
     slidesToScroll: 1,
-    speed: 500,
+    speed: 1000,
     infinite: false,
     draggable: false,
     waitForAnimate: false,

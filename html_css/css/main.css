@@ -799,6 +799,7 @@ a.btn {
     position: absolute;
     transform: translate(25px, -50%);
     z-index: 2;
+    border-radius: 50%;
   }
   .courses__card-img {
     object-fit: cover;
@@ -1043,7 +1044,7 @@ a.btn {
     display: flex;
     width: 200px;
     height: 48px;
-    margin: 21px auto;
+    margin: 21px auto 7px;
     padding: 14px 8px;
     border: none;
     border-radius: 22px;
@@ -1064,6 +1065,7 @@ a.btn {
   .study__list-container {
     overflow: hidden;
     max-width: 217px;
+    padding: 14px 0px;
   }
   .study__container {
     padding-top: 100px;
@@ -1072,7 +1074,7 @@ a.btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 80px;
+    padding-bottom: 66px;
   }
   .study__item {
     margin: 0px 10px;
@@ -1085,7 +1087,7 @@ a.btn {
     transition-property: box-shadow;
   }
   .study__item:hover {
-    box-shadow: 0px 5px 15px var(--lightgray-border);
+    box-shadow: 0px 5px 10px var(--black-header-bg);
     cursor: pointer;
   }
   .study__item-img {
@@ -1405,7 +1407,7 @@ a.btn {
     justify-content: center;
   }
   .study__select {
-    margin: 32px auto;
+    margin: 32px auto 18px;
   }
   .study__slider {
     justify-content: space-around;
@@ -1628,7 +1630,7 @@ a.btn {
   .customer__container {
     justify-content: flex-start;
     gap: 178px;
-    padding: 180px 0px 185px 208px;
+    padding: 166px 0px 185px 208px;
     margin-right: calc((100% - 1024px) / 2);
     max-width: calc(100% - (100% - 1024px) / 2);
     background-position: 0px 76px;
