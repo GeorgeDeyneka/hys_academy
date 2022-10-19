@@ -355,7 +355,8 @@ a.btn {
   box-shadow: none;
 }
 
-.slick-disabled {
+.slick-disabled,
+.slider__btn:disabled {
   background-color: var(--black-header-bg);
   opacity: 0.2;
 }

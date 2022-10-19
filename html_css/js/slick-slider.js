@@ -1,53 +1,72 @@
-export class SliderSlick {
+class SliderSlick {
+  #selector;
+  #renderFunc;
+  #makeActiveFunc;
 
-  #data;
-  
-  constructor(parentClassName, data) {
-    this.parentClassName = parentClassName;
-    this.#data = data;
-    this.renderSlides();
-    this.setData();
+  setData = () => {};
+
+  constructor({ parentClassName, renderSlidesHtml, makeActive }) {
+    this.#selector = parentClassName;
+    this.#renderFunc = renderSlidesHtml;
+    this.#makeActiveFunc = makeActive;
+    this.initSlider();
   }
 
   initSlider() {
-    $(this.parentClassName).slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      speed: 500,
-      infinite: false,
-      draggable: false,
-      waitForAnimate: false,
-      mobileFirst: true,
-      variableWidth: true,
-      responsive: [
-        {
-          breakpoint: 374,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 989,
-          settings: {
-            slidesToShow: 3,
-          },
-        },
-      ],
-    });
+    const parentSelector = document.getElementById(this.#selector);
+    parentSelector.innerHTML = this.#renderFunc();
+    this.#makeActiveFunc();
   }
+}
 
-  renderSlides() {
-    if (!this.#data) {
-      throw new Error ("No data for slider provided")
-    }
-    const sliderWrapper = document.getElementById("slick-slider");
-    const CARD_LAYOUT = `
+function makeActiveSlick() {
+  const parentSelector = document.getElementById("slick-slider");
+  $(parentSelector).slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 500,
+    infinite: false,
+    draggable: false,
+    waitForAnimate: false,
+    mobileFirst: true,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 374,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 989,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
+  });
+}
+
+function renderCards() {
+  const ITEMS = 6;
+  const STARS = 5;
+  let cardLayout = "";
+  let starLayout = "";
+  for (let i = 0; i < STARS; i++) {
+    starLayout += `
+      <svg class="courses__stars-img" width="11" height="11">
+          <use href="./assets/images/sprite.svg#icon-star"></use>
+      </svg>`;
+  }
+  for (let i = 0; i < ITEMS; i++) {
+    cardLayout += `
+         <div class="courses__item">
             <img
               class="courses__avatar-img"
               width="48"
@@ -67,62 +86,44 @@ export class SliderSlick {
                   <p class="price__old"></p>
                 </div>
                 <div class="courses__raiting">
-                  <div class="courses__stars courses__stars_background"></div>
-                  <div class="courses__stars courses__stars_active"></div>
+                  <div class="courses__stars courses__stars_background">
+                  ${starLayout}</div>
+                  <div class="courses__stars courses__stars_active">
+                  ${starLayout}</div>
                   <p class="courses__reviews"></p>
                 </div>
               </div>
             </div>
+          </div>
         `;
-    for (let i = 0; i < this.#data.length; i++) {
-      const divItem = document.createElement("div");
-      sliderWrapper.appendChild(divItem);
-      divItem.classList.add("courses__item");
-      divItem.innerHTML = CARD_LAYOUT;
-    }
-
-    (function drawStars() {
-      const starsBg = document.querySelectorAll(".courses__stars_background");
-      const starsActive = document.querySelectorAll(".courses__stars_active");
-      const STAR_LAYOUT = `
-      <svg class="courses__stars-img" width="11" height="11">
-          <use href="./assets/images/sprite.svg#icon-star"></use>
-      </svg>`;
-      starsBg.forEach((el) => {
-        for (let i = 0; i < 5; i++) {
-          el.innerHTML += STAR_LAYOUT;
-        }
-      });
-      starsActive.forEach((el) => {
-        for (let i = 0; i < 5; i++) {
-          el.innerHTML += STAR_LAYOUT;
-        }
-      });
-    })();
   }
-
-  setData() {
-    this.#data.forEach((el, i) => {
-      this.parentClassName.children[i].querySelector(".courses__reviews").innerText =
-        el.rewievs;
-      this.parentClassName.children[i].querySelector(
-        ".courses__title-card"
-      ).innerText = el.title;
-      this.parentClassName.children[i].querySelector(
-        ".courses__subtitle-card"
-      ).innerText = el.category;
-      this.parentClassName.children[i].querySelector(".courses__card-img").src =
-        el.imageUrl;
-      this.parentClassName.children[i].querySelector(".courses__avatar-img").src =
-        el.avatarUrl;
-      this.parentClassName.children[i].querySelector(".price__actually").innerText =
-        el.price.actually;
-      this.parentClassName.children[i].querySelector(".price__old").innerText =
-        el.price.old;
-      this.parentClassName.children[i].querySelector(
-        ".courses__stars_active"
-      ).style.clipPath = `inset(0% calc(100% - (${el.raiting}% * 20)) 0% 0%)`;
-    });
-  }
+  return cardLayout;
 }
 
+function setSlickData(data) {
+  if (!data) {
+    throw new Error("No data for slider provided");
+  }
+  const arrReviews = document.querySelectorAll(".courses__reviews");
+  const arrTitles = document.querySelectorAll(".courses__title-card");
+  const arrSubtitles = document.querySelectorAll(".courses__subtitle-card");
+  const arrImagesBg = document.querySelectorAll(".courses__card-img");
+  const arrAvatars = document.querySelectorAll(".courses__avatar-img");
+  const arrActuallyPrices = document.querySelectorAll(".price__actually");
+  const arrOldPrices = document.querySelectorAll(".price__old");
+  const arrStars = document.querySelectorAll(".courses__stars_active");
+  data.forEach((el, i) => {
+    arrReviews[i].innerText = el.rewievs;
+    arrTitles[i].innerText = el.title;
+    arrSubtitles[i].innerText = el.category;
+    arrImagesBg[i].src = el.imageUrl;
+    arrAvatars[i].src = el.avatarUrl;
+    arrActuallyPrices[i].innerText = el.price.actually;
+    arrOldPrices[i].innerText = el.price.old;
+    arrStars[
+      i
+    ].style.clipPath = `inset(0% calc(100% - (${el.raiting}% * 20)) 0% 0%)`;
+  });
+}
+
+export { SliderSlick, renderCards, setSlickData, makeActiveSlick };
