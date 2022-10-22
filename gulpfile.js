@@ -21,7 +21,7 @@ gulp.task("build-js", () => {
     .src("./src/js/index.js")
     .pipe(
       webpack({
-        mode: "development",
+        mode: "production",
         output: {
           filename: "index.js",
         },

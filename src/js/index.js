@@ -1,4 +1,6 @@
 import "./mobile-menu.js";
+import "./app.js";
+import "./storage";
 import { blogPoints, changeActiveBtn, paginator } from "./paginator.js";
 import { DATA_SLICK_SLIDER, DATA_NATIVE_SLIDER } from "./state.js";
 import {
@@ -18,7 +20,6 @@ blogPoints.addEventListener("click", paginator);
 blogPoints.addEventListener("click", changeActiveBtn);
 document.addEventListener("DOMContentLoaded", paginator);
 
-
 const coursesSlider = new SliderSlick({
   parentClassName: "slick-slider",
     renderSlidesHtml: renderCards,
@@ -35,4 +36,3 @@ const nativeSlider = new NativeSlider({
 });
 
 nativeSlider.setData = setNativeData(DATA_NATIVE_SLIDER);
-
