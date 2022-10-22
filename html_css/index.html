@@ -3,11 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
+
     <title>Academy Landing Page</title>
   </head>
   <body>
-    <script type="module" defer src="./index.js"></script>
+    <script defer src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+    ></script>
+    <script type="module" defer src="./js/index.js"></script>
     <div class="wrapper">
       <header class="header">
         <div class="header__container container">
@@ -19,14 +29,14 @@
             />
             <div class="header__burger-logo">
               <label class="menu__btn-container" for="menu-toggle">
-                <div class="menu__btn menu__btn_burger"></div>
+                <span class="menu__btn menu__btn_burger"></span>
               </label>
               <svg class="logo logo__main" width="54" height="24">
                 <use href="./assets/images/sprite.svg#icon-logo"></use>
               </svg>
             </div>
             <label class="menu__btn-closer" for="menu-toggle">
-              <div class="menu__btn menu__btn_close"></div>
+              <span class="menu__btn menu__btn_close"></span>
             </label>
             <div class="header__nav-wrapper">
               <ul class="header__nav-list">
@@ -175,252 +185,7 @@
                 <h6 class="courses__subtitle subtitle">MOST POPULAR COURSES</h6>
                 <h2 class="courses__title">2000+ Online courses</h2>
               </div>
-              <div class="courses__content">
-                <button class="courses__slide-left slider__btn" type="button">
-                  <svg
-                    class="slider__slide-img"
-                    width="10"
-                    height="14"
-                    stroke="#64be97"
-                  >
-                    <use
-                      href="./assets/images/sprite.svg#icon-arrow-left"
-                    ></use>
-                  </svg>
-                </button>
-                <div class="courses__items">
-                  <div class="courses__item courses__item_design">
-                    <img
-                      class="courses__avatar-img"
-                      width="48"
-                      src="./assets/images/teacher-one.png"
-                      alt="Our teacher"
-                    />
-                    <img
-                      class="courses__card-img"
-                      width="270"
-                      src="./assets/images/learning-photoshop.jpg"
-                      alt="Tablet"
-                    />
-                    <div class="courses__text-content">
-                      <h6 class="courses__subtitle-card">Design</h6>
-                      <h3 class="courses__title-card">Learn Photoshop</h3>
-                      <div class="courses__description">
-                        <div class="courses__prices price">
-                          <span class="price__actually bold-number">$260</span>
-                          <p class="price__old">$360</p>
-                        </div>
-                        <div class="courses__raiting">
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <p class="courses__reviews">(4)</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="courses__item courses__item_marketing">
-                    <img
-                      class="courses__avatar-img"
-                      width="48"
-                      src="./assets/images/teacher-two.png"
-                      alt="Our teacher"
-                    />
-                    <img
-                      class="courses__card-img"
-                      width="270"
-                      src="./assets/images/learning-html.jpg"
-                      alt="Designer works"
-                    />
-                    <div class="courses__text-content">
-                      <h6 class="courses__subtitle-card">Web developer</h6>
-                      <h3 class="courses__title-card">
-                        Learn HTML/CSS and JavaS...
-                      </h3>
-                      <div class="courses__description">
-                        <div class="courses__prices price">
-                          <span class="price__actually bold-number">$260</span>
-                          <p class="price__old">$360</p>
-                        </div>
-                        <div class="courses__raiting">
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <p class="courses__reviews">(4)</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="courses__item courses__item_web-design">
-                    <img
-                      class="courses__avatar-img"
-                      width="48"
-                      src="./assets/images/teacher-three.png"
-                      alt="The greatest maestro"
-                    />
-                    <img
-                      class="courses__card-img"
-                      width="270"
-                      src="./assets/images/laptop-graphic.jpg"
-                      alt="The desigher work with graphic"
-                    />
-                    <div class="courses__text-content">
-                      <h6 class="courses__subtitle-card">Design</h6>
-                      <h3 class="courses__title-card">Learn UI/UX</h3>
-                      <div class="courses__description">
-                        <div class="courses__prices price">
-                          <span class="price__actually bold-number">$260</span>
-                          <p class="price__old">$360</p>
-                        </div>
-                        <div class="courses__raiting">
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <svg
-                            class="courses__stars-img"
-                            width="11"
-                            height="11"
-                          >
-                            <use
-                              href="./assets/images/sprite.svg#icon-star"
-                            ></use>
-                          </svg>
-                          <p class="courses__reviews">(4)</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="courses__slide-right slider__btn" type="button">
-                  <svg
-                    class="slider__slide-img"
-                    width="10"
-                    height="14"
-                    stroke="#64be97"
-                  >
-                    <use
-                      href="./assets/images/sprite.svg#icon-arrow-right"
-                    ></use>
-                  </svg>
-                </button>
-              </div>
+              <div class="courses__items" id="slick-slider"></div>
             </div>
           </div>
         </section>
@@ -678,70 +443,7 @@
               <option value="Item 3">Item 3</option>
               <option value="Item 4">Item 4</option>
             </select>
-            <div class="study__content">
-              <button class="study__slide slider__btn" type="button">
-                <svg
-                  class="slider__slide-img"
-                  width="10"
-                  height="14"
-                  stroke="#64be97"
-                >
-                  <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
-                </svg>
-              </button>
-              <ul class="study__list">
-                <li class="study__item study__item_gr-design">
-                  <img
-                    class="study__item-img"
-                    width="207"
-                    height="197"
-                    src="./assets/images/tablet-design.jpg"
-                    alt="Graphic Design"
-                  />
-                  <h3 class="study__item-text">Graphic Design</h3>
-                </li>
-                <li class="study__item study__item_web-design">
-                  <img
-                    class="study__item-img"
-                    width="207"
-                    height="197"
-                    src="./assets/images/laptop-graphic.jpg"
-                    alt="Web Design"
-                  />
-                  <h3 class="study__item-text">Web Design</h3>
-                </li>
-                <li class="study__item study__item_marketing">
-                  <img
-                    class="study__item-img"
-                    width="207"
-                    height="197"
-                    src="./assets/images/man-writing.jpg"
-                    alt="Marketing"
-                  />
-                  <h3 class="study__item-text">Marketing</h3>
-                </li>
-                <li class="study__item study__item_education">
-                  <img
-                    class="study__item-img"
-                    width="207"
-                    height="197"
-                    src="./assets/images/men-make-a-list.jpg"
-                    alt="Education"
-                  />
-                  <h3 class="study__item-text">Education</h3>
-                </li>
-              </ul>
-              <button class="study__slide slider__btn" type="button">
-                <svg
-                  class="slider__slide-img"
-                  width="10"
-                  height="14"
-                  stroke="#64be97"
-                >
-                  <use href="./assets/images/sprite.svg#icon-arrow-right"></use>
-                </svg>
-              </button>
-            </div>
+            <div class="study__slider" id="native-slider"></div>
           </div>
         </section>
         <!-- Customer -->
@@ -751,7 +453,7 @@
               <img
                 class="customer__card-img"
                 width="344"
-                src="./assets/images/two-girls-stydying-customers.jpg"
+                src="./assets/images/two-girls-studying-customers.jpg"
                 alt="Two girls studying"
               />
             </div>
@@ -930,8 +632,7 @@
                   <a class="blog__read-link" href="#">Read Now</a>
                 </div>
               </div>
-              <ul class="blog__points">
-              </ul>
+              <ul class="blog__points"></ul>
             </div>
             <form class="blog__form form" id="form">
               <label for="form-name">

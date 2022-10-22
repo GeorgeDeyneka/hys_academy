@@ -37,8 +37,6 @@
       }
     }
 
-    // Burger icon for mobile
-
     &__burger-logo {
       position: relative;
       z-index: 1;
@@ -129,15 +127,15 @@
       ~ *li.header__nav-item {
         padding: 32px 0px;
       }
-      ~ *div.menu__btn_burger,
-      ~ *div.menu__btn_burger::after,
-      ~ *div.menu__btn_burger::before {
+      ~ *span.menu__btn_burger,
+      ~ *span.menu__btn_burger::after,
+      ~ *span.menu__btn_burger::before {
         transition: background-color 500ms ease-in;
         background-color: var(--black);
       }
-      ~ *div.menu__btn_close,
-      ~ *div.menu__btn_close::after,
-      ~ *div.menu__btn_close::before {
+      ~ *span.menu__btn_close,
+      ~ *span.menu__btn_close::after,
+      ~ *span.menu__btn_close::before {
         display: block;
       }
     }

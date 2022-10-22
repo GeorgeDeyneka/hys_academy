@@ -8,6 +8,20 @@
 // Mobile Layout
 
 @media (min-width: 375px) {
+  .slick {
+    &-list {
+      overflow: hidden;
+      padding: 24px 0px;
+      max-width: 260px;
+    }
+    &-next {
+      background-image: url("../assets/images/sprite.svg#icon-arrow-right");
+    }
+    &-prev {
+      background-image: url("../assets/images/sprite.svg#icon-arrow-left");
+    }
+  }
+
   .no-scroll {
     overflow: hidden;
   }
@@ -32,7 +46,7 @@
         background-color: var(--blue-link-btn);
         margin-left: 24px;
       margin-bottom: 3px;
-        margin-bottom: 3px;
+      margin-bottom: 3px;
     }
     }
 
@@ -127,45 +141,37 @@
       background-repeat: no-repeat;
       z-index: -1;
     }
-    &__content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 80px;
-    }
     &__header {
       text-align: center;
     }
 
     &__title {
-      padding: 6px 0px 32px 0px;
+      padding: 6px 0px 30px 0px;
     }
     &__items {
-      padding-top: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 56px;
     }
     &__item {
+      background-color: var(--black);
       position: relative;
       max-width: 260px;
-      margin: 0px 8px;
+      margin: 0px 10px;
       border-radius: 8px;
-      transition-property: box-shadow;
-      &_marketing,
-      &_web-design {
-        display: none;
-      }
-      &:hover {
-        box-shadow: 0px 5px 15px rgba(27, 99, 240, 0.4);
-        cursor: pointer;
-      }
     }
     &__avatar-img {
       position: absolute;
       transform: translate(25px, -50%);
+      z-index: 2;
+      border-radius: 50%;
     }
     &__card-img {
       object-fit: cover;
       height: 364px;
       border-radius: 8px;
+      opacity: 0.7;
     }
 
     &__text-content {
@@ -182,8 +188,13 @@
     }
 
     &__title-card {
-      padding: 0px 16px 15px 16px;
+      padding: 0px 16px;
+      margin-bottom: 15px;
       color: var(--white);
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     &__description {
@@ -198,13 +209,32 @@
         &__actually {
           padding-right: 10px;
         }
+        &__old {
+          text-decoration: line-through;
+        }
       }
     }
     &__raiting {
+      position: relative;
       display: flex;
-      align-items: center;
-      gap: 1px;
     }
+    &__stars {
+      display: flex;
+      gap: 1px;
+      &_background {
+        fill: var(--white);
+      }
+      &_active {
+        position: absolute;
+        top: 3px;
+        left: 0px;
+        fill: #fdd22f;
+      }
+    }
+    &__stars-img {
+      align-self: center;
+    }
+
     &__reviews {
       padding-left: 3px;
     }
@@ -214,7 +244,6 @@
       font-size: 12px;
       font-weight: 400;
       line-height: 1.334;
-      text-decoration: line-through;
     }
   }
   .tour {
@@ -374,7 +403,7 @@
             height: 156px;
             background-color: var(--black-featured-card);
         cursor: pointer;
-            cursor: pointer;
+        cursor: pointer;
       }
 
           &__list {
@@ -401,7 +430,7 @@
       display: flex;
       width: 200px;
       height: 48px;
-      margin: 21px auto;
+      margin: 21px auto 7px;
       padding: 14px 8px;
       border: none;
       border-radius: 22px;
@@ -417,32 +446,26 @@
     }
 
     &__list {
+      transition: transform 1000ms ease-in-out;
       display: flex;
-      gap: 20px;
       margin: 0px;
-      :nth-child(1) {
-        background-color: var(--blue-study-bg);
-      }
-      :nth-last-child(3) {
-        background-color: var(--yellow-study-bg);
-      }
-      :nth-child(3) {
-        background-color: var(--purple-study-bg);
-      }
-      :nth-child(4) {
-        background-color: var(--red-study-bg);
-      }
+    }
+    &__list-container {
+      overflow: hidden;
+      max-width: 217px;
+      padding: 14px 0px;
     }
     &__container {
       padding-top: 100px;
     }
-    &__content {
+    &__slider {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 80px;
+      padding-bottom: 66px;
     }
     &__item {
+      margin: 0px 10px;
       position: relative;
       z-index: 1;
       display: flex;
@@ -450,11 +473,8 @@
       justify-content: center;
       border-radius: 4px;
       transition-property: box-shadow;
-      &:nth-last-child(-n + 3) {
-        display: none;
-      }
       &:hover {
-        box-shadow: 0px 5px 15px var(--lightgray-border);
+        box-shadow: 0px 5px 10px var(--black-header-bg);
         cursor: pointer;
       }
     }
@@ -465,6 +485,7 @@
     }
 
     &__item-text {
+      text-align: center;
       position: absolute;
       z-index: 2;
       color: var(--white);
@@ -607,6 +628,7 @@
       justify-content: space-between;
     }
     &__cards {
+      min-height: 571px;
       display: flex;
       flex-direction: column;
       gap: 44px;
@@ -669,6 +691,13 @@
       padding: 18px 8% 14px;
     }
 
+    &__subtitle-text {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
     &__read-link {
       display: inline-block;
       padding: 14px 21% 24px;
@@ -705,6 +734,12 @@
 // Tablet Layout
 
 @media (min-width: 768px) {
+  .slick {
+    &-list {
+      padding: 24px 15px;
+      max-width: 572px;
+    }
+  }
   .btn {
     padding: 12px 24px;
     &__request {
@@ -749,13 +784,8 @@
   }
   .courses {
     &__items {
-      display: flex;
       gap: 4px;
-    }
-    &__item {
-      &_marketing {
-        display: block;
-      }
+      justify-content: center;
     }
     &__subtitle {
       padding-top: 82px;
@@ -807,21 +837,22 @@
   }
   .study {
     &__container {
-      padding-top: 90px;
+      padding: 90px 10px 0px;
+    }
+    &__list-container {
+      max-width: 651px;
     }
     &__title {
       justify-content: center;
     }
-    &__item {
-      &:nth-last-child(-n + 1) {
-        display: flex;
-      }
-    }
     &__select {
-      margin: 32px auto;
+      margin: 32px auto 18px;
     }
-    &__content {
+    &__slider {
       justify-content: space-around;
+    }
+    &__description {
+      padding: 0px 40px;
     }
   }
   .customer {
@@ -845,6 +876,7 @@
       max-width: 1000px;
     }
     &__cards {
+      min-height: auto;
       flex-direction: row;
       justify-content: space-between;
       gap: 4%;
@@ -864,31 +896,16 @@
 
 // Breakpoints are created for display items where the screen allows
 
-@media (min-width: 950px) {
+@media (min-width: 990px) {
+  .slick {
+    &-list {
+      max-width: 881px;
+    }
+  }
   .courses {
     &__item {
-      &_marketing,
-      &_web-design {
-        display: block;
-      }
-    }
-  }
-  .study {
-    &__item {
-      &:nth-last-child(-n + 2) {
-        display: flex;
-      }
-    }
-  }
-}
-
-@media (min-width: 1100px) {
-  .study {
-    &__item {
-      &:nth-last-child(-n + 3) {
-        display: flex;
-      }
-      // Here flex is repeating because I'm cannot return block in display, because card is include flex elements.
+      max-width: 270px;
+      min-width: 270px;
     }
   }
 }
@@ -896,6 +913,11 @@
 // PC Layout
 
 @media (min-width: 1440px) {
+  .slick {
+    &-list {
+      max-width: 100%;
+    }
+  }
   .background-icons {
     max-width: 1440px;
     margin: auto;
@@ -949,15 +971,18 @@
     &__container {
       max-width: 988px;
     }
-    &__content {
-      gap: 12px;
-      margin-bottom: 64px;
+    &__items {
+      margin-bottom: 40px;
     }
     &__item {
-      max-width: 270px;
+      transition-property: box-shadow;
+      &:hover {
+        box-shadow: 0px 5px 15px rgba(27, 99, 240, 0.4);
+        cursor: pointer;
+      }
     }
     &__title {
-      padding-bottom: 56px;
+      padding-bottom: 54px;
     }
   }
 
@@ -1058,30 +1083,32 @@
       &__btn {
         left: auto;
         transform: translate(0%);
-        // This made for zeroing button position on tablet layout
       }
     }
   }
   .study {
     &__container {
-      padding-top: 80px;
+      padding: 80px 0px 0px;
     }
     &__description {
       padding: 0px 200px;
     }
-    &__content {
+    &__slider {
       justify-content: space-between;
       padding: 0px 27px;
     }
+    &__list-container {
+      max-width: 868px;
+    }
     &__item {
-      max-width: 197.5px;
+      min-width: 197px;
     }
   }
   .customer {
     &__container {
       justify-content: flex-start;
       gap: 178px;
-      padding: 180px 0px 185px 208px;
+      padding: 166px 0px 185px 208px;
       margin-right: calc((100% - 1024px) / 2);
       max-width: calc(100% - (100% - 1024px) / 2);
       background-position: 0px 76px;
@@ -1132,7 +1159,6 @@
     &__points {
       flex-direction: column;
       padding: 0px 27px 0px 0px;
-      // Here i don't use padding-right because I have to zeroing style for this points after tablet layout
     }
     &__content {
       flex-direction: row;
