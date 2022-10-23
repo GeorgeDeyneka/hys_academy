@@ -32,7 +32,6 @@ function paginator(event) {
     event.target.className === "blog__points"
   )
     return;
-  // Here contains doesn't work
   const buttonActive = event.target.innerText;
   setTimeout(getData.bind(this, buttonActive), 200);
 }

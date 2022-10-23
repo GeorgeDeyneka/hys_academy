@@ -1,7 +1,6 @@
 const checkbox = document.querySelector("#menu-toggle");
 const body = document.querySelector("body");
 
-window.addEventListener("resize", menuAutoClose);
 checkbox.addEventListener("change", noScroll);
 
 function noScroll() {
@@ -11,14 +10,18 @@ function noScroll() {
 }
 
 function menuAutoClose() {
-  if (!checkbox.checked) {
-    return;
-  }
-  const newWidth = document.documentElement.clientWidth;
-  this.setTimeout(() => {
-    if (newWidth >= 768) {
-      checkbox.checked = false;
-      noScroll();
+  window.addEventListener("resize", () => {
+    if (!checkbox.checked) {
+      return;
     }
-  }, 500);
+    const newWidth = document.documentElement.clientWidth;
+    setTimeout(() => {
+      if (newWidth >= 768) {
+        checkbox.checked = false;
+        noScroll();
+      }
+    }, 500);
+  });
 }
+
+export { noScroll, menuAutoClose };
