@@ -1,4 +1,5 @@
 import { noScroll, menuAutoClose } from "./mobile-menu.js";
+import { headerNavList, showActiveLink } from "./header-links.js";
 import { blogPoints, changeActiveBtn, paginator } from "./paginator.js";
 import { DATA_SLICK_SLIDER, DATA_NATIVE_SLIDER } from "./state.js";
 import {
@@ -26,14 +27,15 @@ export class App {
 
     document.addEventListener("DOMContentLoaded", paginator);
     blogPoints.addEventListener("click", eventHandler);
+    headerNavList.addEventListener("click", showActiveLink);
 
     function eventHandler(event) {
       changeActiveBtn(event);
       paginator(event);
     }
 
-    const slickStorage = new Storage(DATA_SLICK_SLIDER, 'slickData')
-    const nativeStorage = new Storage(DATA_NATIVE_SLIDER, 'nativeData')
+    const slickStorage = new Storage(DATA_SLICK_SLIDER, "slickData");
+    const nativeStorage = new Storage(DATA_NATIVE_SLIDER, "nativeData");
 
     const coursesSlider = (new SliderSlick({
       parentClassName: "slick-slider",

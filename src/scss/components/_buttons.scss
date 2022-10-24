@@ -14,10 +14,18 @@
     &:active {
       background-color: var(--blue-link-btn-pressed);
     }
+    &:focus-visible {
+      outline: none;
+      border: 3px solid var(--lightblue-btn-border);
+    }
   }
   &__green {
     color: var(--black);
     background-color: var(--lightgreen-btn);
+    &:focus-visible {
+      outline: none;
+      border: 3px solid var(--green-slider-bg);
+    }
   }
   &__lightgreen,
   &__green {
@@ -38,6 +46,9 @@
       padding: 11px 19px;
       border: 2px solid var(--white);
     }
+    &:focus-visible {
+      outline: 2px solid var(--white);
+    }
   }
   &__submit {
     max-width: 415px;
@@ -55,6 +66,10 @@
       transition: all 150ms ease-in-out;
       box-shadow: 0 0 10px 0 var(--green-link-btn inset),
         0 0 10px 4px var(--green-link-btn);
+    }
+    &:focus-visible {
+      outline: none;
+      border: 3px solid var(--green-slider-bg);
     }
   }
 }
@@ -89,6 +104,9 @@ a.btn {
       width: 40px;
       height: 40px;
     }
+    &:focus-visible {
+      outline: 3px solid var(--lightgray-logo);
+    }
   }
 }
 
@@ -105,9 +123,6 @@ a.btn {
   box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
   transition-property: background-color;
   font-size: 0px;
-  &_right {
-    transform: scale(-1, 1);
-  }
   &:hover {
     background-color: var(--green-link-btn);
     --color1: var(--white);
@@ -117,12 +132,18 @@ a.btn {
     background-color: var(--green-slider-bg);
     box-shadow: none;
   }
+  &:focus-visible {
+    outline: 3px solid var(--lightgray-logo);
+  }
+}
+
+.study__slide-next {
+    transform: scale(-1, 1);
 }
 
 .slick-disabled,
 .slider__btn:disabled {
-  background-color: var(--black-header-bg);
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .player {
@@ -141,5 +162,9 @@ a.btn {
   &:active {
     background-color: var(--green-slider-bg);
     box-shadow: none;
+  }
+  &:focus-visible {
+    border: none;
+    outline: 4px solid var(--white);
   }
 }

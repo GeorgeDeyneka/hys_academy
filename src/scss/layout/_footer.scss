@@ -12,6 +12,7 @@
     &__link-list {
       padding: 17px 0px 3px 0px;
     }
+
     &__subtitle {
       padding-bottom: 16px;
     }
@@ -41,6 +42,13 @@
       transition-property: color;
       &:hover {
         color: var(--lightgreen-btn);
+      }
+    }
+    &__link,
+    &__item-link {
+      &:focus-visible {
+        outline: 2px solid var(--gray-conference-text);
+        border-radius: 5px;
       }
     }
     &__info {

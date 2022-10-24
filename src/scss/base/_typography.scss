@@ -111,10 +111,6 @@ button,
 
 .event {
   &__subtitle {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
     color: var(--black);
     font-size: 16px;
     font-weight: 600;
