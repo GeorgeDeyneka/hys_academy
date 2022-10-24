@@ -42,7 +42,7 @@ export class FormActive {
   submitForm() {
     this.#parentSelector.addEventListener("submit", (event) => {
       event.preventDefault();
-      localStorage.clear();
+      localStorage.removeItem("formData");
       this.#formInputs.forEach((el) => (el.value = ""));
       this.#obj = {};
     });

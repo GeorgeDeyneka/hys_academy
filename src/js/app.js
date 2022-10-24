@@ -25,8 +25,12 @@ export class App {
     menuAutoClose();
 
     document.addEventListener("DOMContentLoaded", paginator);
-    blogPoints.addEventListener("click", changeActiveBtn);
-    blogPoints.addEventListener("click", paginator);
+    blogPoints.addEventListener("click", eventHandler);
+
+    function eventHandler(event) {
+      changeActiveBtn(event);
+      paginator(event);
+    }
 
     const slickStorage = new Storage(DATA_SLICK_SLIDER, 'slickData')
     const nativeStorage = new Storage(DATA_NATIVE_SLIDER, 'nativeData')
