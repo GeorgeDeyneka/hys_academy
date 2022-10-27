@@ -89,13 +89,13 @@ function makeActiveNative() {
   checkButtons();
 }
 
-function renderSlides() {
+function renderSlides(quantityOfSlides) {
   const sliderContainer = document.createElement("div");
   const ulList = document.createElement("ul");
   const buttonPrev = document.createElement("button");
   const buttonNext = document.createElement("button");
   const arrowLayout = `<svg
-                  class="slider__slide-img"
+                  class="study__slide-img"
                   width="10"
                   height="14"
                   stroke="#64be97"
@@ -111,7 +111,7 @@ function renderSlides() {
   buttonPrev.classList.add("study__slide-prev", "slider__btn");
   buttonNext.classList.add("study__slide-next", "slider__btn");
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < quantityOfSlides; i++) {
     const liItem = document.createElement("li");
     const imageBg = document.createElement("img");
     const title = document.createElement("h3");
@@ -134,11 +134,9 @@ function setNativeData(data) {
   }
   const arrTitles = document.querySelectorAll(".study__item-text");
   const arrImages = document.querySelectorAll(".study__item-img");
-  const arrItems = document.querySelectorAll(".study__item");
   data.forEach((el, i) => {
     arrTitles[i].innerText = el.title;
-    arrImages[i].src = el.imageUrl;
-    arrItems[i].style.backgroundColor = el.bgColor;
+    arrImages[i].src = el.url;
   });
 }
 

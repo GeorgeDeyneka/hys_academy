@@ -15,17 +15,12 @@
       background-color: var(--blue-link-btn-pressed);
     }
     &:focus-visible {
-      outline: none;
-      border: 3px solid var(--lightblue-btn-border);
+      outline: 3px solid var(--lightblue-btn-border);
     }
   }
   &__green {
     color: var(--black);
     background-color: var(--lightgreen-btn);
-    &:focus-visible {
-      outline: none;
-      border: 3px solid var(--green-slider-bg);
-    }
   }
   &__lightgreen,
   &__green {
@@ -34,6 +29,9 @@
     }
     &:active {
       background-color: var(--lightgreen-btn-pressed);
+    }
+    &:focus-visible {
+      outline: 3px solid var(--green-slider-bg);
     }
   }
   &__request {
@@ -68,8 +66,7 @@
         0 0 10px 4px var(--green-link-btn);
     }
     &:focus-visible {
-      outline: none;
-      border: 3px solid var(--green-slider-bg);
+      outline: 2px solid var(--green-slider-bg);
     }
   }
 }
@@ -138,7 +135,7 @@ a.btn {
 }
 
 .study__slide-next {
-    transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 .slick-disabled,
