@@ -15,10 +15,10 @@ const CARDS_PER_PAGE = 2;
 
     blogPoints.appendChild(blogPointLi);
     blogPointLi.appendChild(blogPointBtn);
-    
+
     blogPointBtn.innerText = `${i}`;
     blogPointBtn.type = "button";
-    
+
     if (i === 1) {
       blogPointBtn.classList.add("blog__point-btn_active");
     }
@@ -34,6 +34,46 @@ function paginator(event) {
     return;
   const buttonActive = event.target.innerText;
   setTimeout(getData.bind(this, buttonActive), 200);
+  blogPoints.children.length > 5
+    ? buttonScroll(buttonActive, DATA_PAGINATOR)
+    : (blogPoints.style.justifyContent = "center");
+}
+
+function checkTranslateProperty() {
+  return window.innerWidth < 1440 ? "translateX" : "translateY";
+}
+
+function checkResize() {
+  if (window.innerWidth < 1440) {
+    if (blogPoints.style.transform) {
+      blogPoints.style.transform = "translateY(0px)";
+    } else {
+      blogPoints.style.transform += "translateY(0px)";
+    }
+  } else {
+    if (blogPoints.style.transform) {
+      blogPoints.style.transform = "translateX(0px)";
+    } else {
+      blogPoints.style.transform += "translateX(0px)";
+    }
+  }
+}
+
+function buttonScroll(activeButton, data) {
+  const translateProperty = checkTranslateProperty();
+  if (activeButton <= 3) {
+    blogPoints.style.transform = `${translateProperty}(-0px)`;
+  }
+  if (activeButton > 3 && activeButton <= Math.round(data.length / 2) - 2) {
+    blogPoints.style.transform = `${translateProperty}(-${
+      62 * (activeButton - 3)
+    }px)`;
+  }
+  if (activeButton == Math.round(data.length / 2) - 1) {
+    blogPoints.style.transform = `${translateProperty}(-${
+      62 * (activeButton - 4)
+    }px)`;
+  }
 }
 
 function changeActiveBtn(event) {
@@ -86,4 +126,4 @@ function changeData(paginatedData) {
   });
 }
 
-export { blogPoints, changeActiveBtn, paginator };
+export { blogPoints, changeActiveBtn, paginator, checkResize };

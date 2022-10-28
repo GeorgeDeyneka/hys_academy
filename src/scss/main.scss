@@ -337,6 +337,7 @@
         margin-right: 8px;
       }
       &__subtitle {
+        text-align: center;
         &:focus-visible {
           outline: 2px solid var(--gray-conference-text);
           border-radius: 5px;
@@ -563,7 +564,7 @@
   }
   .start {
     &__content {
-      padding: 40px 0px 56px;
+      padding: 40px 0px 55px;
     }
     &__links {
       padding-bottom: 40px;
@@ -591,7 +592,7 @@
     }
 
     &__description {
-      padding: 24px 0px 18px 0px;
+      padding: 24px 0px 19px 0px;
     }
 
     &__description-text {
@@ -641,7 +642,7 @@
 
   .blog {
     &__title {
-      padding: 80px 0px 72px 0px;
+      padding: 80px 0px 73px;
     }
     &__content {
       display: flex;
@@ -649,7 +650,7 @@
       justify-content: space-between;
     }
     &__cards {
-      min-height: 571px;
+      min-height: 572px;
       display: flex;
       flex-direction: column;
       gap: 44px;
@@ -680,18 +681,23 @@
     }
     &__points {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       margin: 0px;
-      padding: 24px 0px 80px 0px;
+      padding: 24px 10px 79px;
       gap: 22px;
       font-weight: 600;
       font-size: 16px;
       line-height: 1.5;
       color: var(--blue-blog-text);
     }
+    &__points-container {
+      margin: 0 auto;
+      width: 308px;
+      overflow: hidden;
+    }
     &__illustration-img {
       position: absolute;
-      top: -24px;
+      top: -25px;
       right: 0px;
       object-fit: cover;
       width: 79%;
@@ -713,6 +719,7 @@
     }
 
     &__subtitle-text {
+      min-height: 48px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -833,9 +840,6 @@
       justify-content: center;
     }
     .event {
-      &__subtitle {
-        text-align: center;
-      }
       &__list {
         justify-content: center;
       }
@@ -1168,11 +1172,11 @@
   }
   .blog {
     &__title {
-      padding: 100px 0px 48px;
+      padding: 100px 0px 39px;
     }
     &__cards {
       gap: 20px;
-      margin-top: 24px;
+      margin-top: 34px;
     }
     &__card {
       width: 415px;
@@ -1181,14 +1185,20 @@
     &__card-event {
       gap: 24px;
     }
+    &__points-container {
+      margin: 0;
+      max-width: 94px;
+      padding-bottom: 10px;
+    }
     &__points {
       flex-direction: column;
-      padding: 0px 27px 0px 0px;
+      height: 310px;
+      padding: 10px 27px;
     }
     &__content {
       flex-direction: row;
       max-width: 100%;
-      padding-bottom: 80px;
+      padding-bottom: 57px;
     }
   }
 }

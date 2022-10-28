@@ -1,6 +1,6 @@
 import { noScroll, menuAutoClose } from "./mobile-menu.js";
 import { headerNavList, showActiveLink } from "./header-links.js";
-import { blogPoints, changeActiveBtn, paginator } from "./paginator.js";
+import { blogPoints, changeActiveBtn, paginator, checkResize } from "./paginator.js";
 import { DATA_SLICK_SLIDER, DATA_NATIVE_SLIDER } from "./state.js";
 import { makeRequest } from "./request.js";
 import {
@@ -31,6 +31,12 @@ export class App {
     document.addEventListener("DOMContentLoaded", paginator);
     blogPoints.addEventListener("click", eventHandler);
     headerNavList.addEventListener("click", showActiveLink);
+    window.addEventListener("resize", eventResizeHandler);
+
+    function eventResizeHandler(event) {
+      menuAutoClose(event)
+      checkResize()
+    }
 
     function eventHandler(event) {
       changeActiveBtn(event);
@@ -56,10 +62,12 @@ export class App {
 
     const select = new Select("select");
 
-    select.getSelect().addEventListener("change", async (event) => {
+    select.getSelect().addEventListener("change", onAlbumChange);
+
+    async function onAlbumChange(event) {
       let data = await makeRequest(event.target.value);
       nativeSlider.setData = setNativeData(data);
-    });
+    }
 
     const myForm = new FormActive("blog__form", "form__input");
   }

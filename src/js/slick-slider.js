@@ -27,7 +27,7 @@ function makeActiveSlick() {
     speed: 1000,
     infinite: false,
     draggable: false,
-    waitForAnimate: false,
+    waitForAnimate: true,
     mobileFirst: true,
     variableWidth: true,
     cssEase: "ease-in-out",
