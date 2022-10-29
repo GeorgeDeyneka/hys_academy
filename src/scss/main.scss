@@ -592,7 +592,7 @@
     }
 
     &__description {
-      padding: 24px 0px 19px 0px;
+      padding: 25px 0px 19px 0px;
     }
 
     &__description-text {
@@ -615,20 +615,22 @@
     }
 
     &__item {
-      display: flex;
-      align-items: center;
       border-bottom: 1px solid var(--white-border);
       padding: 12px 0px;
     }
 
     &__item-img {
+      fill: none;
+      stroke: var(--white);
       margin-right: 13px;
+      &:hover {
+        stroke: var(--lightgreen-btn);
+      }
     }
 
     &__item-link {
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.57;
+      display: flex;
+      align-items: center;
       transition-property: color;
       &:hover {
         color: var(--lightgreen-btn);
@@ -752,9 +754,15 @@
       background-color: var(--lightblue-input-bg);
       border-radius: 22px;
       border: none;
+      outline: none;
       &:focus {
         border: 2px solid var(--blue-link-btn);
-        outline: none;
+      }
+      &:focus:invalid {
+        border: 2px solid var(--red-study-bg);
+      }
+      &:valid {
+        border: 1px solid var(--green-link-btn);
       }
     }
     &__submit {
@@ -1164,7 +1172,7 @@
       width: 415px;
     }
     &__content {
-      padding: 64px 0px;
+      padding: 63px 0px;
     }
     &__links {
       padding: 88px 0px 74px;

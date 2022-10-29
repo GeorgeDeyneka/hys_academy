@@ -16,6 +16,7 @@ class SliderSlick {
     const parentSelector = document.getElementById(this.#selector);
     parentSelector.innerHTML = this.#renderFunc();
     this.#makeActiveFunc();
+    appendSvg();
   }
 }
 
@@ -52,6 +53,19 @@ function makeActiveSlick() {
       },
     ],
   });
+}
+
+function appendSvg() {
+  const slickButtons = document.querySelectorAll(".slick-arrow");
+  const arrowLayout = `<svg
+                class="study__slide-img"
+                width="10"
+                height="14"
+                stroke="#64be97"
+              >
+                <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
+              </svg>`;
+  slickButtons.forEach((el) => (el.innerHTML += arrowLayout));
 }
 
 function renderCards() {

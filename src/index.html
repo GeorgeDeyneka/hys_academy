@@ -53,7 +53,7 @@
                   <a class="header__link" href="#blog">Blog</a>
                 </li>
               </ul>
-              <button type="button" class="btn btn__blue">Explore</button>
+              <a class="btn btn__blue" href="#footer">More Info</a>
             </div>
           </nav>
         </div>
@@ -73,7 +73,7 @@
                     public and creates credit. For all of your needs.
                   </p>
                   <div class="education__buttons buttons-block">
-                    <a class="btn btn__blue" href="#">Read More</a>
+                    <a class="btn btn__blue" href="#blog">Read More</a>
                     <a class="btn btn__green" href="#start">Get Started</a>
                   </div>
                 </div>
@@ -227,7 +227,7 @@
                   consequatur?
                 </li>
               </ul>
-              <a class="btn btn__blue" href="#">Read More</a>
+              <a class="btn btn__blue" href="#blog">Read More</a>
               <div class="tour__peach-square"></div>
               <div class="tour__gray-ellipse"></div>
             </div>
@@ -419,9 +419,13 @@
                     </ul>
                   </div>
                 </div>
-                <button type="button" class="btn btn__blue featured__btn">
+                <a
+                  class="btn btn__blue featured__btn"
+                  href="https://www.mastercard.us/en-us.html"
+                  target="_blank"
+                >
                   Become a Sponsor
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -520,9 +524,9 @@
                   </div>
                   <div class="start__buttons buttons-block">
                     <a class="btn btn__green" href="#form">Apply Now</a>
-                    <button class="btn btn__request" type="button">
+                    <a class="btn btn__request" href="#form">
                       Request Service
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="start__links">
@@ -536,38 +540,40 @@
                   </div>
                   <ul class="start__links-list">
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-pen"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#">Tution and Fees</a>
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-pen"
+                          ></use></svg
+                        >Tution and Fees</a
+                      >
                     </li>
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-briefcase"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#">Review & Rating</a>
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-briefcase"
+                          ></use></svg
+                        >Review & Rating</a
+                      >
                     </li>
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-book-open"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#"
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-book-open"
+                          ></use></svg
                         >University Facilities</a
                       >
                     </li>
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-comment"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#">Community Q&A</a>
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-comment"
+                          ></use></svg
+                        >Community Q&A</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -638,6 +644,9 @@
                   name="name"
                   placeholder="Name Surname"
                   type="text"
+                  maxlength="35"
+                  pattern="[A-Za-z\s]{5,35}"
+                  required
                 />
               </label>
               <label for="form-phone">
@@ -646,7 +655,10 @@
                   id="form-phone"
                   name="phone"
                   placeholder="Phone"
-                  type="text"
+                  type="tel"
+                  maxlength="14"
+                  pattern="[0-9]{10,14}"
+                  required
                 />
               </label>
               <label for="form-email">
@@ -655,7 +667,11 @@
                   id="form-email"
                   name="email"
                   placeholder="Enter your email..."
-                  type="text"
+                  type="email"
+                  minlength="12"
+                  maxlength="35"
+                  pattern="([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)"
+                  required
                 />
               </label>
               <button class="btn btn__submit form__submit" type="submit">
@@ -666,7 +682,7 @@
         </section>
       </main>
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="footer" id="footer">
         <div class="footer__background background-icons">
           <div class="container">
             <div class="footer__references">
