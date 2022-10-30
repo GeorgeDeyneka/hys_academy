@@ -16,7 +16,7 @@ const CARDS_PER_PAGE = 2;
     blogPoints.appendChild(blogPointLi);
     blogPointLi.appendChild(blogPointBtn);
 
-    blogPointBtn.innerText = `${i}`;
+    blogPointBtn.innerText = i;
     blogPointBtn.type = "button";
 
     if (i === 1) {
@@ -77,12 +77,7 @@ function buttonScroll(activeButton, data) {
 }
 
 function changeActiveBtn(event) {
-  if (
-    event.target.classList.contains("blog__point") ||
-    event.target.classList.contains("blog__point-btn_active") ||
-    event.target.classList.contains("blog__points")
-  )
-    return;
+  if (event.target.className !== "blog__point-btn") return;
   document
     .querySelector(".blog__point-btn_active")
     .classList.remove("blog__point-btn_active");

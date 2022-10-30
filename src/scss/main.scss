@@ -520,13 +520,26 @@
       top: 46px;
       left: 54px;
       border-radius: 24px;
+      object-fit: cover;
+      max-height: 273px;
+      transition: opacity 300ms ease-in;
+      &_opacity {
+        opacity: 0%;
+      }
     }
+
+    &__quotes-img {
+      transition: fill 200ms ease-in;
+      fill: var(--purple-quote);
+    }
+
     &__blue-square {
       position: relative;
       width: 273px;
       height: 273px;
       background-color: var(--blue-customers-card);
       border-radius: 24px;
+      transition: background-color 200ms ease-in;
     }
 
     &__description {
@@ -541,6 +554,13 @@
       padding-bottom: 54px;
     }
 
+    &__excerption {
+      transition: opacity 100ms ease-in;
+      &_opacity {
+        opacity: 0%;
+      }
+    }
+
     &__points {
       display: flex;
       margin: 0px;
@@ -553,6 +573,7 @@
       background-color: var(--blue-point);
       border-radius: 50%;
       border: none;
+      transition: background-color 200ms ease-in;
       &:hover,
       &_active {
         background-color: var(--blue-link-btn);
@@ -1160,6 +1181,7 @@
     &__card-img {
       top: 58px;
       left: 68px;
+      max-height: 344px;
     }
   }
   .start {

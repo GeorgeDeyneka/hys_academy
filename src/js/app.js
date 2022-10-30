@@ -1,7 +1,9 @@
 import { noScroll, menuAutoClose } from "./mobile-menu.js";
 import { headerNavList, showActiveLink } from "./header-links.js";
 import { blogPoints, changeActiveBtn, paginator, checkResize } from "./paginator.js";
-import { DATA_SLICK_SLIDER, DATA_NATIVE_SLIDER } from "./state.js";
+import { customerPoints, paginatorCustomer, changeActiveBtnCustomer } from "./customer-paginator.js";
+import "./customer-paginator.js"
+import { DATA_SLICK_SLIDER } from "./state.js";
 import { makeRequest } from "./request.js";
 import {
   SliderSlick,
@@ -28,17 +30,28 @@ export class App {
     noScroll();
     menuAutoClose();
 
-    document.addEventListener("DOMContentLoaded", paginator);
-    blogPoints.addEventListener("click", eventHandler);
+    document.addEventListener("DOMContentLoaded", paginationHandler);
+    blogPoints.addEventListener("click", eventClickHandler);
+    customerPoints.addEventListener("click", eventClickHandlerCustomer);
     headerNavList.addEventListener("click", showActiveLink);
     window.addEventListener("resize", eventResizeHandler);
+
+    function paginationHandler(event) {
+      paginator(event);
+      paginatorCustomer(event)
+    }
+
+    function eventClickHandlerCustomer(event) {
+      paginatorCustomer(event);
+      changeActiveBtnCustomer(event);
+    }
 
     function eventResizeHandler(event) {
       menuAutoClose(event)
       checkResize()
     }
 
-    function eventHandler(event) {
+    function eventClickHandler(event) {
       changeActiveBtn(event);
       paginator(event);
     }
