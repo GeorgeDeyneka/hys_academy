@@ -1,34 +1,36 @@
+import { Storage } from "./storage.js";
+
 export class FormActive {
   #classNameChilds;
   #parentSelector;
   #formInputs;
-  #obj;
+  #obj = {};
+  #newStorage = new Storage("formData");
 
   constructor(parentClassName, childClassName) {
     this.#classNameChilds = childClassName;
     this.#parentSelector = document.querySelector(`.${parentClassName}`);
     this.#formInputs = document.querySelectorAll(`.${childClassName}`);
-    this.#obj = {};
-    this.setLocalStorage();
+    this.onFormChange();
     this.setFormData();
     this.submitForm();
   }
 
-  setLocalStorage() {
-    this.#parentSelector.addEventListener("keyup", (event) => {
+  onFormChange() {
+    this.#parentSelector.addEventListener("change", (event) => {
       if (event.target.classList.contains(this.#classNameChilds)) {
-        const localStorageObj = JSON.parse(localStorage.getItem("formData"));
-        if (localStorageObj && Object.keys(localStorageObj).length >= 1) {
+        const localStorageObj = this.#newStorage.getData();
+        if (localStorageObj && Object.keys(localStorageObj).length) {
           this.#obj = localStorageObj;
         }
         this.#obj[event.target.getAttribute("name")] = event.target.value;
-        localStorage.setItem("formData", JSON.stringify(this.#obj));
+        this.#newStorage.setData(this.#obj);
       }
     });
   }
 
   setFormData() {
-    const data = JSON.parse(localStorage.getItem("formData"));
+    const data = this.#newStorage.getData();
     if (data) {
       this.#formInputs.forEach((el) => {
         const valueOfKey = data[el.getAttribute("name")];
@@ -42,7 +44,7 @@ export class FormActive {
   submitForm() {
     this.#parentSelector.addEventListener("submit", (event) => {
       event.preventDefault();
-      localStorage.removeItem("formData");
+      this.#newStorage.removeData();
       this.#formInputs.forEach((el) => (el.value = ""));
       this.#obj = {};
     });

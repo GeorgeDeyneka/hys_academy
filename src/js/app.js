@@ -34,8 +34,10 @@ export class App {
       paginator(event);
     }
 
-    const slickStorage = new Storage(DATA_SLICK_SLIDER, "slickData");
-    const nativeStorage = new Storage(DATA_NATIVE_SLIDER, "nativeData");
+    const slickStorage = new Storage("slickData");
+    slickStorage.setData(DATA_SLICK_SLIDER);
+    const nativeStorage = new Storage("nativeData");
+    nativeStorage.setData(DATA_NATIVE_SLIDER);
 
     const coursesSlider = (new SliderSlick({
       parentClassName: "slick-slider",
