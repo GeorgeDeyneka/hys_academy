@@ -30,6 +30,7 @@ function makeActiveSlick() {
     waitForAnimate: false,
     mobileFirst: true,
     variableWidth: true,
+    cssEase: "ease-in-out",
     responsive: [
       {
         breakpoint: 374,

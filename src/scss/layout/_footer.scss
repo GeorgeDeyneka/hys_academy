@@ -12,6 +12,7 @@
     &__link-list {
       padding: 17px 0px 3px 0px;
     }
+
     &__subtitle {
       padding-bottom: 16px;
     }
@@ -22,10 +23,9 @@
       }
     }
     &__logos {
+      display: flex;
       padding: 7px 0px 31px 0px;
-      :not(:last-child) {
-        padding-right: 12.5px;
-      }
+      gap: 16px;
     }
     &__social {
       fill: none;
@@ -42,6 +42,13 @@
       transition-property: color;
       &:hover {
         color: var(--lightgreen-btn);
+      }
+    }
+    &__link,
+    &__item-link {
+      &:focus-visible {
+        outline: 2px solid var(--gray-conference-text);
+        border-radius: 5px;
       }
     }
     &__info {
@@ -104,7 +111,7 @@
       text-align: start;
     }
     &__logo {
-      margin-right: 60px;
+      margin-right: 63px;
       align-self: auto;
     }
     &__logos {
@@ -112,6 +119,9 @@
     }
     &__link-list {
       padding: 0px;
+      &:last-child {
+        padding-right: 10px;
+      }
     }
     &__subtitle {
       padding: 1px 0px 23px;

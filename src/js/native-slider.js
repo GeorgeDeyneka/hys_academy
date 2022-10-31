@@ -94,6 +94,16 @@ function renderSlides() {
   const ulList = document.createElement("ul");
   const buttonPrev = document.createElement("button");
   const buttonNext = document.createElement("button");
+  const arrowLayout = `<svg
+                  class="slider__slide-img"
+                  width="10"
+                  height="14"
+                  stroke="#64be97"
+                >
+                  <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
+                </svg>`;
+  buttonPrev.innerHTML += arrowLayout
+  buttonNext.innerHTML += arrowLayout
 
   sliderContainer.classList.add("study__list-container");
   sliderContainer.append(ulList);

@@ -109,6 +109,15 @@ button,
   text-transform: uppercase;
 }
 
+.event {
+  &__subtitle {
+    color: var(--black);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
 .footer {
   &__subtitle {
     font-weight: 700;
