@@ -2,7 +2,6 @@ import { noScroll, menuAutoClose } from "./mobile-menu.js";
 import { headerNavList, showActiveLink } from "./header-links.js";
 import { blogPoints, changeActiveBtn, paginator, checkResize } from "./paginator.js";
 import { customerPoints, paginatorCustomer, changeActiveBtnCustomer } from "./customer-paginator.js";
-import "./customer-paginator.js"
 import { DATA_SLICK_SLIDER } from "./state.js";
 import { makeRequest } from "./request.js";
 import {
@@ -58,7 +57,8 @@ export class App {
 
     const dataForNative = await makeRequest();
 
-    const slickStorage = new Storage(DATA_SLICK_SLIDER, "slickData");
+    const slickStorage = new Storage("slickData");
+    slickStorage.setData(DATA_SLICK_SLIDER);
 
     const coursesSlider = (new SliderSlick({
       parentClassName: "slick-slider",

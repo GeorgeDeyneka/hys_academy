@@ -21,6 +21,10 @@
   &__green {
     color: var(--black);
     background-color: var(--lightgreen-btn);
+    &:focus-visible {
+      outline: none;
+      border: 3px solid var(--green-slider-bg);
+    }
   }
   &__lightgreen,
   &__green {
