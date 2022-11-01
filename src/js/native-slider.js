@@ -27,6 +27,7 @@ function makeActiveNative() {
   const ulList = document.querySelector(".study__list");
 
   window.addEventListener("resize", adaptive);
+
   sliderNative.addEventListener("click", (event) => {
     if (event.target.classList.contains("study__slide-prev")) {
       prev();
@@ -102,6 +103,7 @@ function renderSlides(quantityOfSlides) {
                 >
                   <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
                 </svg>`;
+  
   buttonPrev.innerHTML += arrowLayout
   buttonNext.innerHTML += arrowLayout
 
@@ -125,6 +127,7 @@ function renderSlides(quantityOfSlides) {
     liItem.append(imageBg, title);
     ulList.append(liItem);
   }
+
   return [buttonPrev, sliderContainer, buttonNext];
 }
 
@@ -132,8 +135,10 @@ function setNativeData(data) {
   if (!data) {
     throw new Error("No data for slider provided");
   }
+
   const arrTitles = document.querySelectorAll(".study__item-text");
   const arrImages = document.querySelectorAll(".study__item-img");
+  
   data.forEach((el, i) => {
     arrTitles[i].innerText = el.title;
     arrImages[i].src = el.url;

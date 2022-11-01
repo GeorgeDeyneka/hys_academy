@@ -7,21 +7,23 @@ menuList.addEventListener("click", menuAutoClose);
 
 function noScroll() {
   checkbox.checked
-  ? body.classList.add("no-scroll")
-  : body.classList.remove("no-scroll");
+    ? body.classList.add("no-scroll")
+    : body.classList.remove("no-scroll");
 }
 
 function menuAutoClose(event) {
-    if (!checkbox.checked) {
-      return;
+  if (!checkbox.checked) {
+    return;
+  }
+
+  const newWidth = document.documentElement.clientWidth;
+
+  setTimeout(() => {
+    if (newWidth >= 768 || event.target.className === "header__link") {
+      checkbox.checked = false;
+      noScroll();
     }
-    const newWidth = document.documentElement.clientWidth;
-    setTimeout(() => {
-      if (newWidth >= 768 || event.target.className === "header__link") {
-        checkbox.checked = false;
-        noScroll();
-      }
-    }, 500);
-  };
+  }, 500);
+}
 
 export { noScroll, menuAutoClose };

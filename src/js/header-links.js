@@ -12,7 +12,9 @@ function showActiveLink(event) {
         el.classList.remove(ACTIVE_CLASS_NAME);
         event.target.classList.add(ACTIVE_CLASS_NAME);
       }
+
       event.target.classList.add(ACTIVE_CLASS_NAME);
+
       setTimeout(() => el.classList.remove(ACTIVE_CLASS_NAME), 3000);
     });
   }

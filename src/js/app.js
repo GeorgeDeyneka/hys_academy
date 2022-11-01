@@ -71,6 +71,7 @@ export class App {
       renderSlidesHtml: renderSlides.bind(this, dataForNative.length),
       makeActive: makeActiveNative,
     });
+    
     nativeSlider.setData = setNativeData(dataForNative);
 
     const select = new Select("select");
