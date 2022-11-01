@@ -14,6 +14,7 @@ export class FormActive {
     this.onFormChange();
     this.setFormData();
     this.submitForm();
+    this.validateForm();
   }
 
   onFormChange() {
