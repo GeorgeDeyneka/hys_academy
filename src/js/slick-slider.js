@@ -16,18 +16,20 @@ class SliderSlick {
     const parentSelector = document.getElementById(this.#selector);
     parentSelector.innerHTML = this.#renderFunc();
     this.#makeActiveFunc();
+    appendSvg();
   }
 }
 
 function makeActiveSlick() {
   const parentSelector = document.getElementById("slick-slider");
+
   $(parentSelector).slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     speed: 1000,
     infinite: false,
     draggable: false,
-    waitForAnimate: false,
+    waitForAnimate: true,
     mobileFirst: true,
     variableWidth: true,
     cssEase: "ease-in-out",
@@ -54,17 +56,33 @@ function makeActiveSlick() {
   });
 }
 
+function appendSvg() {
+  const slickButtons = document.querySelectorAll(".slick-arrow");
+  const arrowLayout = `<svg
+                class="study__slide-img"
+                width="10"
+                height="14"
+                stroke="#64be97"
+              >
+                <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
+              </svg>`;
+  
+  slickButtons.forEach((el) => (el.innerHTML += arrowLayout));
+}
+
 function renderCards() {
   const ITEMS = 6;
   const STARS = 5;
   let cardLayout = "";
   let starLayout = "";
+
   for (let i = 0; i < STARS; i++) {
     starLayout += `
       <svg class="courses__stars-img" width="11" height="11">
           <use href="./assets/images/sprite.svg#icon-star"></use>
       </svg>`;
   }
+
   for (let i = 0; i < ITEMS; i++) {
     cardLayout += `
          <div class="courses__item">
@@ -98,6 +116,7 @@ function renderCards() {
           </div>
         `;
   }
+
   return cardLayout;
 }
 
@@ -105,6 +124,7 @@ function setSlickData(data) {
   if (!data) {
     throw new Error("No data for slider provided");
   }
+
   const arrReviews = document.querySelectorAll(".courses__reviews");
   const arrTitles = document.querySelectorAll(".courses__title-card");
   const arrSubtitles = document.querySelectorAll(".courses__subtitle-card");
@@ -113,6 +133,7 @@ function setSlickData(data) {
   const arrActuallyPrices = document.querySelectorAll(".price__actually");
   const arrOldPrices = document.querySelectorAll(".price__old");
   const arrStars = document.querySelectorAll(".courses__stars_active");
+  
   data.forEach((el, i) => {
     arrReviews[i].innerText = el.rewievs;
     arrTitles[i].innerText = el.title;

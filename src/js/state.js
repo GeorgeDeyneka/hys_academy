@@ -166,4 +166,78 @@ const DATA_NATIVE_SLIDER = [
   },
 ];
 
-export { DATA_PAGINATOR, DATA_SLICK_SLIDER, DATA_NATIVE_SLIDER };
+const DATA_CUSTOMERS_PAGINATOR = [
+  {
+    id: 1,
+    firstParagraph:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque",
+    secondParagraph:
+      "Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    author: "Stephanie Magion",
+    imageUrl: "./assets/images/two-girls-studying-customers.jpg",
+    bgColor: "var(--blue-customers-card)",
+    quoteColor: "var(--purple-quote)",
+  },
+  {
+    id: 2,
+    firstParagraph:
+      "- Give me the stone. - It's in the case. - What? - It's in the case!",
+    secondParagraph:
+      "- You put the stone in the case? Then open the case and give me the stone. - The only man who knew the combination you just shot.",
+    author: "Boris Blade",
+    imageUrl: "./assets/images/modeling.jpg",
+    bgColor: "var(--gray-basic-text)",
+    quoteColor: "var(--gray-basic-text)",
+  },
+  {
+    id: 3,
+    firstParagraph:
+      " - We should have shotguns for this kind of deal. - How many up there?",
+
+    secondParagraph:
+      " - That's countin' our guy? - Not sure. - So that means there could be up to five guys up there? - It's possible. - We should have fuckin' shotguns.",
+    author: "Vincent Vega",
+    imageUrl: "./assets/images/learning-html.jpg",
+    bgColor: "var(--darkpurple-customer-square)",
+    quoteColor: "var(--darkpurple-customer-square)",
+  },
+  {
+    id: 4,
+    firstParagraph:
+      " - I know why you're here, Neo. I know what you've been doing...",
+    secondParagraph:
+      " - Why you hardly sleep, why you live alone, and why night after night, you sit by your computer. You're looking for him.",
+    author: "Neo from Matrix",
+    imageUrl: "./assets/images/c-programming.jpg",
+    bgColor: "var(--darkblue-customer-square)",
+    quoteColor: "var(--darkblue-customer-square)",
+  },
+  {
+    id: 5,
+    firstParagraph:
+      " - I've been a poor man and I've been a rich man... And I choose rich every time!",
+    secondParagraph:
+      " - Get Off The Phone, FBI! - Was all this legal? Absolutely not, but we were making more money than we knew what to do with.",
+    author: "Jordan Belfort",
+    imageUrl: "./assets/images/learning-photoshop.jpg",
+    bgColor: "var(--black-customer-square)",
+    quoteColor: "var(--black-customer-square)",
+  },
+];
+
+const VALIDATE_MESSAGES = {
+  "form-email":
+    "Expected an your e-mail address (For example: user@gmail.com).",
+  "form-phone":
+    "Your number is too short or has letters. Please, correct this.",
+  "form-name":
+    "Your name is too short or has numbers or other symbols. Please, correct this.",
+};
+
+export {
+  DATA_PAGINATOR,
+  DATA_SLICK_SLIDER,
+  DATA_NATIVE_SLIDER,
+  DATA_CUSTOMERS_PAGINATOR,
+  VALIDATE_MESSAGES
+};

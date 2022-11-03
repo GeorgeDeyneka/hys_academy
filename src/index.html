@@ -53,7 +53,7 @@
                   <a class="header__link" href="#blog">Blog</a>
                 </li>
               </ul>
-              <button type="button" class="btn btn__blue">Explore</button>
+              <a class="btn btn__blue" href="#footer">More Info</a>
             </div>
           </nav>
         </div>
@@ -73,7 +73,7 @@
                     public and creates credit. For all of your needs.
                   </p>
                   <div class="education__buttons buttons-block">
-                    <a class="btn btn__blue" href="#">Read More</a>
+                    <a class="btn btn__blue" href="#blog">Read More</a>
                     <a class="btn btn__green" href="#start">Get Started</a>
                   </div>
                 </div>
@@ -227,7 +227,7 @@
                   consequatur?
                 </li>
               </ul>
-              <a class="btn btn__blue" href="#">Read More</a>
+              <a class="btn btn__blue" href="#blog">Read More</a>
               <div class="tour__peach-square"></div>
               <div class="tour__gray-ellipse"></div>
             </div>
@@ -419,9 +419,13 @@
                     </ul>
                   </div>
                 </div>
-                <button type="button" class="btn btn__blue featured__btn">
+                <a
+                  class="btn btn__blue featured__btn"
+                  href="https://www.mastercard.us/en-us.html"
+                  target="_blank"
+                >
                   Become a Sponsor
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -436,13 +440,7 @@
               Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
-            <select class="study__select" name="Label" id="pagination">
-              <option selected disabled hidden>Label</option>
-              <option value="Item 1">Item 1</option>
-              <option value="Item 2">Item 2</option>
-              <option value="Item 3">Item 3</option>
-              <option value="Item 4">Item 4</option>
-            </select>
+            <div class="study__select-wrapper" id="select"></div>
             <div class="study__slider" id="native-slider"></div>
           </div>
         </section>
@@ -453,6 +451,7 @@
               <img
                 class="customer__card-img"
                 width="344"
+                height="344"
                 src="./assets/images/two-girls-studying-customers.jpg"
                 alt="Two girls studying"
               />
@@ -461,16 +460,16 @@
               <div class="customer__title title">
                 <h2 class="title__text">Our great customers</h2>
               </div>
-              <svg class="customer__qoutes-img" width="39" height="31">
+              <svg class="customer__quotes-img" width="39" height="31">
                 <use href="./assets/images/sprite.svg#icon-quotes"></use>
               </svg>
               <figure class="customer__excerption">
                 <blockquote class="customer__description">
-                  <p class="customer__description-text">
+                  <p class="customer__description-text customer__description-text_first">
                     Sed ut perspiciatis unde omnis iste natus error sit
                     voluptatem accusantium doloremque
                   </p>
-                  <p class="customer__description-text">
+                  <p class="customer__description-text customer__description-text_second">
                     Laudantium, totam rem aperiam, eaque ipsa quae ab illo
                     inventore veritatis et quasi architecto beatae vitae dicta
                     sunt explicabo.
@@ -481,24 +480,6 @@
                 </figcaption>
               </figure>
               <ul class="customer__points">
-                <li class="customer__point">
-                  <button class="customer__point-btn customer__point-btn_active" type="button"></button>
-                </li>
-                <li class="customer__point">
-                  <button class="customer__point-btn" type="button"></button>
-                </li>
-                <li class="customer__point">
-                  <button
-                    class="customer__point-btn"
-                    type="button"
-                  ></button>
-                </li>
-                <li class="customer__point">
-                  <button class="customer__point-btn" type="button"></button>
-                </li>
-                <li class="customer__point">
-                  <button class="customer__point-btn" type="button"></button>
-                </li>
               </ul>
             </div>
           </div>
@@ -526,9 +507,9 @@
                   </div>
                   <div class="start__buttons buttons-block">
                     <a class="btn btn__green" href="#form">Apply Now</a>
-                    <button class="btn btn__request" type="button">
+                    <a class="btn btn__request" href="#form">
                       Request Service
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="start__links">
@@ -542,38 +523,40 @@
                   </div>
                   <ul class="start__links-list">
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-pen"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#">Tution and Fees</a>
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-pen"
+                          ></use></svg
+                        >Tution and Fees</a
+                      >
                     </li>
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-briefcase"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#">Review & Rating</a>
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-briefcase"
+                          ></use></svg
+                        >Review & Rating</a
+                      >
                     </li>
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-book-open"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#"
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-book-open"
+                          ></use></svg
                         >University Facilities</a
                       >
                     </li>
                     <li class="start__item">
-                      <svg class="start__item-img" width="24" height="24">
-                        <use
-                          href="./assets/images/sprite.svg#icon-white-comment"
-                        ></use>
-                      </svg>
-                      <a class="start__item-link" href="#">Community Q&A</a>
+                      <a class="start__item-link" href="#">
+                        <svg class="start__item-img" width="24" height="24">
+                          <use
+                            href="./assets/images/sprite.svg#icon-white-comment"
+                          ></use></svg
+                        >Community Q&A</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -599,10 +582,10 @@
                   <h5 class="blog__vertical-text">DESIGN</h5>
                   <div class="blog__card-event">
                     <img
-                    class="blog__avatar-img"
-                    width="48"
-                    src="./assets/images/teacher-four.png"
-                    alt="Our teacher"
+                      class="blog__avatar-img"
+                      width="48"
+                      src="./assets/images/teacher-four.png"
+                      alt="Our teacher"
                     />
                     <h3 class="blog__subtitle-text">
                       International Conference<br />on Bussiness
@@ -620,10 +603,10 @@
                   <h5 class="blog__vertical-text">DESIGN</h5>
                   <div class="blog__card-event">
                     <img
-                    class="blog__avatar-img"
-                    width="48"
-                    src="./assets/images/teacher-five.png"
-                    alt="Our teacher"
+                      class="blog__avatar-img"
+                      width="48"
+                      src="./assets/images/teacher-five.png"
+                      alt="Our teacher"
                     />
                     <h3 class="blog__subtitle-text">
                       International Conference<br />on Bussiness
@@ -632,7 +615,9 @@
                   <a class="blog__read-link" href="#">Read Now</a>
                 </div>
               </div>
-              <ul class="blog__points"></ul>
+              <div class="blog__points-container">
+                <ul class="blog__points"></ul>
+              </div>
             </div>
             <form class="blog__form form" id="form">
               <label for="form-name">
@@ -642,6 +627,9 @@
                   name="name"
                   placeholder="Name Surname"
                   type="text"
+                  maxlength="35"
+                  pattern="[A-Za-z\s]{5,35}"
+                  required
                 />
               </label>
               <label for="form-phone">
@@ -650,7 +638,10 @@
                   id="form-phone"
                   name="phone"
                   placeholder="Phone"
-                  type="text"
+                  type="tel"
+                  maxlength="14"
+                  pattern="[0-9]{10,14}"
+                  required
                 />
               </label>
               <label for="form-email">
@@ -659,7 +650,11 @@
                   id="form-email"
                   name="email"
                   placeholder="Enter your email..."
-                  type="text"
+                  type="email"
+                  minlength="12"
+                  maxlength="35"
+                  pattern="([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)"
+                  required
                 />
               </label>
               <button class="btn btn__submit form__submit" type="submit">
@@ -670,7 +665,7 @@
         </section>
       </main>
       <!-- Footer -->
-      <footer class="footer">
+      <footer class="footer" id="footer">
         <div class="footer__background background-icons">
           <div class="container">
             <div class="footer__references">

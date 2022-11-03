@@ -97,10 +97,10 @@ button,
     color: var(--blue-text);
   }
   &__yellow {
-    color: var(--yellow-text);
+    color: var(--yellow-study-bg);
   }
   &__red {
-    color: var(--red-text);
+    color: var(--red-study-bg);
   }
 }
 
@@ -115,6 +115,14 @@ button,
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
+  }
+}
+
+.start {
+  &__item-link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
   }
 }
 
