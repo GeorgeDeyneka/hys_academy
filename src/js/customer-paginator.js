@@ -3,12 +3,14 @@ import { DATA_CUSTOMERS_PAGINATOR } from "./state.js";
 const customerPoints = document.querySelector(".customer__points");
 
 function paginatorCustomer(event) {
-  if (
-    event.target.className === "customer__point-btn_active" ||
-    event.target.className === "customer__points" ||
-    event.target.className === "customer__point"
-  )
-    return;
+  const classesArr = [
+    "customer__point-btn_active",
+    "customer__points",
+    "customer__point",
+  ];
+  
+  if (classesArr.includes(event.target.className)) return;
+
 
   const buttonActive = event.target.value;
 

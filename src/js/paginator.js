@@ -3,6 +3,7 @@ import { DATA_PAGINATOR } from "./state.js";
 const blogCards = document.querySelector(".blog__cards");
 const blogPoints = document.querySelector(".blog__points");
 const CARDS_PER_PAGE = 2;
+const PC_DISPLAY_WIDTH = 1440;
 
 (function renderPaginationBtn() {
   if (!DATA_PAGINATOR) return;
@@ -27,12 +28,9 @@ const CARDS_PER_PAGE = 2;
 })();
 
 function paginator(event) {
-  if (
-    event.target.className === "blog__point" ||
-    event.target.className === "blog__point-btn_active" ||
-    event.target.className === "blog__points"
-  )
-    return;
+  const classesArr = ["blog__point", "blog__point-btn_active", "blog__points"];
+
+  if (classesArr.includes(event.target.className)) return;
 
   const buttonActive = event.target.innerText;
 
@@ -44,11 +42,11 @@ function paginator(event) {
 }
 
 function checkTranslateProperty() {
-  return window.innerWidth < 1440 ? "translateX" : "translateY";
+  return window.innerWidth < PC_DISPLAY_WIDTH ? "translateX" : "translateY";
 }
 
 function checkResize() {
-  if (window.innerWidth < 1440) {
+  if (window.innerWidth < PC_DISPLAY_WIDTH) {
     if (blogPoints.style.transform) {
       return (blogPoints.style.transform = "translateY(0px)");
     }

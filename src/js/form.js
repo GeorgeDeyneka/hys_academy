@@ -1,4 +1,5 @@
 import { Storage } from "./storage.js";
+import { VALIDATE_MESSAGES } from "./state.js";
 
 export class FormActive {
   #classNameChilds;
@@ -14,7 +15,7 @@ export class FormActive {
     this.onFormChange();
     this.setFormData();
     this.submitForm();
-    this.validateForm();
+    this.validateForm(VALIDATE_MESSAGES);
   }
 
   onFormChange() {
@@ -52,51 +53,22 @@ export class FormActive {
       this.#newStorage.removeData();
 
       this.#formInputs.forEach((el) => (el.value = ""));
-      
+
       this.#obj = {};
     });
   }
 
-  validateForm() {
+  validateForm(data) {
     this.#parentSelector.addEventListener("input", (event) => {
-      if (event.target.id === "form-email") {
-        if (
-          event.target.validity.typeMismatch ||
-          event.target.validity.patternMismatch
-        ) {
-          return event.target.setCustomValidity(
-            "Expected an your e-mail address (For example: user@gmail.com)."
-          );
-        }
-
-        return event.target.setCustomValidity("");
+      if (
+        event.target.validity.typeMismatch ||
+        event.target.validity.patternMismatch
+      ) {
+        const id = event.target.id;
+        return event.target.setCustomValidity(data[id]);
       }
 
-      if (event.target.id === "form-phone") {
-        if (
-          event.target.validity.typeMismatch ||
-          event.target.validity.patternMismatch
-        ) {
-          return event.target.setCustomValidity(
-            "Your number is too short or has letters. Please, correct this."
-          );
-        }
-
-        return event.target.setCustomValidity("");
-      }
-
-      if (event.target.id === "form-name") {
-        if (
-          event.target.validity.typeMismatch ||
-          event.target.validity.patternMismatch
-        ) {
-          return event.target.setCustomValidity(
-            "Your name is too short or has numbers or other symbols. Please, correct this."
-          );
-        }
-
-        return event.target.setCustomValidity("");
-      }
+      return event.target.setCustomValidity("");
     });
   }
 }

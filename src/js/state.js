@@ -225,9 +225,19 @@ const DATA_CUSTOMERS_PAGINATOR = [
   },
 ];
 
+const VALIDATE_MESSAGES = {
+  "form-email":
+    "Expected an your e-mail address (For example: user@gmail.com).",
+  "form-phone":
+    "Your number is too short or has letters. Please, correct this.",
+  "form-name":
+    "Your name is too short or has numbers or other symbols. Please, correct this.",
+};
+
 export {
   DATA_PAGINATOR,
   DATA_SLICK_SLIDER,
   DATA_NATIVE_SLIDER,
   DATA_CUSTOMERS_PAGINATOR,
+  VALIDATE_MESSAGES
 };
