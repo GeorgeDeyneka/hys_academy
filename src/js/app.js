@@ -1,7 +1,18 @@
+const throttle = require("lodash.throttle");
+
 import { noScroll, menuAutoClose } from "./mobile-menu.js";
 import { headerNavList, showActiveLink } from "./header-links.js";
-import { blogPoints, changeActiveBtn, paginator, checkResize } from "./paginator.js";
-import { customerPoints, paginatorCustomer, changeActiveBtnCustomer } from "./customer-paginator.js";
+import {
+  blogPoints,
+  changeActiveBtn,
+  paginator,
+  checkResize,
+} from "./paginator.js";
+import {
+  customerPoints,
+  paginatorCustomer,
+  changeActiveBtnCustomer,
+} from "./customer-paginator.js";
 import { DATA_SLICK_SLIDER } from "./state.js";
 import { makeRequest } from "./request.js";
 import {
@@ -33,11 +44,11 @@ export class App {
     blogPoints.addEventListener("click", eventClickHandler);
     customerPoints.addEventListener("click", eventClickHandlerCustomer);
     headerNavList.addEventListener("click", showActiveLink);
-    window.addEventListener("resize", eventResizeHandler);
+    window.addEventListener("resize", throttle(eventResizeHandler, 500));
 
     function paginationHandler(event) {
       paginator(event);
-      paginatorCustomer(event)
+      paginatorCustomer(event);
     }
 
     function eventClickHandlerCustomer(event) {
@@ -46,8 +57,8 @@ export class App {
     }
 
     function eventResizeHandler(event) {
-      menuAutoClose(event)
-      checkResize()
+      menuAutoClose(event);
+      checkResize();
     }
 
     function eventClickHandler(event) {
@@ -71,7 +82,7 @@ export class App {
       renderSlidesHtml: renderSlides.bind(this, dataForNative.length),
       makeActive: makeActiveNative,
     });
-    
+
     nativeSlider.setData = setNativeData(dataForNative);
 
     const select = new Select("select");

@@ -1,3 +1,5 @@
+const throttle = require("lodash.throttle");
+
 class NativeSlider {
   #selector;
   #renderFunc;
@@ -26,7 +28,7 @@ function makeActiveNative() {
   const buttonNext = document.querySelector(".study__slide-next");
   const ulList = document.querySelector(".study__list");
 
-  window.addEventListener("resize", adaptive);
+  window.addEventListener("resize", throttle(adaptive, 500));
 
   sliderNative.addEventListener("click", (event) => {
     if (event.target.classList.contains("study__slide-prev")) {
@@ -103,9 +105,9 @@ function renderSlides(quantityOfSlides) {
                 >
                   <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
                 </svg>`;
-  
-  buttonPrev.innerHTML += arrowLayout
-  buttonNext.innerHTML += arrowLayout
+
+  buttonPrev.innerHTML += arrowLayout;
+  buttonNext.innerHTML += arrowLayout;
 
   sliderContainer.classList.add("study__list-container");
   sliderContainer.append(ulList);
@@ -138,7 +140,7 @@ function setNativeData(data) {
 
   const arrTitles = document.querySelectorAll(".study__item-text");
   const arrImages = document.querySelectorAll(".study__item-img");
-  
+
   data.forEach((el, i) => {
     arrTitles[i].innerText = el.title;
     arrImages[i].src = el.url;

@@ -8,9 +8,8 @@ function paginatorCustomer(event) {
     "customer__points",
     "customer__point",
   ];
-  
-  if (classesArr.includes(event.target.className)) return;
 
+  if (classesArr.includes(event.target.className)) return;
 
   const buttonActive = event.target.value;
 
@@ -40,26 +39,23 @@ function changeActiveBtnCustomer(event) {
 function getData(numberOfBtn = 1) {
   if (!DATA_CUSTOMERS_PAGINATOR) return;
 
-  const newArr = DATA_CUSTOMERS_PAGINATOR.slice(numberOfBtn - 1, numberOfBtn);
-
-  changeData(newArr);
+  changeData(DATA_CUSTOMERS_PAGINATOR[numberOfBtn - 1]);
 }
 
 function changeData(paginatedData) {
   if (!paginatedData) return;
 
   document.querySelector(".customer__description-text_first").innerText =
-    paginatedData[0].firstParagraph;
+    paginatedData.firstParagraph;
   document.querySelector(".customer__description-text_second").innerText =
-    paginatedData[0].secondParagraph;
-  document.querySelector(".customer__author").innerText =
-    paginatedData[0].author;
-  document.querySelector(".customer__card-img").src = paginatedData[0].imageUrl;
-  paginatedData[0].author;
+    paginatedData.secondParagraph;
+  document.querySelector(".customer__author").innerText = paginatedData.author;
+  document.querySelector(".customer__card-img").src = paginatedData.imageUrl;
+  paginatedData.author;
   document.querySelector(".customer__blue-square").style.backgroundColor =
-    paginatedData[0].bgColor;
+    paginatedData.bgColor;
   document.querySelector(".customer__quotes-img").style.fill =
-    paginatedData[0].quoteColor;
+    paginatedData.quoteColor;
 }
 
 (function renderPaginationBtn() {

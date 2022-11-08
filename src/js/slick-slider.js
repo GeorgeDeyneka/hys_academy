@@ -66,7 +66,7 @@ function appendSvg() {
               >
                 <use href="./assets/images/sprite.svg#icon-arrow-left"></use>
               </svg>`;
-  
+
   slickButtons.forEach((el) => (el.innerHTML += arrowLayout));
 }
 
@@ -133,7 +133,7 @@ function setSlickData(data) {
   const arrActuallyPrices = document.querySelectorAll(".price__actually");
   const arrOldPrices = document.querySelectorAll(".price__old");
   const arrStars = document.querySelectorAll(".courses__stars_active");
-  
+
   data.forEach((el, i) => {
     arrReviews[i].innerText = el.rewievs;
     arrTitles[i].innerText = el.title;

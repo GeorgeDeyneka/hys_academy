@@ -2,23 +2,17 @@
 @import "./base/typography";
 @import "./base/reset";
 @import "./components/buttons";
+@import "./components/slick";
 @import "./layout/header";
 @import "./layout/footer";
 
 // Mobile Layout
 
 @media (min-width: 375px) {
-  .slick {
-    &-list {
-      overflow: hidden;
-      padding: 24px 0px;
-      max-width: 260px;
-    }
-  }
-
   .no-scroll {
     overflow: hidden;
   }
+
   .logo {
     &__main {
       cursor: pointer;
@@ -795,23 +789,6 @@
 // Tablet Layout
 
 @media (min-width: 768px) {
-  .slick {
-    &-list {
-      padding: 24px 15px;
-      max-width: 572px;
-    }
-  }
-  .btn {
-    padding: 12px 24px;
-    &__request {
-      &:active {
-        padding: 11px 23px;
-      }
-    }
-    &__submit {
-      padding: 12px 44px;
-    }
-  }
   .education {
     &__title {
       margin-top: 0px;
@@ -952,14 +929,7 @@
   }
 }
 
-// Breakpoints are created for display items where the screen allows
-
 @media (min-width: 990px) {
-  .slick {
-    &-list {
-      max-width: 881px;
-    }
-  }
   .courses {
     &__item {
       max-width: 270px;
@@ -971,11 +941,6 @@
 // PC Layout
 
 @media (min-width: 1440px) {
-  .slick {
-    &-list {
-      max-width: 100%;
-    }
-  }
   .background-icons {
     max-width: 1440px;
     margin: auto;

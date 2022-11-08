@@ -18,12 +18,10 @@ function menuAutoClose(event) {
 
   const newWidth = document.documentElement.clientWidth;
 
-  setTimeout(() => {
     if (newWidth >= 768 || event.target.className === "header__link") {
       checkbox.checked = false;
       noScroll();
     }
-  }, 500);
 }
 
 export { noScroll, menuAutoClose };
