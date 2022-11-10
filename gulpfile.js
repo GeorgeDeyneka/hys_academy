@@ -2,7 +2,6 @@ const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("autoprefixer");
-const cleanCSS = require("gulp-clean-css");
 const postcss = require("gulp-postcss");
 const minify = require("gulp-minify");
 const browsersync = require("browser-sync");
@@ -16,36 +15,24 @@ gulp.task("copy-html", () => {
     .pipe(browsersync.stream());
 });
 
-gulp.task("build-js", () => {
+gulp.task("build-ts", () => {
   return gulp
-    .src("./src/js/index.js")
+    .src("./src/ts/index.ts")
     .pipe(
       webpack({
-        mode: "production",
+        mode: "development",
         output: {
           filename: "index.js",
+        },
+        watch: false,
+        resolve: {
+          extensions: [".ts", ".tsx", ".js"],
         },
         module: {
           rules: [
             {
-              test: /\.m?js$/,
-              exclude: /(node_modules|bower_components)/,
-              use: {
-                loader: "babel-loader",
-                options: {
-                  presets: [
-                    [
-                      "@babel/preset-env",
-                      {
-                        debug: true,
-                        corejs: 3,
-                        useBuiltIns: "usage",
-                      },
-                    ],
-                  ],
-                  plugins: ["@babel/plugin-proposal-class-properties"],
-                },
-              },
+              test: /\.tsx?$/,
+              loader: "ts-loader",
             },
           ],
         },
@@ -61,7 +48,6 @@ gulp.task("build-sass", () => {
     .src("./src/scss/**/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([autoprefixer()]))
-    .pipe(cleanCSS())
     .pipe(minify())
     .pipe(gulp.dest(dist + "/css"))
     .pipe(browsersync.stream());
@@ -79,7 +65,7 @@ gulp.task("copy-assets", () => {
 gulp.task("watch", () => {
   browsersync.init({
     server: "./dist/",
-    port: 4000,
+    port: 8080,
     notify: true,
   });
 
@@ -87,12 +73,12 @@ gulp.task("watch", () => {
   gulp.watch("./src/assets/fonts/**.*", gulp.parallel("copy-assets"));
   gulp.watch("./src/assets/images/*.*", gulp.parallel("copy-assets"));
   gulp.watch("./src/scss/**/*.scss", gulp.parallel("build-sass"));
-  gulp.watch("./src/js/**/*.js", gulp.parallel("build-js"));
+  gulp.watch("./src/ts/**/*.ts", gulp.parallel("build-ts"));
 });
 
 gulp.task(
   "build",
-  gulp.parallel("copy-html", "copy-assets", "build-sass", "build-js")
+  gulp.parallel("copy-html", "copy-assets", "build-sass", "build-ts")
 );
 
 gulp.task("prod", () => {

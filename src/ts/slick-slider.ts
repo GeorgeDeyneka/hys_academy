@@ -1,27 +1,31 @@
-class SliderSlick {
-  #selector;
-  #renderFunc;
-  #makeActiveFunc;
+import { slickDataType } from "./types/types";
 
-  setData = () => {};
+class SliderSlick {
+  selector: string;
+  renderFunc: () => string;
+  makeActiveFunc: () => void;
+
+  setData: any;
 
   constructor({ parentClassName, renderSlidesHtml, makeActive }) {
-    this.#selector = parentClassName;
-    this.#renderFunc = renderSlidesHtml;
-    this.#makeActiveFunc = makeActive;
+    this.selector = parentClassName;
+    this.renderFunc = renderSlidesHtml;
+    this.makeActiveFunc = makeActive;
     this.initSlider();
   }
 
-  initSlider() {
-    const parentSelector = document.getElementById(this.#selector);
-    parentSelector.innerHTML = this.#renderFunc();
-    this.#makeActiveFunc();
+  initSlider(): void {
+    const parentSelector = document.getElementById(
+      this.selector
+    ) as HTMLElement;
+    parentSelector.innerHTML = this.renderFunc();
+    this.makeActiveFunc();
     appendSvg();
   }
 }
 
-function makeActiveSlick() {
-  const parentSelector = document.getElementById("slick-slider");
+function makeActiveSlick(): void {
+  const parentSelector = document.getElementById("slick-slider") as HTMLElement;
 
   $(parentSelector).slick({
     slidesToShow: 3,
@@ -56,9 +60,11 @@ function makeActiveSlick() {
   });
 }
 
-function appendSvg() {
-  const slickButtons = document.querySelectorAll(".slick-arrow");
-  const arrowLayout = `<svg
+function appendSvg(): void {
+  const slickButtons = document.querySelectorAll(
+    ".slick-arrow"
+  ) as unknown as HTMLButtonElement[];
+  const arrowLayout: string = `<svg
                 class="study__slide-img"
                 width="10"
                 height="14"
@@ -70,11 +76,11 @@ function appendSvg() {
   slickButtons.forEach((el) => (el.innerHTML += arrowLayout));
 }
 
-function renderCards() {
-  const ITEMS = 6;
-  const STARS = 5;
-  let cardLayout = "";
-  let starLayout = "";
+function renderCards(): string {
+  const ITEMS: number = 6;
+  const STARS: number = 5;
+  let cardLayout: string = "";
+  let starLayout: string = "";
 
   for (let i = 0; i < STARS; i++) {
     starLayout += `
@@ -120,32 +126,26 @@ function renderCards() {
   return cardLayout;
 }
 
-function setSlickData(data) {
+const setSlickData = (data: slickDataType[]): void => {
   if (!data) {
     throw new Error("No data for slider provided");
   }
 
-  const arrReviews = document.querySelectorAll(".courses__reviews");
-  const arrTitles = document.querySelectorAll(".courses__title-card");
-  const arrSubtitles = document.querySelectorAll(".courses__subtitle-card");
-  const arrImagesBg = document.querySelectorAll(".courses__card-img");
-  const arrAvatars = document.querySelectorAll(".courses__avatar-img");
-  const arrActuallyPrices = document.querySelectorAll(".price__actually");
-  const arrOldPrices = document.querySelectorAll(".price__old");
-  const arrStars = document.querySelectorAll(".courses__stars_active");
+  const getElements = (selector: string): HTMLElement[] =>
+    document.querySelectorAll(selector) as unknown as HTMLElement[];
 
-  data.forEach((el, i) => {
-    arrReviews[i].innerText = el.rewievs;
-    arrTitles[i].innerText = el.title;
-    arrSubtitles[i].innerText = el.category;
-    arrImagesBg[i].src = el.imageUrl;
-    arrAvatars[i].src = el.avatarUrl;
-    arrActuallyPrices[i].innerText = el.price.actually;
-    arrOldPrices[i].innerText = el.price.old;
-    arrStars[
+  data.forEach((el: slickDataType, i: string | number) => {
+    getElements(".courses__reviews")[i].innerText = el.rewievs;
+    getElements(".courses__title-card")[i].innerText = el.title;
+    getElements(".courses__subtitle-card")[i].innerText = el.category;
+    getElements(".price__old")[i].innerText = el.price.old;
+    getElements(".price__actually")[i].innerText = el.price.actually;
+    getElements(".courses__stars_active")[
       i
     ].style.clipPath = `inset(0% calc(100% - (${el.raiting}% * 20)) 0% 0%)`;
+    getElements(".courses__card-img")[i].src = el.imageUrl;
+    getElements(".courses__avatar-img")[i].src = el.avatarUrl;
   });
-}
+};
 
 export { SliderSlick, renderCards, setSlickData, makeActiveSlick };

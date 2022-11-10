@@ -1,16 +1,17 @@
-import { DATA_PAGINATOR } from "./state.js";
+import { DATA_PAGINATOR } from "./state";
+import { paginatorDataType } from "./types/types";
 
-const blogCards = document.querySelector(".blog__cards");
-const blogPoints = document.querySelector(".blog__points");
-const CARDS_PER_PAGE = 2;
-const PC_DISPLAY_WIDTH = 1440;
+const blogCards = document.querySelector(".blog__cards") as HTMLElement;
+const blogPoints = document.querySelector(".blog__points") as HTMLElement;
+const CARDS_PER_PAGE: number = 2;
+const PC_DISPLAY_WIDTH: number = 1440;
 
-(function renderPaginationBtn() {
+(function renderPaginationBtn(): void {
   if (!DATA_PAGINATOR) return;
 
   for (let i = 1; i <= Math.ceil(DATA_PAGINATOR.length / 2); i++) {
-    const blogPointBtn = document.createElement("button");
-    const blogPointLi = document.createElement("li");
+    const blogPointBtn = document.createElement("button") as HTMLButtonElement;
+    const blogPointLi = document.createElement("li") as HTMLLIElement;
 
     blogPointLi.classList.add("blog__point");
     blogPointBtn.classList.add("blog__point-btn");
@@ -18,7 +19,7 @@ const PC_DISPLAY_WIDTH = 1440;
     blogPoints.appendChild(blogPointLi);
     blogPointLi.appendChild(blogPointBtn);
 
-    blogPointBtn.innerText = i;
+    blogPointBtn.innerText = i.toString();
     blogPointBtn.type = "button";
 
     if (i === 1) {
@@ -27,25 +28,26 @@ const PC_DISPLAY_WIDTH = 1440;
   }
 })();
 
-function paginator(event) {
-  const classesArr = ["blog__point", "blog__point-btn_active", "blog__points"];
+function paginator(event: Event): void {
+  const classesArr: string[] = ["blog__point", "blog__point-btn_active", "blog__points"];
+  const target = event.target as HTMLButtonElement;
 
-  if (classesArr.includes(event.target.className)) return;
+  if (classesArr.includes(target.className)) return;
 
-  const buttonActive = event.target.innerText;
+  const buttonActive: number = +target.innerText;
 
-  setTimeout(getData.bind(this, buttonActive), 200);
+  setTimeout(getData.bind(this, buttonActive || 1), 200);
 
   blogPoints.children.length > 5
     ? buttonScroll(buttonActive, DATA_PAGINATOR)
     : (blogPoints.style.justifyContent = "center");
 }
 
-function checkTranslateProperty() {
+function checkTranslateProperty(): string {
   return window.innerWidth < PC_DISPLAY_WIDTH ? "translateX" : "translateY";
 }
 
-function checkResize() {
+function checkResize(): string {
   if (window.innerWidth < PC_DISPLAY_WIDTH) {
     if (blogPoints.style.transform) {
       return (blogPoints.style.transform = "translateY(0px)");
@@ -59,8 +61,8 @@ function checkResize() {
   }
 }
 
-function buttonScroll(activeButton, data) {
-  const translateProperty = checkTranslateProperty();
+function buttonScroll(activeButton: number, data: string | any[]) {
+  const translateProperty: string = checkTranslateProperty();
 
   if (activeButton <= 3) {
     blogPoints.style.transform = `${translateProperty}(-0px)`;
@@ -79,27 +81,28 @@ function buttonScroll(activeButton, data) {
   }
 }
 
-function changeActiveBtn(event) {
-  if (event.target.className !== "blog__point-btn") return;
+function changeActiveBtn(event: Event): void {
+  const target = event.target as HTMLButtonElement;
+  if (target.className !== "blog__point-btn") return;
 
-  document
-    .querySelector(".blog__point-btn_active")
-    .classList.remove("blog__point-btn_active");
+  (
+    document.querySelector(".blog__point-btn_active") as HTMLButtonElement
+  ).classList.remove("blog__point-btn_active");
 
-  event.target.classList.add("blog__point-btn_active");
+  target.classList.add("blog__point-btn_active");
   blogCards.classList.add("blog__cards_opacity");
 
   setTimeout(() => blogCards.classList.remove("blog__cards_opacity"), 200);
 }
 
-function getData(numberOfBtn = 1) {
+function getData(numberOfBtn: number): void {
   if (!DATA_PAGINATOR) return;
 
-  const newArr = DATA_PAGINATOR.slice(
+  const newArr: paginatorDataType[] = DATA_PAGINATOR.slice(
     CARDS_PER_PAGE * numberOfBtn - CARDS_PER_PAGE,
     CARDS_PER_PAGE * numberOfBtn
   );
-  const arrCards = document.querySelectorAll(".blog__card");
+  const arrCards = document.querySelectorAll(".blog__card") as unknown as HTMLElement[];
 
   switch (newArr.length) {
     case 1:
@@ -115,10 +118,10 @@ function getData(numberOfBtn = 1) {
   changeData(newArr);
 }
 
-function changeData(paginatedData) {
+function changeData(paginatedData: any[]) {
   if (!paginatedData) return;
 
-  paginatedData.forEach((el, i) => {
+  paginatedData.forEach((el: paginatorDataType, i: string | number) => {
     blogCards.children[i].querySelector(".blog__subtitle-text").innerText =
       el.title;
     blogCards.children[i].querySelector(".blog__illustration-img").src =
