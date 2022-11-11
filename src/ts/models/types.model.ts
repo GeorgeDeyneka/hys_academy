@@ -1,4 +1,4 @@
-type slickDataType = {
+interface slickDataType {
   id?: number;
   rewievs: string;
   title: string;
@@ -7,9 +7,9 @@ type slickDataType = {
   avatarUrl: string;
   price: { actually: string; old: string };
   raiting: string;
-};
+}
 
-type customerDataType = {
+interface customerDataType {
   id?: number;
   firstParagraph: string;
   secondParagraph: string;
@@ -17,29 +17,29 @@ type customerDataType = {
   imageUrl: string;
   bgColor: string;
   quoteColor: string;
-};
+}
 
-type paginatorDataType = {
+interface paginatorDataType {
   id?: number;
   title: string;
   imageUrl: string;
   avatarUrl: string;
   category: string;
   linkText: string;
-};
+}
 
-type nativeDataType = {
+interface nativeDataType {
   bgColor?: string;
   id?: number;
   title: string;
   url: string;
-};
+}
 
-type validateMessagesType = {
+interface validateMessagesType {
   "form-email": string;
   "form-phone": string;
   "form-name": string;
-};
+}
 
 export {
   slickDataType,

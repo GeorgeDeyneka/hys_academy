@@ -1,6 +1,6 @@
 import { Storage } from "./storage";
 import { VALIDATE_MESSAGES } from "./state";
-import { validateMessagesType } from "./models/types";
+import { validateMessagesType } from "./models/types.model";
 
 export class FormActive {
   classNameChilds: string;

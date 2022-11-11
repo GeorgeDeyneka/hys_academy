@@ -1,5 +1,5 @@
 import { DATA_CUSTOMERS_PAGINATOR } from "./state";
-import { customerDataType } from "./models/types";
+import { customerDataType } from "./models/types.model";
 
 const customerPoints = document.querySelector(
   ".customer__points"

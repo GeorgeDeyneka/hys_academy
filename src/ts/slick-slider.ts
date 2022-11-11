@@ -1,4 +1,4 @@
-import { slickDataType } from "./models/types";
+import { slickDataType } from "./models/types.model";
 
 class SliderSlick {
   selector: string;
