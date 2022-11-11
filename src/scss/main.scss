@@ -541,7 +541,21 @@
     }
 
     &__description-text {
-      padding-bottom: 12px;
+      margin-bottom: 12px;
+      &_first {
+        height: 44px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      &_second {
+        height: 66px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
     }
 
     &__author {
@@ -1134,7 +1148,7 @@
       padding: 166px 0px 185px 208px;
       margin-right: calc((100% - 1024px) / 2);
       max-width: calc(100% - (100% - 1024px) / 2);
-      background-position: 0px 76px;
+      background-position: 0px 62px;
     }
     &__content {
       max-width: 400px;

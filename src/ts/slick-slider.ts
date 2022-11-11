@@ -1,4 +1,4 @@
-import { slickDataType } from "./types/types";
+import { slickDataType } from "./models/types";
 
 class SliderSlick {
   selector: string;
@@ -37,26 +37,6 @@ function makeActiveSlick(): void {
     mobileFirst: true,
     variableWidth: true,
     cssEase: "ease-in-out",
-    responsive: [
-      {
-        breakpoint: 374,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 989,
-        settings: {
-          slidesToShow: 3,
-        },
-      },
-    ],
   });
 }
 

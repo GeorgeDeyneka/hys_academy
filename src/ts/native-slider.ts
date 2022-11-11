@@ -1,5 +1,5 @@
 import throttle from "lodash.throttle";
-import { nativeDataType } from "./types/types";
+import { nativeDataType } from "./models/types";
 
 class NativeSlider {
   selector: string;

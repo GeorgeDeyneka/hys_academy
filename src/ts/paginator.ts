@@ -1,5 +1,5 @@
 import { DATA_PAGINATOR } from "./state";
-import { paginatorDataType } from "./types/types";
+import { paginatorDataType } from "./models/types";
 
 const blogCards = document.querySelector(".blog__cards") as HTMLElement;
 const blogPoints = document.querySelector(".blog__points") as HTMLElement;

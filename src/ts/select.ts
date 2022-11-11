@@ -1,3 +1,5 @@
+import { AlbumEnum } from './models/enums';
+
 export class Select {
   divId: HTMLElement;
 
@@ -14,9 +16,9 @@ export class Select {
     for (let i = 0; i < 3; i++) {
       const optionElem: HTMLOptionElement = document.createElement("option");
 
-      optionElem.value = `${i + 1}`;
+      optionElem.value = Object.values(AlbumEnum)[i];
       optionElem.classList.add("study__option");
-      optionElem.innerText = `Album ${i + 1}`;
+      optionElem.innerText = Object.keys(AlbumEnum)[i];
       selectElem.append(optionElem);
     }
 
@@ -27,4 +29,3 @@ export class Select {
     return document.querySelector(".study__select") as HTMLSelectElement;
   }
 }
-
