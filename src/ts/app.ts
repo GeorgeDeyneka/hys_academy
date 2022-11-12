@@ -95,7 +95,7 @@ export class App implements AbstractApp {
 
     const select: Select = new Select("select");
 
-    select.getSelect().addEventListener("change", onAlbumChange);
+    select.getSelect().addEventListener("change", onAlbumChange.bind(this));
 
     async function onAlbumChange(event: Event) {
       const target = event.target as HTMLOptionElement;
