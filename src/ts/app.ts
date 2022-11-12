@@ -30,7 +30,14 @@ import { FormActive } from "./form";
 import { Storage } from "./storage";
 import { Select } from "./select";
 
-export class App {
+abstract class AbstractApp {
+  abstract BASE_URL: string;
+  abstract initFunctions(): void;
+}
+
+export class App implements AbstractApp {
+  BASE_URL: string = `https://jsonplaceholder.typicode.com/albums/`;
+
   constructor() {
     this.initFunctions();
   }
@@ -65,7 +72,7 @@ export class App {
       paginator(event);
     }
 
-    const dataForNative: [] = await makeRequest();
+    const dataForNative: [] = await makeRequest(this.BASE_URL);
 
     const slickStorage: Storage = new Storage("slickData");
     slickStorage.setData(DATA_SLICK_SLIDER);
@@ -92,7 +99,7 @@ export class App {
 
     async function onAlbumChange(event: Event) {
       const target = event.target as HTMLOptionElement;
-      let data: [] = await makeRequest(Number(target.value));
+      let data: [] = await makeRequest(this.BASE_URL, Number(target.value));
       nativeSlider.setData = setNativeData(data);
     }
 

@@ -1,5 +1,5 @@
 import { DATA_PAGINATOR } from "./state";
-import { paginatorDataType } from "./models/types.model";
+import { paginatorDataType } from "./models/interfaces.model";
 
 const blogCards = document.querySelector(".blog__cards") as HTMLElement;
 const blogPoints = document.querySelector(".blog__points") as HTMLElement;
@@ -98,7 +98,7 @@ function changeActiveBtn(event: Event): void {
 function getData(numberOfBtn: number): void {
   if (!DATA_PAGINATOR) return;
 
-  const newArr: paginatorDataType[] = DATA_PAGINATOR.slice(
+  const newArr: Array<paginatorDataType> = DATA_PAGINATOR.slice(
     CARDS_PER_PAGE * numberOfBtn - CARDS_PER_PAGE,
     CARDS_PER_PAGE * numberOfBtn
   );
@@ -118,7 +118,7 @@ function getData(numberOfBtn: number): void {
   changeData(newArr);
 }
 
-function changeData(paginatedData: any[]) {
+function changeData(paginatedData: Array<paginatorDataType>) {
   if (!paginatedData) return;
 
   paginatedData.forEach((el: paginatorDataType, i: string | number) => {

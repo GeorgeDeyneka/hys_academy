@@ -36,9 +36,19 @@ interface nativeDataType {
 }
 
 interface validateMessagesType {
-  "form-email": string;
-  "form-phone": string;
   "form-name": string;
+  "form-phone": string;
+  "form-email": string;
+}
+
+interface formDataType {
+  name?: string;
+  phone?: string;
+  email?: string;
+}
+
+interface ISlider {
+  initSlider(): void;
 }
 
 export {
@@ -47,4 +57,6 @@ export {
   paginatorDataType,
   nativeDataType,
   validateMessagesType,
+  formDataType,
+  ISlider,
 };

@@ -4,7 +4,7 @@ import {
   paginatorDataType,
   slickDataType,
   validateMessagesType,
-} from "./models/types.model";
+} from "./models/interfaces.model";
 
 const DATA_PAGINATOR: paginatorDataType[] = [
   {

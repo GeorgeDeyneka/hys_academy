@@ -1,7 +1,12 @@
-import { AlbumEnum } from './models/enums';
+import { AlbumEnum } from "./models/enums.model";
 
-export class Select {
-  divId: HTMLElement;
+interface ISelect {
+  renderFunc(): HTMLSelectElement;
+  getSelect(): HTMLSelectElement;
+}
+
+export class Select implements ISelect {
+  private readonly divId: HTMLElement;
 
   constructor(divId: string) {
     this.divId = document.getElementById(divId) as HTMLElement;

@@ -1,13 +1,20 @@
 import { Storage } from "./storage";
 import { VALIDATE_MESSAGES } from "./state";
-import { validateMessagesType } from "./models/types.model";
+import { formDataType, validateMessagesType } from "./models/interfaces.model";
 
-export class FormActive {
-  classNameChilds: string;
-  parentSelector: HTMLElement;
-  formInputs: HTMLInputElement[];
-  obj: {} = {};
-  newStorage = new Storage("formData");
+interface IFormActive {
+  onFormChange(): void;
+  setFormData(): void;
+  submitForm(): void;
+  validateForm(data: validateMessagesType): void;
+}
+
+export class FormActive implements IFormActive {
+  private readonly classNameChilds: string;
+  private readonly parentSelector: HTMLElement;
+  private readonly formInputs: HTMLInputElement[];
+  private obj: formDataType = {};
+  private readonly newStorage = new Storage("formData");
 
   constructor(parentClassName: string, childClassName: string) {
     this.classNameChilds = childClassName;
@@ -67,10 +74,7 @@ export class FormActive {
   validateForm(data: validateMessagesType): void {
     this.parentSelector.addEventListener("input", (event: Event) => {
       const target = event.target as HTMLInputElement;
-      if (
-        target.validity.typeMismatch ||
-        target.validity.patternMismatch
-      ) {
+      if (target.validity.typeMismatch || target.validity.patternMismatch) {
         const id = target.id;
         return target.setCustomValidity(data[id]);
       }

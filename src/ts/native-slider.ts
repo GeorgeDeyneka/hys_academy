@@ -1,12 +1,12 @@
 import throttle from "lodash.throttle";
-import { nativeDataType } from "./models/types.model";
+import { ISlider, nativeDataType } from "./models/interfaces.model";
 
-class NativeSlider {
-  selector: string;
-  renderFunc: () => any;
-  makeActiveFunc: () => void;
+class NativeSlider implements ISlider {
+  private readonly selector: string;
+  private readonly renderFunc: () => any;
+  private readonly makeActiveFunc: () => void;
 
-  setData: any;
+  public setData: any;
 
   constructor({ parentClassName, renderSlidesHtml, makeActive }) {
     this.selector = parentClassName;
@@ -15,7 +15,7 @@ class NativeSlider {
     this.initSlider();
   }
 
-  initSlider() {
+  initSlider(): void {
     const parentSelector = document.getElementById(
       this.selector
     ) as HTMLElement;

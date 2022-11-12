@@ -1,11 +1,11 @@
-import { slickDataType } from "./models/types.model";
+import { ISlider, slickDataType } from "./models/interfaces.model";
 
-class SliderSlick {
-  selector: string;
-  renderFunc: () => string;
-  makeActiveFunc: () => void;
+class SliderSlick implements ISlider {
+  private selector: string;
+  private renderFunc: () => string;
+  private makeActiveFunc: () => void;
 
-  setData: any;
+  public setData: any;
 
   constructor({ parentClassName, renderSlidesHtml, makeActive }) {
     this.selector = parentClassName;
