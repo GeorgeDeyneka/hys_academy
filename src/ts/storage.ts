@@ -1,8 +1,8 @@
 import { formDataType, slickDataType } from "./models/interfaces.model";
 
-interface IStorage<Generic> {
-  setData(data: Array<Generic> | formDataType): void;
-  getData(): Array<Generic> | formDataType;
+interface IStorage<T> {
+  setData(data: Array<T> | formDataType): void;
+  getData(): Array<T> | formDataType;
   removeData(): void;
 }
 

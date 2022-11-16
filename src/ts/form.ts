@@ -3,10 +3,7 @@ import { VALIDATE_MESSAGES } from "./state";
 import { formDataType, validateMessagesType } from "./models/interfaces.model";
 
 interface IFormActive {
-  onFormChange(): void;
-  setFormData(): void;
-  submitForm(): void;
-  validateForm(data: validateMessagesType): void;
+  onInit(): void;
 }
 
 export class FormActive implements IFormActive {
@@ -24,13 +21,17 @@ export class FormActive implements IFormActive {
     this.formInputs = document.querySelectorAll(
       `.${childClassName}`
     ) as unknown as HTMLInputElement[];
+    this.onInit();
+  }
+
+  onInit(): void {
     this.onFormChange();
     this.setFormData();
     this.submitForm();
     this.validateForm(VALIDATE_MESSAGES);
   }
 
-  onFormChange(): void {
+  private onFormChange(): void {
     this.parentSelector.addEventListener("change", (event: Event) => {
       const target = event.target as HTMLInputElement;
       if (target.classList.contains(this.classNameChilds)) {
@@ -46,7 +47,7 @@ export class FormActive implements IFormActive {
     });
   }
 
-  setFormData(): void {
+  private setFormData(): void {
     const data: {} = this.newStorage.getData();
 
     if (data) {
@@ -60,7 +61,7 @@ export class FormActive implements IFormActive {
     }
   }
 
-  submitForm(): void {
+  private submitForm(): void {
     this.parentSelector.addEventListener("submit", (event: Event) => {
       event.preventDefault();
       this.newStorage.removeData();
@@ -71,7 +72,7 @@ export class FormActive implements IFormActive {
     });
   }
 
-  validateForm(data: validateMessagesType): void {
+  private validateForm(data: validateMessagesType): void {
     this.parentSelector.addEventListener("input", (event: Event) => {
       const target = event.target as HTMLInputElement;
       if (target.validity.typeMismatch || target.validity.patternMismatch) {

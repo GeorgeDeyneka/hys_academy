@@ -29,20 +29,22 @@ import {
 import { FormActive } from "./form";
 import { Storage } from "./storage";
 import { Select } from "./select";
+import { nativeDataType, slickDataType } from "./models/interfaces.model";
 
 abstract class AbstractApp {
-  abstract BASE_URL: string;
-  abstract initFunctions(): void;
+  protected BASE_URL: string;
+  protected abstract initFunctions(): void;
 }
 
-export class App implements AbstractApp {
-  BASE_URL: string = `https://jsonplaceholder.typicode.com/albums/`;
+export class App extends AbstractApp {
+  protected BASE_URL: string = `https://jsonplaceholder.typicode.com/albums/`;
 
   constructor() {
+    super();
     this.initFunctions();
   }
 
-  async initFunctions() {
+  protected async initFunctions() {
     noScroll();
     menuAutoClose(event);
 
@@ -72,7 +74,7 @@ export class App implements AbstractApp {
       paginator(event);
     }
 
-    const dataForNative: [] = await makeRequest(this.BASE_URL);
+    const dataForNative: nativeDataType[] = await makeRequest(this.BASE_URL);
 
     const slickStorage: Storage = new Storage("slickData");
     slickStorage.setData(DATA_SLICK_SLIDER);
@@ -83,7 +85,9 @@ export class App implements AbstractApp {
       makeActive: makeActiveSlick,
     });
 
-    coursesSlider.setData = setSlickData(slickStorage.getData() as []);
+    coursesSlider.setData = setSlickData(
+      slickStorage.getData() as slickDataType[]
+    );
 
     const nativeSlider: NativeSlider = new NativeSlider({
       parentClassName: "native-slider",
@@ -97,9 +101,12 @@ export class App implements AbstractApp {
 
     select.getSelect().addEventListener("change", onAlbumChange.bind(this));
 
-    async function onAlbumChange(event: Event) {
+    async function onAlbumChange(event: Event): Promise<void> {
       const target = event.target as HTMLOptionElement;
-      let data: [] = await makeRequest(this.BASE_URL, Number(target.value));
+      let data: nativeDataType[] = await makeRequest(
+        this.BASE_URL,
+        Number(target.value)
+      );
       nativeSlider.setData = setNativeData(data);
     }
 

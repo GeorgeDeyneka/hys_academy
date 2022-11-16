@@ -31,6 +31,6 @@ export class Select implements ISelect {
   }
 
   getSelect(): HTMLSelectElement {
-    return document.querySelector(".study__select") as HTMLSelectElement;
+    return this.divId as HTMLSelectElement;
   }
 }

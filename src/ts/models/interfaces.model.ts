@@ -9,6 +9,13 @@ interface slickDataType {
   raiting: string;
 }
 
+interface nativeDataType {
+  bgColor?: string;
+  id?: number;
+  title: string;
+  url: string;
+}
+
 interface customerDataType {
   id?: number;
   firstParagraph: string;
@@ -26,13 +33,6 @@ interface paginatorDataType {
   avatarUrl: string;
   category: string;
   linkText: string;
-}
-
-interface nativeDataType {
-  bgColor?: string;
-  id?: number;
-  title: string;
-  url: string;
 }
 
 interface validateMessagesType {
