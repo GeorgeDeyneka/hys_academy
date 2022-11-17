@@ -1,4 +1,12 @@
-const DATA_PAGINATOR = [
+import {
+  customerDataType,
+  nativeDataType,
+  paginatorDataType,
+  slickDataType,
+  validateMessagesType,
+} from "./models/types.model";
+
+const DATA_PAGINATOR: paginatorDataType[] = [
   {
     id: 1,
     title: "First: Registration",
@@ -46,7 +54,7 @@ const DATA_PAGINATOR = [
   },
 ];
 
-const DATA_SLICK_SLIDER = [
+const DATA_SLICK_SLIDER: slickDataType[] = [
   {
     id: 1,
     title: "Learning Photoshop",
@@ -127,46 +135,46 @@ const DATA_SLICK_SLIDER = [
   },
 ];
 
-const DATA_NATIVE_SLIDER = [
+const DATA_NATIVE_SLIDER: nativeDataType[] = [
   {
     id: 1,
     title: "Graphic Design",
     bgColor: "var(--blue-study-bg)",
-    imageUrl: "./assets/images/tablet-design.jpg",
+    url: "./assets/images/tablet-design.jpg",
   },
   {
     id: 2,
     title: "Web Design",
     bgColor: "var(--yellow-study-bg)",
-    imageUrl: "./assets/images/laptop-graphic.jpg",
+    url: "./assets/images/laptop-graphic.jpg",
   },
   {
     id: 3,
     title: "Business marketing",
     bgColor: "var(--purple-study-bg)",
-    imageUrl: "./assets/images/man-writing.jpg",
+    url: "./assets/images/man-writing.jpg",
   },
   {
     id: 4,
     title: "Programming",
     bgColor: "var(--red-study-bg)",
-    imageUrl: "./assets/images/men-make-a-list.jpg",
+    url: "./assets/images/men-make-a-list.jpg",
   },
   {
     id: 5,
     title: "Modeling",
     bgColor: "var(--lightgreen-btn-pressed)",
-    imageUrl: "./assets/images/modeling.jpg",
+    url: "./assets/images/modeling.jpg",
   },
   {
     id: 6,
     title: "Engineering",
     bgColor: "var(--blue-point)",
-    imageUrl: "./assets/images/c-programming.jpg",
+    url: "./assets/images/c-programming.jpg",
   },
 ];
 
-const DATA_CUSTOMERS_PAGINATOR = [
+const DATA_CUSTOMERS_PAGINATOR: customerDataType[] = [
   {
     id: 1,
     firstParagraph:
@@ -225,7 +233,7 @@ const DATA_CUSTOMERS_PAGINATOR = [
   },
 ];
 
-const VALIDATE_MESSAGES = {
+const VALIDATE_MESSAGES: validateMessagesType = {
   "form-email":
     "Expected an your e-mail address (For example: user@gmail.com).",
   "form-phone":
@@ -239,5 +247,5 @@ export {
   DATA_SLICK_SLIDER,
   DATA_NATIVE_SLIDER,
   DATA_CUSTOMERS_PAGINATOR,
-  VALIDATE_MESSAGES
+  VALIDATE_MESSAGES,
 };
