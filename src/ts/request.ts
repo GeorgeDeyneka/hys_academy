@@ -1,6 +1,9 @@
 import { nativeDataType } from "./models/interfaces.model";
 
-export async function makeRequest(BASE_URL: string, path = 1): Promise<nativeDataType[]> {
+export async function makeRequest(
+  BASE_URL: string,
+  path = 1
+): Promise<nativeDataType[]> {
   const PATH_URL: string = `${path}/photos?_start=0&_limit=10`;
 
   try {
