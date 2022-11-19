@@ -87,8 +87,9 @@ export class App extends AbstractApp {
       makeActive: makeActiveSlick,
     });
 
+    coursesSlider.setData = setSlickData;
     coursesSlider.setData(
-      setSlickData(slickStorage.getData<SlickDataType>() as SlickDataType[])
+      slickStorage.getData<SlickDataType>() as SlickDataType[]
     );
 
     const nativeSlider: NativeSlider = new NativeSlider({
@@ -97,7 +98,8 @@ export class App extends AbstractApp {
       makeActive: makeActiveNative,
     });
 
-    nativeSlider.setData(setNativeData(dataForNative));
+    nativeSlider.setData = setNativeData;
+    nativeSlider.setData(dataForNative);
 
     const select: Select = new Select("select");
 
@@ -109,7 +111,7 @@ export class App extends AbstractApp {
         this.BASE_URL,
         Number(target.value)
       );
-      nativeSlider.setData(setNativeData(data));
+      nativeSlider.setData(data);
     }
 
     const myForm: FormActive = new FormActive("blog__form", "form__input");
