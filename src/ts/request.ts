@@ -1,9 +1,12 @@
-export async function makeRequest(path = 1): Promise <[]> {
+export async function makeRequest<T>(
+  BASE_URL: string,
+  path = 1
+): Promise<T[]> {
+  const PATH_URL: string = `${path}/photos?_start=0&_limit=10`;
+
   try {
-    const response: Response = await fetch(
-      `https://jsonplaceholder.typicode.com/albums/${path}/photos?_start=0&_limit=10`
-    );
-    const result: [] = await response.json();
+    const response: Response = await fetch(BASE_URL + PATH_URL);
+    const result: Array<T> = await response.json();
 
     return result;
   } catch (err) {

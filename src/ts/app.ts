@@ -29,13 +29,22 @@ import {
 import { FormActive } from "./form";
 import { Storage } from "./storage";
 import { Select } from "./select";
+import { NativeDataType, SlickDataType } from "./models/interfaces.model";
 
-export class App {
+abstract class AbstractApp {
+  protected BASE_URL: string;
+  protected abstract initFunctions(): void;
+}
+
+export class App extends AbstractApp {
+  protected BASE_URL: string = `https://jsonplaceholder.typicode.com/albums/`;
+
   constructor() {
+    super();
     this.initFunctions();
   }
 
-  async initFunctions() {
+  protected async initFunctions() {
     noScroll();
     menuAutoClose(event);
 
@@ -65,10 +74,12 @@ export class App {
       paginator(event);
     }
 
-    const dataForNative: [] = await makeRequest();
+    const dataForNative: NativeDataType[] = await makeRequest<NativeDataType>(
+      this.BASE_URL
+    );
 
     const slickStorage: Storage = new Storage("slickData");
-    slickStorage.setData(DATA_SLICK_SLIDER);
+    slickStorage.setData<SlickDataType>(DATA_SLICK_SLIDER);
 
     const coursesSlider: SliderSlick = new SliderSlick({
       parentClassName: "slick-slider",
@@ -76,7 +87,10 @@ export class App {
       makeActive: makeActiveSlick,
     });
 
-    coursesSlider.setData = setSlickData(slickStorage.getData() as []);
+    coursesSlider.setData = setSlickData;
+    coursesSlider.setData(
+      slickStorage.getData<SlickDataType>() as SlickDataType[]
+    );
 
     const nativeSlider: NativeSlider = new NativeSlider({
       parentClassName: "native-slider",
@@ -84,16 +98,20 @@ export class App {
       makeActive: makeActiveNative,
     });
 
-    nativeSlider.setData = setNativeData(dataForNative);
+    nativeSlider.setData = setNativeData;
+    nativeSlider.setData(dataForNative);
 
     const select: Select = new Select("select");
 
-    select.getSelect().addEventListener("change", onAlbumChange);
+    select.getSelect().addEventListener("change", onAlbumChange.bind(this));
 
-    async function onAlbumChange(event: Event) {
+    async function onAlbumChange(event: Event): Promise<void> {
       const target = event.target as HTMLOptionElement;
-      let data: [] = await makeRequest(Number(target.value));
-      nativeSlider.setData = setNativeData(data);
+      let data: NativeDataType[] = await makeRequest<NativeDataType>(
+        this.BASE_URL,
+        Number(target.value)
+      );
+      nativeSlider.setData(data);
     }
 
     const myForm: FormActive = new FormActive("blog__form", "form__input");

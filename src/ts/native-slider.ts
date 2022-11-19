@@ -1,12 +1,12 @@
 import throttle from "lodash.throttle";
-import { nativeDataType } from "./models/types.model";
+import { ISlider, NativeDataType } from "./models/interfaces.model";
 
-class NativeSlider {
-  selector: string;
-  renderFunc: () => any;
-  makeActiveFunc: () => void;
+class NativeSlider implements ISlider {
+  private readonly selector: string;
+  private readonly renderFunc: () => any;
+  private readonly makeActiveFunc: () => void;
 
-  setData: any;
+  public setData: (data: any) => void;
 
   constructor({ parentClassName, renderSlidesHtml, makeActive }) {
     this.selector = parentClassName;
@@ -15,7 +15,7 @@ class NativeSlider {
     this.initSlider();
   }
 
-  initSlider() {
+  initSlider(): void {
     const parentSelector = document.getElementById(
       this.selector
     ) as HTMLElement;
@@ -53,7 +53,7 @@ function makeActiveNative(): void {
   const SLIDES_TO_SCROLL: number = 1;
   const arrItems = document.querySelectorAll(
     ".study__item"
-  ) as unknown as HTMLElement[];
+  ) as NodeListOf<HTMLElement>;
   const itemsCount: number = arrItems.length;
 
   function adaptive() {
@@ -145,19 +145,19 @@ function renderSlides(quantityOfSlides: number): HTMLElement[] {
   return [buttonPrev, sliderContainer, buttonNext];
 }
 
-function setNativeData(data: nativeDataType[]): void {
+function setNativeData(data: NativeDataType[]): void {
   if (!data) {
     throw new Error("No data for slider provided");
   }
 
   const arrTitles = document.querySelectorAll(
     ".study__item-text"
-  ) as unknown as HTMLElement[];
+  ) as NodeListOf<HTMLElement>;
   const arrImages = document.querySelectorAll(
     ".study__item-img"
-  ) as unknown as HTMLImageElement[];
+  ) as NodeListOf<HTMLImageElement>;
 
-  data.forEach((el: nativeDataType, i: string | number) => {
+  data.forEach((el: NativeDataType, i: string | number) => {
     arrTitles[i].innerText = el.title;
     arrImages[i].src = el.url;
   });

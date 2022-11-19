@@ -1,11 +1,11 @@
-import { slickDataType } from "./models/types.model";
+import { ISlider, SlickDataType } from "./models/interfaces.model";
 
-class SliderSlick {
-  selector: string;
-  renderFunc: () => string;
-  makeActiveFunc: () => void;
+class SliderSlick implements ISlider {
+  private selector: string;
+  private renderFunc: () => string;
+  private makeActiveFunc: () => void;
 
-  setData: any;
+  public setData: (data: any) => void;
 
   constructor({ parentClassName, renderSlidesHtml, makeActive }) {
     this.selector = parentClassName;
@@ -43,7 +43,7 @@ function makeActiveSlick(): void {
 function appendSvg(): void {
   const slickButtons = document.querySelectorAll(
     ".slick-arrow"
-  ) as unknown as HTMLButtonElement[];
+  ) as NodeListOf<HTMLButtonElement>;
   const arrowLayout: string = `<svg
                 class="study__slide-img"
                 width="10"
@@ -106,15 +106,15 @@ function renderCards(): string {
   return cardLayout;
 }
 
-const setSlickData = (data: slickDataType[]): void => {
+const setSlickData = (data: SlickDataType[]): void => {
   if (!data) {
     throw new Error("No data for slider provided");
   }
 
   const getElements = (selector: string): HTMLElement[] =>
-    document.querySelectorAll(selector) as unknown as HTMLElement[];
+    Array.from(document.querySelectorAll(selector)) as HTMLElement[];
 
-  data.forEach((el: slickDataType, i: string | number) => {
+  data.forEach((el: SlickDataType, i: string | number) => {
     getElements(".courses__reviews")[i].innerText = el.rewievs;
     getElements(".courses__title-card")[i].innerText = el.title;
     getElements(".courses__subtitle-card")[i].innerText = el.category;
