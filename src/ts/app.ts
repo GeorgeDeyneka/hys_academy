@@ -29,7 +29,7 @@ import {
 import { FormActive } from "./form";
 import { Storage } from "./storage";
 import { Select } from "./select";
-import { nativeDataType, slickDataType } from "./models/interfaces.model";
+import { NativeDataType, SlickDataType } from "./models/interfaces.model";
 
 abstract class AbstractApp {
   protected BASE_URL: string;
@@ -74,10 +74,12 @@ export class App extends AbstractApp {
       paginator(event);
     }
 
-    const dataForNative: nativeDataType[] = await makeRequest(this.BASE_URL);
+    const dataForNative: NativeDataType[] = await makeRequest<NativeDataType>(
+      this.BASE_URL
+    );
 
     const slickStorage: Storage = new Storage("slickData");
-    slickStorage.setData(DATA_SLICK_SLIDER);
+    slickStorage.setData<SlickDataType>(DATA_SLICK_SLIDER);
 
     const coursesSlider: SliderSlick = new SliderSlick({
       parentClassName: "slick-slider",
@@ -85,8 +87,8 @@ export class App extends AbstractApp {
       makeActive: makeActiveSlick,
     });
 
-    coursesSlider.setData = setSlickData(
-      slickStorage.getData() as slickDataType[]
+    coursesSlider.setData(
+      setSlickData(slickStorage.getData<SlickDataType>() as SlickDataType[])
     );
 
     const nativeSlider: NativeSlider = new NativeSlider({
@@ -95,7 +97,7 @@ export class App extends AbstractApp {
       makeActive: makeActiveNative,
     });
 
-    nativeSlider.setData = setNativeData(dataForNative);
+    nativeSlider.setData(setNativeData(dataForNative));
 
     const select: Select = new Select("select");
 
@@ -103,11 +105,11 @@ export class App extends AbstractApp {
 
     async function onAlbumChange(event: Event): Promise<void> {
       const target = event.target as HTMLOptionElement;
-      let data: nativeDataType[] = await makeRequest(
+      let data: NativeDataType[] = await makeRequest<NativeDataType>(
         this.BASE_URL,
         Number(target.value)
       );
-      nativeSlider.setData = setNativeData(data);
+      nativeSlider.setData(setNativeData(data));
     }
 
     const myForm: FormActive = new FormActive("blog__form", "form__input");

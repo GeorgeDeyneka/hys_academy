@@ -1,5 +1,5 @@
 import { DATA_CUSTOMERS_PAGINATOR } from "./state";
-import { customerDataType } from "./models/interfaces.model";
+import { CustomerDataType } from "./models/interfaces.model";
 
 const customerPoints = document.querySelector(
   ".customer__points"
@@ -53,7 +53,7 @@ function getData(numberOfBtn = 1): void {
   changeData(DATA_CUSTOMERS_PAGINATOR[numberOfBtn - 1]);
 }
 
-function changeData(paginatedData: customerDataType): void {
+function changeData(paginatedData: CustomerDataType): void {
   if (!paginatedData) return;
 
   const getElement = (selector: string): HTMLElement =>

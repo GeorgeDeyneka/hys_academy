@@ -1,23 +1,23 @@
-import { formDataType, slickDataType } from "./models/interfaces.model";
+import { FormDataType, SlickDataType } from "./models/interfaces.model";
 
-interface IStorage<T> {
-  setData(data: Array<T> | formDataType): void;
-  getData(): Array<T> | formDataType;
+interface IStorage {
+  setData<T>(data: Array<T> | T): void;
+  getData<T>(): Array<T> | T;
   removeData(): void;
 }
 
-export class Storage implements IStorage<slickDataType> {
+export class Storage implements IStorage {
   private readonly key: string;
 
   constructor(key: string) {
     this.key = key;
   }
 
-  setData(data: Array<slickDataType> | formDataType): void {
+  setData<T>(data: Array<T> | T): void {
     localStorage.setItem(this.key, JSON.stringify(data));
   }
 
-  getData(): Array<slickDataType> | formDataType {
+  getData<T>(): Array<T> | T {
     return JSON.parse(localStorage.getItem(this.key));
   }
 

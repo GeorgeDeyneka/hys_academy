@@ -3,7 +3,7 @@ const headerNavList = document.querySelector(
 ) as HTMLElement;
 const links = document.querySelectorAll(
   ".header__link"
-) as unknown as HTMLLinkElement[];
+) as NodeListOf<HTMLLinkElement>;
 const ACTIVE_CLASS_NAME: string = "header__link_active";
 
 function showActiveLink(event: Event): void {

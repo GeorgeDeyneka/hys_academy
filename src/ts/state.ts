@@ -1,12 +1,12 @@
 import {
-  customerDataType,
-  nativeDataType,
-  paginatorDataType,
-  slickDataType,
-  validateMessagesType,
+  CustomerDataType,
+  NativeDataType,
+  PaginatorDataType,
+  SlickDataType,
+  ValidateMessagesType,
 } from "./models/interfaces.model";
 
-const DATA_PAGINATOR: paginatorDataType[] = [
+const DATA_PAGINATOR: PaginatorDataType[] = [
   {
     id: 1,
     title: "First: Registration",
@@ -54,7 +54,7 @@ const DATA_PAGINATOR: paginatorDataType[] = [
   },
 ];
 
-const DATA_SLICK_SLIDER: slickDataType[] = [
+const DATA_SLICK_SLIDER: SlickDataType[] = [
   {
     id: 1,
     title: "Learning Photoshop",
@@ -135,7 +135,7 @@ const DATA_SLICK_SLIDER: slickDataType[] = [
   },
 ];
 
-const DATA_NATIVE_SLIDER: nativeDataType[] = [
+const DATA_NATIVE_SLIDER: NativeDataType[] = [
   {
     id: 1,
     title: "Graphic Design",
@@ -174,7 +174,7 @@ const DATA_NATIVE_SLIDER: nativeDataType[] = [
   },
 ];
 
-const DATA_CUSTOMERS_PAGINATOR: customerDataType[] = [
+const DATA_CUSTOMERS_PAGINATOR: CustomerDataType[] = [
   {
     id: 1,
     firstParagraph:
@@ -233,7 +233,7 @@ const DATA_CUSTOMERS_PAGINATOR: customerDataType[] = [
   },
 ];
 
-const VALIDATE_MESSAGES: validateMessagesType = {
+const VALIDATE_MESSAGES: ValidateMessagesType = {
   "form-email":
     "Expected an your e-mail address (For example: user@gmail.com).",
   "form-phone":

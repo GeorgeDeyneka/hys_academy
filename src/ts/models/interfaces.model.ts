@@ -1,4 +1,4 @@
-interface slickDataType {
+interface SlickDataType {
   id?: number;
   rewievs: string;
   title: string;
@@ -9,14 +9,14 @@ interface slickDataType {
   raiting: string;
 }
 
-interface nativeDataType {
+interface NativeDataType {
   bgColor?: string;
   id?: number;
   title: string;
   url: string;
 }
 
-interface customerDataType {
+interface CustomerDataType {
   id?: number;
   firstParagraph: string;
   secondParagraph: string;
@@ -26,7 +26,7 @@ interface customerDataType {
   quoteColor: string;
 }
 
-interface paginatorDataType {
+interface PaginatorDataType {
   id?: number;
   title: string;
   imageUrl: string;
@@ -35,13 +35,13 @@ interface paginatorDataType {
   linkText: string;
 }
 
-interface validateMessagesType {
+interface ValidateMessagesType {
   "form-name": string;
   "form-phone": string;
   "form-email": string;
 }
 
-interface formDataType {
+interface FormDataType {
   name?: string;
   phone?: string;
   email?: string;
@@ -52,11 +52,11 @@ interface ISlider {
 }
 
 export {
-  slickDataType,
-  customerDataType,
-  paginatorDataType,
-  nativeDataType,
-  validateMessagesType,
-  formDataType,
+  SlickDataType,
+  CustomerDataType,
+  PaginatorDataType,
+  NativeDataType,
+  ValidateMessagesType,
+  FormDataType,
   ISlider,
 };
