@@ -27,9 +27,10 @@ import {
   makeActiveNative,
 } from "./native-slider";
 import { FormActive } from "./form";
-import { Storage } from "./storage";
+import { SlickStorage } from "./storage";
 import { Select } from "./select";
 import { NativeDataType, SlickDataType } from "./models/interfaces.model";
+import { ReadOnly } from "./models/decorators.decorator";
 
 abstract class AbstractApp {
   protected BASE_URL: string;
@@ -44,6 +45,7 @@ export class App extends AbstractApp {
     this.initFunctions();
   }
 
+  @ReadOnly(true)
   protected async initFunctions() {
     noScroll();
     menuAutoClose(event);
@@ -78,8 +80,8 @@ export class App extends AbstractApp {
       this.BASE_URL
     );
 
-    const slickStorage: Storage = new Storage("slickData");
-    slickStorage.setData<SlickDataType>(DATA_SLICK_SLIDER);
+    const slickStorage: SlickStorage = new SlickStorage()
+    slickStorage.setData(DATA_SLICK_SLIDER);
 
     const coursesSlider: SliderSlick = new SliderSlick({
       parentClassName: "slick-slider",
