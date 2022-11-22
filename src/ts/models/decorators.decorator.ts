@@ -10,14 +10,13 @@ function ReadOnly(boolean: boolean) {
   };
 }
 
-function LocalStorage(keyData: string) {
+function LocalStorage(keyData: string): (target: Object, key: string) => void {
   return function (target: Object, key: string) {
-
-    const getData = () => {
+    const getData = (): SlickDataType[] => {
       return JSON.parse(localStorage.getItem(keyData));
     };
 
-    const setData = (data: SlickDataType[]) => {
+    const setData = (data: SlickDataType[]): void => {
       localStorage.setItem(keyData, JSON.stringify(data));
     };
 

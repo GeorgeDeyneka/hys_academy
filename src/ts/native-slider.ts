@@ -3,10 +3,10 @@ import { ISlider, NativeDataType } from "./models/interfaces.model";
 
 class NativeSlider implements ISlider {
   private readonly selector: string;
-  private readonly renderFunc: () => any;
+  private readonly renderFunc: () => HTMLElement[];
   private readonly makeActiveFunc: () => void;
 
-  public setData: (data: any) => void;
+  public setData: (data: NativeDataType[]) => void;
 
   constructor({ parentClassName, renderSlidesHtml, makeActive }) {
     this.selector = parentClassName;

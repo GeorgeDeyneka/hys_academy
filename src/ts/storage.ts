@@ -13,28 +13,28 @@ export class Storage implements IStorage {
     this.key = key;
   }
 
-  setData<T>(data: Array<T> | T): void {
+  public setData<T>(data: T): void {
     localStorage.setItem(this.key, JSON.stringify(data));
   }
 
-  getData<T>(): Array<T> | T {
+  public getData<T>(): T {
     return JSON.parse(localStorage.getItem(this.key));
   }
 
-  removeData(): void {
+  public removeData(): void {
     localStorage.removeItem(this.key);
   }
 }
 
 export class SlickStorage implements IStorage {
   @LocalStorage("slickData")
-  localData: any;
+  private localData: any;
 
-  public setData<T>(data: Array<T> | T): void {
+  public setData<T>(data: Array<T>): void {
     this.localData = data;
   }
 
-  public getData<T>(): Array<T> | T {
+  public getData<T>(): Array<T> {
     return this.localData;
   }
 }

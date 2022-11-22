@@ -31,6 +31,7 @@ import { SlickStorage } from "./storage";
 import { Select } from "./select";
 import { NativeDataType, SlickDataType } from "./models/interfaces.model";
 import { ReadOnly } from "./models/decorators.decorator";
+import { ClassNamesForApp } from "./models/enums.model";
 
 abstract class AbstractApp {
   protected BASE_URL: string;
@@ -80,11 +81,11 @@ export class App extends AbstractApp {
       this.BASE_URL
     );
 
-    const slickStorage: SlickStorage = new SlickStorage()
+    const slickStorage: SlickStorage = new SlickStorage();
     slickStorage.setData(DATA_SLICK_SLIDER);
 
     const coursesSlider: SliderSlick = new SliderSlick({
-      parentClassName: "slick-slider",
+      parentClassName: ClassNamesForApp.slickSlider,
       renderSlidesHtml: renderCards,
       makeActive: makeActiveSlick,
     });
@@ -95,7 +96,7 @@ export class App extends AbstractApp {
     );
 
     const nativeSlider: NativeSlider = new NativeSlider({
-      parentClassName: "native-slider",
+      parentClassName: ClassNamesForApp.nativeSlider,
       renderSlidesHtml: renderSlides.bind(this, dataForNative.length),
       makeActive: makeActiveNative,
     });
@@ -103,7 +104,7 @@ export class App extends AbstractApp {
     nativeSlider.setData = setNativeData;
     nativeSlider.setData(dataForNative);
 
-    const select: Select = new Select("select");
+    const select: Select = new Select(ClassNamesForApp.select);
 
     select.getSelect().addEventListener("change", onAlbumChange.bind(this));
 
@@ -116,6 +117,9 @@ export class App extends AbstractApp {
       nativeSlider.setData(data);
     }
 
-    const myForm: FormActive = new FormActive("blog__form", "form__input");
+    const myForm: FormActive = new FormActive(
+      ClassNamesForApp.blogForm,
+      ClassNamesForApp.formInput
+    );
   }
 }
