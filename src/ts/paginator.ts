@@ -29,7 +29,11 @@ const PC_DISPLAY_WIDTH: number = 1440;
 })();
 
 function paginator(event: Event): void {
-  const classesArr: string[] = ["blog__point", "blog__point-btn_active", "blog__points"];
+  const classesArr: string[] = [
+    "blog__point",
+    "blog__point-btn_active",
+    "blog__points",
+  ];
   const target = event.target as HTMLButtonElement;
 
   if (classesArr.includes(target.className)) return;
@@ -61,10 +65,7 @@ function checkResize(): string {
   }
 }
 
-function buttonScroll(
-  activeButton: number,
-  data: PaginatorDataType[]
-) {
+function buttonScroll(activeButton: number, data: PaginatorDataType[]) {
   const translateProperty: string = checkTranslateProperty();
 
   if (activeButton <= 3) {
@@ -105,15 +106,19 @@ function getData(numberOfBtn: number): void {
     CARDS_PER_PAGE * numberOfBtn - CARDS_PER_PAGE,
     CARDS_PER_PAGE * numberOfBtn
   );
-  const arrCards = document.querySelectorAll(".blog__card") as NodeListOf<HTMLElement>;
+  const arrCards = document.querySelectorAll(
+    ".blog__card"
+  ) as NodeListOf<HTMLElement>;
 
   switch (newArr.length) {
     case 1:
+      blogCards.style.justifyContent = "center";
       if (arrCards[arrCards.length - 1].classList.contains("blog__card_delete"))
         return;
       arrCards[arrCards.length - 1].classList.add("blog__card_delete");
       break;
     case 2:
+      blogCards.style.justifyContent = "start";
       arrCards.forEach((el) => el.classList.remove("blog__card_delete"));
       break;
   }
@@ -131,7 +136,7 @@ function changeData(paginatedData: Array<PaginatorDataType>) {
       el.imageUrl;
     blogCards.children[i].querySelector(".blog__avatar-img").src = el.avatarUrl;
     blogCards.children[i].querySelector(".blog__vertical-text").innerText =
-      el.category;
+      el.category.length > 6 ? el.category.slice(0, 5) + "…" : el.category;
     blogCards.children[i].querySelector(".blog__read-link").innerText =
       el.linkText;
   });

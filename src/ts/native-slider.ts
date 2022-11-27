@@ -1,5 +1,6 @@
 import throttle from "lodash.throttle";
 import { ISlider, NativeDataType } from "./models/interfaces.model";
+import { NativeStorage } from "./storage";
 
 class NativeSlider implements ISlider {
   private readonly selector: string;
@@ -48,13 +49,18 @@ function makeActiveNative(): void {
     }
   });
 
+  const nativeStorage = new NativeStorage();
+
   let slidesToShow: number = 0;
-  let position: number = 0;
+  let position: number = nativeStorage.getData();
+
   const SLIDES_TO_SCROLL: number = 1;
   const arrItems = document.querySelectorAll(
     ".study__item"
   ) as NodeListOf<HTMLElement>;
   const itemsCount: number = arrItems.length;
+
+  setPosition();
 
   function adaptive() {
     if (sliderContainer.clientWidth === 217) {
@@ -76,11 +82,17 @@ function makeActiveNative(): void {
   });
 
   function setPosition(): void {
+    nativeStorage.setData(position);
+
     ulList.style.transform = `translateX(${position}px)`;
   }
+
   function checkButtons(): void {
-    buttonPrev.disabled = position === 0;
-    buttonNext.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
+    if (buttonPrev && buttonNext) {
+      buttonPrev.disabled = position === 0;
+      buttonNext.disabled =
+        position <= -(itemsCount - slidesToShow) * itemWidth;
+    }
   }
 
   function prev(): void {
@@ -141,8 +153,10 @@ function renderSlides(quantityOfSlides: number): HTMLElement[] {
     liItem.append(imageBg, title);
     ulList.append(liItem);
   }
-
-  return [buttonPrev, sliderContainer, buttonNext];
+  if (quantityOfSlides) {
+    return [buttonPrev, sliderContainer, buttonNext];
+  }
+  return [sliderContainer];
 }
 
 function setNativeData(data: NativeDataType[]): void {

@@ -10,6 +10,6 @@ export async function makeRequest<T>(
 
     return result;
   } catch (err) {
-    console.log(err);
+    console.log(`Error: ${err}`);
   }
 }

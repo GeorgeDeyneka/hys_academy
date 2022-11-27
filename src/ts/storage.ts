@@ -1,12 +1,12 @@
-import { LocalStorage } from "./models/decorators.decorator";
+import { LocalStorage, SessionStorage } from "./models/decorators.decorator";
 
 interface IStorage {
-  setData<T>(data: Array<T> | T): void;
-  getData<T>(): Array<T> | T;
+  setData<T>(data: Array<T> | T | number): void;
+  getData<T>(): Array<T> | T | Object | number;
   removeData?(): void;
 }
 
-export class Storage implements IStorage {
+class Storage implements IStorage {
   private readonly key: string;
 
   constructor(key: string) {
@@ -16,9 +16,12 @@ export class Storage implements IStorage {
   public setData<T>(data: T): void {
     localStorage.setItem(this.key, JSON.stringify(data));
   }
-
-  public getData<T>(): T {
-    return JSON.parse(localStorage.getItem(this.key));
+  
+  public getData<T>(): T | Object {
+    if (localStorage.getItem(this.key) != null) {
+      return JSON.parse(localStorage.getItem(this.key));
+    }
+    return {}
   }
 
   public removeData(): void {
@@ -26,7 +29,7 @@ export class Storage implements IStorage {
   }
 }
 
-export class SlickStorage implements IStorage {
+class SlickStorage implements IStorage {
   @LocalStorage("slickData")
   private localData: any;
 
@@ -38,3 +41,18 @@ export class SlickStorage implements IStorage {
     return this.localData;
   }
 }
+
+class NativeStorage implements IStorage {
+  @SessionStorage("sliderPosition")
+  private localData: any;
+
+  public setData(data: number): void {
+    this.localData = data;
+  }
+
+  public getData(): number {
+    return this.localData;
+  }
+}
+
+export { Storage, SlickStorage, NativeStorage }

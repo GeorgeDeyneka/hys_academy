@@ -18,7 +18,7 @@ export class Select implements ISelect {
 
     selectElem.classList.add("study__select");
 
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < Object.entries(AlbumEnum).length; i++) {
       const optionElem: HTMLOptionElement = document.createElement("option");
 
       optionElem.value = Object.values(AlbumEnum)[i];

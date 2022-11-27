@@ -13,7 +13,10 @@ function ReadOnly(boolean: boolean) {
 function LocalStorage(keyData: string): (target: Object, key: string) => void {
   return function (target: Object, key: string) {
     const getData = (): SlickDataType[] => {
-      return JSON.parse(localStorage.getItem(keyData));
+      if (localStorage.getItem(keyData) != null) {
+        return JSON.parse(localStorage.getItem(keyData));
+      }
+      return [];
     };
 
     const setData = (data: SlickDataType[]): void => {
@@ -27,4 +30,24 @@ function LocalStorage(keyData: string): (target: Object, key: string) => void {
   };
 }
 
-export { ReadOnly, LocalStorage };
+function SessionStorage(keyData: string): (target: Object, key: string) => void {
+  return function (target: Object, key: string) {
+    const getData = (): number => {
+      if (sessionStorage.getItem(keyData) != null) {
+        return JSON.parse(sessionStorage.getItem(keyData));
+      }
+      return 0;
+    };
+
+    const setData = (data: number): void => {
+      sessionStorage.setItem(keyData, JSON.stringify(data));
+    };
+
+    Object.defineProperty(target, key, {
+      get: getData,
+      set: setData,
+    });
+  };
+}
+
+export { ReadOnly, LocalStorage, SessionStorage };
