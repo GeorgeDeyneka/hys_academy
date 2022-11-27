@@ -1,9 +1,9 @@
-import { FormDataType, SlickDataType } from "./models/interfaces.model";
+import { LocalStorage } from "./models/decorators.decorator";
 
 interface IStorage {
   setData<T>(data: Array<T> | T): void;
   getData<T>(): Array<T> | T;
-  removeData(): void;
+  removeData?(): void;
 }
 
 export class Storage implements IStorage {
@@ -13,15 +13,28 @@ export class Storage implements IStorage {
     this.key = key;
   }
 
-  setData<T>(data: Array<T> | T): void {
+  public setData<T>(data: T): void {
     localStorage.setItem(this.key, JSON.stringify(data));
   }
 
-  getData<T>(): Array<T> | T {
+  public getData<T>(): T {
     return JSON.parse(localStorage.getItem(this.key));
   }
 
-  removeData(): void {
+  public removeData(): void {
     localStorage.removeItem(this.key);
+  }
+}
+
+export class SlickStorage implements IStorage {
+  @LocalStorage("slickData")
+  private localData: any;
+
+  public setData<T>(data: Array<T>): void {
+    this.localData = data;
+  }
+
+  public getData<T>(): Array<T> {
+    return this.localData;
   }
 }

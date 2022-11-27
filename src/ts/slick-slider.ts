@@ -5,7 +5,7 @@ class SliderSlick implements ISlider {
   private renderFunc: () => string;
   private makeActiveFunc: () => void;
 
-  public setData: (data: any) => void;
+  public setData: (data: SlickDataType[]) => void;
 
   constructor({ parentClassName, renderSlidesHtml, makeActive }) {
     this.selector = parentClassName;

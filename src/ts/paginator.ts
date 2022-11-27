@@ -61,7 +61,10 @@ function checkResize(): string {
   }
 }
 
-function buttonScroll(activeButton: number, data: string | any[]) {
+function buttonScroll(
+  activeButton: number,
+  data: PaginatorDataType[]
+) {
   const translateProperty: string = checkTranslateProperty();
 
   if (activeButton <= 3) {
