@@ -10,34 +10,23 @@ function ReadOnly(boolean: boolean) {
   };
 }
 
-function LocalStorage(target: Object, key: string): void {
+function StorageDecorator(target: Object, key: string): void {
   Object.defineProperty(target, key, {
-    get: function (): SlickDataType[] | FormDataType {
-      if (localStorage.getItem(this.key) != null) {
-        return JSON.parse(localStorage.getItem(this.key));
+    get: function (): number | SlickDataType[] | FormDataType {
+      const dataType: Storage =
+        this.typeOfData === "local" ? localStorage : sessionStorage;
+      if (dataType.getItem(this.key) != null) {
+        return JSON.parse(dataType.getItem(this.key));
       }
-      return [];
+      return dataType === localStorage ? [] : 0
     },
 
-    set: function (data: SlickDataType[] | FormDataType): void {
-      localStorage.setItem(this.key, JSON.stringify(data));
+    set: function (data: number | SlickDataType[] | FormDataType): void {
+      const dataType: Storage =
+        this.typeOfData === "local" ? localStorage : sessionStorage;
+      dataType.setItem(this.key, JSON.stringify(data));
     },
   });
 }
 
-function SessionStorage(target: Object, key: string): void {
-  Object.defineProperty(target, key, {
-    get: function (): number {
-      if (sessionStorage.getItem(this.key) != null) {
-        return JSON.parse(sessionStorage.getItem(this.key));
-      }
-      return 0;
-    },
-
-    set: function (data: number): void {
-      sessionStorage.setItem(this.key, JSON.stringify(data));
-    },
-  });
-}
-
-export { ReadOnly, LocalStorage, SessionStorage };
+export { ReadOnly, StorageDecorator };

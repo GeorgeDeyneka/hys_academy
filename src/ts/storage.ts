@@ -1,4 +1,4 @@
-import { LocalStorage, SessionStorage } from "./models/decorators.decorator";
+import { StorageDecorator } from "./models/decorators.decorator";
 
 interface IStorage {
   setData<T>(data: Array<T> | T | number): void;
@@ -6,21 +6,23 @@ interface IStorage {
   removeData?(): void;
 }
 
-class LocStorage implements IStorage {
+class StorageClass implements IStorage {
   private readonly key: string;
+  private readonly typeOfData: string;
 
-  constructor(key: string) {
+  constructor(key: string, typeOfData: "local" | "session") {
     this.key = key;
+    this.typeOfData = typeOfData;
   }
 
-  @LocalStorage
+  @StorageDecorator
   private localData: any;
 
-  public setData<T>(data: Array<T> | T): void {
+  public setData<T>(data: Array<T> | T | number): void {
     this.localData = data;
   }
 
-  public getData<T>(): Array<T> | T {
+  public getData<T>(): Array<T> | T | number {
     return this.localData;
   }
 
@@ -29,23 +31,4 @@ class LocStorage implements IStorage {
   }
 }
 
-class SessStorage implements IStorage {
-  private readonly key: string;
-
-  constructor(key: string) {
-    this.key = key;
-  }
-  
-  @SessionStorage
-  private localData: any;
-
-  public setData(data: number): void {
-    this.localData = data;
-  }
-
-  public getData(): number {
-    return this.localData;
-  }
-}
-
-export { LocStorage, SessStorage }
+export { StorageClass }

@@ -1,6 +1,6 @@
 import throttle from "lodash.throttle";
 import { ISlider, NativeDataType } from "./models/interfaces.model";
-import { SessStorage } from "./storage";
+import { StorageClass } from "./storage";
 
 class NativeSlider implements ISlider {
   private readonly selector: string;
@@ -49,10 +49,10 @@ function makeActiveNative(): void {
     }
   });
 
-  const nativeStorage = new SessStorage("sliderPosition");
+  const nativeStorage = new StorageClass("sliderPosition", "session");
 
   let slidesToShow: number = 0;
-  let position: number = nativeStorage.getData();
+  let position: number = nativeStorage.getData() as number;
 
   const SLIDES_TO_SCROLL: number = 1;
   const arrItems = document.querySelectorAll(
