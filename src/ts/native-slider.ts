@@ -1,6 +1,6 @@
 import throttle from "lodash.throttle";
 import { ISlider, NativeDataType } from "./models/interfaces.model";
-import { NativeStorage } from "./storage";
+import { SessStorage } from "./storage";
 
 class NativeSlider implements ISlider {
   private readonly selector: string;
@@ -49,7 +49,7 @@ function makeActiveNative(): void {
     }
   });
 
-  const nativeStorage = new NativeStorage();
+  const nativeStorage = new SessStorage("sliderPosition");
 
   let slidesToShow: number = 0;
   let position: number = nativeStorage.getData();
@@ -160,7 +160,7 @@ function renderSlides(quantityOfSlides: number): HTMLElement[] {
 }
 
 function setNativeData(data: NativeDataType[]): void {
-  if (!data) {
+  if (!data || !Object.keys(data).length) {
     throw new Error("No data for slider provided");
   }
 

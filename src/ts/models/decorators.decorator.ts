@@ -1,4 +1,4 @@
-import { SlickDataType } from "./interfaces.model";
+import { FormDataType, SlickDataType } from "./interfaces.model";
 
 function ReadOnly(boolean: boolean) {
   return function (
@@ -10,44 +10,34 @@ function ReadOnly(boolean: boolean) {
   };
 }
 
-function LocalStorage(keyData: string): (target: Object, key: string) => void {
-  return function (target: Object, key: string) {
-    const getData = (): SlickDataType[] => {
-      if (localStorage.getItem(keyData) != null) {
-        return JSON.parse(localStorage.getItem(keyData));
+function LocalStorage(target: Object, key: string): void {
+  Object.defineProperty(target, key, {
+    get: function (): SlickDataType[] | FormDataType {
+      if (localStorage.getItem(this.key) != null) {
+        return JSON.parse(localStorage.getItem(this.key));
       }
       return [];
-    };
+    },
 
-    const setData = (data: SlickDataType[]): void => {
-      localStorage.setItem(keyData, JSON.stringify(data));
-    };
-
-    Object.defineProperty(target, key, {
-      get: getData,
-      set: setData,
-    });
-  };
+    set: function (data: SlickDataType[] | FormDataType): void {
+      localStorage.setItem(this.key, JSON.stringify(data));
+    },
+  });
 }
 
-function SessionStorage(keyData: string): (target: Object, key: string) => void {
-  return function (target: Object, key: string) {
-    const getData = (): number => {
-      if (sessionStorage.getItem(keyData) != null) {
-        return JSON.parse(sessionStorage.getItem(keyData));
+function SessionStorage(target: Object, key: string): void {
+  Object.defineProperty(target, key, {
+    get: function (): number {
+      if (sessionStorage.getItem(this.key) != null) {
+        return JSON.parse(sessionStorage.getItem(this.key));
       }
       return 0;
-    };
+    },
 
-    const setData = (data: number): void => {
-      sessionStorage.setItem(keyData, JSON.stringify(data));
-    };
-
-    Object.defineProperty(target, key, {
-      get: getData,
-      set: setData,
-    });
-  };
+    set: function (data: number): void {
+      sessionStorage.setItem(this.key, JSON.stringify(data));
+    },
+  });
 }
 
 export { ReadOnly, LocalStorage, SessionStorage };

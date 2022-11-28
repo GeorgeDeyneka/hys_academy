@@ -6,22 +6,22 @@ interface IStorage {
   removeData?(): void;
 }
 
-class Storage implements IStorage {
+class LocStorage implements IStorage {
   private readonly key: string;
 
   constructor(key: string) {
     this.key = key;
   }
 
-  public setData<T>(data: T): void {
-    localStorage.setItem(this.key, JSON.stringify(data));
+  @LocalStorage
+  private localData: any;
+
+  public setData<T>(data: Array<T> | T): void {
+    this.localData = data;
   }
-  
-  public getData<T>(): T | Object {
-    if (localStorage.getItem(this.key) != null) {
-      return JSON.parse(localStorage.getItem(this.key));
-    }
-    return {}
+
+  public getData<T>(): Array<T> | T {
+    return this.localData;
   }
 
   public removeData(): void {
@@ -29,21 +29,14 @@ class Storage implements IStorage {
   }
 }
 
-class SlickStorage implements IStorage {
-  @LocalStorage("slickData")
-  private localData: any;
+class SessStorage implements IStorage {
+  private readonly key: string;
 
-  public setData<T>(data: Array<T>): void {
-    this.localData = data;
+  constructor(key: string) {
+    this.key = key;
   }
-
-  public getData<T>(): Array<T> {
-    return this.localData;
-  }
-}
-
-class NativeStorage implements IStorage {
-  @SessionStorage("sliderPosition")
+  
+  @SessionStorage
   private localData: any;
 
   public setData(data: number): void {
@@ -55,4 +48,4 @@ class NativeStorage implements IStorage {
   }
 }
 
-export { Storage, SlickStorage, NativeStorage }
+export { LocStorage, SessStorage }
