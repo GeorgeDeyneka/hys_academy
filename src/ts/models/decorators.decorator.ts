@@ -10,23 +10,36 @@ function ReadOnly(boolean: boolean) {
   };
 }
 
-function StorageDecorator(target: Object, key: string): void {
+function SessionStorageDec(target: Object, key: string): void {
   Object.defineProperty(target, key, {
-    get: function (): number | SlickDataType[] | FormDataType {
-      const dataType: Storage =
-        this.typeOfData === "local" ? localStorage : sessionStorage;
-      if (dataType.getItem(this.key) != null) {
-        return JSON.parse(dataType.getItem(this.key));
+    get: function <T>(): T | Array<T> | number {
+      if (sessionStorage.getItem(this.key) != null) {
+        return JSON.parse(sessionStorage.getItem(this.key));
       }
-      return dataType === localStorage ? [] : 0
+      return this.key === "sliderPosition" ? 0 : [];
     },
 
-    set: function (data: number | SlickDataType[] | FormDataType): void {
-      const dataType: Storage =
-        this.typeOfData === "local" ? localStorage : sessionStorage;
-      dataType.setItem(this.key, JSON.stringify(data));
+    set: function <T>(data: T | Array<T>): void {
+      sessionStorage.setItem(this.key, JSON.stringify(data));
     },
+    configurable: true,
   });
 }
 
-export { ReadOnly, StorageDecorator };
+function LocalStorageDec(target: Object, key: string): void {
+  Object.defineProperty(target, key, {
+    get: function <T>(): T | Array<T> | number {
+      if (localStorage.getItem(this.key) != null) {
+        return JSON.parse(localStorage.getItem(this.key));
+      }
+      return this.key === "sliderPosition" ? 0 : [];
+    },
+
+    set: function <T>(data: T | Array<T>): void {
+      localStorage.setItem(this.key, JSON.stringify(data));
+    },
+    configurable: true,
+  });
+}
+
+export { ReadOnly, SessionStorageDec, LocalStorageDec };

@@ -11,7 +11,7 @@ export class FormActive implements IFormActive {
   private readonly parentSelector: HTMLElement;
   private readonly formInputs: HTMLInputElement[];
   private obj: FormDataType = {};
-  private readonly newStorage = new StorageClass("formData", 'local');
+  private readonly newStorage = new StorageClass("formData");
 
   constructor(parentClassName: string, childClassName: string) {
     this.classNameChilds = childClassName;

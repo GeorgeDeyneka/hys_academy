@@ -81,7 +81,7 @@ export class App extends AbstractApp {
       this.BASE_URL
     );
 
-    const slickStorage: StorageClass = new StorageClass("slickData", 'local');
+    const slickStorage: StorageClass = new StorageClass("slickData");
     slickStorage.setData(DATA_SLICK_SLIDER);
 
     const coursesSlider: SliderSlick = new SliderSlick({

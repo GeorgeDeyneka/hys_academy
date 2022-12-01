@@ -49,7 +49,7 @@ function makeActiveNative(): void {
     }
   });
 
-  const nativeStorage = new StorageClass("sliderPosition", "session");
+  const nativeStorage = new StorageClass("sliderPosition");
 
   let slidesToShow: number = 0;
   let position: number = nativeStorage.getData() as number;
