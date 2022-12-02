@@ -1,5 +1,3 @@
-import { FormDataType, SlickDataType } from "./interfaces.model";
-
 function ReadOnly(boolean: boolean) {
   return function (
     target: Object,
@@ -11,6 +9,14 @@ function ReadOnly(boolean: boolean) {
 }
 
 function SessionStorageDec(target: Object, key: string): void {
+  target["arrMethods"] = [];
+
+  const saveSessionStorage = <T>(data: T | Array<T>, keyData: string): void => {
+    sessionStorage.setItem(keyData, JSON.stringify(data));
+  };
+
+  target["arrMethods"].push(saveSessionStorage);
+
   Object.defineProperty(target, key, {
     get: function <T>(): T | Array<T> | number {
       if (sessionStorage.getItem(this.key) != null) {
@@ -18,15 +24,18 @@ function SessionStorageDec(target: Object, key: string): void {
       }
       return this.key === "sliderPosition" ? 0 : [];
     },
-
-    set: function <T>(data: T | Array<T>): void {
-      sessionStorage.setItem(this.key, JSON.stringify(data));
-    },
     configurable: true,
   });
 }
 
+
 function LocalStorageDec(target: Object, key: string): void {
+  const saveLocalStorage = <T>(data: T | Array<T>, keyData: string): void => {
+    localStorage.setItem(keyData, JSON.stringify(data));
+  };
+
+  target["arrMethods"].push(saveLocalStorage);
+
   Object.defineProperty(target, key, {
     get: function <T>(): T | Array<T> | number {
       if (localStorage.getItem(this.key) != null) {
@@ -35,8 +44,11 @@ function LocalStorageDec(target: Object, key: string): void {
       return this.key === "sliderPosition" ? 0 : [];
     },
 
-    set: function <T>(data: T | Array<T>): void {
-      localStorage.setItem(this.key, JSON.stringify(data));
+    set: function (data) {
+      const keyData = this.key;
+      target["arrMethods"].forEach((el) => {
+        el.call(this, data, keyData);
+      });
     },
     configurable: true,
   });

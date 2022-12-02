@@ -11,7 +11,7 @@ interface IStorage {
 
 class StorageClass implements IStorage {
   private readonly key: string;
-  private readonly typeOfData: string;
+  arrMethods;
 
   constructor(key: string) {
     this.key = key;
