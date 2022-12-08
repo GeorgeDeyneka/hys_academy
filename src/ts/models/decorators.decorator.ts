@@ -11,18 +11,17 @@ function ReadOnly(boolean: boolean) {
 function SessionStorageDec(target: Object, key: string): void {
   target["arrMethods"] = [];
 
-  const saveSessionStorage = <T>(data: T | Array<T>, keyData: string): void => {
+  const saveSessionStorage = <T>(data: T, keyData: string): void => {
     sessionStorage.setItem(keyData, JSON.stringify(data));
   };
 
   target["arrMethods"].push(saveSessionStorage);
 
   Object.defineProperty(target, key, {
-    get: function <T>(): T | Array<T> | number {
+    get: function <T>(): T {
       if (sessionStorage.getItem(this.key) != null) {
-        return JSON.parse(sessionStorage.getItem(this.key));
+        return (JSON.parse(sessionStorage.getItem(this.key)) as T);
       }
-      return this.key === "sliderPosition" ? 0 : [];
     },
     configurable: true,
   });
@@ -30,18 +29,17 @@ function SessionStorageDec(target: Object, key: string): void {
 
 
 function LocalStorageDec(target: Object, key: string): void {
-  const saveLocalStorage = <T>(data: T | Array<T>, keyData: string): void => {
+  const saveLocalStorage = <T>(data: T, keyData: string): void => {
     localStorage.setItem(keyData, JSON.stringify(data));
   };
 
   target["arrMethods"].push(saveLocalStorage);
 
   Object.defineProperty(target, key, {
-    get: function <T>(): T | Array<T> | number {
+    get: function <T>(): T {
       if (localStorage.getItem(this.key) != null) {
-        return JSON.parse(localStorage.getItem(this.key));
+        return (JSON.parse(localStorage.getItem(this.key)) as T);
       }
-      return this.key === "sliderPosition" ? 0 : [];
     },
 
     set: function (data) {

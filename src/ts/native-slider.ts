@@ -52,8 +52,8 @@ function makeActiveNative(): void {
   const nativeStorage = new StorageClass("sliderPosition");
 
   let slidesToShow: number = 0;
-  let position: number = nativeStorage.getData() as number;
-
+  let position = nativeStorage.getData<number>() || 0;
+  
   const SLIDES_TO_SCROLL: number = 1;
   const arrItems = document.querySelectorAll(
     ".study__item"
@@ -82,7 +82,7 @@ function makeActiveNative(): void {
   });
 
   function setPosition(): void {
-    nativeStorage.setData(position);
+    nativeStorage.setData<number>(position);
 
     ulList.style.transform = `translateX(${position}px)`;
   }

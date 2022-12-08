@@ -92,7 +92,7 @@ export class App extends AbstractApp {
 
     coursesSlider.setData = setSlickData;
     coursesSlider.setData(
-      slickStorage.getData<SlickDataType>() as SlickDataType[]
+      slickStorage.getData<SlickDataType[]>()
     );
 
     const nativeSlider: NativeSlider = new NativeSlider({

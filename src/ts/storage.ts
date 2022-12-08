@@ -4,14 +4,14 @@ import {
 } from "./models/decorators.decorator";
 
 interface IStorage {
-  setData<T>(data: Array<T> | T | number): void;
-  getData<T>(): Array<T> | T | Object | number;
+  setData<T>(data: | T): void;
+  getData<T>(): | T;
   removeData?(): void;
 }
 
 class StorageClass implements IStorage {
   private readonly key: string;
-  arrMethods;
+  private arrMethods = Array<Function>;
 
   constructor(key: string) {
     this.key = key;
@@ -21,11 +21,11 @@ class StorageClass implements IStorage {
   @SessionStorageDec
   private localData: any;
 
-  public setData<T>(data: Array<T> | T | number): void {
+  public setData<T>(data: T): void {
     this.localData = data;
   }
 
-  public getData<T>(): Array<T> | T | number {
+  public getData<T>(): T {
     return this.localData;
   }
 
