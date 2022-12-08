@@ -1,4 +1,4 @@
-import { Storage } from "./storage";
+import { StorageClass } from "./storage";
 import { VALIDATE_MESSAGES } from "./state";
 import { FormDataType, ValidateMessagesType } from "./models/interfaces.model";
 
@@ -11,7 +11,7 @@ export class FormActive implements IFormActive {
   private readonly parentSelector: HTMLElement;
   private readonly formInputs: HTMLInputElement[];
   private obj: FormDataType = {};
-  private readonly newStorage = new Storage("formData");
+  private readonly newStorage = new StorageClass("formData");
 
   constructor(parentClassName: string, childClassName: string) {
     this.classNameChilds = childClassName;

@@ -27,7 +27,7 @@ import {
   makeActiveNative,
 } from "./native-slider";
 import { FormActive } from "./form";
-import { SlickStorage } from "./storage";
+import { StorageClass } from "./storage";
 import { Select } from "./select";
 import { NativeDataType, SlickDataType } from "./models/interfaces.model";
 import { ReadOnly } from "./models/decorators.decorator";
@@ -81,7 +81,7 @@ export class App extends AbstractApp {
       this.BASE_URL
     );
 
-    const slickStorage: SlickStorage = new SlickStorage();
+    const slickStorage: StorageClass = new StorageClass("slickData");
     slickStorage.setData(DATA_SLICK_SLIDER);
 
     const coursesSlider: SliderSlick = new SliderSlick({
@@ -92,7 +92,7 @@ export class App extends AbstractApp {
 
     coursesSlider.setData = setSlickData;
     coursesSlider.setData(
-      slickStorage.getData<SlickDataType>() as SlickDataType[]
+      slickStorage.getData<SlickDataType[]>()
     );
 
     const nativeSlider: NativeSlider = new NativeSlider({

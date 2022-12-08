@@ -682,6 +682,7 @@
     }
     &__cards {
       min-height: 572px;
+      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 44px;
@@ -927,7 +928,7 @@
     &__cards {
       min-height: auto;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: start;
       gap: 4%;
     }
     &__card {

@@ -107,7 +107,7 @@ function renderCards(): string {
 }
 
 const setSlickData = (data: SlickDataType[]): void => {
-  if (!data) {
+  if (!data || !data.length) {
     throw new Error("No data for slider provided");
   }
 

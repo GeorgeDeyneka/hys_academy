@@ -6,12 +6,12 @@ const postcss = require("gulp-postcss");
 const minify = require("gulp-minify");
 const browsersync = require("browser-sync");
 
-const dist = "./dist";
+const docs = "./docs";
 
 gulp.task("copy-html", () => {
   return gulp
     .src("./src/index.html")
-    .pipe(gulp.dest(dist))
+    .pipe(gulp.dest(docs))
     .pipe(browsersync.stream());
 });
 
@@ -39,7 +39,7 @@ gulp.task("build-ts", () => {
       })
     )
     .pipe(minify())
-    .pipe(gulp.dest(dist + "/js"))
+    .pipe(gulp.dest(docs + "/js"))
     .pipe(browsersync.stream());
 });
 
@@ -49,22 +49,22 @@ gulp.task("build-sass", () => {
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(minify())
-    .pipe(gulp.dest(dist + "/css"))
+    .pipe(gulp.dest(docs + "/css"))
     .pipe(browsersync.stream());
 });
 
 gulp.task("copy-assets", () => {
-  gulp.src("./src/assets/fonts/**.*").pipe(gulp.dest(dist + "/assets/fonts"));
+  gulp.src("./src/assets/fonts/**.*").pipe(gulp.dest(docs + "/assets/fonts"));
 
   return gulp
     .src("./src/assets/images/*.*")
-    .pipe(gulp.dest(dist + "/assets/images"))
+    .pipe(gulp.dest(docs + "/assets/images"))
     .pipe(browsersync.stream());
 });
 
 gulp.task("watch", () => {
   browsersync.init({
-    server: "./dist/",
+    server: "./docs/",
     port: 8080,
     notify: true,
   });
@@ -82,9 +82,9 @@ gulp.task(
 );
 
 gulp.task("prod", () => {
-  gulp.src("./src/index.html").pipe(gulp.dest(dist));
-  gulp.src("./src/assets/images/*.*").pipe(gulp.dest(dist + "/assets/images"));
-  gulp.src("./src/assets/fonts/**.*").pipe(gulp.dest(dist + "/assets/fonts"));
+  gulp.src("./src/index.html").pipe(gulp.dest(docs));
+  gulp.src("./src/assets/images/*.*").pipe(gulp.dest(docs + "/assets/images"));
+  gulp.src("./src/assets/fonts/**.*").pipe(gulp.dest(docs + "/assets/fonts"));
 });
 
 gulp.task("default", gulp.parallel("watch", "build"));
