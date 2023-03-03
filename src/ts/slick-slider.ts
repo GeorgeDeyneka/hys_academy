@@ -37,6 +37,26 @@ function makeActiveSlick(): void {
     mobileFirst: true,
     variableWidth: true,
     cssEase: "ease-in-out",
+    responsive: [
+      {
+        breakpoint: 1439,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 374,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 }
 
