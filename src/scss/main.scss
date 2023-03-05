@@ -8,7 +8,7 @@
 
 // Mobile Layout
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .no-scroll {
     overflow: hidden;
   }
@@ -151,7 +151,7 @@
     &__item {
       background-color: var(--black);
       position: relative;
-      max-width: 260px;
+      max-width: 220px;
       margin-right: 20px;
       border-radius: 8px;
       &:focus-visible {
@@ -343,7 +343,7 @@
     }
     .featured {
       background-color: var(--lightorange-featured-bg);
-      padding: 40px 23.5px 60px 23.5px;
+      padding: 40px 8px 60px;
       position: relative;
       margin: 0px -24px;
       &__big-title {
@@ -366,12 +366,7 @@
       &__duration-item {
         display: flex;
         align-items: center;
-        &:nth-child(1) {
-          padding-right: 44px;
-        }
-        &:nth-child(2) {
-          padding-right: 55px;
-        }
+        padding-right: 30px;
       }
       &__card {
         position: relative;
@@ -465,6 +460,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin: 0 -20px;
       padding-bottom: 66px;
     }
     &__slide-img {
@@ -511,8 +507,8 @@
     }
     &__card-img {
       position: absolute;
-      top: 46px;
-      left: 54px;
+      top: 24px;
+      left: 14px;
       border-radius: 24px;
       object-fit: cover;
       max-height: 273px;
@@ -724,16 +720,17 @@
     }
     &__points-container {
       margin: 0 auto;
-      width: 308px;
       overflow: hidden;
     }
     &__illustration-img {
+      display: block;
       position: absolute;
       top: -25px;
       right: 0px;
       object-fit: cover;
       width: 79%;
       height: 160px;
+      border-radius: 5px;
     }
 
     &__avatar-img {
@@ -797,6 +794,48 @@
     }
     &__submit {
       margin: 16px 0px 84px 0px;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .featured {
+    padding: 40px 23.5px 60px;
+
+    &__duration-item {
+      display: flex;
+      align-items: center;
+      &:nth-child(1) {
+        padding-right: 44px;
+      }
+      &:nth-child(2) {
+        padding-right: 55px;
+      }
+    }
+  }
+
+  .blog {
+    &__points-container {
+      width: 308px;
+    }
+  }
+
+  .courses {
+    &__item {
+      max-width: 260px;
+    }
+  }
+
+  .study {
+    &__slider {
+      margin: 0;
+    }
+  }
+
+  .customer {
+    &__card-img {
+      top: 46px;
+      left: 54px;
     }
   }
 }

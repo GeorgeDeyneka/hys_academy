@@ -51,7 +51,7 @@ function makeActiveSlick(): void {
         },
       },
       {
-        breakpoint: 374,
+        breakpoint: 319,
         settings: {
           slidesToShow: 1,
         },

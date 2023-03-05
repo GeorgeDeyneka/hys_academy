@@ -1,8 +1,16 @@
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .slick {
     &-list {
       overflow: hidden;
       padding: 24px 0px;
+      max-width: 220px;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .slick {
+    &-list {
       max-width: 260px;
     }
   }

@@ -264,7 +264,7 @@ input.form__input::placeholder {
     scroll-behavior: auto !important;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .btn {
     padding: 12px 20px;
     font-size: 12px;
@@ -349,8 +349,9 @@ a.btn {
   display: inline-block;
 }
 
-.buttons-block :first-child {
-  margin-right: 20px;
+.buttons-block {
+  display: flex;
+  gap: 20px;
 }
 
 .blog__point-btn {
@@ -439,10 +440,15 @@ a.btn {
   outline: 4px solid var(--white);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .slick-list {
     overflow: hidden;
     padding: 24px 0px;
+    max-width: 220px;
+  }
+}
+@media (min-width: 375px) {
+  .slick-list {
     max-width: 260px;
   }
 }
@@ -462,7 +468,7 @@ a.btn {
     max-width: 100%;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .wrapper {
     background-image: url(../assets/images/green-head-bg.svg);
     background-repeat: no-repeat;
@@ -639,7 +645,7 @@ a.btn {
     background-size: 50%;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .footer__background {
     z-index: -1;
     background-image: url(../assets/images/union.png);
@@ -759,7 +765,7 @@ a.btn {
     padding: 1px 0px 23px;
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 320px) {
   .no-scroll {
     overflow: hidden;
   }
@@ -886,7 +892,7 @@ a.btn {
   .courses__item {
     background-color: var(--black);
     position: relative;
-    max-width: 260px;
+    max-width: 220px;
     margin-right: 20px;
     border-radius: 8px;
   }
@@ -1070,7 +1076,7 @@ a.btn {
   }
   .events .featured {
     background-color: var(--lightorange-featured-bg);
-    padding: 40px 23.5px 60px 23.5px;
+    padding: 40px 8px 60px;
     position: relative;
     margin: 0px -24px;
   }
@@ -1094,12 +1100,7 @@ a.btn {
   .events .featured__duration-item {
     display: flex;
     align-items: center;
-  }
-  .events .featured__duration-item:nth-child(1) {
-    padding-right: 44px;
-  }
-  .events .featured__duration-item:nth-child(2) {
-    padding-right: 55px;
+    padding-right: 30px;
   }
   .events .featured__card {
     position: relative;
@@ -1183,6 +1184,7 @@ a.btn {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 -20px;
     padding-bottom: 66px;
   }
   .study__slide-img {
@@ -1227,8 +1229,8 @@ a.btn {
   }
   .customer__card-img {
     position: absolute;
-    top: 46px;
-    left: 54px;
+    top: 24px;
+    left: 14px;
     border-radius: 24px;
     -o-object-fit: cover;
        object-fit: cover;
@@ -1417,10 +1419,10 @@ a.btn {
   }
   .blog__points-container {
     margin: 0 auto;
-    width: 308px;
     overflow: hidden;
   }
   .blog__illustration-img {
+    display: block;
     position: absolute;
     top: -25px;
     right: 0px;
@@ -1428,6 +1430,7 @@ a.btn {
        object-fit: cover;
     width: 79%;
     height: 160px;
+    border-radius: 5px;
   }
   .blog__avatar-img {
     border-radius: 50%;
@@ -1487,6 +1490,34 @@ a.btn {
   }
   .form__submit {
     margin: 16px 0px 84px 0px;
+  }
+}
+@media (min-width: 375px) {
+  .featured {
+    padding: 40px 23.5px 60px;
+  }
+  .featured__duration-item {
+    display: flex;
+    align-items: center;
+  }
+  .featured__duration-item:nth-child(1) {
+    padding-right: 44px;
+  }
+  .featured__duration-item:nth-child(2) {
+    padding-right: 55px;
+  }
+  .blog__points-container {
+    width: 308px;
+  }
+  .courses__item {
+    max-width: 260px;
+  }
+  .study__slider {
+    margin: 0;
+  }
+  .customer__card-img {
+    top: 46px;
+    left: 54px;
   }
 }
 @media (min-width: 768px) {
