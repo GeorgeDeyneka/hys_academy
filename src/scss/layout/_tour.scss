@@ -1,0 +1,133 @@
+@media (min-width: 320px) {
+  .tour {
+    &__container {
+      padding: 0px 0px 36px 0px;
+      margin-bottom: 44px;
+      background-color: var(--lightblue-tour-bg);
+    }
+
+    &__player {
+      position: relative;
+      background-image: url("../assets/images/two-girls-studying-tour.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 520px;
+    }
+
+    &__btn-play {
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &__subtitle {
+      padding: 40px 0px 6px 0px;
+    }
+
+    &__content {
+      padding: 0px 24px;
+    }
+
+    &__title {
+      padding-bottom: 24px;
+    }
+
+    &__description-text {
+      padding-bottom: 12px;
+    }
+
+    &__description-list {
+      margin: 0;
+      padding: 0px 0px 12px 36px;
+      position: relative;
+    }
+
+    &__list-item {
+      padding-bottom: 12px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        margin-top: 8px;
+        left: 8px;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: var(--lightorange-decor-circle);
+      }
+
+      :not(:last-child) {
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .tour {
+    &__container {
+      padding: 0px;
+    }
+
+    &__player {
+      margin: 0px;
+    }
+
+    &__content {
+      padding: 50px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .tour {
+    &__container {
+      display: flex;
+      min-width: 100%;
+      margin-bottom: 100px;
+    }
+
+    &__player {
+      min-width: 730px;
+    }
+
+    &__content {
+      padding: 16px 208px 66px 87px;
+    }
+
+    &__btn-play {
+      top: 48%;
+      left: 505px;
+    }
+
+    &__description-list {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: -130px;
+        top: -29px;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: var(--lightorange-decor-square);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        bottom: -31px;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--gray-decor-elem);
+      }
+    }
+  }
+}

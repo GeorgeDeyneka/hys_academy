@@ -1,0 +1,16 @@
+@media (min-width: 320px) {
+  .title {
+    display: flex;
+
+    ::after {
+      content: "";
+      display: inline-block;
+      width: 60px;
+      height: 2px;
+      background-color: var(--blue-link-btn);
+      margin-left: 24px;
+      margin-bottom: 3px;
+      margin-bottom: 3px;
+    }
+  }
+}

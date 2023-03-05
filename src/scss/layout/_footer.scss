@@ -9,6 +9,7 @@
       background-repeat: no-repeat;
       z-index: -1;
     }
+
     &__link-list {
       padding: 17px 0px 3px 0px;
     }
@@ -16,17 +17,21 @@
     &__subtitle {
       padding-bottom: 16px;
     }
+
     &__links {
       margin: 0px;
+
       :not(:last-child) {
         padding-bottom: 12px;
       }
     }
+
     &__logos {
       display: flex;
       padding: 7px 0px 31px 0px;
       gap: 16px;
     }
+
     &__social {
       fill: none;
       stroke-width: 2px;
@@ -34,16 +39,20 @@
       stroke-linejoin: round;
       stroke: var(--black);
       transition-property: stroke;
+
       &:hover {
         stroke: var(--lightgreen-btn);
       }
     }
+
     &__link {
       transition-property: color;
+
       &:hover {
         color: var(--lightgreen-btn);
       }
     }
+
     &__link,
     &__item-link {
       &:focus-visible {
@@ -51,28 +60,35 @@
         border-radius: 5px;
       }
     }
+
     &__info {
       padding: 40px 0px 16px;
       border-top: 1px solid var(--lightgray-border);
     }
+
     &__rights-text {
       padding-bottom: 24px;
     }
+
     &__other-data {
       margin: 0px;
+
       :not(:last-child) {
         padding-bottom: 17px;
       }
     }
+
     &__item {
       line-height: 1.2;
       transition-property: color;
+
       &:hover {
         color: var(--blue-link-btn);
       }
     }
   }
 }
+
 @media (min-width: 768px) {
   .footer {
     &__background {
@@ -80,19 +96,23 @@
       background-position-y: 130px;
       background-repeat: no-repeat;
     }
+
     &__references {
       display: flex;
       justify-content: space-between;
       padding-bottom: 80px;
       text-align: center;
     }
+
     &__logo {
       align-self: center;
     }
+
     &__info {
       display: flex;
       justify-content: space-between;
     }
+
     &__other-data {
       display: flex;
       gap: 20px;
@@ -105,24 +125,30 @@
       background-position: -45px -48px;
       background-repeat: no-repeat;
     }
+
     &__references {
       max-width: 850px;
       margin: 0 auto;
       text-align: start;
     }
+
     &__logo {
       margin-right: 63px;
       align-self: auto;
     }
+
     &__logos {
       padding: 0px;
     }
+
     &__link-list {
       padding: 0px;
+
       &:last-child {
         padding-right: 10px;
       }
     }
+
     &__subtitle {
       padding: 1px 0px 23px;
     }

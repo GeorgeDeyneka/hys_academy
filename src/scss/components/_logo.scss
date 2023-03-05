@@ -1,0 +1,12 @@
+@media (min-width: 320px) {
+  .logo {
+    &__main {
+      cursor: pointer;
+      fill: var(--blue-link-btn);
+      transition-property: fill;
+      &:hover {
+        fill: var(--black);
+      }
+    }
+  }
+}
