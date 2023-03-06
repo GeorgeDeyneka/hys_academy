@@ -239,8 +239,11 @@ const VALIDATE_MESSAGES: ValidateMessagesType = {
   "form-phone":
     "(A number longer than 10 digits is expected. Also, the number should not contain letters)",
   "form-name":
-    "(Name is expected to be longer than 4 letters, no numbers or other symbols)",
+    "(The name is expected to be at least 4 characters long. English letters only, no numbers or symbols)",
 };
+
+const MODAL_TEXT: string =
+  "Thank you for writing to us! We will contact you as soon as possible.";
 
 export {
   DATA_PAGINATOR,
@@ -248,4 +251,5 @@ export {
   DATA_NATIVE_SLIDER,
   DATA_CUSTOMERS_PAGINATOR,
   VALIDATE_MESSAGES,
+  MODAL_TEXT,
 };

@@ -1,12 +1,15 @@
 import { StorageClass } from "./storage";
 import { VALIDATE_MESSAGES } from "./state";
+import { MODAL_TEXT } from "./state";
 import { FormDataType, ValidateMessagesType } from "./models/interfaces.model";
+import { ModalWindow } from "./modal";
 
 interface IFormActive {
   onInit(): void;
 }
 
 export class FormActive implements IFormActive {
+  private modalWindow: ModalWindow = new ModalWindow(MODAL_TEXT);
   private readonly classNameChilds: string;
   private readonly parentSelector: HTMLElement;
   private readonly formInputs: HTMLInputElement[];
@@ -33,8 +36,6 @@ export class FormActive implements IFormActive {
 
   private onFormChange(): void {
     this.parentSelector.addEventListener("change", (event: Event) => {
-      // this.validateForm(VALIDATE_MESSAGES);
-
       const target = event.target as HTMLInputElement;
       if (target.classList.contains(this.classNameChilds)) {
         const localStorageObj: Object = this.newStorage.getData<FormDataType>();
@@ -64,14 +65,16 @@ export class FormActive implements IFormActive {
   }
 
   private generateErrorLabel(elem: HTMLInputElement, text: string): void {
-    const errorSpan = document.createElement("div");
-    errorSpan.className = "form__label-error";
-    errorSpan.textContent = text;
-    elem.parentNode.appendChild(errorSpan);
+    if (elem.parentNode.children.length == 1) {
+      const errorSpan = document.createElement("div");
+      errorSpan.className = "form__label-error";
+      errorSpan.textContent = text;
+      elem.parentNode.appendChild(errorSpan);
+    }
   }
 
   private removeSiblingLabel(elem: HTMLInputElement) {
-    elem?.nextSibling?.remove();
+    elem.nextSibling?.remove();
   }
 
   private addInvalidClass(elem: HTMLInputElement) {
@@ -90,6 +93,8 @@ export class FormActive implements IFormActive {
       this.formInputs.forEach((el) => (el.value = ""));
 
       this.obj = {};
+
+      this.modalWindow.openModal();
     });
   }
 
@@ -104,7 +109,7 @@ export class FormActive implements IFormActive {
       if (target.validity.typeMismatch || target.validity.patternMismatch) {
         this.addInvalidClass(target);
         this.generateErrorLabel(target, data[id]);
-      } else if (target.value === '') {
+      } else if (target.value === "") {
         this.addInvalidClass(target);
         this.generateErrorLabel(target, "Please, fill this field.");
       }

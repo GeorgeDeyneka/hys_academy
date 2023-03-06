@@ -3,11 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      type="Image/x-icon"
-      href="./assets/images/favicon.svg"
-      rel="icon"
-    />
+    <link type="Image/x-icon" href="./assets/images/favicon.svg" rel="icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
@@ -647,9 +643,10 @@
                   placeholder="Phone"
                   type="tel"
                   maxlength="14"
-                  pattern="[0-9]{10,14}"
+                  pattern="^\+[0-9]{10,14}"
                   required
-                />
+                  />
+                  <!-- [0-9+]{10,14} -->
               </label>
               <label class="form__label" for="form-email">
                 <input
