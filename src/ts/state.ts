@@ -237,9 +237,9 @@ const VALIDATE_MESSAGES: ValidateMessagesType = {
   "form-email":
     "Expected an your e-mail address (For example: user@gmail.com).",
   "form-phone":
-    "Your number is too short or has letters. Please, correct this.",
+    "(A number longer than 10 digits is expected. Also, the number should not contain letters)",
   "form-name":
-    "Your name is too short or has numbers or other symbols. Please, correct this.",
+    "(Name is expected to be longer than 4 letters, no numbers or other symbols)",
 };
 
 export {

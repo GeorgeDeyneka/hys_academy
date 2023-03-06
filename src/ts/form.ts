@@ -33,6 +33,8 @@ export class FormActive implements IFormActive {
 
   private onFormChange(): void {
     this.parentSelector.addEventListener("change", (event: Event) => {
+      // this.validateForm(VALIDATE_MESSAGES);
+
       const target = event.target as HTMLInputElement;
       if (target.classList.contains(this.classNameChilds)) {
         const localStorageObj: Object = this.newStorage.getData<FormDataType>();
@@ -61,6 +63,25 @@ export class FormActive implements IFormActive {
     }
   }
 
+  private generateErrorLabel(elem: HTMLInputElement, text: string): void {
+    const errorSpan = document.createElement("div");
+    errorSpan.className = "form__label-error";
+    errorSpan.textContent = text;
+    elem.parentNode.appendChild(errorSpan);
+  }
+
+  private removeSiblingLabel(elem: HTMLInputElement) {
+    elem?.nextSibling?.remove();
+  }
+
+  private addInvalidClass(elem: HTMLInputElement) {
+    elem.classList.add("invalid");
+  }
+
+  private removeInvalidClass(elem: HTMLInputElement) {
+    elem.classList.remove("invalid");
+  }
+
   private submitForm(): void {
     this.parentSelector.addEventListener("submit", (event: Event) => {
       event.preventDefault();
@@ -75,12 +96,18 @@ export class FormActive implements IFormActive {
   private validateForm(data: ValidateMessagesType): void {
     this.parentSelector.addEventListener("input", (event: Event) => {
       const target = event.target as HTMLInputElement;
-      if (target.validity.typeMismatch || target.validity.patternMismatch) {
-        const id = target.id;
-        return target.setCustomValidity(data[id]);
-      }
+      const id = target.id;
 
-      return target.setCustomValidity("");
+      this.removeInvalidClass(target);
+      this.removeSiblingLabel(target);
+
+      if (target.validity.typeMismatch || target.validity.patternMismatch) {
+        this.addInvalidClass(target);
+        this.generateErrorLabel(target, data[id]);
+      } else if (target.value === '') {
+        this.addInvalidClass(target);
+        this.generateErrorLabel(target, "Please, fill this field.");
+      }
     });
   }
 }

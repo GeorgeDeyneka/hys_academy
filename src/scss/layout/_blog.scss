@@ -109,42 +109,6 @@
       }
     }
   }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-
-    &__input {
-      width: 100%;
-      padding-left: 12px;
-      width: 100%;
-      padding-left: 12px;
-      margin-bottom: 16px;
-      bottom: 32px;
-      max-width: 415px;
-      height: 44px;
-      background-color: var(--lightblue-input-bg);
-      border-radius: 22px;
-      border: none;
-      outline: none;
-
-      &:focus {
-        border: 2px solid var(--blue-link-btn);
-      }
-
-      &:focus:invalid {
-        border: 2px solid var(--red-study-bg);
-      }
-
-      &:valid {
-        border: 1px solid var(--green-link-btn);
-      }
-    }
-
-    &__submit {
-      margin: 16px 0px 84px 0px;
-    }
-  }
 }
 
 @media (min-width: 375px) {
@@ -171,15 +135,6 @@
 
     &__card {
       width: 48%;
-    }
-  }
-
-  .form {
-    align-items: center;
-
-    &__input {
-      padding-left: 10px;
-      min-width: 415px;
     }
   }
 }

@@ -119,7 +119,7 @@ export class App extends AbstractApp {
 
     const myForm: FormActive = new FormActive(
       ClassNamesForApp.blogForm,
-      ClassNamesForApp.formInput
+      ClassNamesForApp.formInput,
     );
   }
 }
