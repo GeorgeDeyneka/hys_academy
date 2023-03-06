@@ -5,10 +5,13 @@ enum ModalClasses {
   noScroll = "no-scroll",
 }
 
+const MODAL_IMG_URL: string = "assets/images/checkmark.png";
+
 export class ModalWindow {
   private body: HTMLBodyElement = document.querySelector("body");
   private modalWrapper: HTMLElement;
   private modalText: string;
+  private imageUrl: string = MODAL_IMG_URL;
 
   constructor(modalText: string) {
     this.modalText = modalText;
@@ -32,7 +35,8 @@ export class ModalWindow {
   private generateModal() {
     const template = `
           <div class="modal-window">
-          <h2>${this.modalText}</h2>
+          <h2 class="modal-title">${this.modalText}</h2>
+          <img src=${this.imageUrl} alt="checkmark"></img>
           <button id="modal-btn" class="btn btn__green">Okay</button>
           </div>
           <div class="modal-overlay"></div>
@@ -65,6 +69,3 @@ export class ModalWindow {
     this.modalWrapper.classList.add(ModalClasses.close);
   }
 }
-
-// Add icon into modal
-// How do you init modal? Do you generate template or bind that on existing?

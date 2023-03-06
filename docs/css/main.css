@@ -547,9 +547,6 @@ input.form__input::placeholder {
     left: 0;
     background: rgba(0, 0, 0, 0.7);
   }
-  .modal-wrapper > .btn {
-    padding: 12px 30px;
-  }
   .modal-overlay {
     position: absolute;
     width: 100%;
@@ -569,6 +566,12 @@ input.form__input::placeholder {
     border-radius: 10px;
     z-index: 2;
   }
+  .modal-window > .btn {
+    padding: 12px 30px;
+  }
+  .modal-title {
+    font-size: 20px;
+  }
   .opened-modal {
     display: flex;
   }
@@ -577,6 +580,9 @@ input.form__input::placeholder {
   }
 }
 @media (min-width: 768px) {
+  .modal-title {
+    font-size: 24px;
+  }
   .modal-window {
     max-width: 500px;
     height: 400px;

@@ -11,13 +11,6 @@
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.7);
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%, -50%);
-
-      > .btn {
-        padding: 12px 30px;
-      }
     }
 
     &-overlay {
@@ -39,6 +32,14 @@
       background-color: #fff;
       border-radius: 10px;
       z-index: 2;
+
+      > .btn {
+        padding: 12px 30px;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
     }
   }
 
@@ -53,6 +54,10 @@
 
 @media (min-width: 768px) {
   .modal {
+    &-title {
+      font-size: 24px;
+    }
+
     &-window {
       max-width: 500px;
       height: 400px;
