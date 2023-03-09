@@ -256,8 +256,8 @@ input.form__input::placeholder {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -363,7 +363,7 @@ input.form__input::placeholder {
     outline: 3px solid var(--lightgray-logo);
   }
   .slider__btn,
-.slick-arrow {
+  .slick-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -377,41 +377,41 @@ input.form__input::placeholder {
     font-size: 0px;
   }
   .slider__btn:hover,
-.slick-arrow:hover {
+  .slick-arrow:hover {
     background-color: var(--green-link-btn);
     --color1: var(--white);
     stroke: var(----color1);
   }
   .slider__btn:active,
-.slick-arrow:active {
+  .slick-arrow:active {
     background-color: var(--green-slider-bg);
     box-shadow: none;
   }
   .slider__btn:focus-visible,
-.slick-arrow:focus-visible {
+  .slick-arrow:focus-visible {
     outline: 3px solid var(--lightgray-logo);
   }
   .study__slide-next,
-.slick-next {
+  .slick-next {
     transform: scale(-1, 1);
   }
   .slick-disabled,
-.slider__btn:disabled {
+  .slider__btn:disabled {
     opacity: 0.4;
   }
   .player {
-    padding: 9px 6px 7px 10px;
     width: 40px;
     height: 40px;
+    padding: 9px 6px 7px 10px;
     background-color: var(--green-link-btn);
     border-radius: 50%;
     border: 2px solid var(--white);
     box-shadow: 0px 5px 10px var(--green-player-shadow);
-    transition-property: padding;
+    transition: none;
   }
   .player:hover {
-    padding: 11px 6px 9px 10px;
     border: none;
+    padding: 11px 6px 7px 12px;
   }
   .player:active {
     background-color: var(--green-slider-bg);
@@ -728,14 +728,14 @@ input.form__input::placeholder {
     padding: 32px 0px;
   }
   .header #menu-toggle:checked ~ * span.menu__btn_burger,
-.header #menu-toggle:checked ~ * span.menu__btn_burger::after,
-.header #menu-toggle:checked ~ * span.menu__btn_burger::before {
+  .header #menu-toggle:checked ~ * span.menu__btn_burger::after,
+  .header #menu-toggle:checked ~ * span.menu__btn_burger::before {
     transition: background-color 500ms ease-in;
     background-color: var(--black);
   }
   .header #menu-toggle:checked ~ * span.menu__btn_close,
-.header #menu-toggle:checked ~ * span.menu__btn_close::after,
-.header #menu-toggle:checked ~ * span.menu__btn_close::before {
+  .header #menu-toggle:checked ~ * span.menu__btn_close::after,
+  .header #menu-toggle:checked ~ * span.menu__btn_close::before {
     display: block;
   }
 }
@@ -1035,7 +1035,7 @@ input.form__input::placeholder {
     padding-left: 3px;
   }
   .courses__reviews,
-.courses .price__old {
+  .courses .price__old {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.334;
