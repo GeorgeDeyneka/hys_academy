@@ -25,9 +25,6 @@ npm run watch
 
 This is my landing page, written with TypeScript and assembled by the Gulp builder. The SCSS preprocessor was used to style the project. It is well optimized for different devices as it uses responsive design and is written using the Mobile First technique.
 
-Also pay attention to the accessibility of the project and the styling of the focus on each individual element when using the site using the keyboard.
-
-
 ### Built With
 
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -46,11 +43,11 @@ Also pay attention to the accessibility of the project and the styling of the fo
 <div>
   <ul>
     <li>
-Description
+When you open a project, you see the start page. So, you can navigate through the sections using the navigation buttons.
     </li>
     </br>
     <li>
-Description
+All links to companies open on the pages of these companies in a new tab.
     </li>
   </ul>
   </br>
@@ -65,15 +62,15 @@ Description
 <div>
   <ul>
     <li>
-Description
+Moving down the page, you will be taken to the slider section.
     </li>
     </br>
     <li>
-Description
+It is connected and works using the jQuery library, and has all the necessary settings for the adaptive version of the site, and is also configured according to the requirements of the project.
     </li>
     </br>
     <li>
-Description
+Pay attention to the star rating: it is automatically calculated from the incoming property data, so you just see the stars of the rating.
     </li>
   </ul>
   </br>
@@ -88,17 +85,20 @@ Description
 <div>
   <ul>
     <li>
-Description
+So, you have reached the next section with the slider. I wrote it without using any third party libraries.
     </li>
     </br>
     <li>
-Description
+      It is worth noting that the animation of all interaction elements on the page, whether it be sliders or pagination, is written in the same style. This helps maintain the overall style of the project and allows the application to look cohesive.
+    </li>
+      </br>
+    <li>
+So, in this slider you can change the Album categories, which automatically changes the data received from the server. The images and text of the slides are taken from the provided API.
     </li>
   </ul>
   </br>
 <img src="demo-images/second-slider.png" alt="second-slider-demo" width="1000">
 </div>
-
 </br>
 
 ---
@@ -107,15 +107,11 @@ Description
 <div>
   <ul>
     <li>
-Description
+The next section provides a simple pagination. It is also written without the use of third party libraries.
     </li>
     </br>
     <li>
-Description
-    </li>
-    </br>
-    <li>
-Description
+You can see the image, background color and text change. By the way, I had the freedom of imagination in the choice of text content, so I gave quotes from famous world cinema masterpieces.
     </li>
   </ul>
   </br>
@@ -130,27 +126,35 @@ Description
 <div>
   <ul>
     <li>
-Description
+Here is the last section of the site - pagination and a form to fill out.
     </li>
     </br>
     <li>
-Description
+The pagination shows two elements and also has a smooth animation transition.
     </li>
     </br>
     <li>
-Description
+The form has validation, so you can fill it out without any problems. As you fill out the form, you will see prompts
+what data the form expects.
     </li>
     </br>
     <li>
-Description
+When you click the "Submit" button, the data from the form will be submitted and you will see a modal window with the words of thanks. Try filling out and submitting the form, it's very easy!
     </li>
     </br>
     <li>
-Description
+Also pay attention to the accessibility of the project and the styling of the focus on each individual element when using the site using the keyboard.
     </li>
   </ul>
   </br>
 <img src="demo-images/second-pagination.png" alt="second-pagination-demo" width="1000">
+  </br>
+  </br>
+  <ul>
+    <li>
+You are presented with only a small part of the available functionality, so go to the site using the link above and you will see everything for yourself!
+    </li>
+  </ul>
 </div>
 
 </br>
@@ -171,6 +175,7 @@ If you want to improve the project code, you need to:
 
 Don't forget to give the project a star! Thanks again!
 
+<!-- Say thanks json placeholder & sednev -->
 
 ## My Contacts (Links)
 
