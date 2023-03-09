@@ -40,7 +40,120 @@ Also pay attention to the accessibility of the project and the styling of the fo
 - ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 - ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-<!-- USAGE -->
+## Usage
+
+### Start section
+<div>
+  <ul>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+  </ul>
+  </br>
+<img src="demo-images/main-page.png" alt="main-page-demo" width="1000">
+</div>
+
+</br>
+
+---
+
+### Online courses
+<div>
+  <ul>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+  </ul>
+  </br>
+<img src="demo-images/first-slider.png" alt="first-slider-demo" width="1000">
+</div>
+
+</br>
+
+---
+
+### Which one do you prefer?
+<div>
+  <ul>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+  </ul>
+  </br>
+<img src="demo-images/second-slider.png" alt="second-slider-demo" width="1000">
+</div>
+
+</br>
+
+---
+
+### Our great customers
+<div>
+  <ul>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+  </ul>
+  </br>
+<img src="demo-images/first-pagination.png" alt="first-pagination-demo" width="1000">
+</div>
+
+</br>
+
+---
+
+### Latest blog, form
+<div>
+  <ul>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+    </br>
+    <li>
+Description
+    </li>
+  </ul>
+  </br>
+<img src="demo-images/second-pagination.png" alt="second-pagination-demo" width="1000">
+</div>
+
+</br>
 
 ## Contributing
 
