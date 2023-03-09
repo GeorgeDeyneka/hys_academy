@@ -5,8 +5,14 @@ const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
 const minify = require("gulp-minify");
 const browsersync = require("browser-sync");
+var ghPages = require("gh-pages");
+var path = require("path");
 
 const docs = "./docs";
+
+gulp.task("deploy", function (cb) {
+  ghPages.publish(path.join(process.cwd(), "docs"), cb);
+});
 
 gulp.task("copy-html", () => {
   return gulp
