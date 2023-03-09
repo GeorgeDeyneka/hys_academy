@@ -175,7 +175,6 @@ If you want to improve the project code, you need to:
 
 Don't forget to give the project a star! Thanks again!
 
-<!-- Say thanks json placeholder & sednev -->
 
 ## My Contacts (Links)
 
@@ -188,3 +187,10 @@ Don't forget to give the project a star! Thanks again!
 - <a href="mailto: zhoradeynecka@gmail.com">
     <img src="https://img.shields.io/badge/Email-white?style=for-the-badge&logo=gmail&logoColor=red" alt="Email Badge"/>
   </a> 
+
+
+## Acknowledgments
+
+- I would like to thank the creators of <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a> for creating a simple and accessible API that was used in this project.
+
+- I would also like to say thanks to <a href="https://github.com/alexsednev" target="_blank">@alexsednev</a> for regular code reviews and advice on keeping the code structure correct.
