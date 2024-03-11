@@ -118,6 +118,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/ts/models/interfaces.model.ts":
+/*!*******************************************!*\
+  !*** ./src/ts/models/interfaces.model.ts ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\n\n\n//# sourceURL=webpack://hys_academy/./src/ts/models/interfaces.model.ts?");
+
+/***/ }),
+
 /***/ "./src/ts/native-slider.ts":
 /*!*********************************!*\
   !*** ./src/ts/native-slider.ts ***!
@@ -278,8 +289,24 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/index.ts");
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	__webpack_require__("./src/ts/app.ts");
+/******/ 	__webpack_require__("./src/ts/customer-paginator.ts");
+/******/ 	__webpack_require__("./src/ts/form.ts");
+/******/ 	__webpack_require__("./src/ts/header-links.ts");
+/******/ 	__webpack_require__("./src/ts/index.ts");
+/******/ 	__webpack_require__("./src/ts/mobile-menu.ts");
+/******/ 	__webpack_require__("./src/ts/modal.ts");
+/******/ 	__webpack_require__("./src/ts/native-slider.ts");
+/******/ 	__webpack_require__("./src/ts/paginator.ts");
+/******/ 	__webpack_require__("./src/ts/request.ts");
+/******/ 	__webpack_require__("./src/ts/select.ts");
+/******/ 	__webpack_require__("./src/ts/slick-slider.ts");
+/******/ 	__webpack_require__("./src/ts/state.ts");
+/******/ 	__webpack_require__("./src/ts/storage.ts");
+/******/ 	__webpack_require__("./src/ts/models/decorators.decorator.ts");
+/******/ 	__webpack_require__("./src/ts/models/enums.model.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/models/interfaces.model.ts");
 /******/ 	
 /******/ })()
 ;
