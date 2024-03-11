@@ -1,29 +1,67 @@
 const gulp = require("gulp");
+const clean = require("gulp-clean");
 const webpack = require("webpack-stream");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
 const minify = require("gulp-minify");
 const browsersync = require("browser-sync");
-var ghPages = require("gh-pages");
-var path = require("path");
+const ghPages = require("gh-pages");
+const path = require("path");
 
-const docs = "./docs";
+const outputDir = "./docs";
+const deployDir = "docs";
 
-gulp.task("deploy", function (cb) {
-  ghPages.publish(path.join(process.cwd(), "docs"), cb);
-});
+const src = {
+  htmlDir: "./src/index.html",
+  fontsDir: "./src/assets/fonts/**.*",
+  imagesDir: "./src/assets/images/*.*",
+  stylesDir: "./src/scss/**/*.scss",
+  tsDir: "./src/ts/**/*.ts",
+};
+
+const build = {
+  htmlDir: outputDir,
+  fontsDir: outputDir + "/assets/fonts",
+  imagesDir: outputDir + "/assets/images",
+  stylesDir: outputDir + "/css",
+  jsDir: outputDir + "/js",
+};
 
 gulp.task("copy-html", () => {
   return gulp
-    .src("./src/index.html")
-    .pipe(gulp.dest(docs))
+    .src(src.htmlDir)
+    .pipe(gulp.dest(build.htmlDir))
+    .pipe(browsersync.stream());
+});
+
+gulp.task("copy-fonts", () => {
+  return gulp
+    .src(src.fontsDir)
+    .pipe(gulp.dest(build.fontsDir))
+    .pipe(browsersync.stream());
+});
+
+gulp.task("copy-images", () => {
+  return gulp
+    .src(src.imagesDir)
+    .pipe(gulp.dest(build.imagesDir))
+    .pipe(browsersync.stream());
+});
+
+gulp.task("build-sass", () => {
+  return gulp
+    .src(src.stylesDir)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(postcss([autoprefixer()]))
+    .pipe(minify())
+    .pipe(gulp.dest(build.stylesDir))
     .pipe(browsersync.stream());
 });
 
 gulp.task("build-ts", () => {
   return gulp
-    .src("./src/ts/index.ts")
+    .src(src.tsDir)
     .pipe(
       webpack({
         mode: "development",
@@ -45,52 +83,53 @@ gulp.task("build-ts", () => {
       })
     )
     .pipe(minify())
-    .pipe(gulp.dest(docs + "/js"))
+    .pipe(gulp.dest(build.jsDir))
     .pipe(browsersync.stream());
 });
 
-gulp.task("build-sass", () => {
-  return gulp
-    .src("./src/scss/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(postcss([autoprefixer()]))
-    .pipe(minify())
-    .pipe(gulp.dest(docs + "/css"))
-    .pipe(browsersync.stream());
-});
+// gulp.task("clean", () => {
+//   console.log("Clean all files in build folder...");
+//   return gulp
+//     .src(outputDir, { read: false })
+//     .pipe(clean({ force: true, allowEmpty: true }))
+//     .pipe(gulp.dest(outputDir));
+// });
 
-gulp.task("copy-assets", () => {
-  gulp.src("./src/assets/fonts/**.*").pipe(gulp.dest(docs + "/assets/fonts"));
-
-  return gulp
-    .src("./src/assets/images/*.*")
-    .pipe(gulp.dest(docs + "/assets/images"))
-    .pipe(browsersync.stream());
-});
-
-gulp.task("watch", () => {
+gulp.task("start-server", () => {
   browsersync.init({
-    server: "./docs/",
+    server: outputDir,
     port: 8080,
     notify: true,
   });
-
-  gulp.watch("./src/index.html", gulp.parallel("copy-html"));
-  gulp.watch("./src/assets/fonts/**.*", gulp.parallel("copy-assets"));
-  gulp.watch("./src/assets/images/*.*", gulp.parallel("copy-assets"));
-  gulp.watch("./src/scss/**/*.scss", gulp.parallel("build-sass"));
-  gulp.watch("./src/ts/**/*.ts", gulp.parallel("build-ts"));
 });
 
 gulp.task(
   "build",
-  gulp.parallel("copy-html", "copy-assets", "build-sass", "build-ts")
+  // gulp.series(
+  // "clean",
+  gulp.parallel(
+    "copy-html",
+    "copy-fonts",
+    "copy-images",
+    "build-sass",
+    "build-ts"
+  )
+  // )
 );
 
-gulp.task("prod", () => {
-  gulp.src("./src/index.html").pipe(gulp.dest(docs));
-  gulp.src("./src/assets/images/*.*").pipe(gulp.dest(docs + "/assets/images"));
-  gulp.src("./src/assets/fonts/**.*").pipe(gulp.dest(docs + "/assets/fonts"));
+gulp.task("watch", () => {
+  gulp.watch(src.htmlDir, gulp.parallel("copy-html"));
+  gulp.watch(src.fontsDir, gulp.parallel("copy-fonts"));
+  gulp.watch(src.imagesDir, gulp.parallel("copy-images"));
+  gulp.watch(src.stylesDir, gulp.parallel("build-sass"));
+  gulp.watch(src.tsDir, gulp.parallel("build-ts"));
 });
 
-gulp.task("default", gulp.parallel("watch", "build"));
+gulp.task("dev", gulp.parallel("start-server", "build", "watch"));
+
+gulp.task(
+  "deploy",
+  gulp.parallel("build", function (cb) {
+    ghPages.publish(path.join(process.cwd(), deployDir), cb);
+  })
+);

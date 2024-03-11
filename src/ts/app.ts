@@ -91,9 +91,7 @@ export class App extends AbstractApp {
     });
 
     coursesSlider.setData = setSlickData;
-    coursesSlider.setData(
-      slickStorage.getData<SlickDataType[]>()
-    );
+    coursesSlider.setData(slickStorage.getData<SlickDataType[]>());
 
     const nativeSlider: NativeSlider = new NativeSlider({
       parentClassName: ClassNamesForApp.nativeSlider,
@@ -119,7 +117,7 @@ export class App extends AbstractApp {
 
     const myForm: FormActive = new FormActive(
       ClassNamesForApp.blogForm,
-      ClassNamesForApp.formInput,
+      ClassNamesForApp.formInput
     );
   }
 }
