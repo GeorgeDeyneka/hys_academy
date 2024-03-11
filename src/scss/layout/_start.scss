@@ -1,108 +1,102 @@
-@media (min-width: 320px) {
-  .start {
-    &__content {
-      padding: 40px 0px 55px;
-    }
-
-    &__links {
-      padding-bottom: 40px;
-    }
-
-    &__background {
-      background-image: url(../assets/images/tablet-design.jpg);
-      background-position: center;
-      z-index: 1;
-    }
-
-    &__overflow {
-      background-color: var(--purple-start-bg);
-      opacity: 95%;
-      color: var(--white);
-      z-index: 5;
-    }
-
-    &__subtitle {
-      padding-bottom: 8px;
-      color: var(--white);
-    }
-
-    &__title {
-      color: var(--green-link-btn);
-    }
-
-    &__description {
-      padding: 25px 0px 19px 0px;
-    }
-
-    &__description-text {
-      padding-bottom: 12px;
-    }
-
-    &__links-title {
+.start {
+  &__container {
+    @media (min-width: 1440px) {
       display: flex;
-      align-items: center;
-      padding-bottom: 12px;
+      justify-content: space-between;
     }
+  }
 
-    &__links-title-text {
-      color: var(--white);
-      padding-left: 8px;
+  &__content {
+    padding: 40px 0px 55px;
+
+    @media (min-width: 1440px) {
+      width: 415px;
+      padding: 63px 0px;
     }
+  }
 
-    &__links-list {
-      margin: 0px;
+  &__links {
+    padding-bottom: 40px;
+
+    @media (min-width: 1440px) {
+      width: 415px;
+      padding: 88px 0px 74px;
     }
+  }
 
-    &__item {
-      border-bottom: 1px solid var(--white-border);
-      padding: 12px 0px;
-    }
+  &__background {
+    background-image: url("../assets/images/tablet-design.jpg");
+    background-position: center;
+    z-index: 1;
+  }
 
-    &__item-img {
+  &__overflow {
+    background-color: var(--purple-start-bg);
+    opacity: 95%;
+    color: var(--white);
+    z-index: 5;
+  }
+
+  &__subtitle {
+    padding-bottom: 8px;
+    color: var(--white);
+  }
+
+  &__title {
+    color: var(--green-link-btn);
+  }
+
+  &__description {
+    padding: 25px 0px 19px 0px;
+  }
+
+  &__description-text {
+    padding-bottom: 12px;
+  }
+
+  &__links-title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+  }
+
+  &__links-title-text {
+    color: var(--white);
+    padding-left: 8px;
+  }
+
+  &__links-list {
+    margin: 0px;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--white-border);
+    padding: 12px 0px;
+
+    &-img {
       fill: none;
       stroke: var(--white);
       margin-right: 13px;
-
-      &:hover {
-        stroke: var(--lightgreen-btn);
-      }
+      transition-property: stroke;
     }
 
-    &__item-link {
+    &-link {
       display: flex;
       align-items: center;
       transition-property: color;
-
-      &:hover {
-        color: var(--lightgreen-btn);
-      }
 
       &:focus-visible {
         outline: 2px solid var(--white-border);
         border-radius: 5px;
       }
     }
-  }
-}
 
-@media (min-width: 1440px) {
-  .start {
-    &__container {
-      display: flex;
-      justify-content: space-between;
+    &:hover &-img {
+      stroke: var(--lightgreen-btn);
     }
 
-    &__links,
-    &__content {
-      width: 415px;
-    }
-
-    &__content {
-      padding: 63px 0px;
-    }
-
-    &__links {
-      padding: 88px 0px 74px;
+    &:hover &-link {
+      color: var(--lightgreen-btn);
     }
   }
 }

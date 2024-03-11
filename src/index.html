@@ -12,12 +12,15 @@
     <title>Academy Landing Page</title>
   </head>
   <body>
+    <!-- Start scripts -->
     <script defer src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
     ></script>
     <script type="module" defer src="./js/index-min.js"></script>
+    <!-- End scripts -->
+
     <div class="wrapper">
       <header class="header">
         <div class="header__container container">
@@ -27,37 +30,46 @@
               id="menu-toggle"
               type="checkbox"
             />
+
             <div class="header__burger-logo">
               <label class="menu__btn-container" for="menu-toggle">
                 <span class="menu__btn menu__btn_burger"></span>
               </label>
+
               <svg class="logo logo__main" width="54" height="24">
                 <use href="./assets/images/sprite.svg#icon-logo"></use>
               </svg>
             </div>
+
             <label class="menu__btn-closer" for="menu-toggle">
               <span class="menu__btn menu__btn_close"></span>
             </label>
+
             <div class="header__nav-wrapper">
               <ul class="header__nav-list">
                 <li class="header__nav-item">
                   <a class="header__link" href="#about">Features</a>
                 </li>
+
                 <li class="header__nav-item">
                   <a class="header__link" href="#courses">Courses</a>
                 </li>
+
                 <li class="header__nav-item">
                   <a class="header__link" href="#events">Explore</a>
                 </li>
+
                 <li class="header__nav-item">
                   <a class="header__link" href="#blog">Blog</a>
                 </li>
               </ul>
+
               <a class="btn btn__blue" href="#footer">More Info</a>
             </div>
           </nav>
         </div>
       </header>
+
       <main class="main">
         <!-- Education -->
         <section class="education" id="education">
@@ -68,15 +80,18 @@
                   <h1 class="education__title">
                     Education is the most powerfull weapon
                   </h1>
+
                   <p class="education__description">
                     A bank is a financial institution accepts deposits from
                     public and creates credit. For all of your needs.
                   </p>
+
                   <div class="education__buttons buttons-block">
                     <a class="btn btn__blue" href="#blog">Read More</a>
                     <a class="btn btn__green" href="#start">Get Started</a>
                   </div>
                 </div>
+
                 <img
                   class="education__illustration-img"
                   width="500"
@@ -84,6 +99,7 @@
                   alt="Girl with laptop"
                 />
               </div>
+
               <ul class="education__logos">
                 <li class="education__logo">
                   <a
@@ -96,6 +112,7 @@
                     </svg>
                   </a>
                 </li>
+
                 <li class="education__logo">
                   <a
                     class="education__logo-link"
@@ -109,6 +126,7 @@
                     </svg>
                   </a>
                 </li>
+
                 <li class="education__logo">
                   <a
                     class="education__logo-link"
@@ -124,50 +142,63 @@
             </div>
           </div>
         </section>
+
         <!-- About -->
         <section class="about" id="about">
           <div class="about__container container">
             <div class="about__title title">
               <h2 class="title__text">Our features</h2>
             </div>
+
             <div class="about__content">
               <div class="about__item">
                 <svg class="about__icon-img" width="54" height="54">
                   <use href="./assets/images/sprite.svg#icon-certificate"></use>
                 </svg>
+
                 <h3 class="about__subtitle">Certificate</h3>
+
                 <p class="about__description_first">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod.
                 </p>
               </div>
+
               <div class="about__item">
                 <svg class="about__icon-img" width="54" height="54">
                   <use
                     href="./assets/images/sprite.svg#icon-life-programs"
                   ></use>
                 </svg>
+
                 <h3 class="about__subtitle">Life Programs</h3>
+
                 <p class="about__description_second">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
                 </p>
               </div>
+
               <div class="about__item">
                 <svg class="about__icon-img" width="54" height="54">
                   <use
                     href="./assets/images/sprite.svg#icon-affordability"
                   ></use>
                 </svg>
+
                 <h3 class="about__subtitle">Affordability</h3>
+
                 <p class="about__description_third">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed.
                 </p>
               </div>
+
               <div class="about__item">
                 <svg class="about__icon-img" width="54" height="54">
                   <use href="./assets/images/sprite.svg#icon-social"></use>
                 </svg>
+
                 <h3 class="about__subtitle">Social</h3>
+
                 <p class="about__description_fourth">
                   A bank is a financial institution accepts deposits from public
                   and creates credit.
@@ -176,19 +207,23 @@
             </div>
           </div>
         </section>
+
         <!-- Courses -->
         <section class="courses" id="courses">
           <div class="courses__background background-icons">
             <div class="courses__container container">
               <div class="courses__background-img"></div>
+
               <div class="courses__header">
                 <h6 class="courses__subtitle subtitle">MOST POPULAR COURSES</h6>
                 <h2 class="courses__title">2000+ Online courses</h2>
               </div>
+
               <div class="courses__items" id="slick-slider"></div>
             </div>
           </div>
         </section>
+
         <!-- Tour -->
         <section class="tour" id="tour">
           <div class="tour__container container">
@@ -206,26 +241,32 @@
                 </svg>
               </a>
             </div>
+
             <div class="tour__content">
               <div class="tour__header">
                 <h6 class="tour__subtitle subtitle">UNIVERSITY DESCRIPTION</h6>
+
                 <div class="tour__title title">
                   <h2 class="title__text">Take a tour</h2>
                 </div>
               </div>
+
               <p class="tour__description-text">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque
               </p>
+
               <p class="tour__description-text">
                 Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
                 veritatis et quasi architecto beatae vitae dicta sunt explicabo.
               </p>
+
               <ul class="tour__description-list">
                 <li class="tour__list-item">
                   Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                   amet, consectetur
                 </li>
+
                 <li class="tour__list-item">
                   Ut enim ad minima veniam, quis nostrum exercitationem ullam
                   corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
@@ -233,11 +274,10 @@
                 </li>
               </ul>
               <a class="btn btn__blue" href="#blog">Read More</a>
-              <div class="tour__peach-square"></div>
-              <div class="tour__gray-ellipse"></div>
             </div>
           </div>
         </section>
+
         <!-- Events -->
         <section class="events" id="events">
           <div class="events__container container">
@@ -245,10 +285,12 @@
               <div class="events__title title">
                 <h2 class="title__text">Why choose us?</h2>
               </div>
+
               <div class="conferences__item conferences__item_first">
                 <a class="event__subtitle event" href="#">
                   International Conference on Bussiness
                 </a>
+
                 <ul class="event__list">
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
@@ -258,6 +300,7 @@
                     </svg>
                     July 8, 2018
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -266,6 +309,7 @@
                     </svg>
                     5:00pm - 7:00pm
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -276,10 +320,12 @@
                   </li>
                 </ul>
               </div>
+
               <div class="conferences__item event">
                 <a class="event__subtitle" href="#">
                   International Conference on Bussiness
                 </a>
+
                 <ul class="event__list">
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
@@ -289,6 +335,7 @@
                     </svg>
                     July 8, 2018
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -297,6 +344,7 @@
                     </svg>
                     5:00pm - 7:00pm
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -307,10 +355,12 @@
                   </li>
                 </ul>
               </div>
+
               <div class="conferences__item event">
                 <a class="event__subtitle" href="#">
                   International Conference on Bussiness
                 </a>
+
                 <ul class="event__list">
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
@@ -320,6 +370,7 @@
                     </svg>
                     July 8, 2018
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -328,6 +379,7 @@
                     </svg>
                     5:00pm - 7:00pm
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -338,10 +390,12 @@
                   </li>
                 </ul>
               </div>
+
               <div class="conferences__item event">
                 <a class="event__subtitle" href="#">
                   International Conference on Bussiness
                 </a>
+
                 <ul class="event__list">
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
@@ -351,6 +405,7 @@
                     </svg>
                     July 8, 2018
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -359,6 +414,7 @@
                     </svg>
                     5:00pm - 7:00pm
                   </li>
+
                   <li class="event__item">
                     <svg class="event__icon-img" width="20" height="20">
                       <use
@@ -370,6 +426,7 @@
                 </ul>
               </div>
             </div>
+
             <div class="events__featured featured">
               <p class="featured__big-title">FEATURED</p>
               <div class="featured__content">
@@ -377,13 +434,16 @@
                   <li class="featured__duration-item">
                     <span class="bold-number bold-number__blue">$213</span>Days
                   </li>
+
                   <li class="featured__duration-item">
                     <span class="bold-number bold-number__yellow">23</span>Hours
                   </li>
+
                   <li class="featured__duration-item">
                     <span class="bold-number bold-number__red">59</span>Min
                   </li>
                 </ul>
+
                 <div class="featured__card">
                   <img
                     class="featured__card-img-bg"
@@ -392,10 +452,12 @@
                     src="./assets/images/tablet-design.jpg"
                     alt="Tablet"
                   />
+
                   <div class="featured__description event">
                     <a class="event__subtitle featured__subtitle" href="#">
                       International Conference on Bussiness
                     </a>
+
                     <ul class="event__list featured__list">
                       <li class="event__item event__item_featured">
                         <svg class="event__icon-img" width="20" height="20">
@@ -405,6 +467,7 @@
                         </svg>
                         July 8, 2018
                       </li>
+
                       <li class="event__item event__item_featured">
                         <svg class="event__icon-img" width="20" height="20">
                           <use
@@ -413,6 +476,7 @@
                         </svg>
                         5pm - 7pm
                       </li>
+
                       <li class="event__item event__item_featured">
                         <svg class="event__icon-img" width="20" height="20">
                           <use
@@ -424,6 +488,7 @@
                     </ul>
                   </div>
                 </div>
+
                 <a
                   class="btn btn__blue featured__btn"
                   href="https://www.mastercard.us/en-us.html"
@@ -435,20 +500,24 @@
             </div>
           </div>
         </section>
+
         <!-- Study -->
         <section class="study" id="study">
           <div class="study__container container">
             <div class="study__title title">
               <h2 class="title__text">Which one do you prefer?</h2>
             </div>
+
             <p class="study__description">
               Laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
               veritatis et quasi architecto beatae vitae dicta sunt explicabo.
             </p>
+
             <div class="study__select-wrapper" id="select"></div>
             <div class="study__slider" id="native-slider"></div>
           </div>
         </section>
+
         <!-- Customer -->
         <section class="customer" id="customer">
           <div class="customer__container container">
@@ -461,13 +530,16 @@
                 alt="Two girls studying"
               />
             </div>
+
             <div class="customer__content">
               <div class="customer__title title">
                 <h2 class="title__text">Our great customers</h2>
               </div>
+
               <svg class="customer__quotes-img" width="39" height="31">
                 <use href="./assets/images/sprite.svg#icon-quotes"></use>
               </svg>
+
               <figure class="customer__excerption">
                 <blockquote class="customer__description">
                   <p
@@ -484,14 +556,17 @@
                     sunt explicabo.
                   </p>
                 </blockquote>
+
                 <figcaption>
                   <h5 class="customer__author">Stephanie Magion</h5>
                 </figcaption>
               </figure>
+
               <ul class="customer__points"></ul>
             </div>
           </div>
         </section>
+
         <!-- Get started -->
         <section class="start" id="start">
           <div class="start__background">
@@ -501,25 +576,31 @@
                   <h5 class="start__subtitle">
                     IT'S FAST, FREE AND VERY EASY!
                   </h5>
+
                   <h2 class="start__title">Ready to get started?</h2>
+
                   <div class="start__description">
                     <p class="start__description-text">
                       Sed ut perspiciatis unde omnis iste natus error sit
                       voluptatem accusantium doloremque
                     </p>
+
                     <p class="start__description-text">
                       Laudantium, totam rem aperiam, eaque ipsa quae ab illo
                       inventore veritatis et quasi architecto beatae vitae dicta
                       sunt explicabo.
                     </p>
                   </div>
+
                   <div class="start__buttons buttons-block">
                     <a class="btn btn__green" href="#form">Apply Now</a>
+
                     <a class="btn btn__request" href="#form">
                       Request Service
                     </a>
                   </div>
                 </div>
+
                 <div class="start__links">
                   <div class="start__links-title">
                     <svg class="start__links-title-img" width="24" height="24">
@@ -527,8 +608,10 @@
                         href="./assets/images/sprite.svg#icon-white-chain"
                       ></use>
                     </svg>
+
                     <h2 class="start__links-title-text">Quick Links</h2>
                   </div>
+
                   <ul class="start__links-list">
                     <li class="start__item">
                       <a class="start__item-link" href="#">
@@ -539,6 +622,7 @@
                         >Tution and Fees</a
                       >
                     </li>
+
                     <li class="start__item">
                       <a class="start__item-link" href="#">
                         <svg class="start__item-img" width="24" height="24">
@@ -548,6 +632,7 @@
                         >Review & Rating</a
                       >
                     </li>
+
                     <li class="start__item">
                       <a class="start__item-link" href="#">
                         <svg class="start__item-img" width="24" height="24">
@@ -557,6 +642,7 @@
                         >University Facilities</a
                       >
                     </li>
+
                     <li class="start__item">
                       <a class="start__item-link" href="#">
                         <svg class="start__item-img" width="24" height="24">
@@ -572,12 +658,14 @@
             </div>
           </div>
         </section>
+
         <!-- Blog -->
         <section class="blog" id="blog">
           <div class="container">
             <div class="blog__title title">
               <h2 class="title__text">Latest Blog</h2>
             </div>
+
             <div class="blog__content">
               <div class="blog__cards">
                 <div class="blog__card">
@@ -587,7 +675,9 @@
                     src="./assets/images/laptop-graphic.jpg"
                     alt="Designer draw on laptop"
                   />
+
                   <h5 class="blog__vertical-text">DESIGN</h5>
+
                   <div class="blog__card-event">
                     <img
                       class="blog__avatar-img"
@@ -595,12 +685,15 @@
                       src="./assets/images/teacher-four.png"
                       alt="Our teacher"
                     />
+
                     <h3 class="blog__subtitle-text">
                       International Conference<br />on Bussiness
                     </h3>
                   </div>
+
                   <a class="blog__read-link" href="#">Read Now</a>
                 </div>
+
                 <div class="blog__card">
                   <img
                     class="blog__illustration-img"
@@ -608,7 +701,9 @@
                     src="./assets/images/men-make-a-list.jpg"
                     alt="Designer draw on laptop"
                   />
+
                   <h5 class="blog__vertical-text">DESIGN</h5>
+
                   <div class="blog__card-event">
                     <img
                       class="blog__avatar-img"
@@ -616,17 +711,21 @@
                       src="./assets/images/teacher-five.png"
                       alt="Our teacher"
                     />
+
                     <h3 class="blog__subtitle-text">
                       International Conference<br />on Bussiness
                     </h3>
                   </div>
+
                   <a class="blog__read-link" href="#">Read Now</a>
                 </div>
               </div>
+
               <div class="blog__points-container">
                 <ul class="blog__points"></ul>
               </div>
             </div>
+
             <form class="blog__form form" id="form">
               <label class="form__label" for="form-name">
                 <input
@@ -640,6 +739,7 @@
                   required
                 />
               </label>
+
               <label class="form__label" for="form-phone">
                 <input
                   class="form__input"
@@ -652,6 +752,7 @@
                   required
                 />
               </label>
+
               <label class="form__label" for="form-email">
                 <input
                   class="form__input"
@@ -665,6 +766,7 @@
                   required
                 />
               </label>
+
               <button class="btn btn__submit form__submit" type="submit">
                 Send
               </button>
@@ -672,6 +774,7 @@
           </div>
         </section>
       </main>
+
       <!-- Footer -->
       <footer class="footer" id="footer">
         <div class="footer__background background-icons">
@@ -680,50 +783,64 @@
               <svg class="logo__main footer__logo" width="54" height="24">
                 <use href="./assets/images/sprite.svg#icon-logo"></use>
               </svg>
+
               <div class="footer__link-list">
                 <h3 class="footer__subtitle">Company</h3>
+
                 <ul class="footer__links">
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">About Company</a>
                   </li>
+
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">Feature Course</a>
                   </li>
+
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">Careers</a>
                   </li>
                 </ul>
               </div>
+
               <div class="footer__link-list">
                 <h3 class="footer__subtitle">Help Links</h3>
+
                 <ul class="footer__links">
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">Student Support</a>
                   </li>
+
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">Course Policy</a>
                   </li>
+
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">Register Key</a>
                   </li>
                 </ul>
               </div>
+
               <div class="footer__link-list">
                 <h3 class="footer__subtitle">Course</h3>
+
                 <ul class="footer__links">
                   <li class="footer__link-text">
-                    <a class="footer__link" href="#">Wordpres</a>
+                    <a class="footer__link" href="#">Wordpress</a>
                   </li>
+
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">Photography</a>
                   </li>
+
                   <li class="footer__link-text">
                     <a class="footer__link" href="#">Learning English</a>
                   </li>
                 </ul>
               </div>
+
               <div class="footer__link-list">
                 <h3 class="footer__subtitle">Social Media</h3>
+
                 <div class="footer__logos">
                   <a
                     class="footer__link"
@@ -736,6 +853,7 @@
                       ></use>
                     </svg>
                   </a>
+
                   <a
                     class="footer__link"
                     href="https://www.instagram.com/"
@@ -747,6 +865,7 @@
                       ></use>
                     </svg>
                   </a>
+
                   <a
                     class="footer__link"
                     href="https://twitter.com/i/flow/login"
@@ -756,6 +875,7 @@
                       <use href="./assets/images/sprite.svg#icon-twitter"></use>
                     </svg>
                   </a>
+
                   <a
                     class="footer__link"
                     href="https://www.youtube.com/"
@@ -768,21 +888,27 @@
                 </div>
               </div>
             </div>
+
             <div class="footer__info">
               <h5 class="footer__rights-text">All rights Reserved</h5>
+
               <ul class="footer__other-data">
                 <li class="footer__item">
                   <a class="footer__item-link" href="#">About company</a>
                 </li>
+
                 <li class="footer__item">
                   <a class="footer__item-link" href="#">Privacy Policy</a>
                 </li>
+
                 <li class="footer__item">
                   <a class="footer__item-link" href="#">Help Center</a>
                 </li>
+
                 <li class="footer__item">
                   <a class="footer__item-link" href="#">Terms</a>
                 </li>
+
                 <li class="footer__item">
                   <a class="footer__item-link" href="#">Site map</a>
                 </li>
