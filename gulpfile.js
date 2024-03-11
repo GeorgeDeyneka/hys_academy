@@ -9,7 +9,7 @@ const browsersync = require("browser-sync");
 const ghPages = require("gh-pages");
 const path = require("path");
 
-const outputDir = "./docs";
+const outputDir = "./docs/";
 const deployDir = "docs";
 
 const src = {
@@ -22,10 +22,10 @@ const src = {
 
 const build = {
   htmlDir: outputDir,
-  fontsDir: outputDir + "/assets/fonts",
-  imagesDir: outputDir + "/assets/images",
-  stylesDir: outputDir + "/css",
-  jsDir: outputDir + "/js",
+  fontsDir: outputDir + "assets/fonts",
+  imagesDir: outputDir + "assets/images",
+  stylesDir: outputDir + "css",
+  jsDir: outputDir + "js",
 };
 
 gulp.task("copy-html", () => {
@@ -87,13 +87,13 @@ gulp.task("build-ts", () => {
     .pipe(browsersync.stream());
 });
 
-// gulp.task("clean", () => {
-//   console.log("Clean all files in build folder...");
-//   return gulp
-//     .src(outputDir, { read: false })
-//     .pipe(clean({ force: true, allowEmpty: true }))
-//     .pipe(gulp.dest(outputDir));
-// });
+gulp.task("clean", () => {
+  console.log("Clean all files in build folder...");
+  return gulp
+    .src(outputDir + "*", { read: false })
+    .pipe(clean({ force: true, allowEmpty: true }))
+    .pipe(gulp.dest(outputDir));
+});
 
 gulp.task("start-server", () => {
   browsersync.init({
@@ -105,16 +105,16 @@ gulp.task("start-server", () => {
 
 gulp.task(
   "build",
-  // gulp.series(
-  // "clean",
-  gulp.parallel(
-    "copy-html",
-    "copy-fonts",
-    "copy-images",
-    "build-sass",
-    "build-ts"
+  gulp.series(
+    "clean",
+    gulp.parallel(
+      "copy-html",
+      "copy-fonts",
+      "copy-images",
+      "build-sass",
+      "build-ts"
+    )
   )
-  // )
 );
 
 gulp.task("watch", () => {
@@ -125,11 +125,11 @@ gulp.task("watch", () => {
   gulp.watch(src.tsDir, gulp.parallel("build-ts"));
 });
 
-gulp.task("dev", gulp.parallel("start-server", "build", "watch"));
+gulp.task("dev", gulp.series("build", "start-server", "watch"));
 
 gulp.task(
   "deploy",
-  gulp.parallel("build", function (cb) {
+  gulp.series("build", function (cb) {
     ghPages.publish(path.join(process.cwd(), deployDir), cb);
   })
 );
