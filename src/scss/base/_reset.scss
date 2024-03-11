@@ -20,7 +20,7 @@ dd {
 }
 
 ul {
-  padding-left: 0px;
+  padding-left: 0;
 }
 
 html {
@@ -34,6 +34,7 @@ html {
 
 a {
   text-decoration: none;
+
   &:not([class]) {
     text-decoration-skip-ink: auto;
   }
@@ -62,11 +63,6 @@ body {
   text-rendering: optimizeSpeed;
   font-family: "Montserrat";
   color: var(--gray-basic-text);
-}
-
-input.form__input::placeholder {
-  color: var(--gray-basic-text);
-  font-size: 14px;
 }
 
 @media (prefers-reduced-motion: reduce) {

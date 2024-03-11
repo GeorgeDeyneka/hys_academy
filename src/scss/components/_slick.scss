@@ -1,41 +1,23 @@
-@media (min-width: 320px) {
-  .slick {
-    &-list {
-      overflow: hidden;
-      padding: 24px 0px;
-      max-width: 220px;
-    }
-  }
-}
+.slick {
+  &-list {
+    overflow: hidden;
+    padding: 24px 0;
+    max-width: 220px;
 
-@media (min-width: 375px) {
-  .slick {
-    &-list {
+    @media (min-width: 375px) {
       max-width: 260px;
     }
-  }
-}
 
-@media (min-width: 768px) {
-  .slick {
-    &-list {
+    @media (min-width: 768px) {
       padding: 24px 15px;
       max-width: 572px;
     }
-  }
-}
 
-@media (min-width: 990px) {
-  .slick {
-    &-list {
+    @media (min-width: 990px) {
       max-width: 881px;
     }
-  }
-}
 
-@media (min-width: 1440px) {
-  .slick {
-    &-list {
+    @media (min-width: 1440px) {
       max-width: 100%;
     }
   }

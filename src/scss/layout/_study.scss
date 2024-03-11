@@ -1,153 +1,139 @@
-@media (min-width: 320px) {
-  .study {
-    &__title {
-      padding-bottom: 16px;
+.study {
+  &__container {
+    padding-top: 100px;
+
+    @media (min-width: 768px) {
+      padding: 90px 10px 0;
     }
 
-    &__description {
-      text-align: center;
+    @media (min-width: 1440px) {
+      padding: 80px 0 0;
+    }
+  }
+
+  &__title {
+    padding-bottom: 16px;
+
+    @media (min-width: 768px) {
+      justify-content: center;
+    }
+  }
+
+  &__description {
+    text-align: center;
+
+    @media (min-width: 768px) {
+      padding: 0 40px;
     }
 
-    &__select-wrapper {
+    @media (min-width: 1440px) {
+      padding: 0 200px;
+    }
+  }
+
+  &__select {
+    display: flex;
+    width: 200px;
+    height: 48px;
+    margin: 21px auto 7px;
+    padding: 14px 8px;
+    border: none;
+    border-radius: 22px;
+    background-color: var(--lightblue-input-bg);
+
+    &:active,
+    &:hover {
+      outline: 1px solid var(--blue-link-btn);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--blue-link-btn);
+    }
+
+    &-wrapper {
       margin: 21px auto 7px;
-    }
 
-    &__select {
-      display: flex;
-      width: 200px;
-      height: 48px;
-      margin: 21px auto 7px;
-      padding: 14px 8px;
-      border: none;
-      border-radius: 22px;
-      background-color: var(--lightblue-input-bg);
-
-      &:active,
-      &:hover {
-        outline: 1px solid var(--blue-link-btn);
-      }
-
-      &:focus-visible {
-        outline: 2px solid var(--blue-link-btn);
+      @media (min-width: 768px) {
+        margin: 32px auto 18px;
       }
     }
+  }
 
-    &__list {
-      transition: transform 1000ms ease-in-out;
-      display: flex;
-      margin: 0px;
-    }
+  &__list {
+    transition: transform 1000ms ease-in-out;
+    display: flex;
+    margin: 0;
 
-    &__list-container {
+    &-container {
       overflow: hidden;
       max-width: 217px;
-      padding: 14px 0px;
-    }
+      padding: 14px 0;
 
-    &__container {
-      padding-top: 100px;
-    }
+      @media (min-width: 768px) {
+        max-width: 650px;
+      }
 
-    &__slider {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 -20px;
-      padding-bottom: 66px;
-    }
-
-    &__slide-img {
-      pointer-events: none;
-    }
-
-    &__item {
-      margin: 0px 10px;
-      position: relative;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition-property: box-shadow;
-
-      &:hover {
-        box-shadow: 0px 5px 10px var(--black-header-bg);
-        cursor: pointer;
+      @media (min-width: 1440px) {
+        max-width: 868px;
       }
     }
+  }
 
-    &__item-img {
+  &__slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 -20px;
+    padding-bottom: 66px;
+
+    @media (min-width: 375px) {
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      justify-content: space-around;
+    }
+
+    @media (min-width: 1440px) {
+      justify-content: space-between;
+      padding: 0 27px;
+    }
+  }
+
+  &__slide-img {
+    pointer-events: none;
+  }
+
+  &__item {
+    margin: 0 10px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition-property: box-shadow;
+
+    @media (min-width: 1440px) {
+      min-width: 197px;
+    }
+
+    &:hover {
+      box-shadow: 0 5px 10px var(--black-header-bg);
+      cursor: pointer;
+    }
+
+    &-img {
       opacity: 0.4;
       border-radius: 4px;
       object-fit: cover;
     }
 
-    &__item-text {
+    &-text {
       text-align: center;
       position: absolute;
       z-index: 2;
       color: var(--white);
-    }
-  }
-}
-
-@media (min-width: 375px) {
-  .study {
-    &__slider {
-      margin: 0;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .study {
-    &__container {
-      padding: 90px 10px 0px;
-    }
-
-    &__list-container {
-      max-width: 651px;
-    }
-
-    &__title {
-      justify-content: center;
-    }
-
-    &__select-wrapper {
-      margin: 32px auto 18px;
-    }
-
-    &__slider {
-      justify-content: space-around;
-    }
-
-    &__description {
-      padding: 0px 40px;
-    }
-  }
-}
-
-@media (min-width: 1440px) {
-  .study {
-    &__container {
-      padding: 80px 0px 0px;
-    }
-
-    &__description {
-      padding: 0px 200px;
-    }
-
-    &__slider {
-      justify-content: space-between;
-      padding: 0px 27px;
-    }
-
-    &__list-container {
-      max-width: 868px;
-    }
-
-    &__item {
-      min-width: 197px;
     }
   }
 }

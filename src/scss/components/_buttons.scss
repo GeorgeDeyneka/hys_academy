@@ -1,207 +1,201 @@
-@media (min-width: 320px) {
-  .btn {
-    padding: 12px 20px;
-    font-size: 12px;
-    line-height: 1.334;
-    border-radius: 22px;
-    border: none;
-    background-color: var(--blue-link-btn);
-    color: var(--white);
-    transition-property: background-color;
+.btn {
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1.334;
+  border-radius: 22px;
+  border: none;
+  background-color: var(--blue-link-btn);
+  color: var(--white);
+  transition-property: background-color;
 
-    &__blue {
-      &:hover {
-        background-color: var(--blue-link-btn-hover);
-      }
-
-      &:active {
-        background-color: var(--blue-link-btn-pressed);
-      }
-
-      &:focus-visible {
-        outline: 3px solid var(--lightblue-btn-border);
-      }
-    }
-
-    &__green {
-      color: var(--black);
-      background-color: var(--lightgreen-btn);
-
-      &:focus-visible {
-        outline: 3px solid var(--green-slider-bg);
-      }
-    }
-
-    &__lightgreen,
-    &__green {
-      &:hover {
-        background-color: var(--lightgreen-btn-hover);
-      }
-
-      &:active {
-        background-color: var(--lightgreen-btn-pressed);
-      }
-
-      &:focus-visible {
-        outline: 3px solid var(--green-slider-bg);
-      }
-    }
-
-    &__request {
-      background-color: var(--gray-request-btn);
-      border: 1px solid var(--white);
-
-      &:hover {
-        background-color: var(--white-request-btn-hover);
-      }
-
-      &:active {
-        padding: 11px 19px;
-        border: 2px solid var(--white);
-      }
-
-      &:focus-visible {
-        outline: 2px solid var(--white);
-      }
-    }
-
-    &__submit {
-      max-width: 415px;
-      line-height: 1.334;
-      background-color: var(--green-link-btn);
-      box-shadow: 0px 5px 10px var(--green-player-shadow);
-
-      &:hover {
-        background-color: var(--lightgreen-btn);
-      }
-
-      &:active {
-        border-color: var(--green-link-btn);
-        color: var(--green-link-btn);
-        background-color: var(--white);
-        -webkit-transition: all 150ms ease-in-out;
-        transition: all 150ms ease-in-out;
-        box-shadow: 0 0 10px 0 var(--green-link-btn inset),
-          0 0 10px 4px var(--green-link-btn);
-      }
-
-      &:focus-visible {
-        outline: 2px solid var(--green-slider-bg);
-      }
-    }
+  @media (min-width: 768px) {
+    padding: 12px 24px;
   }
 
-  a.btn {
-    display: inline-block;
-  }
-
-  .buttons-block {
-    display: flex;
-    gap: 20px;
-  }
-
-  .blog {
-    &__point-btn {
-      width: 40px;
-      height: 40px;
-      color: var(--blue-blog-text);
-      background-color: var(--white);
-      border: var(--white);
-      border-radius: 50%;
-      transition-property: border;
-      &:hover {
-        color: var(--blue-link-btn);
-        box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
-      }
-      &:active,
-      &_active {
-        border: 1px solid var(--green-link-btn);
-        box-shadow: none;
-        width: 39px;
-        height: 39px;
-      }
-      &:focus-visible {
-        outline: 3px solid var(--lightgray-logo);
-      }
-    }
-  }
-
-  .slider__btn,
-  .slick-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 40px;
-    height: 40px;
-    background-color: var(--white);
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0px 5px 10px var(--lightblue-slider-shadow);
-    transition-property: background-color;
-    font-size: 0px;
+  &__blue {
     &:hover {
-      background-color: var(--green-link-btn);
-      --color1: var(--white);
-      stroke: var(----color1);
+      background-color: var(--blue-link-btn-hover);
     }
+
     &:active {
-      background-color: var(--green-slider-bg);
+      background-color: var(--blue-link-btn-pressed);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--lightblue-btn-border);
+    }
+  }
+
+  &__green {
+    color: var(--black);
+    background-color: var(--lightgreen-btn);
+
+    &:focus-visible {
+      outline: 3px solid var(--green-slider-bg);
+    }
+  }
+
+  &__lightgreen,
+  &__green {
+    &:hover {
+      background-color: var(--lightgreen-btn-hover);
+    }
+
+    &:active {
+      background-color: var(--lightgreen-btn-pressed);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--green-slider-bg);
+    }
+  }
+
+  &__request {
+    background-color: var(--gray-request-btn);
+    border: 1px solid var(--white);
+
+    &:hover {
+      background-color: var(--white-request-btn-hover);
+    }
+
+    &:active {
+      padding: 11px 19px;
+      border: 2px solid var(--white);
+
+      @media (min-width: 768px) {
+        padding: 11px 23px;
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--white);
+    }
+  }
+
+  &__submit {
+    max-width: 415px;
+    line-height: 1.334;
+    background-color: var(--green-link-btn);
+    box-shadow: 0 5px 10px var(--green-player-shadow);
+
+    @media (min-width: 768px) {
+      padding: 12px 44px;
+    }
+
+    &:hover {
+      background-color: var(--lightgreen-btn);
+    }
+
+    &:active {
+      border-color: var(--green-link-btn);
+      color: var(--green-link-btn);
+      background-color: var(--white);
+      -webkit-transition: all 150ms ease-in-out;
+      transition: all 150ms ease-in-out;
+      box-shadow: 0 0 10px 0 var(--green-link-btn inset),
+        0 0 10px 4px var(--green-link-btn);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--green-slider-bg);
+    }
+  }
+}
+
+a.btn {
+  display: inline-block;
+}
+
+.buttons-block {
+  display: flex;
+  gap: 20px;
+}
+
+.blog {
+  &__point-btn {
+    width: 40px;
+    height: 40px;
+    color: var(--blue-blog-text);
+    background-color: var(--white);
+    border: var(--white);
+    border-radius: 50%;
+    transition-property: border;
+    &:hover {
+      color: var(--blue-link-btn);
+      box-shadow: 0 5px 10px var(--lightblue-slider-shadow);
+    }
+    &:active,
+    &_active {
+      border: 1px solid var(--green-link-btn);
       box-shadow: none;
+      width: 39px;
+      height: 39px;
     }
     &:focus-visible {
       outline: 3px solid var(--lightgray-logo);
     }
   }
+}
 
-  .study__slide-next,
-  .slick-next {
-    transform: scale(-1, 1);
-  }
-
-  .slick-disabled,
-  .slider__btn:disabled {
-    opacity: 0.4;
-  }
-
-  .player {
-    width: 40px;
-    height: 40px;
-    padding: 9px 6px 7px 10px;
+.slider__btn,
+.slick-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 5px 10px var(--lightblue-slider-shadow);
+  transition-property: background-color;
+  font-size: 0;
+  &:hover {
     background-color: var(--green-link-btn);
-    border-radius: 50%;
-    border: 2px solid var(--white);
-    box-shadow: 0px 5px 10px var(--green-player-shadow);
-    transition: none;
-
-    &:hover {
-      border: none;
-      padding: 11px 6px 7px 12px;
-    }
-
-    &:active {
-      background-color: var(--green-slider-bg);
-      box-shadow: none;
-    }
-
-    &:focus-visible {
-      border: none;
-      outline: 4px solid var(--white);
-    }
+    --color1: var(--white);
+    stroke: var(----color1);
+  }
+  &:active {
+    background-color: var(--green-slider-bg);
+    box-shadow: none;
+  }
+  &:focus-visible {
+    outline: 3px solid var(--lightgray-logo);
   }
 }
 
-@media (min-width: 768px) {
-  .btn {
-    padding: 12px 24px;
+.study__slide-next,
+.slick-next {
+  transform: scale(-1, 1);
+}
 
-    &__request {
-      &:active {
-        padding: 11px 23px;
-      }
-    }
+.slick-disabled,
+.slider__btn:disabled {
+  opacity: 0.4;
+}
 
-    &__submit {
-      padding: 12px 44px;
-    }
+.player {
+  width: 40px;
+  height: 40px;
+  padding: 9px 6px 7px 10px;
+  background-color: var(--green-link-btn);
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  box-shadow: 0 5px 10px var(--green-player-shadow);
+  transition: none;
+
+  &:hover {
+    border: none;
+    padding: 11px 6px 7px 12px;
+  }
+
+  &:active {
+    background-color: var(--green-slider-bg);
+    box-shadow: none;
+  }
+
+  &:focus-visible {
+    border: none;
+    outline: 4px solid var(--white);
   }
 }

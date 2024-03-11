@@ -93,6 +93,7 @@ button,
   font-size: 18px;
   font-weight: 700;
   line-height: 1.334;
+
   &__blue {
     color: var(--blue-text);
   }
@@ -107,38 +108,4 @@ button,
 .subtitle {
   color: var(--blue-link-btn);
   text-transform: uppercase;
-}
-
-.event {
-  &__subtitle {
-    color: var(--black);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.5;
-  }
-}
-
-.start {
-  &__item-link {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.57;
-  }
-}
-
-.footer {
-  &__subtitle {
-    font-weight: 700;
-  }
-
-  &__link {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.572;
-  }
-
-  &__rights-text {
-    font-weight: 600;
-    color: var(--gray-basic-text);
-  }
 }
