@@ -240,7 +240,7 @@ body {
     background-size: auto;
   }
 }
-@media (min-width: 1560px) {
+@media (min-width: 1550px) {
   .wrapper {
     background-size: 50%;
   }
