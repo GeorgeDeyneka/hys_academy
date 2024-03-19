@@ -7,7 +7,7 @@
     background-position: -72px 478px;
     overflow: hidden;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       display: flex;
       justify-content: space-between;
       padding-bottom: 50px;
@@ -15,7 +15,7 @@
       background-position: top left;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       justify-content: flex-start;
       gap: 178px;
       padding: 166px 0 185px 208px;
@@ -26,11 +26,11 @@
   }
 
   &__content {
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       width: 45%;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       max-width: 400px;
     }
   }
@@ -38,7 +38,7 @@
   &__title {
     padding: 70px 0 48px 0;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       padding-top: 0;
     }
   }
@@ -52,12 +52,12 @@
     max-height: 273px;
     transition: opacity 300ms ease-in;
 
-    @media (min-width: 375px) {
+    @media #{$phone-md} {
       top: 46px;
       left: 54px;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       top: 58px;
       left: 68px;
       max-height: 344px;
@@ -81,7 +81,7 @@
     border-radius: 24px;
     transition: background-color 200ms ease-in;
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       min-width: 344px;
       min-height: 344px;
     }

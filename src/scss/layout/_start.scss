@@ -1,6 +1,6 @@
 .start {
   &__container {
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       display: flex;
       justify-content: space-between;
     }
@@ -9,7 +9,7 @@
   &__content {
     padding: 40px 0 55px;
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       width: 415px;
       padding: 63px 0;
     }
@@ -48,7 +48,7 @@
   &__links {
     padding-bottom: 40px;
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       width: 415px;
       padding: 88px 0 74px;
     }

@@ -2,11 +2,11 @@
   &__container {
     padding-top: 100px;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       padding: 90px 10px 0;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       padding: 80px 0 0;
     }
   }
@@ -14,7 +14,7 @@
   &__title {
     padding-bottom: 16px;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       justify-content: center;
     }
   }
@@ -22,11 +22,11 @@
   &__description {
     text-align: center;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       padding: 0 40px;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       padding: 0 200px;
     }
   }
@@ -53,7 +53,7 @@
     &-wrapper {
       margin: 21px auto 7px;
 
-      @media (min-width: 768px) {
+      @media #{$tablet-sm} {
         margin: 32px auto 18px;
       }
     }
@@ -69,11 +69,11 @@
       max-width: 217px;
       padding: 14px 0;
 
-      @media (min-width: 768px) {
+      @media #{$tablet-sm} {
         max-width: 650px;
       }
 
-      @media (min-width: 1440px) {
+      @media #{$desktop-md} {
         max-width: 868px;
       }
     }
@@ -86,15 +86,15 @@
     margin: 0 -20px;
     padding-bottom: 66px;
 
-    @media (min-width: 375px) {
+    @media #{$phone-md} {
       margin: 0;
     }
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       justify-content: space-around;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       justify-content: space-between;
       padding: 0 27px;
     }
@@ -114,7 +114,7 @@
     border-radius: 4px;
     transition-property: box-shadow;
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       min-width: 197px;
     }
 

@@ -95,14 +95,6 @@ gulp.task("clean", () => {
     .pipe(gulp.dest(outputDir));
 });
 
-gulp.task("start-server", () => {
-  browsersync.init({
-    server: outputDir,
-    port: 8080,
-    notify: true,
-  });
-});
-
 gulp.task(
   "build",
   gulp.series(
@@ -118,6 +110,12 @@ gulp.task(
 );
 
 gulp.task("watch", () => {
+  browsersync.init({
+    server: outputDir,
+    port: 8080,
+    notify: true,
+  });
+
   gulp.watch(src.htmlDir, gulp.parallel("copy-html"));
   gulp.watch(src.fontsDir, gulp.parallel("copy-fonts"));
   gulp.watch(src.imagesDir, gulp.parallel("copy-images"));
@@ -125,7 +123,7 @@ gulp.task("watch", () => {
   gulp.watch(src.tsDir, gulp.parallel("build-ts"));
 });
 
-gulp.task("dev", gulp.series("build", "start-server", "watch"));
+gulp.task("dev", gulp.series("build", "watch"));
 
 gulp.task(
   "deploy",

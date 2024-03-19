@@ -8,7 +8,7 @@
   color: var(--white);
   transition-property: background-color;
 
-  @media (min-width: 768px) {
+  @media #{$tablet-sm} {
     padding: 12px 24px;
   }
 
@@ -62,7 +62,7 @@
       padding: 11px 19px;
       border: 2px solid var(--white);
 
-      @media (min-width: 768px) {
+      @media #{$tablet-sm} {
         padding: 11px 23px;
       }
     }
@@ -78,7 +78,7 @@
     background-color: var(--green-link-btn);
     box-shadow: 0 5px 10px var(--green-player-shadow);
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       padding: 12px 44px;
     }
 

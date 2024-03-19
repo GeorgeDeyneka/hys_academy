@@ -8,13 +8,13 @@
     background-repeat: no-repeat;
     z-index: -1;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       background-position: center;
       background-position-y: 130px;
       background-repeat: no-repeat;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       background-position: -45px -48px;
       background-repeat: no-repeat;
     }
@@ -24,20 +24,20 @@
     font-weight: 700;
     padding-bottom: 16px;
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       padding-bottom: 23px;
     }
   }
 
   &__references {
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       display: flex;
       justify-content: space-between;
       padding-bottom: 80px;
       text-align: center;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       max-width: 850px;
       margin: 0 auto;
       text-align: start;
@@ -57,17 +57,17 @@
     padding: 7px 0 31px 0;
     gap: 16px;
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       padding: 0;
     }
   }
 
   &__logo {
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       align-self: center;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       margin-right: 63px;
       align-self: auto;
     }
@@ -95,7 +95,7 @@
     &-list {
       padding: 17px 0 3px 0;
 
-      @media (min-width: 1440px) {
+      @media #{$desktop-md} {
         padding: 0;
 
         &:last-child {
@@ -121,7 +121,7 @@
     padding: 40px 0 16px;
     border-top: 1px solid var(--lightgray-border);
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       display: flex;
       justify-content: space-between;
     }
@@ -136,7 +136,7 @@
   &__other-data {
     margin: 0;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       display: flex;
       gap: 20px;
     }

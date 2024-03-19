@@ -1,5 +1,5 @@
 .background-icons {
-  @media (min-width: 1440px) {
+  @media #{$desktop-md} {
     max-width: 1440px;
     margin: auto;
     z-index: -2;

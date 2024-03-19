@@ -4,12 +4,12 @@
   background-size: 100%;
   z-index: -1;
 
-  @media (min-width: 768px) {
+  @media #{$tablet-sm} {
     background-position: right 0;
     background-size: auto;
   }
 
-  @media (min-width: 1560px) {
+  @media #{$desktop-lg} {
     background-size: 50%;
   }
 }
@@ -18,11 +18,11 @@
   padding: 0 24px;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media #{$tablet-sm} {
     padding: 0 50px;
   }
 
-  @media (min-width: 1440px) {
+  @media #{$desktop-md} {
     margin: 0 auto;
     padding: 0;
     max-width: 1024px;

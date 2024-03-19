@@ -45,3 +45,10 @@
   --purple-start-bg: #45529c;
   --blue-point: #bad1ff;
 }
+
+$phone-sm: "(min-width: 320px)";
+$phone-md: "(min-width: 375px)";
+$tablet-sm: "(min-width: 768px)";
+$tablet-md: "(min-width: 990px)";
+$desktop-md: "(min-width: 1440px)";
+$desktop-lg: "(min-width: 1550px)";

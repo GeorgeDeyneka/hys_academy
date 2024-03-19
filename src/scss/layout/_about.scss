@@ -1,12 +1,12 @@
 .about {
   &__container {
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       max-width: 850px;
     }
   }
 
   &__content {
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -14,7 +14,7 @@
       gap: 20px 4%;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       gap: 22px 28px;
     }
   }
@@ -22,7 +22,7 @@
   &__title {
     padding: 38px 0 56px;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       padding: 86px 0 56px;
     }
   }
@@ -33,11 +33,11 @@
     align-items: center;
     text-align: center;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       width: 48%;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       align-items: flex-start;
       max-width: 415px;
       text-align: start;
@@ -47,7 +47,7 @@
   &__subtitle {
     padding: 19px 0 6px 0;
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       padding: 18px 0 6px 0;
     }
   }

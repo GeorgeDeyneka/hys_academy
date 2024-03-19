@@ -32,7 +32,7 @@
     border-radius: 10px;
     z-index: 2;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       max-width: 500px;
       height: 400px;
     }
@@ -45,7 +45,7 @@
   &-title {
     font-size: 20px;
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       font-size: 24px;
     }
   }

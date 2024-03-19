@@ -4,20 +4,20 @@
     padding: 24px 0;
     max-width: 220px;
 
-    @media (min-width: 375px) {
+    @media #{$phone-md} {
       max-width: 260px;
     }
 
-    @media (min-width: 768px) {
+    @media #{$tablet-sm} {
       padding: 24px 15px;
       max-width: 572px;
     }
 
-    @media (min-width: 990px) {
+    @media #{$tablet-md} {
       max-width: 881px;
     }
 
-    @media (min-width: 1440px) {
+    @media #{$desktop-md} {
       max-width: 100%;
     }
   }

@@ -19,7 +19,7 @@
       align-items: center;
       justify-content: space-between;
 
-      @media (min-width: 768px) {
+      @media #{$tablet-sm} {
         z-index: 1;
         gap: 29px;
       }
@@ -28,7 +28,7 @@
     &-list {
       display: none;
 
-      @media (min-width: 768px) {
+      @media #{$tablet-sm} {
         display: flex;
         gap: 21px;
         margin: 0;
@@ -94,7 +94,7 @@
         width: 30px;
         cursor: pointer;
 
-        @media (min-width: 768px) {
+        @media #{$tablet-sm} {
           display: none;
         }
       }
